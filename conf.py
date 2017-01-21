@@ -149,16 +149,11 @@ html_theme_path = ["_templates/plugin_layouts"]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'Runestone Interactive Overview'
+html_title = None
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title ='Runestone Interactive Overview'
-
-# The name of an image file (relative to this directory) to place at the top
-# of the sidebar.
-
-# logo is included in layout file
-#html_logo = "../source/_static/logo_small.png"
+html_short_title ='Informática'
+html_logo = "/_static/logo_small.png"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -199,7 +194,7 @@ html_static_path = ['_static']  + runestone_static_dirs()
 html_show_sourcelink = False
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_sphinx = True
+html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 #html_show_copyright = True

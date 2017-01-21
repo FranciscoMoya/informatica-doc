@@ -21,13 +21,55 @@ Congratulations!   If you can see this file you have probably successfully run t
 This is just a sample of what you can do.  The index.rst file is the table of contents for your entire project.  You can put all of your writing in the index, or  you can include additional rst files.  Those files may even be in subdirectories that you can reference using a relative path.
 
 
-::
+.. toctree::
+   :maxdepth: 2
 
 
-   .. toctree::
-      :maxdepth: 2
-
-      some/path/myfile.rst
+   BisectionSearch.rst
+   Datos AEMET.rst
+   ejercicios.rst
+   ExamenExtraordinario.rst
+   Examen ordinario.rst
+   exb.rst
+   Gráficas.rst
+   hanoi.rst
+   index.rst
+   install.rst
+   lab-01.rst
+   lab-02.rst
+   lab-03.rst
+   mochila01.rst
+   Navegación web.rst
+   Optimización.rst
+   Paseo.rst
+   Permutaciones.rst
+   Problema de las 8 damas.rst
+   Procesamiento de XML.rst
+   Prueba de Progreso 1ºA.rst
+   Prueba de Progreso 1ºB.rst
+   Prueba de Progreso 1ºC.rst
+   Prueba de Progreso 2016 1ºA.rst
+   Prueba de Progreso 2016 1ºB.rst
+   Prueba de Progreso 2016 1ºC.rst
+   python-00.rst
+   python-01.rst
+   python-02.rst
+   python-04-ejercicios.rst
+   python-04.rst
+   python-05-06-07.rst
+   python-09.rst
+   python-10.rst
+   python-12.rst
+   python-14.rst
+   python-files.rst
+   PythonMinimo.rst
+   Resumen.rst
+   sopa_letras.rst
+   Sudoku 2.rst
+   Sudoku 3.rst
+   Sudoku.rst
+   tour-caballo.rst
+   trabajo-grupo.rst
 
 
 Section 2: Links
