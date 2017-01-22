@@ -53,6 +53,7 @@
       </button>
 
       <div>
+        <div style='float:left;display:block;background-size:90px 40px !important;height:40px;width:90px;background:transparent url("{{pathto('_static/eii_small.png', 1)}}") no-repeat 0px 0px;'>&nbsp; </div>
         <a class="navbar-brand" href="{{ pathto(master_doc) }}">{% if theme_navbar_title -%}{{ theme_navbar_title|e }}{%- else -%}{{ project|e }}{%- endif -%}</a>
       </div>
     </div>
@@ -96,9 +97,8 @@
         </li>
         <!-- end search dropdown -->
 
-        <li class="divider-vertical"></li>
-
         {% if use_services == 'true' %}
+        <li class="divider-vertical"></li>
         <!-- user account dropdown -->
         <li class="dropdown">
           <a class="dropdown-toggle" href="#" data-toggle="dropdown">
@@ -133,7 +133,7 @@
             <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
           </a>
           <ul class="dropdown-menu user-menu">
-            <li><a href='/{{appname}}/static/{{course_id}}/navhelp.html'>Navigation Help</a></li>
+            <li><a href="{{ pathto('_static/navhelp') }}">Ayuda a la navegación</a></li>
             <li class="divider"></li>
             <li><a href='http://runestoneinteractive.org'>Acerca de Runestone</a></li>
           </ul>

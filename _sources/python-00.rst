@@ -1,6 +1,8 @@
 
 Herramientas usadas en el curso
-===============================
+-------------------------------
+
+
 
 Para las presentaciones utilizaremos `Google
 Presentations <https://docs.google.com/presentation/>`__. Todas las
@@ -50,7 +52,7 @@ instrucciones de instalación:
    paquetes.
 
 Organización del curso
-======================
+----------------------
 
 El curso se organiza en tres sesiones de una hora en clase a la semana y
 una sesión de dos horas en laboratorio cada dos semanas. Se estima que
@@ -197,7 +199,7 @@ estudiar, ignóralos si ves que los ejercicios del laboratorio o los
 programas de ejemplo te resultan muy fáciles.
 
 Manos a la obra
-===============
+---------------
 
 Empieza a programar ya. No tienes excusa, si estás leyendo ésto es que
 tienes un navegador y por tanto puedes abrir una pestaña nueva e ir a
@@ -206,14 +208,9 @@ de archivos. Pulsa el menú *New* y selecciona *Python 3*.
 
 Teclea el siguiente programa en la celda editable:
 
-.. code:: python
+.. activecode:: python
 
     print('Hola, Mundo')
-
-
-.. parsed-literal::
-
-    Hola, Mundo
 
 
 Ahora pulsa el botón *run cell* de la barra de botones, el que tiene una
