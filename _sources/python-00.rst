@@ -1,27 +1,11 @@
+Introducción
+============
 
-Herramientas usadas en el curso
--------------------------------
+No es necesario instalar ningún software para estudiar esta
+asignatura.  El libro de texto puede leerse con cualquier navegador
+moderno y los ejercicios pueden hacerse también desde el propio
+navegador.  Puedes utilizar también alguno de los 
 
-
-
-Para las presentaciones utilizaremos `Google
-Presentations <https://docs.google.com/presentation/>`__. Todas las
-presentaciones se irán haciendo disponibles desde la página del curso en
-`CampusVirtual <https://campusvirtual.uclm.es/>`__. Las presentaciones
-no están hechas para estudiar, sino para ayudar a asimilar los conceptos
-contados en clase, durante la exposición del profesor. No merece la pena
-imprimirlas. Sería un gasto inútil de papel y sobre todo de tinta.
-
-Como guión de clase se proporcionará junto a las presentaciones un
-conjunto de textos online (cuadernos) creados con `IPython
-Notebook <http://ipython.org/notebook.html>`__. No deben entenderse como
-textos autocontenidos sino como guiones que permiten recordar al alumno
-lo visto en cada sesión y donde se incluyen referencias a otros
-documentos que pueden ser usados para estudiar. Los propios ejemplos
-vistos en clase los realizaremos también con `IPython
-Notebook <http://ipython.org/notebook.html>`__.
-
-No es necesario instalar ningún software para estudiar esta asignatura.
 Las presentaciones pueden verse con cualquier navegador moderno, los
 cuadernos podrán verse también con un navegador en `Notebook
 Viewer <http://nbviewer.ipython.org/>`__, y los ejercicios pueden
