@@ -19,9 +19,9 @@ options(
     sphinx = Bunch(docroot=".",),
 
     build = Bunch(
-        builddir="./docs/informatica",
+        builddir="./docs",
         sourcedir="_sources",
-        outdir="./docs/informatica",
+        outdir="./docs",
         confdir=".",
         project_name = "informatica",
         template_args={'course_id': 'CS101',
