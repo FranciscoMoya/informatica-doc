@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Lab 2: Bucles, listas y cadenas</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/livecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="top" title="None" href="index.html" />
+    <link rel="next" title="Lab 3: Archivos y manipulación de cadenas" href="lab-03.html" />
+    <link rel="prev" title="Lab 1.1: Familiarización" href="lab-01.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'CS101';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'informatica';
+  eBookConfig.runestone_version = '2.7.11';
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head>
+  <body role="document">
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <div style='float:left;display:block;background-size:90px 40px !important;height:40px;width:90px;background:transparent url("_static/eii_small.png") no-repeat 0px 0px;'>&nbsp; </div>
+        <a class="navbar-brand" href="index.html">Informática</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <!--<li class="divider-vertical"></li>-->
+        
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Lab 2: Bucles, listas y cadenas</a></li>
+</ul>
+</ul>
+</li>
+          <!--<li class="divider-vertical"></li>-->
+        
+        <!--
+          
+  <li id="relations-prev" title="Previous Chapter - Lab 1.1: Familiarización" data-toggle="tooltip">
+    <a href="lab-01.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Lab 3: Archivos y manipulación de cadenas' data-toggle="tooltip" >
+    <a href="lab-03.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html'>Índice del libro</a></li>
+            
+            <li><a href="genindex.html">Índice alfabético</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Código activo de prueba</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Buscar en el libro" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
+            
+            <li>
+  <a href="_sources/lab-02.txt"
+     rel="nofollow">Ver fuente</a></li>
+            
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>Acerca de Runestone</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="lab-2-bucles-listas-y-cadenas">
+<h1>Lab 2: Bucles, listas y cadenas<a class="headerlink" href="#lab-2-bucles-listas-y-cadenas" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Lee atentamente los ejercicios que se piden a continuación relacionados
+con bucles, listas y cadenas en Python y hazlos todos ellos en una única
+entrega.</p>
+<ol class="arabic">
+<li><p class="first"><em>Define una función ``suma_rango`` que tenga dos argumentos enteros
+y devuelva la suma de todos los números desde el primero hasta el
+segundo, sin contar este último. Se asume que el primer argumento es
+menor que el segundo.</em></p>
+</li>
+<li><p class="first"><em>Define una función ``contar_negativos`` que tenga un único
+argumento que es una lista de enteros. Debe devolver el número de
+enteros negativos que contiene.</em></p>
+</li>
+<li><p class="first"><em>Define una función ``buscar_vocal`` que tenga un único argumento de
+tipo cadena de texto y devuelva la posición de la primera vocal
+encontrada. Si no encuentra vocales debe devolver -1.</em> Nota: la
+primera letra tiene la posición 0.</p>
+</li>
+<li><p class="first"><em>Define una función ``multiplos_7_en_rango`` que tenga dos
+argumentos enteros y devuelva una lista con todos los números
+enteros entre ambos argumentos (sin contar el segundo) que sean
+múltiplos de 7. Se asume que el primer argumento es menor que el
+segundo.</em> Nota: Para añadir un elemento a una lista se puede usar el
+método <code class="docutils literal"><span class="pre">append</span></code>.</p>
+</li>
+<li><p class="first"><em>Define una función ``dibujar_cuadrado`` que tenga un argumento
+entero que corresponde al ancho del cuadrado en caracteres. Esta
+función debe imprimir por salida estándar el dibujo de un cuadrado
+del ancho especificado en caracteres. Por ejemplo, para el ancho 8
+la función debe imprimir exactamente el dibujo de abajo.</em> <strong>Nota: El
+ancho puede asumirse par. Nótese que el ancho incluye los caracteres
+de los bordes y esquinas. Nótese que la altura del cuadrado es menor
+que la anchura. Concretamente el número de segmentos verticales
+``|`` es la mitad que el número de segmentos horizontales ``-``.</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">+------+</span>
+<span class="o">|</span>      <span class="o">|</span>
+<span class="o">|</span>      <span class="o">|</span>
+<span class="o">|</span>      <span class="o">|</span>
+<span class="o">+------+</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><em>Escribe una función ``codigo_cesar`` que tenga un único argumento
+de tipo cadena de texto. Debe devolver otra cadena resultado de
+aplicar el `Cifrado
+César &lt;https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar&gt;`__ con
+desplzamiento de 3 posiciones a la cadena original. No se consideran
+letras acentuadas, ni diéresis, ni ñ, ni números.</em> <strong>Nota: Las
+únicas letras a considerar son las que muestra el siguiente
+fragmento.</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
+<span class="nb">print</span> <span class="n">string</span><span class="o">.</span><span class="n">ascii_letters</span>
+</pre></div>
+</div>
+<p>Si usas CodeSkulptor quizás no puedas ejecutar este fragmento. El
+resultado es la siguiente cadena de texto.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s1">&#39;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><em>Escribe una función ``es_perfecto(n)`` que devuelva ``True`` si el
+argumento es un `número
+perfecto &lt;https://es.wikipedia.org/wiki/N%C3%BAmero_perfecto&gt;`__ y
+``False`` si no lo es.</em></p>
+</li>
+<li><p class="first"><em>Escribe una función ``cifras(n)`` que devuelve una lista de las
+cifras decimales de su argumento. Por ejemplo, para el número
+``1984`` devuelve ``[1, 9, 8, 4]``.</em> Nota: Para añadir un elemento a
+una lista se puede usar el método <code class="docutils literal"><span class="pre">append</span></code>.</p>
+</li>
+<li><p class="first"><em>Un popular juego de naipes llamado `las 7 y
+media &lt;https://es.wikipedia.org/wiki/Siete_y_media&gt;`__ precisa sumar
+los valores de conjuntos de cartas de una manera muy peculiar. Los
+naipes están numerados del 1 al 12, aunque los 8 y los 9 no se
+utilizan en este juego. Cada carta vale lo que corresponde a su
+número salvo los 10, 11 y 12 que valen solo 0.5 puntos. Si se
+superan los 7.5 puntos se ha perdido. Si no se supera gana el que
+más se aproxime a 7.5 puntos (de ahí el nombre). Escribe una función
+``compara_bazas`` que acepta dos listas de números correspondientes
+a las bazas de dos jugadores y devuelve 1 si gana la primera lista,
+2 si gana la segunda lista y 0 si hay empate.</em> Por ejemplo,
+<code class="docutils literal"><span class="pre">compara_bazas([1,5,12],</span> <span class="pre">[7,10])</span></code> debe devolver <code class="docutils literal"><span class="pre">2</span></code>.</p>
+</li>
+<li><p class="first"><em>Escribe una función ``buscar_texto`` que devuelva el número de
+veces que aparece la cadena que se pasa como segundo argumento en la
+cadena que se pasa como primer argumento.</em> Por ejemplo
+<code class="docutils literal"><span class="pre">buscar_texto('No</span> <span class="pre">por</span> <span class="pre">mucho</span> <span class="pre">madrugar</span> <span class="pre">amanece</span> <span class="pre">mas</span> <span class="pre">temprano',</span> <span class="pre">'ma')</span></code>
+debe devolver 3.</p>
+</li>
+</ol>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Capítulo anterior - Lab 1.1: Familiarización' data-toggle="tooltip">
+    <a href="lab-01.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="lab-01.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - Lab 3: Archivos y manipulación de cadenas' data-toggle="tooltip" >
+    <a href="lab-03.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="lab-03.html" >Next Section - Lab 3: Archivos y manipulación de cadenas</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017 Francisco Moya.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

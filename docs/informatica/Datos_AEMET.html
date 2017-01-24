@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Trabajo en grupo 2015 (Datos AEMET)</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/livecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="top" title="None" href="index.html" />
+    <link rel="next" title="Ejercicios simples" href="ejercicios.html" />
+    <link rel="prev" title="Pago de balance de tarjeta de crédito en un año" href="BisectionSearch.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'CS101';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'informatica';
+  eBookConfig.runestone_version = '2.7.11';
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head>
+  <body role="document">
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <div style='float:left;display:block;background-size:90px 40px !important;height:40px;width:90px;background:transparent url("_static/eii_small.png") no-repeat 0px 0px;'>&nbsp; </div>
+        <a class="navbar-brand" href="index.html">Informática</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <!--<li class="divider-vertical"></li>-->
+        
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Trabajo en grupo 2015 (Datos AEMET)</a></li>
+</ul>
+</ul>
+</li>
+          <!--<li class="divider-vertical"></li>-->
+        
+        <!--
+          
+  <li id="relations-prev" title="Previous Chapter - Pago de balance de tarjeta de crédito en un año" data-toggle="tooltip">
+    <a href="BisectionSearch.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Ejercicios simples' data-toggle="tooltip" >
+    <a href="ejercicios.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html'>Índice del libro</a></li>
+            
+            <li><a href="genindex.html">Índice alfabético</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Código activo de prueba</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Buscar en el libro" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
+            
+            <li>
+  <a href="_sources/Datos_AEMET.txt"
+     rel="nofollow">Ver fuente</a></li>
+            
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>Acerca de Runestone</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="trabajo-en-grupo-2015-datos-aemet">
+<h1>Trabajo en grupo 2015 (Datos AEMET)<a class="headerlink" href="#trabajo-en-grupo-2015-datos-aemet" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Probablemente lo más complejo del trabajo es pensar un modelo para
+almacenar la predicción. Esta propuesta de solución asume que las
+predicciones se almacenan como una lista de <code class="docutils literal"><span class="pre">PrediccionMunicipio</span></code>. La
+clase <code class="docutils literal"><span class="pre">PrediccionMunicipio</span></code> contiene todos los datos disponibles en el
+XML.</p>
+<p>Como siempre utilizaremos diseño <em>top-down</em>. Antes de diseñar
+<code class="docutils literal"><span class="pre">PrediccionMunicipio</span></code> vamos a resolver el problema y lo que
+necesitemos lo iremos usando como si ya estuviera disponible. No se
+llega a esta solución de una vez. Es un proceso iterativo en el que se
+va añadiendo la funcionalidad poco a poco. Pero cuidado, eso no
+significa que diseñamos <em>bottom-up</em>. Implementamos la solución al
+problema solo que de manera reducida o incluso incompleta.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="kn">import</span> <span class="nn">urllib</span>
+<span class="kn">import</span> <span class="nn">lxml.etree</span> <span class="k">as</span> <span class="nn">ET</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="k">class</span> <span class="nc">PrediccionAEMET</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_provinciaToId</span> <span class="o">=</span> <span class="n">_leerCodigosProvincias</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_prediccion</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_provincia</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">maxTemperatura</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">provincia</span><span class="p">):</span>
+        <span class="sd">u&#39;&#39;&#39;Asume provincia cadena con nombre de provincia según AEMET.</span>
+<span class="sd">            Devuelve tupla (T, L) siendo T temperatura máxima de la predicción</span>
+<span class="sd">            y L lista de tuplas (municipio, fecha) en la que se espera T.&#39;&#39;&#39;</span>
+        <span class="n">por_temperatura</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">prediccion</span><span class="p">(</span><span class="n">provincia</span><span class="p">):</span>
+            <span class="n">por_temperatura</span> <span class="o">+=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">temperaturaMax</span><span class="p">(),</span>
+                                   <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">nombre</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">fechas</span><span class="p">),</span>
+                                   <span class="n">p</span><span class="o">.</span><span class="n">fechas</span><span class="p">)</span>
+        <span class="n">por_temperatura</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">por_temperatura</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">T</span> <span class="o">=</span> <span class="n">por_temperatura</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">L</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([(</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">por_temperatura</span> <span class="k">if</span> <span class="n">T</span> <span class="o">==</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+        <span class="k">return</span> <span class="n">T</span><span class="p">,</span> <span class="n">L</span>
+
+    <span class="k">def</span> <span class="nf">graficaSensacionTermica</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">municipio</span><span class="p">,</span> <span class="n">formato</span><span class="p">):</span>
+        <span class="sd">u&#39;&#39;&#39;Asume municipio, formato cadenas.</span>
+<span class="sd">            Genera una gráfica de sensación térmica para el municipio indicado. &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prediccion</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;No hay provincia&#39;</span><span class="p">)</span>
+        <span class="n">prediccion</span> <span class="o">=</span> <span class="p">[</span> <span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prediccion</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">nombre</span> <span class="o">==</span> <span class="n">municipio</span> <span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">prediccion</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Municipio no encontrado&#39;</span><span class="p">)</span>
+
+        <span class="n">prediccion</span> <span class="o">=</span> <span class="n">prediccion</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">u&#39;Sensación térmica en </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">prediccion</span><span class="o">.</span><span class="n">nombre</span><span class="p">),</span>
+                  <span class="n">fontsize</span><span class="o">=</span><span class="s1">&#39;x-large&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Fecha&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">u&#39;Sensación térmica (ºC)&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">),</span>
+                   <span class="n">prediccion</span><span class="o">.</span><span class="n">fechas</span><span class="p">,</span>
+                   <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+
+        <span class="n">smax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">prediccion</span><span class="o">.</span><span class="n">sensTermicaMax</span><span class="p">(),</span> <span class="s1">&#39;ro--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">u&#39;máxima&#39;</span><span class="p">)</span>
+        <span class="n">smin</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">prediccion</span><span class="o">.</span><span class="n">sensTermicaMin</span><span class="p">(),</span> <span class="s1">&#39;bo--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">u&#39;mínima&#39;</span><span class="p">)</span>
+
+        <span class="n">plt2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">twiny</span><span class="p">()</span>
+        <span class="n">plt2</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+        <span class="n">plt2</span><span class="o">.</span><span class="n">set_autoscale_on</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">plt2</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">xmax</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">prediccion</span><span class="o">.</span><span class="n">sensTermica</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">horas</span><span class="p">,</span> <span class="n">por_horas</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sensacionTermicaPorHoras</span><span class="p">(</span><span class="n">prediccion</span><span class="p">)</span>
+
+        <span class="n">shoras</span> <span class="o">=</span> <span class="n">plt2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">horas</span><span class="p">,</span> <span class="n">por_horas</span><span class="p">,</span> <span class="s1">&#39;g^--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">u&#39;estimación&#39;</span><span class="p">)</span>
+
+        <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">smax</span><span class="o">+</span><span class="n">smin</span><span class="o">+</span><span class="n">shoras</span><span class="p">,</span>
+                   <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">,</span>
+                   <span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                   <span class="n">fontsize</span><span class="o">=</span><span class="s1">&#39;large&#39;</span><span class="p">)</span>
+        <span class="n">outfile</span> <span class="o">=</span> <span class="s1">u&#39;</span><span class="si">{0}</span><span class="s1">_</span><span class="si">{1}</span><span class="s1">.</span><span class="si">{2}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">prediccion</span><span class="o">.</span><span class="n">nombre</span><span class="p">,</span>
+                                        <span class="n">prediccion</span><span class="o">.</span><span class="n">fechas</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                                        <span class="n">formato</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">outfile</span><span class="p">)</span>
+        <span class="nb">print</span> <span class="s1">&#39;Almacenado archivo&#39;</span><span class="p">,</span> <span class="n">outfile</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">prediccion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">provincia</span><span class="p">):</span>
+        <span class="sd">u&#39;&#39;&#39;Asume provincia cadena con nombre de provincia según AEMET.</span>
+<span class="sd">            Devuelve lista de predicciones diarias&#39;&#39;&#39;</span>
+        <span class="n">id_provincia</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_provinciaToId</span><span class="p">[</span><span class="n">provincia</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prediccion</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_provincia</span> <span class="o">!=</span> <span class="n">id_provincia</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_prediccion</span> <span class="o">=</span> <span class="n">_leerPrediccionProvincia</span><span class="p">(</span><span class="n">id_provincia</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_provincia</span> <span class="o">=</span> <span class="n">id_provincia</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prediccion</span>
+
+    <span class="k">def</span> <span class="nf">sensacionTermicaPorHoras</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prediccion</span><span class="p">):</span>
+        <span class="sd">u&#39;&#39;&#39;Asume self._prediccion previamente actualizado.</span>
+<span class="sd">            Devuelve tupla de dos listas, eje X e Y de la predicción</span>
+<span class="sd">            de sensación térmica por horas&#39;&#39;&#39;</span>
+        <span class="n">frac_dia</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;00&#39;</span><span class="p">:</span> <span class="mf">0.</span><span class="p">,</span> <span class="s1">&#39;06&#39;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span> <span class="s1">&#39;12&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;18&#39;</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">,</span> <span class="s1">&#39;24&#39;</span><span class="p">:</span> <span class="mf">1.</span> <span class="p">}</span>
+        <span class="n">sens_horas</span> <span class="o">=</span> <span class="p">[</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">prediccion</span><span class="o">.</span><span class="n">sensTermica</span>  <span class="p">]</span>
+        <span class="n">horas</span><span class="p">,</span> <span class="n">por_horas</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">dia</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sens_horas</span><span class="p">)):</span>
+            <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">sens_horas</span><span class="p">[</span><span class="n">dia</span><span class="p">]:</span>
+                <span class="n">horas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dia</span> <span class="o">+</span> <span class="n">frac_dia</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+                <span class="n">por_horas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">horas</span><span class="p">,</span> <span class="n">por_horas</span>
+</pre></div>
+</div>
+<p>Ahora que ya sabemos qué necesitamos en <code class="docutils literal"><span class="pre">PrediccionMunicipio</span></code> es el
+momento de implementarla.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PrediccionMunicipio</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;nombre&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fechas</span> <span class="o">=</span> <span class="p">[</span> <span class="n">dia</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;fecha&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">dia</span> <span class="ow">in</span> <span class="n">root</span><span class="o">.</span><span class="n">iter</span><span class="p">(</span><span class="s1">&#39;dia&#39;</span><span class="p">)</span> <span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sensTermica</span> <span class="o">=</span> <span class="p">[</span> <span class="bp">self</span><span class="o">.</span><span class="n">_leerMagnitud</span><span class="p">(</span><span class="s1">&#39;sens_termica&#39;</span><span class="p">,</span> <span class="n">dia</span><span class="p">)</span> <span class="k">for</span> <span class="n">dia</span> <span class="ow">in</span> <span class="n">root</span><span class="o">.</span><span class="n">iter</span><span class="p">(</span><span class="s1">&#39;dia&#39;</span><span class="p">)</span> <span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">temperatura</span> <span class="o">=</span> <span class="p">[</span> <span class="bp">self</span><span class="o">.</span><span class="n">_leerMagnitud</span><span class="p">(</span><span class="s1">&#39;temperatura&#39;</span><span class="p">,</span> <span class="n">dia</span><span class="p">)</span> <span class="k">for</span> <span class="n">dia</span> <span class="ow">in</span> <span class="n">root</span><span class="o">.</span><span class="n">iter</span><span class="p">(</span><span class="s1">&#39;dia&#39;</span><span class="p">)</span> <span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">sensTermicaMax</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">sensTermica</span> <span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">sensTermicaMin</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">sensTermica</span> <span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">temperaturaMax</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">temperatura</span> <span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">temperaturaMin</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">temperatura</span> <span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">_leerMagnitud</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">dia</span><span class="p">):</span>
+        <span class="n">magnitud</span> <span class="o">=</span> <span class="n">dia</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+        <span class="n">mmax</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">magnitud</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;maxima&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        <span class="n">mmin</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">magnitud</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;minima&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        <span class="n">horas</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;hora&#39;</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">text</span><span class="p">))</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">magnitud</span><span class="o">.</span><span class="n">iter</span><span class="p">(</span><span class="s1">&#39;dato&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">d</span><span class="o">.</span><span class="n">text</span> <span class="p">]</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">mmax</span><span class="p">,</span> <span class="n">mmin</span><span class="p">,</span> <span class="n">horas</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;&#39;&#39;Prediccion (</span><span class="si">{0}</span><span class="s1">,</span>
+<span class="s1">            </span><span class="si">{1}</span><span class="s1">,</span>
+<span class="s1">            </span><span class="si">{2}</span><span class="s1">,</span>
+<span class="s1">            </span><span class="si">{3}</span><span class="s1">)&#39;&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nombre</span><span class="p">,</span>
+                           <span class="bp">self</span><span class="o">.</span><span class="n">fechas</span><span class="p">,</span>
+                           <span class="bp">self</span><span class="o">.</span><span class="n">sensTermica</span><span class="p">,</span>
+                           <span class="bp">self</span><span class="o">.</span><span class="n">temperatura</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Las funciones de comunicación con la AEMET las dejo aparte de manera que
+pueda probar todo lo anterior sin conexiones.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_leerCodigosProvincias</span><span class="p">():</span>
+    <span class="sd">u&#39;&#39;&#39;Devuelve un diccionario que hace corresponder el nombre de la provincia al</span>
+<span class="sd">        código numérico correspondiente según AEMET&#39;&#39;&#39;</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s1">&#39;http://www.aemet.es/es/eltiempo/prediccion/municipios&#39;</span><span class="p">)</span>
+    <span class="n">encoding</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;content-type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;charset=&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">root</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">unicode</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span> <span class="n">encoding</span><span class="p">))</span>
+    <span class="n">provincias</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&quot;.//select[@id=&#39;provincia_selector&#39;]/option&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="k">return</span>  <span class="p">{</span> <span class="n">nombre</span><span class="p">:</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">provincias</span> \
+                <span class="k">for</span> <span class="n">nombre</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span> <span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">_leerPrediccionProvincia</span><span class="p">(</span><span class="n">id_provincia</span><span class="p">):</span>
+    <span class="sd">u&#39;&#39;&#39;Asume provincia cadena con nombre de provincia según AEMET.</span>
+<span class="sd">        Lee de AEMET la predicción para todos sus municipios y</span>
+<span class="sd">        devuelve una lista con todas las predicciones diarias.&#39;&#39;&#39;</span>
+    <span class="n">prediccion</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">fallos</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">municipio</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10000</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">prediccion</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_leerPrediccionMunicipio</span><span class="p">(</span><span class="n">id_provincia</span><span class="p">,</span> <span class="n">municipio</span><span class="p">))</span>
+            <span class="n">fallos</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">fallos</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">fallos</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span> <span class="k">break</span>
+    <span class="k">return</span> <span class="n">prediccion</span>
+
+<span class="k">def</span> <span class="nf">_leerPrediccionMunicipio</span><span class="p">(</span><span class="n">id_provincia</span><span class="p">,</span> <span class="n">id_municipio</span><span class="p">):</span>
+    <span class="sd">u&#39;&#39;&#39;Asume id_provincia, id_municipio enteros.</span>
+<span class="sd">        Devuelve lista de predicciones diarias para ese municipio.&#39;&#39;&#39;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://www.aemet.es/xml/municipios/localidad_</span><span class="si">{0:02d}{1:03d}</span><span class="s1">.xml&#39;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">id_provincia</span><span class="p">,</span> <span class="n">id_municipio</span><span class="p">)</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">getcode</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Failed (</span><span class="si">{0}</span><span class="s1">) </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">getcode</span><span class="p">(),</span> <span class="n">url</span><span class="p">))</span>
+    <span class="n">root</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">PrediccionMunicipio</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>La interfaz puede ser tan simple como se desee. En nuestro caso vamos a
+usar las capacidades interactivas de IPython Notebook.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.html.widgets</span> <span class="k">import</span> <span class="n">interact</span>
+
+<span class="n">provincias</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">_leerCodigosProvincias</span><span class="p">()</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="n">formatos</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;png&#39;</span><span class="p">,</span> <span class="s1">&#39;pdf&#39;</span><span class="p">]</span>
+<span class="n">aemet</span> <span class="o">=</span> <span class="n">PrediccionAEMET</span><span class="p">()</span>
+
+<span class="nd">@interact</span><span class="p">(</span><span class="n">provincia</span><span class="o">=</span><span class="n">provincias</span><span class="p">,</span> <span class="n">formato</span><span class="o">=</span><span class="n">formatos</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">datos_AEMET</span><span class="p">(</span><span class="n">provincia</span><span class="p">,</span> <span class="n">formato</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">provincia</span><span class="p">:</span> <span class="k">return</span>
+
+    <span class="n">tmax</span><span class="p">,</span> <span class="n">municipios</span> <span class="o">=</span> <span class="n">aemet</span><span class="o">.</span><span class="n">maxTemperatura</span><span class="p">(</span><span class="n">provincia</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="s1">u&#39;La máxima temperatura para los próximos días es de </span><span class="si">{0}</span><span class="s1">ºC y se espera en:&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tmax</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">nombre</span><span class="p">,</span><span class="n">fecha</span> <span class="ow">in</span> <span class="n">municipios</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="s1">u&#39; - </span><span class="si">{0}</span><span class="s1"> el día </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">fecha</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">formato</span><span class="p">:</span> <span class="k">return</span>
+    <span class="nb">print</span>
+    <span class="k">for</span> <span class="n">nombre</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">([</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">municipios</span><span class="p">]):</span>
+        <span class="n">aemet</span><span class="o">.</span><span class="n">graficaSensacionTermica</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">formato</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">La</span> <span class="n">máxima</span> <span class="n">temperatura</span> <span class="n">para</span> <span class="n">los</span> <span class="n">próximos</span> <span class="n">días</span> <span class="n">es</span> <span class="n">de</span> <span class="mf">37.0</span><span class="n">ºC</span> <span class="n">y</span> <span class="n">se</span> <span class="n">espera</span> <span class="n">en</span><span class="p">:</span>
+ <span class="o">-</span> <span class="n">Alameda</span> <span class="n">de</span> <span class="n">la</span> <span class="n">Sagra</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Alcañizo</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Azután</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Añover</span> <span class="n">de</span> <span class="n">Tajo</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Barcience</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Bargas</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Borox</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Cabañas</span> <span class="n">de</span> <span class="n">la</span> <span class="n">Sagra</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Calera</span> <span class="n">y</span> <span class="n">Chozas</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Camarenilla</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Carriches</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Cebolla</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Ciruelos</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Cobeja</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">El</span> <span class="n">Puente</span> <span class="k">del</span> <span class="n">Arzobispo</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Erustes</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Esquivias</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Huerta</span> <span class="n">de</span> <span class="n">Valdecarábanos</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Las</span> <span class="n">Ventas</span> <span class="n">de</span> <span class="n">San</span> <span class="n">Julián</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Magán</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Malpica</span> <span class="n">de</span> <span class="n">Tajo</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Mocejón</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Navalmoralejo</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Numancia</span> <span class="n">de</span> <span class="n">la</span> <span class="n">Sagra</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Olías</span> <span class="k">del</span> <span class="n">Rey</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Ontígola</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Oropesa</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Pantoja</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Rielves</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Seseña</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Toledo</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Torralba</span> <span class="n">de</span> <span class="n">Oropesa</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Valdeverdeja</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Villaluenga</span> <span class="n">de</span> <span class="n">la</span> <span class="n">Sagra</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Villamiel</span> <span class="n">de</span> <span class="n">Toledo</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Villamuelas</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Villaseca</span> <span class="n">de</span> <span class="n">la</span> <span class="n">Sagra</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Villasequilla</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Yeles</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Yepes</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Yuncler</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+ <span class="o">-</span> <span class="n">Yunclillos</span> <span class="n">el</span> <span class="n">día</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span>
+
+<span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Torralba</span> <span class="n">de</span> <span class="n">Oropesa_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_1.png" src="DatosAEMET_files/DatosAEMET_7_1.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Toledo_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_3.png" src="DatosAEMET_files/DatosAEMET_7_3.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Pantoja_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_5.png" src="DatosAEMET_files/DatosAEMET_7_5.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Bargas_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_7.png" src="DatosAEMET_files/DatosAEMET_7_7.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Erustes_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_9.png" src="DatosAEMET_files/DatosAEMET_7_9.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Yepes_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_11.png" src="DatosAEMET_files/DatosAEMET_7_11.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Rielves_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_13.png" src="DatosAEMET_files/DatosAEMET_7_13.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Ontígola_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_15.png" src="DatosAEMET_files/DatosAEMET_7_15.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Cobeja_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_17.png" src="DatosAEMET_files/DatosAEMET_7_17.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Esquivias_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_19.png" src="DatosAEMET_files/DatosAEMET_7_19.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Camarenilla_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_21.png" src="DatosAEMET_files/DatosAEMET_7_21.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Malpica</span> <span class="n">de</span> <span class="n">Tajo_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_23.png" src="DatosAEMET_files/DatosAEMET_7_23.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Borox_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_25.png" src="DatosAEMET_files/DatosAEMET_7_25.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Villamuelas_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_27.png" src="DatosAEMET_files/DatosAEMET_7_27.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Numancia</span> <span class="n">de</span> <span class="n">la</span> <span class="n">Sagra_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_29.png" src="DatosAEMET_files/DatosAEMET_7_29.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Azután_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_31.png" src="DatosAEMET_files/DatosAEMET_7_31.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Cebolla_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_33.png" src="DatosAEMET_files/DatosAEMET_7_33.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Yeles_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_35.png" src="DatosAEMET_files/DatosAEMET_7_35.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Villamiel</span> <span class="n">de</span> <span class="n">Toledo_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_37.png" src="DatosAEMET_files/DatosAEMET_7_37.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">El</span> <span class="n">Puente</span> <span class="k">del</span> <span class="n">Arzobispo_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_39.png" src="DatosAEMET_files/DatosAEMET_7_39.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Ciruelos_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_41.png" src="DatosAEMET_files/DatosAEMET_7_41.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Yuncler_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_43.png" src="DatosAEMET_files/DatosAEMET_7_43.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Carriches_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_45.png" src="DatosAEMET_files/DatosAEMET_7_45.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Oropesa_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_47.png" src="DatosAEMET_files/DatosAEMET_7_47.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Villaseca</span> <span class="n">de</span> <span class="n">la</span> <span class="n">Sagra_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_49.png" src="DatosAEMET_files/DatosAEMET_7_49.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Yunclillos_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_51.png" src="DatosAEMET_files/DatosAEMET_7_51.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Olías</span> <span class="k">del</span> <span class="n">Rey_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_53.png" src="DatosAEMET_files/DatosAEMET_7_53.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Magán_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_55.png" src="DatosAEMET_files/DatosAEMET_7_55.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Alcañizo_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_57.png" src="DatosAEMET_files/DatosAEMET_7_57.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Cabañas</span> <span class="n">de</span> <span class="n">la</span> <span class="n">Sagra_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_59.png" src="DatosAEMET_files/DatosAEMET_7_59.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Villasequilla_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_61.png" src="DatosAEMET_files/DatosAEMET_7_61.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Navalmoralejo_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_63.png" src="DatosAEMET_files/DatosAEMET_7_63.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Las</span> <span class="n">Ventas</span> <span class="n">de</span> <span class="n">San</span> <span class="n">Julián_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_65.png" src="DatosAEMET_files/DatosAEMET_7_65.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Alameda</span> <span class="n">de</span> <span class="n">la</span> <span class="n">Sagra_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_67.png" src="DatosAEMET_files/DatosAEMET_7_67.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Barcience_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_69.png" src="DatosAEMET_files/DatosAEMET_7_69.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Seseña_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_71.png" src="DatosAEMET_files/DatosAEMET_7_71.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Villaluenga</span> <span class="n">de</span> <span class="n">la</span> <span class="n">Sagra_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_73.png" src="DatosAEMET_files/DatosAEMET_7_73.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Calera</span> <span class="n">y</span> <span class="n">Chozas_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_75.png" src="DatosAEMET_files/DatosAEMET_7_75.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Huerta</span> <span class="n">de</span> <span class="n">Valdecarábanos_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_77.png" src="DatosAEMET_files/DatosAEMET_7_77.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Valdeverdeja_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_79.png" src="DatosAEMET_files/DatosAEMET_7_79.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Mocejón_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_81.png" src="DatosAEMET_files/DatosAEMET_7_81.png" />
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Almacenado</span> <span class="n">archivo</span> <span class="n">Añover</span> <span class="n">de</span> <span class="n">Tajo_2016</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mf">04.</span><span class="n">png</span>
+</pre></div>
+</div>
+<img alt="DatosAEMET_files/DatosAEMET_7_83.png" src="DatosAEMET_files/DatosAEMET_7_83.png" />
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Capítulo anterior - Pago de balance de tarjeta de crédito en un año' data-toggle="tooltip">
+    <a href="BisectionSearch.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="BisectionSearch.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - Ejercicios simples' data-toggle="tooltip" >
+    <a href="ejercicios.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="ejercicios.html" >Next Section - Ejercicios simples</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017 Francisco Moya.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

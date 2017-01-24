@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Prueba de progreso 1ºC</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/livecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="top" title="None" href="index.html" />
+    <link rel="next" title="Distancia Minkowski" href="Prueba de Progreso 2016 1ºA.html" />
+    <link rel="prev" title="Prueba de progreso 1ºB" href="Prueba de Progreso 1ºB.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'CS101';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'informatica';
+  eBookConfig.runestone_version = '2.7.11';
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head>
+  <body role="document">
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <div style='float:left;display:block;background-size:90px 40px !important;height:40px;width:90px;background:transparent url("_static/eii_small.png") no-repeat 0px 0px;'>&nbsp; </div>
+        <a class="navbar-brand" href="index.html">Informática</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <!--<li class="divider-vertical"></li>-->
+        
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Prueba de progreso 1ºC</a><ul>
+<li><a class="reference internal" href="#convolucion-de-senales">1. Convolución de señales</a><ul>
+<li><a class="reference internal" href="#ejemplo-de-funcionamiento">Ejemplo de funcionamiento</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#piedra-papel-o-tijera">2. Piedra, papel o tijera</a><ul>
+<li><a class="reference internal" href="#id1">Ejemplo de funcionamiento</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rubrica-de-evaluacion">Rúbrica de evaluación</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <!--<li class="divider-vertical"></li>-->
+        
+        <!--
+          
+  <li id="relations-prev" title="Previous Chapter - Prueba de progreso 1ºB" data-toggle="tooltip">
+    <a href="Prueba de Progreso 1ºB.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Distancia Minkowski' data-toggle="tooltip" >
+    <a href="Prueba de Progreso 2016 1ºA.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html'>Índice del libro</a></li>
+            
+            <li><a href="genindex.html">Índice alfabético</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Código activo de prueba</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Buscar en el libro" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
+            
+            <li>
+  <a href="_sources/Prueba de Progreso 1ºC.txt"
+     rel="nofollow">Ver fuente</a></li>
+            
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>Acerca de Runestone</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="prueba-de-progreso-1oc">
+<h1>Prueba de progreso 1ºC<a class="headerlink" href="#prueba-de-progreso-1oc" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Lee atentamente el enunciado de la prueba. El enunciado consiste en una
+serie de ejercicios que deben realizarse en un mismo archivo Python.
+Todas las funciones deben definirse en el mismo archivo y no debe
+incuirse ningún fragmento de código de prueba. Las entregas deberán ser
+trabajo original del alumno que realiza la entrega.</p>
+<p>No se permite la comunicación con otras personas durante el examen. Se
+permiten libros, apuntes y búsquedas en Internet.</p>
+<div class="section" id="convolucion-de-senales">
+<h2>1. Convolución de señales<a class="headerlink" href="#convolucion-de-senales" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Dadas dos señales de tiempo discreto, definidas como secuencias de
+valores reales <span class="math">\(u(k)\)</span> y <span class="math">\(v(k)\)</span> se define la convolución de
+ambas señales como:</p>
+<div class="math">
+\[w[n] = \sum_k u[k]\, v[n-k]\]</div>
+<p><strong>Nota: Una señal :math:`u[k]` se modela como una lista ``u`` con los
+números reales desde :math:`u[0]` hasta :math:`u[m-1]` siendo
+``m = len(u)``. Todos los demás elementos se asume que valen 0. Es decir
+:math:`u[k] = 0, forall k notin {0..m}`.</strong></p>
+<ol class="arabic simple">
+<li><em>Definir una función ``elem`` con dos parámetros. El primer parámetro
+es una lista ``s`` conteniendo una señal discreta. El segundo
+parámetro es un entero ``k`` que indica un índice de elemento. La
+función debe devolver ``s[k]`` si ``k`` está en el rango de índices
+válidos para la lista ``s`` o ``0.0`` en caso contrario.</em></li>
+<li><em>Definir una función ``conv_elem`` con tres parámetros. Los dos
+primeros parámetros corresponden a las señales ``u`` y ``v``. El
+tercer parámetro es un entero ``n``. La función debe devolver el
+resultado de la ecuación definida arriba. Es decir, debe devolver el
+elemento ``n``-simo de la convolución de ``u`` y ``v``. Se sugiere
+utilizar la función ``elem`` para evitar tener que considerar casos
+especiales.</em></li>
+<li><em>Definir una función ``convolucion`` con dos parámetros que
+corresponden a las señales ``u`` y ``v`` y devuelve la lista de
+números reales resultado de la convolución de ambas señales. La
+longitud de la convolución de ``u`` y ``v`` es
+``len(u) + len(v) - 1``.</em></li>
+</ol>
+<div class="section" id="ejemplo-de-funcionamiento">
+<h3>Ejemplo de funcionamiento<a class="headerlink" href="#ejemplo-de-funcionamiento" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span> <span class="p">]</span>
+<span class="n">v</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">1.</span> <span class="p">]</span>
+<span class="nb">print</span> <span class="n">convolucion</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
+
+<span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mf">12.0</span><span class="p">,</span> <span class="mf">13.0</span><span class="p">,</span> <span class="mf">14.0</span><span class="p">,</span> <span class="mf">13.0</span><span class="p">,</span> <span class="mf">14.0</span><span class="p">,</span> <span class="mf">12.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">elem</span><span class="p">(</span><span class="n">signal</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">k</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">signal</span><span class="p">)</span> <span class="ow">or</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mf">0.</span>
+    <span class="k">return</span> <span class="n">signal</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">conv_elem</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="mf">0.</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">u</span><span class="p">)):</span>
+        <span class="nb">sum</span> <span class="o">+=</span> <span class="n">elem</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">elem</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="n">k</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">sum</span>
+
+<span class="k">def</span> <span class="nf">convolucion</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span> <span class="n">conv_elem</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">u</span><span class="p">)</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">]</span>
+</pre></div>
+</div>
+<p>La función <code class="docutils literal"><span class="pre">convolucion</span></code> también se puede hacer sin <em>list
+comprehensions</em>.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convolucion</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">u</span><span class="p">)</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">c</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">conv_elem</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">i</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">c</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="piedra-papel-o-tijera">
+<h2>2. Piedra, papel o tijera<a class="headerlink" href="#piedra-papel-o-tijera" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Piedra, papel o tijera es un juego en el que dos jugadores eligen una de
+esas tres opciones a la vez. El que gana depende de lo elegido por
+ambos:</p>
+<ul class="simple">
+<li>La piedra gana a las tijeras (las despunta).</li>
+<li>Las tijeras ganan al papel (lo cortan).</li>
+<li>El papel gana a la piedra (la tapa).</li>
+<li>Dos iguales empatan.</li>
+</ul>
+<p>Hacer una función <code class="docutils literal"><span class="pre">ganador</span></code> que tenga dos parámetros de tipo cadena de
+texto. Cada parámetro puede contener una de estas tres palabras
+<code class="docutils literal"><span class="pre">piedra</span></code>, <code class="docutils literal"><span class="pre">papel</span></code>, o <code class="docutils literal"><span class="pre">tijera</span></code>. La función debe devolver un número
+indicando cuál de los dos gana. Si el primero gana devolverá un <code class="docutils literal"><span class="pre">1</span></code>.
+Si el segundo gana devolverá un <code class="docutils literal"><span class="pre">2</span></code>. Si empatan devolverá un <code class="docutils literal"><span class="pre">0</span></code>.</p>
+<div class="section" id="id1">
+<h3>Ejemplo de funcionamiento<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">ganador</span><span class="p">(</span><span class="s1">&#39;piedra&#39;</span><span class="p">,</span><span class="s1">&#39;tijera&#39;</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="nb">print</span> <span class="n">ganador</span><span class="p">(</span><span class="s1">&#39;piedra&#39;</span><span class="p">,</span><span class="s1">&#39;papel&#39;</span><span class="p">)</span>
+<span class="mi">2</span>
+<span class="nb">print</span> <span class="n">ganador</span><span class="p">(</span><span class="s1">&#39;tijera&#39;</span><span class="p">,</span><span class="s1">&#39;tijera&#39;</span><span class="p">)</span>
+<span class="mi">0</span>
+</pre></div>
+</div>
+<p>La forma más sencilla de hacerlo (desde mi punto de vista) es con un
+diccionario. Veamos cuáles son las distintas posibilidades de partidas
+en las que no hay empate.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">opciones</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;piedra&#39;</span><span class="p">,</span> <span class="s1">&#39;papel&#39;</span><span class="p">,</span> <span class="s1">&#39;tijera&#39;</span><span class="p">]</span>
+<span class="n">juegos_posibles</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">opciones</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">opciones</span> <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">j</span> <span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">juegos_posibles</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[(</span><span class="s1">&#39;piedra&#39;</span><span class="p">,</span> <span class="s1">&#39;papel&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;piedra&#39;</span><span class="p">,</span> <span class="s1">&#39;tijera&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;papel&#39;</span><span class="p">,</span> <span class="s1">&#39;piedra&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;papel&#39;</span><span class="p">,</span> <span class="s1">&#39;tijera&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;tijera&#39;</span><span class="p">,</span> <span class="s1">&#39;piedra&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;tijera&#39;</span><span class="p">,</span> <span class="s1">&#39;papel&#39;</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>Ya solo tenemos que decir cuál es el ganador de estas posibilidades en
+una lista y componer el diccionario:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ganador</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="n">opciones</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;piedra&#39;</span><span class="p">,</span> <span class="s1">&#39;papel&#39;</span><span class="p">,</span> <span class="s1">&#39;tijera&#39;</span><span class="p">]</span>
+    <span class="n">posibles</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">opciones</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">opciones</span> <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">j</span> <span class="p">]</span>
+    <span class="n">gana</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span> <span class="p">]</span>
+    <span class="n">ganadores</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">posibles</span><span class="p">,</span> <span class="n">gana</span><span class="p">))</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="ow">in</span> <span class="n">ganadores</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">ganadores</span><span class="p">[(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>También se puede hacer sin diccionario. Contemplamos primero el caso de
+que sean iguales y luego la mitad de los casos en los que a y b están
+ordenados según la secuencia <code class="docutils literal"><span class="pre">piedra</span></code>, <code class="docutils literal"><span class="pre">papel</span></code>, <code class="docutils literal"><span class="pre">tijera</span></code>. Para los
+demás casos llamamos a <code class="docutils literal"><span class="pre">ganador</span></code> con los parámetros invertidos y
+corregimos el resultado.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ganador</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">:</span> <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="s1">&#39;piedra&#39;</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">==</span> <span class="s1">&#39;papel&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="s1">&#39;piedra&#39;</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">==</span> <span class="s1">&#39;tijera&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="s1">&#39;papel&#39;</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">==</span> <span class="s1">&#39;tijera&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="k">if</span> <span class="n">ganador</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>La última línea también se puede poner como una lista indexada por el
+resultado.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ganador</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">:</span> <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="s1">&#39;piedra&#39;</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">==</span> <span class="s1">&#39;papel&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="s1">&#39;piedra&#39;</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">==</span> <span class="s1">&#39;tijera&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="s1">&#39;papel&#39;</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">==</span> <span class="s1">&#39;tijera&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">][</span><span class="n">ganador</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="rubrica-de-evaluacion">
+<h2>Rúbrica de evaluación<a class="headerlink" href="#rubrica-de-evaluacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Puntos totales: 10 puntos:</p>
+<ul class="simple">
+<li>1.1 Función <code class="docutils literal"><span class="pre">elem</span></code>: 2.5 puntos</li>
+<li>1.2 Función <code class="docutils literal"><span class="pre">conv_elem</span></code>: 2.5 puntos</li>
+<li>1.3 Función <code class="docutils literal"><span class="pre">convolucion</span></code>: 2.5 puntos</li>
+<li>2 Función <code class="docutils literal"><span class="pre">ganador</span></code>: 2.5 puntos</li>
+</ul>
+<p>Penalizaciones:</p>
+<ul class="simple">
+<li>Errores de sintaxis: 100% de los puntos de la función</li>
+<li>Errores de ejecución (excepciones): 50% de los puntos de la función</li>
+<li>Errores en límites de recorridos: 20% de los puntos de la función</li>
+<li>Código repetitivo: 10% de los puntos de la función</li>
+</ul>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Capítulo anterior - Prueba de progreso 1ºB' data-toggle="tooltip">
+    <a href="Prueba de Progreso 1ºB.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="Prueba de Progreso 1ºB.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - Distancia Minkowski' data-toggle="tooltip" >
+    <a href="Prueba de Progreso 2016 1ºA.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="Prueba de Progreso 2016 1ºA.html" >Next Section - Distancia Minkowski</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017 Francisco Moya.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

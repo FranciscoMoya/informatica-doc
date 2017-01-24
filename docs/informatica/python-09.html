@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Listas, tuplas, conjuntos y diccionarios</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/livecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="top" title="None" href="index.html" />
+    <link rel="next" title="Ejemplos de divide y vencerás" href="python-10.html" />
+    <link rel="prev" title="Abstracción con funciones" href="python-05-06-07.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'CS101';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'informatica';
+  eBookConfig.runestone_version = '2.7.11';
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head>
+  <body role="document">
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <div style='float:left;display:block;background-size:90px 40px !important;height:40px;width:90px;background:transparent url("_static/eii_small.png") no-repeat 0px 0px;'>&nbsp; </div>
+        <a class="navbar-brand" href="index.html">Informática</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <!--<li class="divider-vertical"></li>-->
+        
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Listas, tuplas, conjuntos y diccionarios</a><ul>
+<li><a class="reference internal" href="#mutabilidad-en-listas">Mutabilidad en listas</a></li>
+<li><a class="reference internal" href="#slicing-en-listas">Slicing en listas</a></li>
+<li><a class="reference internal" href="#metodos-de-una-lista">Métodos de una lista</a></li>
+<li><a class="reference internal" href="#clonado-de-listas">Clonado de listas</a></li>
+<li><a class="reference internal" href="#comprensiones-de-listas">Comprensiones de listas</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <!--<li class="divider-vertical"></li>-->
+        
+        <!--
+          
+  <li id="relations-prev" title="Previous Chapter - Abstracción con funciones" data-toggle="tooltip">
+    <a href="python-05-06-07.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Ejemplos de divide y vencerás' data-toggle="tooltip" >
+    <a href="python-10.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html'>Índice del libro</a></li>
+            
+            <li><a href="genindex.html">Índice alfabético</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Código activo de prueba</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Buscar en el libro" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
+            
+            <li>
+  <a href="_sources/python-09.txt"
+     rel="nofollow">Ver fuente</a></li>
+            
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>Acerca de Runestone</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="listas-tuplas-conjuntos-y-diccionarios">
+<h1>Listas, tuplas, conjuntos y diccionarios<a class="headerlink" href="#listas-tuplas-conjuntos-y-diccionarios" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>La gama de contenedores de Python hay que conocerla con cierta
+profundidad para hacer programas no triviales. Estudia los capítulos 8,
+9 y 10 del libro de texto y empieza a practicar.</p>
+<p>Directa o indirectamente hemos conocido varias formas de agrupar
+elementos en Python. La que hemos utilizado con más frecuencia es la
+<em>lista</em>, que se crea con corchetes. Alguna vez han aparecido las
+<em>tuplas</em> que aparecen entre paréntesis. Y aún hay otra forma, que son
+los conjuntos, que se expresan como una seuencia de elementos entre
+llaves.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">}</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">,</span> <span class="nb">set</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Aparentemente listas y tuplas funcionan de forma parecida.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="k">if</span> <span class="mi">3</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El 3 está&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="n">El</span> <span class="mi">3</span> <span class="n">está</span>
+</pre></div>
+</div>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">b</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="k">if</span> <span class="mi">3</span> <span class="ow">in</span> <span class="n">b</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El 3 está&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="n">El</span> <span class="mi">3</span> <span class="n">está</span>
+</pre></div>
+</div>
+<p>Los conjuntos son ligeramente diferentes, porque no permiten indexar,
+pero sí iterar y determinar pertenencia. De hecho son especialmente
+eficientes en esta última operación.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="c1"># c[1:] &lt;- No podemos</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="k">if</span> <span class="mi">3</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El 3 está&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="n">El</span> <span class="mi">3</span> <span class="n">está</span>
+</pre></div>
+</div>
+<p>Los diccionarios se comportan como conjuntos, pero además tienen una
+operación de indexación especial, que permiten acceder a valores
+independientes de los elementos que actúan como índice.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">:</span><span class="s1">&#39;uno&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;dos&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s1">&#39;tres&#39;</span> <span class="p">}</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="k">if</span> <span class="mi">3</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El 3 está&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="n">uno</span>
+<span class="mi">2</span> <span class="n">dos</span>
+<span class="mi">3</span> <span class="n">tres</span>
+<span class="n">El</span> <span class="mi">3</span> <span class="n">está</span>
+</pre></div>
+</div>
+<p>Otra característica distintiva de conjuntos y diccionarios es que el
+orden no necesariamente refleja el orden en que se introdujeron los
+elementos. Se dice que son contenedores sin orden.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">}</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;dos&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="s1">&#39;uno&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s1">&#39;tres&#39;</span> <span class="p">}</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">1</span> <span class="n">uno</span>
+<span class="mi">2</span> <span class="n">dos</span>
+<span class="mi">3</span> <span class="n">tres</span>
+</pre></div>
+</div>
+<div class="section" id="mutabilidad-en-listas">
+<h2>Mutabilidad en listas<a class="headerlink" href="#mutabilidad-en-listas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Las listas tienen algunas características especiales, que deben ser
+conocidas para evitar sorpresas. Por ejemplo, se trata de un tipo
+<em>mutable</em>. Esto quiere decir que podemos usar el operador de indexación
+(corchetes) al lado izquierdo de una asignación.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">19</span><span class="p">]</span> <span class="o">=</span> <span class="mi">58</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">12</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">58</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>La mutabilidad tiene consecuencias muy importantes. Vamos a ver una
+serie de ejemplos para ilustrarlas.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">consonantes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">]</span>
+<span class="n">vocales</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">]</span>
+<span class="n">letras</span> <span class="o">=</span> <span class="p">[</span><span class="n">consonantes</span><span class="p">,</span> <span class="n">vocales</span><span class="p">]</span>
+<span class="n">letras2</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>Aparentemente <code class="docutils literal"><span class="pre">letras</span></code> y <code class="docutils literal"><span class="pre">letras2</span></code> son lo mismo.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;letras =&#39;</span><span class="p">,</span> <span class="n">letras</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;letras2 =&#39;</span><span class="p">,</span> <span class="n">letras2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">letras</span> <span class="o">==</span> <span class="n">letras2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">letras</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">]]</span>
+<span class="n">letras2</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">]]</span>
+<span class="kc">True</span>
+</pre></div>
+</div>
+<p>Pero fíjate en el resultado de manipular la lista <code class="docutils literal"><span class="pre">vocales</span></code> sin tocar
+en absoluto la lista <code class="docutils literal"><span class="pre">letras</span></code>.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">vocales</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;letras =&#39;</span><span class="p">,</span> <span class="n">letras</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;letras2 =&#39;</span><span class="p">,</span> <span class="n">letras2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">letras</span> <span class="o">==</span> <span class="n">letras2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">letras</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">]]</span>
+<span class="n">letras2</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">]]</span>
+<span class="kc">False</span>
+</pre></div>
+</div>
+<p>Python no guarda el contenido de las listas <code class="docutils literal"><span class="pre">consonantes</span></code> y
+<code class="docutils literal"><span class="pre">vocales</span></code> como elementos de <code class="docutils literal"><span class="pre">letras</span></code>, sino que guarda una referencia
+al objeto original, que puede manipularse afectando a todas las
+variables que contienen referencias a esas listas.</p>
+<p>Podemos ver que se trata de objetos diferentes empleando la función
+<code class="docutils literal"><span class="pre">id</span></code> o bien con
+<a class="reference external" href="http://www.pythontutor.com/visualize.html#code=consonantes+%3D+%5B'b',+'c',+'d',+'f'%5D%0Avocales+%3D+%5B'a',+'e',+'i'%5D%0Aletras+%3D+%5Bconsonantes,+vocales%5D%0Aletras2+%3D+%5B%5B'b',+'c',+'d',+'f'%5D,+%5B'a',+'e',+'i'%5D%5D%0A&amp;mode=display&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=2&amp;rawInputLstJSON=%5B%5D&amp;curInstr=4">PythonTutor</a>.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">letras</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">letras2</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">912297503944</span> <span class="mi">912316674440</span>
+</pre></div>
+</div>
+<p>Esto tiene más implicaciones de las que vemos a primera vista, porque el
+paso de parámetros no es más que un caso particular de todo esto.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
+    <span class="n">lista</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;u&#39;</span><span class="p">)</span>
+
+<span class="n">f</span><span class="p">(</span><span class="n">letras2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">letras2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;u&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>Hasta ahora cuando pasábamos un valor a una función se trataba de una
+copia, que podía manipular a su antojo sin afectar al programa que
+llamaba. Por ejemplo:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cifras</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="mi">10</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">//=</span> <span class="mi">10</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">1985</span>
+<span class="n">cifras</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">5</span>
+<span class="mi">8</span>
+<span class="mi">9</span>
+<span class="mi">1</span>
+<span class="mi">1985</span>
+</pre></div>
+</div>
+<p>Al pasar una lista se está pasando una referencia al objeto
+correspondiente. Al tratarse de un objeto mutable la función puede
+devolver resultados a la función que llama sin ni siquiera usar
+<code class="docutils literal"><span class="pre">return</span></code>. Nunca hagas esto.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cifras</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">lista</span><span class="p">):</span>  <span class="c1"># Nunca hagas esto</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="mi">10</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">//=</span> <span class="mi">10</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">cifras</span><span class="p">(</span><span class="mi">1985</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Recuerda que programas para que otros lean tus programas. Si escondes el
+valor de retorno solo estás dificultando la lectura.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cifras</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="mi">10</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">//=</span> <span class="mi">10</span>
+    <span class="k">return</span> <span class="n">lista</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">cifras</span><span class="p">(</span><span class="mi">1985</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="slicing-en-listas">
+<h2>Slicing en listas<a class="headerlink" href="#slicing-en-listas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Se llama <em>slicing</em> (partir en rodajas) a las operaciones que seleccionan
+una parte de la lista, generando una nueva lista en principio más
+pequeña. Familiarízate con las operaciones de <em>slicing</em>, son las más
+frecuentes y no solo en listas.</p>
+<p>Veamos algunos ejemplos.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Cuando se selecciona una parte de la lista el resultado es una lista. En
+cambio si se usa un índice concreto (operación de indexación) el
+resultado es un elemento concreto. Eso es muy importante para manipular
+la lista. Veamos dos ejemplos en los que sustituimos el segundo
+elemento.</p>
+<p>En el primer caso usamos indexación, metemos como segundo elemento el
+resultado de la operación de slicing <code class="docutils literal"><span class="pre">L1[5:]</span></code>. Es decir, a partir del
+elemento 5.</p>
+<p>En el segundo caso sustituimos la lista <code class="docutils literal"><span class="pre">L2[1:1]</span></code> por la lista
+<code class="docutils literal"><span class="pre">L2[5:]</span></code>. Aunque <code class="docutils literal"><span class="pre">L2[1:1]</span></code> solo tenga un elemento sigue siendo una
+lista, no un elemento. Por eso al sustituir una lista por otra estamos
+insertando.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">L1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">L1</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span>
+<span class="n">L2</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">L2</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Un ejercicio interesante es practicar <em>slicing</em> para seleccionar las
+distintas partes de un Sudoku.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">sudoku</span> <span class="o">=</span> <span class="p">[</span>
+<span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>Practica con filas, y con elementos de una fila. Pero hasta que domines
+las <em>list comprehensions</em> que se cuentan más adelante no serás capaz de
+seleccionar los cuadrantes.</p>
+</div>
+<div class="section" id="metodos-de-una-lista">
+<h2>Métodos de una lista<a class="headerlink" href="#metodos-de-una-lista" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Familiarízate con los métodos de las listas. Se utilizan muchísimo.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Añadir un elemento al final.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Contar todas las apariciones del elemento <code class="docutils literal"><span class="pre">4</span></code>.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">2</span>
+</pre></div>
+</div>
+<p>Insertar el elemento <code class="docutils literal"><span class="pre">80</span></code> en la posición <code class="docutils literal"><span class="pre">3</span></code>.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">L</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Añadir al final los elementos de otra lista.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">L</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Eliminar la primera ocurrencia del elemento <code class="docutils literal"><span class="pre">4</span></code>.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">L</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Imprimir la posición del primer elemento de valor <code class="docutils literal"><span class="pre">4</span></code>.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">10</span>
+</pre></div>
+</div>
+<p>Eliminar el último de la lista devolviendo su valor. También se puede
+indicar una posición para eliminar uno cualquiera de la lista.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">4</span>
+</pre></div>
+</div>
+<p>Ordenar los elementos de la lista en orden creciente.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">L</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">80</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Invertir el orden de todos los elementos de la lista.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">L</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">80</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clonado-de-listas">
+<h2>Clonado de listas<a class="headerlink" href="#clonado-de-listas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Al modificar el contenido de la lista se puede afectar al recorrido de
+la lista. Por ejemplo, considera la siguiente función:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">borraDuplicados</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">):</span> <span class="c1"># ¡OJO! ¡Esta función es incorrecta!</span>
+    <span class="sd">&#39;&#39;&#39;Asume que L1 y L2 son listas.</span>
+<span class="sd">    Elimina todos los elementos de L1 que estén presentes en L2.&#39;&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L2</span><span class="p">:</span>
+            <span class="n">L1</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Veamos un posible uso de la función.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">borraDuplicados</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;L1 =&#39;</span><span class="p">,</span> <span class="n">L1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>¡Sorpresa! El número 2 está presente en <code class="docutils literal"><span class="pre">L2</span></code> pero no es eliminado de
+<code class="docutils literal"><span class="pre">L1</span></code>. ¿Qué ha pasado?</p>
+<p>El motivo es que el recorrido de la lista se realiza internamente con un
+contador que va desde el 0 (primer elemento) hasta <code class="docutils literal"><span class="pre">len(L1)</span></code> (sin
+incluirlo). En la primera iteración comprueba el elemento 0 y descubre
+que es un duplicado. Por tanto lo elimina, pero al eliminarlo el primer
+elemento deja de existir y su lugar es ocupado por el segundo elemento.
+El bucle <code class="docutils literal"><span class="pre">for</span></code> no tiene forma de saber que se ha cambiado el orden de
+los elementos y sigue por donde iba, por el segundo elemento. Pero el
+que ahora ocupa el segundo lugar es el que antes era el tercero. Se ha
+saltado el <code class="docutils literal"><span class="pre">2</span></code>.</p>
+<p><strong>La lección a recordar es que la mutación de una lista invalida los
+iteradores. Todos los ``for`` que recorran la lista y que se estén
+ejecutando en el momento de la mutación dejan de tener sentido.</strong></p>
+<p>Por tanto el recorrido debe separarse de la mutación, debe hacerse sobre
+objetos distintos. La forma más sencilla es clonando la lista. Es decir,
+creando otra lista con los mismos elementos. Y eso ya sabemos hacerlo:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">borraDuplicados</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Asume que L1 y L2 son listas.</span>
+<span class="sd">    Elimina todos los elementos de L1 que estén presentes en L2.&#39;&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L1</span><span class="p">[:]:</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L2</span><span class="p">:</span>
+            <span class="n">L1</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>La expresión <code class="docutils literal"><span class="pre">L1[:]</span></code> es una nueva lista que contiene todos los
+elementos de <code class="docutils literal"><span class="pre">L1</span></code>. Ahora el recorrido se hace sobre esa nueva lista,
+mientras que la operación de mutación <code class="docutils literal"><span class="pre">remove</span></code> se realiza sobre la
+lista <code class="docutils literal"><span class="pre">L1</span></code> original.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">borraDuplicados</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;L1 =&#39;</span><span class="p">,</span> <span class="n">L1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>El mismo resultado se obtiene con la llamada a la función <code class="docutils literal"><span class="pre">list(L1)</span></code>.
+Crea una nueva lista con los elementos de la que se pasa como argumento.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">borraDuplicados</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Asume que L1 y L2 son listas.</span>
+<span class="sd">    Elimina todos los elementos de L1 que estén presentes en L2.&#39;&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">L1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L2</span><span class="p">:</span>
+            <span class="n">L1</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Ambas opciones son perfectamente razonables en un programa Python. Cuál
+usar es un tema de gusto personal.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">borraDuplicados</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;L1 =&#39;</span><span class="p">,</span> <span class="n">L1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>¿Y si los elementos de la lista son a su vez mutables? Volvemos a tener
+el mismo problema. Al copiar los elementos cada uno de ellos debe
+crearse una nueva copia de su contenido. Veamos un ejemplo.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">frutas</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;pera&#39;</span><span class="p">,</span> <span class="s1">&#39;manzana&#39;</span><span class="p">,</span> <span class="s1">&#39;naranja&#39;</span> <span class="p">]</span>
+<span class="n">verduras</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;tomate&#39;</span><span class="p">,</span> <span class="s1">&#39;apio&#39;</span><span class="p">,</span> <span class="s1">&#39;puerro&#39;</span> <span class="p">]</span>
+<span class="n">productos</span> <span class="o">=</span> <span class="p">[</span> <span class="n">frutas</span><span class="p">,</span> <span class="n">verduras</span> <span class="p">]</span>
+
+<span class="n">productos2</span> <span class="o">=</span> <span class="n">productos</span><span class="p">[:]</span>
+<span class="n">frutas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;melon&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">productos2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="s1">&#39;pera&#39;</span><span class="p">,</span> <span class="s1">&#39;manzana&#39;</span><span class="p">,</span> <span class="s1">&#39;naranja&#39;</span><span class="p">,</span> <span class="s1">&#39;melon&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;tomate&#39;</span><span class="p">,</span> <span class="s1">&#39;apio&#39;</span><span class="p">,</span> <span class="s1">&#39;puerro&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>La forma más sencilla de realizar copias de objetos complejos es
+mediante la biblioteca <code class="docutils literal"><span class="pre">copy</span></code>.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">copy</span> <span class="k">import</span> <span class="n">deepcopy</span>
+
+<span class="n">productos2</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">productos</span><span class="p">)</span>
+<span class="n">verduras</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;calabaza&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">productos2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="s1">&#39;pera&#39;</span><span class="p">,</span> <span class="s1">&#39;manzana&#39;</span><span class="p">,</span> <span class="s1">&#39;naranja&#39;</span><span class="p">,</span> <span class="s1">&#39;melon&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;tomate&#39;</span><span class="p">,</span> <span class="s1">&#39;apio&#39;</span><span class="p">,</span> <span class="s1">&#39;puerro&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>Ahora las dos estructuras de datos son completamente independientes y al
+alterar una o parte de ella no notamos cambio alguno en la otra.</p>
+</div>
+<div class="section" id="comprensiones-de-listas">
+<h2>Comprensiones de listas<a class="headerlink" href="#comprensiones-de-listas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Una construcción muy importante en Python es la denominada <em>list
+comprehension</em> o comprensión de lista. Se trata de una notación compacta
+para generar listas (u otros contenedores) cuyos elementos se puedan
+escribir en forma de expresiones con los elementos de otra lista.</p>
+<p>Por ejemplo, una lista con los primeros 10 cuadrados de números
+naturales.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span> <span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>También se puede añadir una condición que actúa como filtro. Es decir,
+de los elementos generados solo los que cumplen la condición se incluyen
+en la lista. Por ejemplo, tenemos la función <code class="docutils literal"><span class="pre">os.listdir</span></code> que nos dice
+el contenido de una carpeta. Veamos que pasa si la llamo en el
+directorio de los cuadernos de la asignatura.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;.ipynb_checkpoints&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;BisectionSearch.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Datos AEMET.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Examen ordinario.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;ExamenExtraordinario.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Gráficas.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;lab-01.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;lab-02.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;lab-03.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Navegación web.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Paseo.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Problema de las 8 damas.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Procesamiento de XML.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Prueba de Progreso 1ºA.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Prueba de Progreso 1ºB.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Prueba de Progreso 1ºC.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;python-00.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;python-01.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;python-02.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;python-04-ejercicios.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;python-04.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;python-05-06-07.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;python-09.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;python-10.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;python-14.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;python-files.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Resumen.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Sudoku 2.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Sudoku 3.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Sudoku.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Untitled.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Untitled1.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Untitled2.ipynb&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Hay archivos que acaban en <code class="docutils literal"><span class="pre">.ipynb</span></code> que son cuadernos y otros que no.
+Hay archivos que corresponden al laboratorio, otros que son ejemplos no
+relacionados con un tema concreto y otros que son relativos a un tema
+concreto. Por ejemplo, los que empiezan por <code class="docutils literal"><span class="pre">python-</span></code> y acaban en
+<code class="docutils literal"><span class="pre">.ipynb</span></code> son cuadernos relativos a un tema. Vamos a generar una lista
+por comprensión.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.ipynb&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">f</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;python-&#39;</span><span class="p">)</span> <span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;python-00.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;python-01.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;python-02.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;python-04-ejercicios.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;python-04.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;python-05-06-07.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;python-09.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;python-10.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;python-14.ipynb&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;python-files.ipynb&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Volvamos al ejercicio del Sudoku. Vamos a seleccionar partes de él ahora
+que sabemos todo acerca de las <em>list comprehensions</em>.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">sudoku</span> <span class="o">=</span> <span class="p">[</span>
+<span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>Seleccionemos el cuadrante superior izquierdo.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">s</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sudoku</span><span class="p">[:</span><span class="mi">3</span><span class="p">]]</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>Ahora el inferior derecho.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="mi">6</span><span class="p">:]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sudoku</span><span class="p">[</span><span class="mi">6</span><span class="p">:]]</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>Ahora el del medio.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sudoku</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">]]</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>Ahora la tercera columna.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sudoku</span> <span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Practica tú. Haz por ejemplo que los cuadrantes aparezcan como una lista
+simple en lugar de una lista de listas.</p>
+<p>Piénsalo un poco por tí mismo y si no llegas a la solución sigue
+leyendo. A partir de aquí se pede considerar un uso avanzado de las
+<em>list comprehensions</em>. No te preocupes si no las entiendes.</p>
+<p>Por ejemplo, el cuadrante superior izquierdo:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="n">i</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sudoku</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>El cuadrante inferior derecho:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="n">i</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sudoku</span><span class="p">[</span><span class="mi">6</span><span class="p">:]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="mi">6</span><span class="p">:]</span> <span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>El del medio:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="n">i</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sudoku</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span> <span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Piensa ahora una función para devolver el cuadrante (x, y) siendo x e y
+números entre 0 y 2.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cuadrante</span><span class="p">(</span><span class="n">sudoku</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span> <span class="n">i</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sudoku</span><span class="p">[</span><span class="mi">3</span><span class="o">*</span><span class="n">y</span><span class="p">:][:</span><span class="mi">3</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="p">:][:</span><span class="mi">3</span><span class="p">]</span> <span class="p">]</span>
+</pre></div>
+</div>
+<p>Veamos para probarlo los cuadrantes centrales.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cuadrante</span><span class="p">(</span><span class="n">sudoku</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cuadrante</span><span class="p">(</span><span class="n">sudoku</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cuadrante</span><span class="p">(</span><span class="n">sudoku</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Capítulo anterior - Abstracción con funciones' data-toggle="tooltip">
+    <a href="python-05-06-07.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="python-05-06-07.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - Ejemplos de divide y vencerás' data-toggle="tooltip" >
+    <a href="python-10.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="python-10.html" >Next Section - Ejemplos de divide y vencerás</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017 Francisco Moya.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
