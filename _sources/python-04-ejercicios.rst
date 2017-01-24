@@ -1,3 +1,5 @@
+Ejercicios
+==========
 
 Haz un programa que imprima la suma de los 10 números que se introduzcan
 por pantalla.

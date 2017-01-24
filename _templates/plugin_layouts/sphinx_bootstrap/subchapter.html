@@ -1,5 +1,5 @@
 {%- if prev %}
-  <li id="relations-prev" class="navLink" title='Previous Section - {{ prev.title }}' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Capítulo anterior - {{ prev.title }}' data-toggle="tooltip">
     <a href="{{ prev.link|e }}" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
@@ -8,7 +8,7 @@
   {% endif %}
 
 {%- if next %}
-  <li id="relations-next" class="navLink" title='Next Section - {{ next.title }}' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - {{ next.title }}' data-toggle="tooltip" >
     <a href="{{ next.link|e }}" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>

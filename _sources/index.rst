@@ -17,11 +17,10 @@ Informática para ingenieros
    python-12.rst
    python-14.rst
    BisectionSearch.rst
-   Datos AEMET.rst
+   Datos_AEMET.rst
    ejercicios.rst
    ExamenExtraordinario.rst
    Examen ordinario.rst
-   exb.rst
    Gráficas.rst
    hanoi.rst
    install.rst

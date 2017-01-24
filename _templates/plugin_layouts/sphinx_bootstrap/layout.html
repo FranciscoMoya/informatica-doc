@@ -62,6 +62,15 @@
 
       <ul class="nav navbar-nav navbar-right">
 
+        <!--<li class="divider-vertical"></li>-->
+        {% block sidebartoc %}
+          {% include "localtoc.html" %}
+          <!--<li class="divider-vertical"></li>-->
+        {% endblock %}
+        <!--{% block sidebarrel %}
+          {% include "relations.html" %}
+        {% endblock %}-->
+
         <li class="divider-vertical"></li>
 
         <!-- search dropdown -->
@@ -134,6 +143,9 @@
           </a>
           <ul class="dropdown-menu user-menu">
             <li><a href="{{ pathto('_static/navhelp') }}">Ayuda a la navegación</a></li>
+            {% if theme_source_link_position == "nav" %}
+            <li>{% include "sourcelink.html" %}</li>
+            {% endif %}
             <li class="divider"></li>
             <li><a href='http://runestoneinteractive.org'>Acerca de Runestone</a></li>
           </ul>
@@ -142,20 +154,6 @@
 
         <li class="divider-vertical"></li>
 
-      </ul>
-
-      <ul class="nav navbar-nav">
-        <li class="divider-vertical"></li>
-        <!--{% block sidebartoc %}
-          {% include "localtoc.html" %}
-          <li class="divider-vertical"></li>
-        {% endblock %}
-        {% block sidebarrel %}
-          {% include "relations.html" %}
-        {% endblock %}-->
-        {% if theme_source_link_position == "nav" %}
-          <li>{% include "sourcelink.html" %}</li>
-        {% endif %}
       </ul>
 
     </div>

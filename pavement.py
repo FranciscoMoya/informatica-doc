@@ -12,19 +12,19 @@ sys.path.append(os.getcwd())
 home_dir = os.getcwd()
 master_url = 'http://127.0.0.1:8000'
 master_app = 'runestone'
-serving_dir = "./build/informatica"
+serving_dir = "./docs/informatica"
 dest = "../../static"
 
 options(
     sphinx = Bunch(docroot=".",),
 
     build = Bunch(
-        builddir="./build/informatica",
+        builddir="./docs/informatica",
         sourcedir="_sources",
-        outdir="./build/informatica",
+        outdir="./docs/informatica",
         confdir=".",
         project_name = "informatica",
-        template_args={'course_id': 'informatica',
+        template_args={'course_id': 'CS101',
                        'login_required':'false',
                        'appname':master_app,
                        'loglevel': 0,

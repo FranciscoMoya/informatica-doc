@@ -1,5 +1,5 @@
-
- # Lab 1.1: Familiarización
+Lab 1.1: Familiarización
+========================
 
 Bienvenidos al laboratorio. Ya nos hemos familiarizado con un buen
 número de características de Python y seguro que ya has hecho tus

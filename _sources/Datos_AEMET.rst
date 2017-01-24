@@ -1,3 +1,5 @@
+Trabajo en grupo 2015 (Datos AEMET)
+===================================
 
 Probablemente lo más complejo del trabajo es pensar un modelo para
 almacenar la predicción. Esta propuesta de solución asume que las
@@ -261,7 +263,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_1.png
+.. image:: Datos AEMET_files/Datos AEMET_7_1.png
 
 
 .. parsed-literal::
@@ -270,7 +272,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_3.png
+.. image:: Datos AEMET_files/Datos AEMET_7_3.png
 
 
 .. parsed-literal::
@@ -279,7 +281,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_5.png
+.. image:: Datos AEMET_files/Datos AEMET_7_5.png
 
 
 .. parsed-literal::
@@ -288,7 +290,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_7.png
+.. image:: Datos AEMET_files/Datos AEMET_7_7.png
 
 
 .. parsed-literal::
@@ -297,7 +299,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_9.png
+.. image:: Datos AEMET_files/Datos AEMET_7_9.png
 
 
 .. parsed-literal::
@@ -306,7 +308,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_11.png
+.. image:: Datos AEMET_files/Datos AEMET_7_11.png
 
 
 .. parsed-literal::
@@ -315,7 +317,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_13.png
+.. image:: Datos AEMET_files/Datos AEMET_7_13.png
 
 
 .. parsed-literal::
@@ -324,7 +326,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_15.png
+.. image:: Datos AEMET_files/Datos AEMET_7_15.png
 
 
 .. parsed-literal::
@@ -333,7 +335,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_17.png
+.. image:: Datos AEMET_files/Datos AEMET_7_17.png
 
 
 .. parsed-literal::
@@ -342,7 +344,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_19.png
+.. image:: Datos AEMET_files/Datos AEMET_7_19.png
 
 
 .. parsed-literal::
@@ -351,7 +353,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_21.png
+.. image:: Datos AEMET_files/Datos AEMET_7_21.png
 
 
 .. parsed-literal::
@@ -360,7 +362,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_23.png
+.. image:: Datos AEMET_files/Datos AEMET_7_23.png
 
 
 .. parsed-literal::
@@ -369,7 +371,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_25.png
+.. image:: Datos AEMET_files/Datos AEMET_7_25.png
 
 
 .. parsed-literal::
@@ -378,7 +380,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_27.png
+.. image:: Datos AEMET_files/Datos AEMET_7_27.png
 
 
 .. parsed-literal::
@@ -387,7 +389,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_29.png
+.. image:: Datos AEMET_files/Datos AEMET_7_29.png
 
 
 .. parsed-literal::
@@ -396,7 +398,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_31.png
+.. image:: Datos AEMET_files/Datos AEMET_7_31.png
 
 
 .. parsed-literal::
@@ -405,7 +407,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_33.png
+.. image:: Datos AEMET_files/Datos AEMET_7_33.png
 
 
 .. parsed-literal::
@@ -414,7 +416,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_35.png
+.. image:: Datos AEMET_files/Datos AEMET_7_35.png
 
 
 .. parsed-literal::
@@ -423,7 +425,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_37.png
+.. image:: Datos AEMET_files/Datos AEMET_7_37.png
 
 
 .. parsed-literal::
@@ -432,7 +434,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_39.png
+.. image:: Datos AEMET_files/Datos AEMET_7_39.png
 
 
 .. parsed-literal::
@@ -441,7 +443,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_41.png
+.. image:: Datos AEMET_files/Datos AEMET_7_41.png
 
 
 .. parsed-literal::
@@ -450,7 +452,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_43.png
+.. image:: Datos AEMET_files/Datos AEMET_7_43.png
 
 
 .. parsed-literal::
@@ -459,7 +461,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_45.png
+.. image:: Datos AEMET_files/Datos AEMET_7_45.png
 
 
 .. parsed-literal::
@@ -468,7 +470,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_47.png
+.. image:: Datos AEMET_files/Datos AEMET_7_47.png
 
 
 .. parsed-literal::
@@ -477,7 +479,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_49.png
+.. image:: Datos AEMET_files/Datos AEMET_7_49.png
 
 
 .. parsed-literal::
@@ -486,7 +488,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_51.png
+.. image:: Datos AEMET_files/Datos AEMET_7_51.png
 
 
 .. parsed-literal::
@@ -495,7 +497,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_53.png
+.. image:: Datos AEMET_files/Datos AEMET_7_53.png
 
 
 .. parsed-literal::
@@ -504,7 +506,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_55.png
+.. image:: Datos AEMET_files/Datos AEMET_7_55.png
 
 
 .. parsed-literal::
@@ -513,7 +515,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_57.png
+.. image:: Datos AEMET_files/Datos AEMET_7_57.png
 
 
 .. parsed-literal::
@@ -522,7 +524,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_59.png
+.. image:: Datos AEMET_files/Datos AEMET_7_59.png
 
 
 .. parsed-literal::
@@ -531,7 +533,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_61.png
+.. image:: Datos AEMET_files/Datos AEMET_7_61.png
 
 
 .. parsed-literal::
@@ -540,7 +542,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_63.png
+.. image:: Datos AEMET_files/Datos AEMET_7_63.png
 
 
 .. parsed-literal::
@@ -549,7 +551,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_65.png
+.. image:: Datos AEMET_files/Datos AEMET_7_65.png
 
 
 .. parsed-literal::
@@ -558,7 +560,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_67.png
+.. image:: Datos AEMET_files/Datos AEMET_7_67.png
 
 
 .. parsed-literal::
@@ -567,7 +569,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_69.png
+.. image:: Datos AEMET_files/Datos AEMET_7_69.png
 
 
 .. parsed-literal::
@@ -576,7 +578,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_71.png
+.. image:: Datos AEMET_files/Datos AEMET_7_71.png
 
 
 .. parsed-literal::
@@ -585,7 +587,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_73.png
+.. image:: Datos AEMET_files/Datos AEMET_7_73.png
 
 
 .. parsed-literal::
@@ -594,7 +596,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_75.png
+.. image:: Datos AEMET_files/Datos AEMET_7_75.png
 
 
 .. parsed-literal::
@@ -603,7 +605,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_77.png
+.. image:: Datos AEMET_files/Datos AEMET_7_77.png
 
 
 .. parsed-literal::
@@ -612,7 +614,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_79.png
+.. image:: Datos AEMET_files/Datos AEMET_7_79.png
 
 
 .. parsed-literal::
@@ -621,7 +623,7 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_81.png
+.. image:: Datos AEMET_files/Datos AEMET_7_81.png
 
 
 .. parsed-literal::
@@ -630,6 +632,6 @@ usar las capacidades interactivas de IPython Notebook.
 
 
 
-.. image:: Datos%20AEMET_files/Datos%20AEMET_7_83.png
+.. image:: Datos AEMET_files/Datos AEMET_7_83.png
 
 
