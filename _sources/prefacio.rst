@@ -73,20 +73,24 @@ pasado ya a muchos compañeros.
   profesional se verá afectada, porque la programación de computadores
   es la herramienta más efectiva del ingeniero moderno.
 
-Por favor, sigue este consejo al pie de la letra.  Destina 6 horas a
-la semana a practicar, a programar.  No dejes pasar ninguna semana con
-menos de 4.5 horas de dedicación a la asignatura y compensa las
-semanas que dedicas menos de 6 horas dedicando más horas en la
-siguiente.  Es igual si se trata de los ejercicios, el trabajo en
-grupo u otros retos que encuentres en Internet.  Lee el libro a toda
-velocidad y practica.  Ya volverás al libro cuando lo necesites.  Los
-ejercicios no son escoyos que hay que superar, sino instrumentos para
-desarrollar y mejorar tu pensamiento computacional.  Piensa en ellos
-como ejercicios de gimnasia.  Por tanto no se trata de entregarlos
-cuando funcionan, sino de re-elaborarlos hasta que creas que están
-como deben.  No dudes en rehacer ejercicios que funcionan si crees que
-no han quedado suficientemente claros y, especialmente, cuando
-aprendas nuevas técnicas o construcciones.
+.. warning:: Destina 6 horas a la semana a practicar, a programar. No
+             dejes pasar ninguna semana con menos de 4.5 horas de
+             dedicación a la asignatura y compensa las semanas que
+             dedicas menos de 6 horas dedicando más horas en la
+             siguiente. 
+
+Es esencial practicar.  Es igual si se trata de los ejercicios, el
+trabajo en grupo u otros retos que encuentres en Internet.  Lee el
+libro a toda velocidad y practica.  Ya volverás al libro cuando lo
+necesites.
+
+Los ejercicios no son escoyos que hay que superar, sino instrumentos
+para desarrollar y mejorar tu pensamiento computacional.  Piensa en
+ellos como ejercicios de gimnasia.  Por tanto no se trata de
+entregarlos cuando funcionan, sino de re-elaborarlos hasta que creas
+que están como deben.  No dudes en rehacer ejercicios que funcionan si
+crees que no han quedado suficientemente claros y, especialmente,
+cuando aprendas nuevas técnicas o construcciones.
 
 Un último consejo. Hay una infinidad de recursos para aprender a
 programar pero los mejores están en inglés.  Si eso es un problema
@@ -170,10 +174,13 @@ años.  La estructura responde aproximadamente al libro de John Guttag,
 `Introduction to Computation and Programming Using Python
 <https://mitpress.mit.edu/books/introduction-computation-and-programming-using-python-0>`_
 con clara influencia de `Composing Programs
-<http://www.composingprograms.com/>`_ de John DeNero.  Cuando el
-inglés deje de ser un problema para ti consulta los originales, están
-maravillosamente escritos, contienen mucha más información y están
-ampliamente revisados.
+<http://www.composingprograms.com/>`_ de John DeNero.  La forma en que
+resolvemos los casos de estudio está inspirada en `Clean Code
+<https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882>`_
+de Robert C. Martin, uno de los libros más influyentes de los últimos
+años.  Cuando el inglés deje de ser un problema para ti consulta los
+originales, están maravillosamente escritos, contienen mucha más
+información y están ampliamente revisados.
 
 No vamos a describir un lenguaje de programación de principio a fin.
 Para eso hay muchos libros, incluso en castellano.  Déjame
@@ -196,6 +203,44 @@ querido centrarlo en la solución de problemas.  Trataremos de darte un
 conjunto de consejos que te garantizarán el éxito en la mayoría de tus
 proyectos.  Te describimos un proceso sistemático y un abanico de
 métodos para resolver problemas.
+
+El libro consta de tres materias relativamente independientes que se
+entrelazan para impartirse de forma concurrente.  Aunque hemos puesto
+cuidado de respetar las dependencias entre ellas es posible que en
+algún punto tengamos que anticipar aspectos que serán descritos más
+adelante.
+
+1. En primer lugar hay un bloque de capítulos dedicados a la
+   programación en Python.  Nuestro objetivo es ir tan rápido como
+   podamos en la primera parte del curso para llegar al punto en el
+   que podemos trabajar con los tres elementos básicos de la
+   programación de computadores: primitivas, composición y
+   abstracción.  Introducimos las funciones mucho antes que la mayoría
+   de los textos sobre Python, porque es el mecanismo de abstracción
+   básico sobre el que vamos a construir.  En cambio estructuras de
+   datos, iteradores y generadores quedan relegados hasta que tenemos
+   bien establecida la metodología de resolución de problemas.  Si te
+   confunde esta forma de enfocarlo lee antes uno de los libros de
+   Python que te recomendamos.
+
+2. De forma concurrente vemos un conjunto de métodos de resolución de
+   problemas con un computador.  Entre los métodos que veremos está la
+   enumeración exhaustiva, la búsqueda por bisección, el método de
+   Newton-Raphson, el método de divide y vencerás, programación
+   dinámica, programación orientada a objetos, métodos voraces,
+   backtracking, etc.  Ilustraremos los métodos con algoritmos de todo
+   tipo (aritméticos, de ordenación, de búsqueda, de clasificación,
+   etc.)
+
+3. También de forma concurrente y repartido por el texto intentamos
+   plasmar nuestra visión de cómo debes programar.  Vamos a insistir
+   mucho en diseño *top-down*, descomponer en funciones muy pequeñas,
+   usar nombres con sentido y evitar los problemas potenciales con
+   programación defensiva, con pruebas unitarias y con funciones sin
+   efectos de lado.  Te enseñaremos a encontrar los errores de tus
+   programas pero esto funcionará especialmente bien si sigues el
+   resto de consejos.
+
 
 Organización del curso
 ----------------------
