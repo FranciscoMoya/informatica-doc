@@ -1,7 +1,6 @@
 1. Introducción
 ===============
 
-
 Empieza a programar ya. No tienes excusa, si estás leyendo ésto es que
 tienes un navegador y por tanto puedes probar el código que aparece en
 la siguiente celda editable:
@@ -12,9 +11,11 @@ la siguiente celda editable:
 
 Ahora pulsa el botón *Run* de la barra de botones. Verás que el
 mensaje entre comillas aparece junto a la celda editable. Ya has hecho
-tu primer programa, es así de simple. Prueba a cambiar el mensaje,
+tu primer programa, es así de simple.  Prueba a cambiar el mensaje,
 poniendo eñes, tildes o signos de puntuación y volviendo a pulsar
-*Run*.
+*Run*.  Probar es esencial, aunque te parezca tonto hazlo, tienes que
+desarrollar tu intuición para ver cómo puedes cambiar un programa para
+que haga lo que tú quieres.
 
 1.1 Instalación del software
 ----------------------------
@@ -76,7 +77,9 @@ nombre de usuario es ``Francisco.Moya``). Ahora debería funcionar ``pip``.
 
 3. Introduce las siguientes órdenes en la ventana del *Terminal*.
 
-``pip install ipython   pip install jupyter``
+::
+   pip install ipython   
+   pip install jupyter
 
 1.2 Ejecutar Python
 -------------------
@@ -97,8 +100,22 @@ documentos que explican poco a poco los programas.  Puedes probarlo
 también en línea, sin instalar nada, visitando `try.jupyter.org
 <https://try.jupyter.org/>`_.
 
+.. warning:: En lo sucesivo asumiremos que el alumno usa Microsoft
+             Windows porque es la opción más frecuente.  Si eres
+             usuario de otro sistema operativo trata de adaptar las
+             instrucciones o pide ayuda en el foro del Campus Virtual.
+
 1.2.1 Hola mundo con IDLE
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Pulsa la tecla del logo de :kbd:`Windows` y teclea ``idle``.  Si has
+instalado correctamente Python aparecerá ``IDLE (Python 3.5)`` o algo
+similar.  Pulsa :kbd:`Intro` y la ventana principal de IDLE aparecerá.
+
+.. figure:: idle-main.png
+   :align: center
+   :figwidth: 60%
+   :alt: Ventana principal de IDLE.
 
 1.2.2 Hola mundo con Jupyter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
