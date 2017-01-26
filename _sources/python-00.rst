@@ -209,14 +209,58 @@ Inmediatamente aparecerá en la ventana principal lo siguiente:
 
 Como ves los programas Python se ejecutan siempre en la ventana
 principal.  Sin embargo puedes tener un número arbitrario de ventanas
-de edición en las que editas tus programas.
+de edición en las que editas tus programas.  
+
+El ciclo *editar - ejecutar* debe ser muy ágil. Debes acostumbrarte a
+editar rápido con pequeños cambios que puedas probar y ejecutar
+pulsando :kbd:`F5` para comprobar esos cambios.  Evita escribir mucho
+código sin probarlo.  Lo más probable es que no funcione a la primera
+y es mucho más difícil depurar (corregir) un programa grande que uno
+pequeño.
 
 
 1.2.2 Hola mundo con Jupyter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Otra forma de ejecutar Python es 
+Otra forma de ejecutar Python es mediante un cuaderno *Jupyter*.  Este
+entorno es más bien un editor de documentos en los que puedes insertar
+programas o fragmentos de un programa, así como los resultados
+producidos por su ejecución.  Un aspecto interesante es que utiliza un
+navegador web como interfaz de usuario.  Entre otras cosas eso hace
+que el usuario pueda disponer de un sinfin de características
+avanzadas del navegador (gráficos, animaciones, tipografía avanzada,
+etc.).
 
+*Jupyter* puede utilizarse en línea sin necesidad de instalar nada
+pero te recomendamos instalarlo en tu propio ordenador para evitar
+problemas.  Los servicios en línea de *Jupyter* que son gratuitos no
+tienen muchas garantías de disponibilidad.  Por si quieres probar
+éstos son algunos:
+
+- `Microsoft Azure Notebooks <https://notebooks.azure.com/>`_ Es la
+  versión de Microsoft desplegada sobre sus servicios en la nube,
+  Azure.  Está en fase de pruebas (*preview*) y mientras eso ocurra es
+  totalmente gratuito.  Tarde o temprano será un servicio de pago,
+  pero siempre habrá una capa gratuita (*free tier*).  Es decir, con
+  ciertas limitaciones siempre podrás utilizarlo de forma gratuita.
+
+- `IBM Data Scientist Workbench
+  <https://datascientistworkbench.com/>`_ Es algo lento para
+  arrancar un cuaderno y la interfaz no está tan cuidada como en otros
+  servicios, pero el soporte para computación científica es excelente.
+
+- `SageMathCloud <https://cloud.sagemath.com/settings>`_ Es mucho más
+  que cuadernos *Jupyter*, pero una de las cosas que permite hacer en
+  un proyecto es crear cuadernos de Jupyter.  El uso sin *upgrades* es
+  gratuito pero puede no estar disponible en las horas pico.
+
+- `Binder <http://mybinder.org/>`_ te permite almacenar cuadernos
+  Jupyter en un repositorio `GitHub <https://github.com>`_ y el
+  servicio de *binder* los permite ejecutar en línea.  Es una forma
+  excelente de colaborar en trabajos que puedes haber editado con
+  cualquiera de las otras opciones.
+
+- Cuadernos Jupyter `temporales <http
 Para ejecutar un entorno similar a `tmpnb.org <http://tmpnb.org>`_ en
 tu propio ordenador con la capacidad de guardar los cuadernos en disco
 basta con ejecutar el intérprete de órdenes (``cmd.exe`` en Windows o
