@@ -211,7 +211,7 @@ algún punto tengamos que anticipar aspectos que serán descritos más
 adelante.
 
 1. En primer lugar hay un bloque de capítulos dedicados a la
-   programación en Python.  Nuestro objetivo es ir tan rápido como
+   **programación en Python**.  Nuestro objetivo es ir tan rápido como
    podamos en la primera parte del curso para llegar al punto en el
    que podemos trabajar con los tres elementos básicos de la
    programación de computadores: primitivas, composición y
@@ -223,8 +223,8 @@ adelante.
    confunde esta forma de enfocarlo lee antes uno de los libros de
    Python que te recomendamos.
 
-2. De forma concurrente vemos un conjunto de métodos de resolución de
-   problemas con un computador.  Entre los métodos que veremos está la
+2. De forma concurrente vemos un conjunto de **métodos de resolución de
+   problemas** con un computador.  Entre los métodos que veremos está la
    enumeración exhaustiva, la búsqueda por bisección, el método de
    Newton-Raphson, el método de divide y vencerás, programación
    dinámica, programación orientada a objetos, métodos voraces,
@@ -233,13 +233,13 @@ adelante.
    etc.)
 
 3. También de forma concurrente y repartido por el texto intentamos
-   plasmar nuestra visión de cómo debes programar.  Vamos a insistir
-   mucho en diseño *top-down*, descomponer en funciones muy pequeñas,
-   usar nombres con sentido y evitar los problemas potenciales con
-   programación defensiva, con pruebas unitarias y con funciones sin
-   efectos de lado.  Te enseñaremos a encontrar los errores de tus
-   programas pero esto funcionará especialmente bien si sigues el
-   resto de consejos.
+   plasmar nuestra visión de **cómo debes programar**.  Vamos a
+   insistir mucho en diseño *top-down*, descomponer en funciones muy
+   pequeñas, usar nombres con sentido y evitar los problemas
+   potenciales con programación defensiva, con pruebas unitarias y con
+   funciones sin efectos de lado.  Te enseñaremos a encontrar los
+   errores de tus programas pero esto funcionará especialmente bien si
+   sigues el resto de consejos.
 
 
 Organización del curso

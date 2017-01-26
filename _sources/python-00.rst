@@ -5,7 +5,8 @@ Empieza a programar ya. No tienes excusa, si estás leyendo ésto es que
 tienes un navegador y por tanto puedes probar el código que aparece en
 la siguiente celda editable:
 
-.. activecode:: hello-world
+.. activecode:: Hola_Mundo
+    :nocodelens:
 
     print('Hola, Mundo')
 
@@ -13,7 +14,13 @@ Ahora pulsa el botón *Run* de la barra de botones. Verás que el
 mensaje entre comillas aparece junto a la celda editable. Ya has hecho
 tu primer programa, es así de simple.  Prueba a cambiar el mensaje,
 poniendo eñes, tildes o signos de puntuación y volviendo a pulsar
-*Run*.  Probar es esencial, aunque te parezca tonto hazlo, tienes que
+*Run*.
+
+Prueba ahora a sustituir todo el mensaje entre comillas, incluídas las
+comillas por un número y pulsa *Run*.  Prueba también a poner una
+expresión aritmética, por ejemplo `124 + (12 - 1.5) * 0.21`.
+
+Probar es esencial, aunque te parezca tonto hazlo, tienes que
 desarrollar tu intuición para ver cómo puedes cambiar un programa para
 que haga lo que tú quieres.
 
@@ -44,7 +51,8 @@ ordenador.
 3. Escribe las siguientes órdenes en la ventana del intérprete de
    órdenes:
 
-::
+.. code::
+   
    pip install ipython
    pip install jupyter
 
@@ -54,7 +62,8 @@ no se ha añadido correctamente al ``PATH``. Añade manualmente las
 siguientes rutas a la variable de entorno ``Path``. En el propio
 intérprete de órdenes:
 
-::
+.. code::
+   
     setx PATH "%PATH%;C:\Users\<usuario>\AppData\Local\Programs\Python\Python35"
     setx PATH "%PATH%;C:\Users\<usuario>\AppData\Local\Programs\Python\Python35\Scripts"
 
@@ -77,8 +86,9 @@ nombre de usuario es ``Francisco.Moya``). Ahora debería funcionar ``pip``.
 
 3. Introduce las siguientes órdenes en la ventana del *Terminal*.
 
-::
-   pip install ipython   
+.. code::
+   
+   pip install ipython
    pip install jupyter
 
 1.2 Ejecutar Python
@@ -112,19 +122,107 @@ Pulsa la tecla del logo de :kbd:`Windows` y teclea ``idle``.  Si has
 instalado correctamente Python aparecerá ``IDLE (Python 3.5)`` o algo
 similar.  Pulsa :kbd:`Intro` y la ventana principal de IDLE aparecerá.
 
-.. figure:: idle-main.png
+.. figure:: _static/idle-main.png
    :align: center
    :figwidth: 60%
    :alt: Ventana principal de IDLE.
 
+         
+La ventana principal es una consola interactiva de Python.  El símbolo
+``>>>`` invita a introducir nuevas órdenes en Python.  Se conoce por
+su nombre en inglés, *prompt*.
+
+Cuando Python se ejecuta en modo interactivo ejecuta las órdenes tan
+pronto como se introducen.  Por ejemplo, si introducimos el contenido
+del programa `Hola_Mundo` veremos el resultado inmediatamente.
+
+.. code::
+
+   >>> print('Hola Mundo')
+   Hola Mundo
+   >>> ▂
+
+El modo interactivo es extraordinariamente útil para experimentar.
+Una característica interesante de este modo es que el resultado de las
+expresiones que se introducen se muestra automáticamente, como si
+hubiéramos usado ``print``.  Por ejemplo:
+
+
+.. code::
+
+   >>> 123.92 * 0.21
+   26.0232
+   >>> ▂
+
+Es decir, funciona como una calculadora avanzada.
+
+Sin embargo lo normal será que utilicemos archivos de texto para
+escribir nuestros programas.  De esta forma podrán almacenarse en el
+disco para ejecutarlos tantas veces como deseemos.
+
+.. warning:: Los programas se escriben en archivos de texto, no en
+             documentos.  No utilices *Microsoft Word* para programar.
+             Utiliza IDLE o Jupyter.
+
+             Un archivo de texto solo contiene el programa.  Por
+             contra, un documento contiene además gran cantidad de
+             información acerca de estilos, tipos de letra, formato de
+             página, alineamiento, etc.  Nada de eso será capaz de
+             entenderlo el intérprete de Python.
+
+Selecciona ahora la opción de menú :menuselection:`File-->New File` o
+pulsa las teclas :kbd:`Control-N`.  Aparecerá una nueva ventana
+similar a la principal, pero en este caso no hay intérprete de Python.
+
+.. figure:: _static/idle-new-file.png
+   :align: center
+   :figwidth: 60%
+   :alt: Nuevo archivo en IDLE.
+
+Es un editor de archivos de texto especialmente indicado para editar
+programas en Python. Escribe ahora el programa `Hola_Mundo` en la
+nueva ventana.  Cuando termines selecciona el menú
+:menuselection:`Run-->Run Module` o pulsa :kbd:`F5`.  La primera vez
+que lo hagas IDLE avisará de que el archivo no está guardado y debe
+guardarse antes de ejecutarlo.
+
+.. figure:: _static/idle-must-save.png
+   :align: center
+   :figwidth: 60%
+   :alt: Advertencia para grabar archivo.
+
+Pulsa *OK* y escribe un nombre (por ejemplo `hola`) en el cuadro de
+diálogo que se muestra a continuación:
+
+.. figure:: _static/idle-save-as.png
+   :align: center
+   :figwidth: 60%
+   :alt: Diálogo para guardar archivo.
+
+Inmediatamente aparecerá en la ventana principal lo siguiente:
+
+.. code::
+
+   ======================== RESTART: /home/paco/hola.py ========================
+   Hola Mundo
+   >>> ▂
+
+Como ves los programas Python se ejecutan siempre en la ventana
+principal.  Sin embargo puedes tener un número arbitrario de ventanas
+de edición en las que editas tus programas.
+
+
 1.2.2 Hola mundo con Jupyter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Otra forma de ejecutar Python es 
 
 Para ejecutar un entorno similar a `tmpnb.org <http://tmpnb.org>`_ en
 tu propio ordenador con la capacidad de guardar los cuadernos en disco
 basta con ejecutar el intérprete de órdenes (``cmd.exe`` en Windows o
 *Terminal* en Mac OS X) e introducir la siguiente orden.
 
-::
+.. code::
+   
    jupyter notebook
 

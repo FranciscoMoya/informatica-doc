@@ -23,7 +23,6 @@ Informática para ingenieros
    Examen ordinario.rst
    Gráficas.rst
    hanoi.rst
-   install.rst
    lab-01.rst
    lab-02.rst
    lab-03.rst
