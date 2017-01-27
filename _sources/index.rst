@@ -14,7 +14,6 @@ Mancha*.
    prefacio.rst
    intro.rst
    elem.rst
-   python-02.rst
    python-04-ejercicios.rst
    python-04.rst
    python-05-06-07.rst
@@ -55,3 +54,4 @@ Mancha*.
    tour-caballo.rst
    trabajo-grupo.rst
 
+   about.rst
