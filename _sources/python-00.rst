@@ -227,7 +227,7 @@ entorno es más bien un editor de documentos en los que puedes insertar
 programas o fragmentos de un programa, así como los resultados
 producidos por su ejecución.  Un aspecto interesante es que utiliza un
 navegador web como interfaz de usuario.  Entre otras cosas eso hace
-que el usuario pueda disponer de un sinfin de características
+que el usuario pueda disponer de un sinfín de características
 avanzadas del navegador (gráficos, animaciones, tipografía avanzada,
 etc.).
 
@@ -235,9 +235,9 @@ etc.).
 pero te recomendamos instalarlo en tu propio ordenador para evitar
 problemas.  Los servicios en línea de *Jupyter* que son gratuitos no
 tienen muchas garantías de disponibilidad.  Por si quieres probar
-éstos son algunos:
+éstos son algunos de los mejores:
 
-- `Microsoft Azure Notebooks <https://notebooks.azure.com/>`_ Es la
+- `Microsoft Azure Notebooks <https://notebooks.azure.com/>`_ es la
   versión de Microsoft desplegada sobre sus servicios en la nube,
   Azure.  Está en fase de pruebas (*preview*) y mientras eso ocurra es
   totalmente gratuito.  Tarde o temprano será un servicio de pago,
@@ -245,11 +245,11 @@ tienen muchas garantías de disponibilidad.  Por si quieres probar
   ciertas limitaciones siempre podrás utilizarlo de forma gratuita.
 
 - `IBM Data Scientist Workbench
-  <https://datascientistworkbench.com/>`_ Es algo lento para
+  <https://datascientistworkbench.com/>`_ es algo lento para
   arrancar un cuaderno y la interfaz no está tan cuidada como en otros
   servicios, pero el soporte para computación científica es excelente.
 
-- `SageMathCloud <https://cloud.sagemath.com/settings>`_ Es mucho más
+- `SageMathCloud <https://cloud.sagemath.com/settings>`_ es mucho más
   que cuadernos *Jupyter*, pero una de las cosas que permite hacer en
   un proyecto es crear cuadernos de Jupyter.  El uso sin *upgrades* es
   gratuito pero puede no estar disponible en las horas pico.
@@ -258,15 +258,111 @@ tienen muchas garantías de disponibilidad.  Por si quieres probar
   Jupyter en un repositorio `GitHub <https://github.com>`_ y el
   servicio de *binder* los permite ejecutar en línea.  Es una forma
   excelente de colaborar en trabajos que puedes haber editado con
-  cualquiera de las otras opciones.
+  cualquiera de las otras opciones, o en tu propio ordenador.
 
-- Cuadernos Jupyter `temporales <http
-Para ejecutar un entorno similar a `tmpnb.org <http://tmpnb.org>`_ en
-tu propio ordenador con la capacidad de guardar los cuadernos en disco
-basta con ejecutar el intérprete de órdenes (``cmd.exe`` en Windows o
-*Terminal* en Mac OS X) e introducir la siguiente orden.
+- Cuadernos Jupyter `temporales <https://try.jupyter.org>`_ es una
+  demo de Jupyter que mantiene la propia organización de Jupyter.
+  Siempre tienen la última versión liberada pero la disponibilidad en
+  horas pico se resiente.
+
+Para ejecutar un entorno similar en tu propio ordenador con la
+capacidad de guardar los cuadernos en tu propio disco sigue estos pasos.
+
+1. Ejecuta un navegador web.
+
+2. Ejecuta el intérprete de órdenes.  En Windows puedes ejecutarlo
+pulsando la tecla :kbd:`Windows` y escribiendo :program:`cmd`.  En
+Mac OS X ejecuta la aplicación :program:`Terminal`.
+
+3. Introduce la siguiente orden:
 
 .. code::
    
    jupyter notebook
 
+4. Utiliza la ventana que se abre en el navegador para interactuar con
+   Jupyter.  Si no se abre ninguna ventana abre una nueva pestaña en
+   el navegador y escribe la siguiente URL en la barra de direcciones:
+   ``localhost:8888``.
+
+La ventana principal de Jupyter tiene el siguiente aspecto.
+
+.. figure:: _static/jupyter-main.png
+   :align: center
+   :figwidth: 60%
+   :alt: Ventana principal de Jupyter.
+
+Se trata del administrador de archivos.  Para crear un nuevo cuaderno
+selecciona el menú :menuselection:`New-->Python 3`.  Aparecerá la
+interfaz de edición de documentos, como la que se muestra a
+continuación.
+
+.. figure:: _static/jupyter-new.png
+   :align: center
+   :figwidth: 60%
+   :alt: Nuevo documento en Jupyter.
+
+Al crear un nuevo documento aparece automáticamente una nueva *celda*
+editable.  Las celdas de Jupyter pueden servir para diversos
+propósitos, pero por defecto son para introducir programas.  Así que
+escribe en la celda el programa `Hola_Mundo`.  Después pulsa sobre el
+botón con el signo de *ejecutar y avanzar* como muestra la figura.
+Alternativamente se puede usar el menú :menuselection:`Cell-->Run
+Cells` o directamente pulsando :kbd:`Mays Intro` (:kbd:`Shift Enter`).
+
+.. figure:: _static/jupyter-run.png
+   :align: center
+   :figwidth: 60%
+   :alt: Ejecutar celda en Jupyter.
+
+El resultado se mostrará justo bajo la celda y automáticamente
+avanzará a la siguiente celda.  En este caso no hay celda siguiente y
+por tanto crea una nueva.  Cada celda puede contener un fragmento del
+programa y se pueden ejecutar en cualquier orden, aunque lo normal es
+que se ejecuten en secuencia.
+
+El documento se guarda automáticamente en el disco, pero con el nombre
+``Untitled``.  Si deseas ponerle un nombre más adecuado basta hacer
+doble click sobre el nombre en la cabecera.
+
+.. figure:: _static/jupyter-rename.png
+   :align: center
+   :figwidth: 60%
+   :alt: Renombrar documento Jupyter.
+
+Jupyter añadirá automáticamente la extensión ``.ipynb`` a los
+documentos.
+
+Cuando hayas terminado de editar el documento selecciona el menú
+:menuselection:`File-->Close and Halt`.  De esta forma nos aseguramos
+de que la copia del disco estará completamente al día.
+
+
+1.3 Elegir un entorno de programación
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+La elección del entorno en el que vas a trabajar depende
+exclusivamente de tu gusto personal.  En esta asignatura no vamos a
+necesitar manejar grandes cantidades de código, ni vamos a utilizar
+bibliotecas externas.  Por tanto el entorno va a aportar relativamente
+poco.
+
+Nuestro consejo es que empieces con IDLE, que está incluido en la
+distribución oficial de Python. Por tanto está disponible en todos
+los ordenadores que dispongan de Python.
+
+Más adelante, cuando domines el lenguaje, empieza a probar otros, como
+`Jupyter <http://jupyter.org/>`_, `PyCharm
+<https://www.jetbrains.com/pycharm/>`_, `Eclipse PyDev
+<http://www.pydev.org/>`_, `Netbeans Python
+<http://wiki.netbeans.org/Python>`_, `Visual Studio con Python
+Development Tools <https://www.visualstudio.com/es/vs/python/>`_, etc.
+
+No te rindas a la primera.  Un buen entorno es normalmente complejo y
+requiere algo de tiempo acostumbrarse a él.  Ese tiempo se recupera
+con creces en el futuro debido a los incrementos de productividad que
+permite.
+
+A partir de este momento asumiremos que el entorno de programación que
+usaremos es IDLE.  Si no es así en tu caso adapta las instrucciones a
+tu entorno.
