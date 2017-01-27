@@ -1,6 +1,6 @@
 
-Python 02: Elementos de programación
-====================================
+Elementos de programación
+=========================
 
 En esta sesión debes aprender a usar expresiones simples y compuestas.
 Es especialmente importante entender la expresión de llamada a función.
