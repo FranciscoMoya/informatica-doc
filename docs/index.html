@@ -11,20 +11,20 @@
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="_static/poll.css" type="text/css" />
     <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
     <link rel="stylesheet" href="_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
-    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
-    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
-    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
@@ -36,7 +36,8 @@
         VERSION:     '0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
@@ -44,30 +45,6 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/livecode.js"></script>
-    <script type="text/javascript" src="_static/clike.js"></script>
-    <script type="text/javascript" src="_static/animationbase.js"></script>
-    <script type="text/javascript" src="_static/fitb.js"></script>
-    <script type="text/javascript" src="_static/timedfitb.js"></script>
-    <script type="text/javascript" src="_static/poll.js"></script>
-    <script type="text/javascript" src="_static/shortanswer.js"></script>
-    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="_static/dragndrop.js"></script>
-    <script type="text/javascript" src="_static/timeddnd.js"></script>
-    <script type="text/javascript" src="_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
-    <script type="text/javascript" src="_static/datafile.js"></script>
-    <script type="text/javascript" src="_static/mchoice.js"></script>
-    <script type="text/javascript" src="_static/timedmc.js"></script>
-    <script type="text/javascript" src="_static/timed.js"></script>
-    <script type="text/javascript" src="_static/clickable.js"></script>
-    <script type="text/javascript" src="_static/timedclickable.js"></script>
-    <script type="text/javascript" src="_static/reveal.js"></script>
-    <script type="text/javascript" src="_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="_static/parsons.js"></script>
-    <script type="text/javascript" src="_static/timedparsons.js"></script>
     <script type="text/javascript" src="_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="_static/bookfuncs.js"></script>
     <script type="text/javascript" src="_static/codemirror.js"></script>
@@ -81,11 +58,35 @@
     <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
     <script type="text/javascript" src="_static/clike.js"></script>
     <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
     <script type="text/javascript" src="_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="_static/pytutor.js"></script>
     <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/livecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
@@ -102,10 +103,10 @@
     <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="top" title="None" href="#" />
-    <link rel="next" title="Prefacio" href="prefacio.html" />
+    <link rel="next" title="1. Prefacio" href="prefacio.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -172,15 +173,7 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Informática para ingenieros</a><ul>
-<li><a class="reference internal" href="#section-2-links">Section 2: Links</a></li>
-<li><a class="reference internal" href="#section-3-sample-directives">SECTION 3: Sample Directives</a><ul>
-<li><a class="reference internal" href="#activecode">ActiveCode</a></li>
-<li><a class="reference internal" href="#multiple-choice">Multiple Choice</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">Informática para ingenieros</a></li>
 </ul>
 </ul>
 </li>
@@ -188,7 +181,7 @@
         
         <!--
           
-  <li id="relations-next" title='Next Chapter - Prefacio' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - 1. Prefacio' data-toggle="tooltip" >
     <a href="prefacio.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -251,7 +244,7 @@
             <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
             
             <li>
-  <a href="_sources/index.txt"
+  <a href="_sources/index.rst.txt"
      rel="nofollow">Ver fuente</a></li>
             
             <li class="divider"></li>
@@ -275,348 +268,302 @@
   
   <div class="section" id="informatica-para-ingenieros">
 <h1>Informática para ingenieros<a class="headerlink" href="#informatica-para-ingenieros" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Bienvenidos al libro de texto de la asignatura <em>Informática</em> de la
+<em>Escuela de Ingeniería Industrial</em> de la <em>Universidad de Castilla-La
+Mancha</em>.</p>
 <div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Tabla de contenido</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="prefacio.html">Prefacio</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="prefacio.html#acerca-de-la-asignatura">Acerca de la asignatura</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prefacio.html#informatica-en-la-ingenieria">Informática en la ingeniería</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prefacio.html#estructura-del-libro">Estructura del libro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prefacio.html#organizacion-del-curso">Organización del curso</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prefacio.html#politica-de-copias">Política de copias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prefacio.html">1. Prefacio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="prefacio.html#acerca-de-la-asignatura">1.1. Acerca de la asignatura</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prefacio.html#informatica-en-la-ingenieria">1.2. Informática en la ingeniería</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prefacio.html#estructura-del-libro">1.3. Estructura del libro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prefacio.html#organizacion-del-curso">1.4. Organización del curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prefacio.html#politica-de-copias">1.5. Política de copias</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="python-00.html">1. Introducción</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python-00.html#instalacion-del-software">1.1 Instalación del software</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-00.html#ejecutar-python">1.2 Ejecutar Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">2. Introducción</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#interpretes-y-compiladores">2.1. Intérpretes y compiladores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#instalacion-del-software">2.2. Instalación del software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#ejecutar-python">2.3. Ejecutar Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#elegir-un-entorno-de-programacion">2.4. Elegir un entorno de programación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#modo-interactivo-y-modo-script">2.5. Modo interactivo y modo <em>script</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#un-paseo-por-la-sintaxis-de-python">2.6. Un paseo por la sintaxis de Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#trabaja-sobre-lo-visto">2.7. Trabaja sobre lo visto</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="python-01.html">Python 01. Introducción</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-01.html#trabaja-sobre-lo-visto">Trabaja sobre lo visto</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python-01.html#ejecucion-condicional">Ejecución condicional</a></li>
+<li class="toctree-l1"><a class="reference internal" href="elem.html">3. Elementos de un programa</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="elem.html#expresiones-primitivas-y-compuestas">3.1. Expresiones primitivas y compuestas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elem.html#tipos-de-datos-en-python">3.2. Tipos de datos en Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elem.html#funciones">3.3. Funciones</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="python-01.html#bucles">Bucles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-02.html">Python 02: Elementos de programación</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python-02.html#notacion-funcional">Notación funcional</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-02.html#tipos-de-datos-en-python">Tipos de datos en Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-02.html#funciones">Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bif-iter.html">4. Ramificación e iteración</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bif-iter.html#ramificacion">4.1. Ramificación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bif-iter.html#iteracion">4.2. Iteración</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bif-iter.html#ejercicios">4.3. Ejercicios</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="python-04-ejercicios.html">Ejercicios</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-04.html">Ramificación e iteración</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python-04.html#ramificacion">Ramificación</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-04.html#iteracion">Iteración</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-05-06-07.html">5. Abstracción con funciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python-05-06-07.html#recursion">5.1. Recursión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-05-06-07.html#id1">5.2. Recursión</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="python-05-06-07.html">Abstracción con funciones</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python-05-06-07.html#recursion">Recursión</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-05-06-07.html#id1">Recursión</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-09.html">6. Listas, tuplas, conjuntos y diccionarios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python-09.html#mutabilidad-en-listas">6.1. Mutabilidad en listas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-09.html#slicing-en-listas">6.2. Slicing en listas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-09.html#metodos-de-una-lista">6.3. Métodos de una lista</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-09.html#clonado-de-listas">6.4. Clonado de listas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-09.html#comprensiones-de-listas">6.5. Comprensiones de listas</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="python-09.html">Listas, tuplas, conjuntos y diccionarios</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python-09.html#mutabilidad-en-listas">Mutabilidad en listas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-09.html#slicing-en-listas">Slicing en listas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-09.html#metodos-de-una-lista">Métodos de una lista</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-09.html#clonado-de-listas">Clonado de listas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-09.html#comprensiones-de-listas">Comprensiones de listas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-10.html">7. Ejemplos de divide y vencerás</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python-10.html#torres-de-hanoi">7.1. Torres de Hanoi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-10.html#ordenacion-merge-sort">7.2. Ordenación: <em>Merge sort</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-10.html#ordenacion-quicksort">7.3. Ordenación: <em>Quicksort</em></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="python-10.html">Ejemplos de divide y vencerás</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python-10.html#torres-de-hanoi">Torres de Hanoi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-10.html#ordenacion-merge-sort">Ordenación: <em>Merge sort</em></a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-10.html#ordenacion-quicksort">Ordenación: <em>Quicksort</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-12.html">8. Prueba de software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python-12.html#depuracion-con-ipdb">8.1. Depuración con <code class="docutils literal"><span class="pre">ipdb</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="python-12.html">Prueba de software</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python-12.html#depuracion-con-ipdb">Depuración con <code class="docutils literal"><span class="pre">ipdb</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-14.html">9. Operaciones con listas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python-14.html#subconjunto-de-una-lista">9.1. Subconjunto de una lista</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-14.html#interseccion-de-listas">9.2. Intersección de listas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-14.html#powerset">9.3. <em>Powerset</em></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="python-14.html">Operaciones con listas</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python-14.html#subconjunto-de-una-lista">Subconjunto de una lista</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-14.html#interseccion-de-listas">Intersección de listas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-14.html#powerset"><em>Powerset</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-14.html#operaciones-con-bits">10. Operaciones con bits</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python-14.html#sistemas-de-numeracion-posicionales">10.1. Sistemas de numeración posicionales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-14.html#conversiones-de-base">10.2. Conversiones de base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-14.html#numeros-con-signo">10.3. Números con signo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-14.html#operadores-de-bits">10.4. Operadores de bits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-14.html#seleccionar-bits-de-un-numero">10.5. Seleccionar bits de un número</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="python-14.html#operaciones-con-bits">Operaciones con bits</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python-14.html#sistemas-de-numeracion-posicionales">Sistemas de numeración posicionales</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-14.html#conversiones-de-base">Conversiones de base</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-14.html#numeros-con-signo">Números con signo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-14.html#operadores-de-bits">Operadores de bits</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-14.html#seleccionar-bits-de-un-numero">Seleccionar bits de un número</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BisectionSearch.html">11. Pago de balance de tarjeta de crédito en un año</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BisectionSearch.html#pago-minimo-de-10">11.1. 1. Pago mínimo de 10€</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="BisectionSearch.html">Pago de balance de tarjeta de crédito en un año</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="BisectionSearch.html#pago-minimo-de-10">1. Pago mínimo de 10€</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BisectionSearch.html#pago-multiplo-de-0-01">12. 2. Pago múltiplo de 0.01€</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Datos_AEMET.html">13. Trabajo en grupo 2015 (Datos AEMET)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ejercicios.html">14. Ejercicios simples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ejercicios.html#coordenadas-geograficas">14.1. Coordenadas geográficas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ejercicios.html#reproduccion-de-insectos">14.2. Reproducción de insectos</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="BisectionSearch.html#pago-multiplo-de-0-01">2. Pago múltiplo de 0.01€</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Datos_AEMET.html">Trabajo en grupo 2015 (Datos AEMET)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ejercicios.html">Ejercicios simples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ejercicios.html#coordenadas-geograficas">Coordenadas geográficas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ejercicios.html#reproduccion-de-insectos">Reproducción de insectos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExamenExtraordinario.html">15. Examen extraordinario (2016)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examen ordinario.html">16. Bloque 1. Ejercicios sencillos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examen ordinario.html#rombo-con-caracteres-ascii">16.1. Rombo con caracteres ascii</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examen ordinario.html#suma-de-fecha-y-dias">16.2. Suma de fecha y días</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examen ordinario.html#regresion-lineal">16.3. Regresión lineal</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ExamenExtraordinario.html">Examen extraordinario (2016)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Examen ordinario.html">Bloque 1. Ejercicios sencillos</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Examen ordinario.html#rombo-con-caracteres-ascii">Rombo con caracteres ascii</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examen ordinario.html#suma-de-fecha-y-dias">Suma de fecha y días</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examen ordinario.html#regresion-lineal">Regresión lineal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examen ordinario.html#bloque-2-ley-d-hont">17. Bloque 2. Ley D&#8217;Hont</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examen ordinario.html#recuperacion-de-prueba-de-progreso">18. Recuperación de prueba de progreso</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examen ordinario.html#vocales-a-numeros">18.1. Vocales a números</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examen ordinario.html#iniciales">18.2. Iniciales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examen ordinario.html#traza-de-una-matriz-cuadrada">18.3. Traza de una matriz cuadrada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examen ordinario.html#opciones-de-compra">18.4. Opciones de compra</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Examen ordinario.html#bloque-2-ley-d-hont">Bloque 2. Ley D&#8217;Hont</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Examen ordinario.html#recuperacion-de-prueba-de-progreso">Recuperación de prueba de progreso</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Examen ordinario.html#vocales-a-numeros">Vocales a números</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examen ordinario.html#iniciales">Iniciales</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examen ordinario.html#traza-de-una-matriz-cuadrada">Traza de una matriz cuadrada</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examen ordinario.html#opciones-de-compra">Opciones de compra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Gráficas.html">19. Gráficas con Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hanoi.html">20. Torres de Hanoi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hanoi.html#usando-generadores">20.1. Usando generadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hanoi.html#interfaces-de-usuario-con-jupyter-notebook">20.2. Interfaces de usuario con Jupyter Notebook</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Gráficas.html">Gráficas con Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hanoi.html">Torres de Hanoi</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="hanoi.html#usando-generadores">Usando generadores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hanoi.html#interfaces-de-usuario-con-jupyter-notebook">Interfaces de usuario con Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab-01.html">21. Lab 1.1: Familiarización</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab-02.html">22. Lab 2: Bucles, listas y cadenas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab-03.html">23. Lab 3: Archivos y manipulación de cadenas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mochila01.html">24. El problema de la mochila 0-1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mochila01.html#enumeracion-exhaustiva">24.1. Enumeración exhaustiva</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Instalación del software del laboratorio</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install.html#microsoft-windows">Microsoft Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Navegación web.html">25. Navegación web con Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Navegación web.html#conceptos-previos">25.1. Conceptos previos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Navegación web.html#navegacion-con-urllib">25.2. Navegación con <code class="docutils literal"><span class="pre">urllib</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Navegación web.html#navegacion-con-requests">25.3. Navegación con <code class="docutils literal"><span class="pre">requests</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="lab-01.html">Lab 1.1: Familiarización</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab-02.html">Lab 2: Bucles, listas y cadenas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab-03.html">Lab 3: Archivos y manipulación de cadenas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mochila01.html">El problema de la mochila 0-1</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mochila01.html#enumeracion-exhaustiva">Enumeración exhaustiva</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Optimización.html">26. Enumeración exhaustiva</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Optimización.html#algoritmo-voraz">27. Algoritmo voraz</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Optimización.html#simplificando">27.1. Simplificando</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Navegación web.html">Navegación web con Python</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Navegación web.html#conceptos-previos">Conceptos previos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Navegación web.html#navegacion-con-urllib">Navegación con <code class="docutils literal"><span class="pre">urllib</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="Navegación web.html#navegacion-con-requests">Navegación con <code class="docutils literal"><span class="pre">requests</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Paseo.html">28. Un paseo con Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Paseo.html#algebra-matricial">28.1. Álgebra matricial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Paseo.html#calculo-simbolico">28.2. Cálculo simbólico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Paseo.html#graficos">28.3. Gráficos</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Optimización.html">Enumeración exhaustiva</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Optimización.html#algoritmo-voraz">Algoritmo voraz</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Optimización.html#simplificando">Simplificando</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Permutaciones.html">29. Permutaciones de <em>n</em> elementos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Permutaciones.html#usando-generadores">29.1. Usando generadores</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Paseo.html">Un paseo con Python</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Paseo.html#algebra-matricial">Álgebra matricial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Paseo.html#calculo-simbolico">Cálculo simbólico</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Paseo.html#graficos">Gráficos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Problema de las 8 damas.html">30. Problema de las 8 damas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Problema de las 8 damas.html#analisis-previo">30.1. Análisis previo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Permutaciones.html">Permutaciones de <em>n</em> elementos</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Permutaciones.html#usando-generadores">Usando generadores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Procesamiento de XML.html">31. Procesamiento de XML</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Procesamiento de XML.html#leer-con-elementtree">31.1. Leer con <code class="docutils literal"><span class="pre">ElementTree</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Procesamiento de XML.html#leer-con-beautifulsoup">31.2. Leer con <code class="docutils literal"><span class="pre">BeautifulSoup</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Problema de las 8 damas.html">Problema de las 8 damas</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Problema de las 8 damas.html#analisis-previo">Análisis previo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 1ºA.html">32. Prueba de progreso 1ºA</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 1ºA.html#filtrado-de-senales">32.1. 1. Filtrado de señales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 1ºA.html#nota-numerica">32.2. 2. Nota numérica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 1ºA.html#rubrica-de-evaluacion">32.3. Rúbrica de evaluación</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Procesamiento de XML.html">Procesamiento de XML</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Procesamiento de XML.html#leer-con-elementtree">Leer con <code class="docutils literal"><span class="pre">ElementTree</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="Procesamiento de XML.html#leer-con-beautifulsoup">Leer con <code class="docutils literal"><span class="pre">BeautifulSoup</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 1ºB.html">33. Prueba de progreso 1ºB</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 1ºB.html#filtrado-de-senales-iir">33.1. 1. Filtrado de señales (IIR)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 1ºB.html#diezmado-e-interpolacion">33.2. 2. Diezmado e interpolación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 1ºB.html#rubrica-de-evaluacion">33.3. Rúbrica de evaluación</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 1ºA.html">Prueba de progreso 1ºA</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 1ºA.html#filtrado-de-senales">1. Filtrado de señales</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 1ºA.html#nota-numerica">2. Nota numérica</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 1ºA.html#rubrica-de-evaluacion">Rúbrica de evaluación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 1ºC.html">34. Prueba de progreso 1ºC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 1ºC.html#convolucion-de-senales">34.1. 1. Convolución de señales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 1ºC.html#piedra-papel-o-tijera">34.2. 2. Piedra, papel o tijera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 1ºC.html#rubrica-de-evaluacion">34.3. Rúbrica de evaluación</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 1ºB.html">Prueba de progreso 1ºB</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 1ºB.html#filtrado-de-senales-iir">1. Filtrado de señales (IIR)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 1ºB.html#diezmado-e-interpolacion">2. Diezmado e interpolación</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 1ºB.html#rubrica-de-evaluacion">Rúbrica de evaluación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html">35. Distancia Minkowski</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#ejemplo-de-funcionamiento">35.1. Ejemplo de funcionamiento:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#solucion">35.2. Solución</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 1ºC.html">Prueba de progreso 1ºC</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 1ºC.html#convolucion-de-senales">1. Convolución de señales</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 1ºC.html#piedra-papel-o-tijera">2. Piedra, papel o tijera</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 1ºC.html#rubrica-de-evaluacion">Rúbrica de evaluación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#distancia-a-una-agrupacion">36. Distancia a una agrupación</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#id1">36.1. Ejemplo de funcionamiento:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#id2">36.2. Solución</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html">Distancia Minkowski</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#ejemplo-de-funcionamiento">Ejemplo de funcionamiento:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#solucion">Solución</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#centroide-de-un-agrupamiento">37. Centroide de un agrupamiento</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#id3">37.1. Ejemplo de funcionamiento:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#id4">37.2. Solución</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#distancia-a-una-agrupacion">Distancia a una agrupación</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#id1">Ejemplo de funcionamiento:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#id2">Solución</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#cuadrado-magico">38. Cuadrado mágico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#id5">38.1. Ejemplo de funcionamiento:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#id6">38.2. Solución</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#centroide-de-un-agrupamiento">Centroide de un agrupamiento</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#id3">Ejemplo de funcionamiento:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#id4">Solución</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html">39. Polígonos regulares</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#ejemplo-de-funcionamiento">39.1. Ejemplo de funcionamiento:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#solucion">39.2. Solución</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#cuadrado-magico">Cuadrado mágico</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#id5">Ejemplo de funcionamiento:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºA.html#id6">Solución</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#estrella-cirscunscrita">40. Estrella cirscunscrita</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#id3">40.1. Ejemplo de funcionamiento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#id4">40.2. Solución</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html">Polígonos regulares</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#ejemplo-de-funcionamiento">Ejemplo de funcionamiento:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#solucion">Solución</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#mosaicos">41. Mosaicos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#id5">41.1. Ejemplo de funcionamiento:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#id6">41.2. Solución</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#estrella-cirscunscrita">Estrella cirscunscrita</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#id3">Ejemplo de funcionamiento</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#id4">Solución</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#curvas-fractales">42. Curvas fractales</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#id7">42.1. Ejemplo de funcionamiento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#id8">42.2. Solución</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#mosaicos">Mosaicos</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#id5">Ejemplo de funcionamiento:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#id6">Solución</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºC.html">43. Ley de Benford</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºC.html#ejemplo-de-funcionamiento">43.1. Ejemplo de funcionamiento:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºC.html#solucion">43.2. Solución</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#curvas-fractales">Curvas fractales</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#id7">Ejemplo de funcionamiento</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºB.html#id8">Solución</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºC.html#error-cuadratico-medio">44. Error cuadrático medio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºC.html#id1">44.1. Ejemplo de funcionamiento:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºC.html#id2">44.2. Solución</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºC.html">Ley de Benford</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºC.html#ejemplo-de-funcionamiento">Ejemplo de funcionamiento:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºC.html#solucion">Solución</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºC.html#problema-del-asno-de-buridan">45. Problema del asno de Buridán</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºC.html#id3">45.1. Solución</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºC.html#error-cuadratico-medio">Error cuadrático medio</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºC.html#id1">Ejemplo de funcionamiento:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºC.html#id2">Solución</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºC.html#triangulo-numerico">46. Triángulo numérico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºC.html#id4">46.1. Solución</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºC.html#problema-del-asno-de-buridan">Problema del asno de Buridán</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºC.html#id3">Solución</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-files.html">47. Archivos con Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python-files.html#lectura-de-archivos-csv">47.1. Lectura de archivos CSV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-files.html#caso-de-estudio-censo-de-viviendas">47.2. Caso de estudio: Censo de viviendas</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Prueba de Progreso 2016 1ºC.html#triangulo-numerico">Triángulo numérico</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Prueba de Progreso 2016 1ºC.html#id4">Solución</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PythonMinimo.html">48. Python básico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#expresiones">48.1. Expresiones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#variables">48.2. Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#funciones">48.3. Funciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#bifurcacion">48.4. Bifurcación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#repeticion">48.5. Repetición</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#listas">48.6. Listas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#tuplas">48.7. Tuplas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#diccionarios">48.8. Diccionarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#conjuntos">48.9. Conjuntos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#rodajas-slices">48.10. Rodajas (slices)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="python-files.html">Archivos con Python</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python-files.html#lectura-de-archivos-csv">Lectura de archivos CSV</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-files.html#caso-de-estudio-censo-de-viviendas">Caso de estudio: Censo de viviendas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PythonMinimo.html#apendice-biblioteca-estandar">49. Apéndice. Biblioteca estándar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#formateo-de-cadenas">49.1. Formateo de cadenas</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="PythonMinimo.html">Python básico</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#expresiones">Expresiones</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#variables">Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#funciones">Funciones</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#bifurcacion">Bifurcación</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#repeticion">Repetición</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#listas">Listas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#tuplas">Tuplas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#diccionarios">Diccionarios</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#conjuntos">Conjuntos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#rodajas-slices">Rodajas (slices)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PythonMinimo.html#apendice-aspectos-avanzados">50. Apéndice. Aspectos avanzados</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#generadores">50.1. Generadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#comprehensions">50.2. <em>Comprehensions</em></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="PythonMinimo.html#apendice-biblioteca-estandar">Apéndice. Biblioteca estándar</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#formateo-de-cadenas">Formateo de cadenas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PythonMinimo.html#apendice-operadores">51. Apéndice. Operadores</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#operadores-aritmeticos">51.1. Operadores aritméticos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#operadores-de-comparacion">51.2. Operadores de comparación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#operadores-logicos">51.3. Operadores lógicos</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="PythonMinimo.html#apendice-aspectos-avanzados">Apéndice. Aspectos avanzados</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#generadores">Generadores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#comprehensions"><em>Comprehensions</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Resumen.html">52. Resumen de métodos computacionales</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Resumen.html#conjeturar-y-comprobar">52.1. Conjeturar y comprobar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Resumen.html#enumeracion-exhaustiva">52.2. Enumeración exhaustiva</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Resumen.html#busqueda-por-biseccion">52.3. Búsqueda por bisección</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Resumen.html#metodo-de-newton-raphson">52.4. Método de Newton-Raphson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Resumen.html#divide-y-venceras">52.5. Divide y vencerás</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Resumen.html#programacion-dinamica">52.6. Programación dinámica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Resumen.html#poda-del-espacio-de-busqueda">52.7. Poda del espacio de búsqueda</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="PythonMinimo.html#apendice-operadores">Apéndice. Operadores</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#operadores-aritmeticos">Operadores aritméticos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#operadores-de-comparacion">Operadores de comparación</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PythonMinimo.html#operadores-logicos">Operadores lógicos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sopa_letras.html">53. Sopa de letras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sudoku 2.html">54. Resolución de Sudokus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Sudoku 2.html#modelo-de-sudoku">54.1. Modelo de Sudoku</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sudoku 2.html#comprobaciones-del-invariante-de-representacion">54.2. Comprobaciones del invariante de representación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sudoku 2.html#creacion-de-sudokus">54.3. Creación de Sudokus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sudoku 2.html#restricciones-con-clases">54.4. Restricciones con clases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sudoku 2.html#sudokus-dificiles">54.5. Sudokus difíciles</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Resumen.html">Resumen de métodos computacionales</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Resumen.html#conjeturar-y-comprobar">Conjeturar y comprobar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Resumen.html#enumeracion-exhaustiva">Enumeración exhaustiva</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Resumen.html#busqueda-por-biseccion">Búsqueda por bisección</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Resumen.html#metodo-de-newton-raphson">Método de Newton-Raphson</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Resumen.html#divide-y-venceras">Divide y vencerás</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Resumen.html#programacion-dinamica">Programación dinámica</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Resumen.html#poda-del-espacio-de-busqueda">Poda del espacio de búsqueda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sudoku 3.html">55. Sudoku al estilo de P. Norvig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sudoku.html">56. Sudoku</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Sudoku.html#comprobar-sudoku">56.1. Comprobar Sudoku</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="sopa_letras.html">Sopa de letras</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Sudoku 2.html">Resolución de Sudokus</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Sudoku 2.html#modelo-de-sudoku">Modelo de Sudoku</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Sudoku 2.html#comprobaciones-del-invariante-de-representacion">Comprobaciones del invariante de representación</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Sudoku 2.html#creacion-de-sudokus">Creación de Sudokus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Sudoku 2.html#restricciones-con-clases">Restricciones con clases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Sudoku 2.html#sudokus-dificiles">Sudokus difíciles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tour-caballo.html">57. El tour del caballo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trabajo-grupo.html">58. Trabajo en grupo (curso 2016-2017)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="trabajo-grupo.html#rango-de-una-matriz">58.1. 1. Rango de una matriz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trabajo-grupo.html#solucion-de-sistema-de-ecuaciones">58.2. 2. Solución de sistema de ecuaciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trabajo-grupo.html#inversa-de-una-matriz">58.3. 3. Inversa de una matriz</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Sudoku 3.html">Sudoku al estilo de P. Norvig</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Sudoku.html">Sudoku</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Sudoku.html#comprobar-sudoku">Comprobar Sudoku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">59. Sobre este libro</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="tour-caballo.html">El tour del caballo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="trabajo-grupo.html">Trabajo en grupo (curso 2016-2017)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="trabajo-grupo.html#rango-de-una-matriz">1. Rango de una matriz</a></li>
-<li class="toctree-l2"><a class="reference internal" href="trabajo-grupo.html#solucion-de-sistema-de-ecuaciones">2. Solución de sistema de ecuaciones</a></li>
-<li class="toctree-l2"><a class="reference internal" href="trabajo-grupo.html#inversa-de-una-matriz">3. Inversa de una matriz</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section" id="section-2-links">
-<h2>Section 2: Links<a class="headerlink" href="#section-2-links" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Runestone uses the <code class="docutils literal"><span class="pre">restructuredText</span></code> (rst) markup language.  We chose this over markdown largely because rst is extensible.  Nearly all of the basic markup tasks are already handled by restructuredText.  You should check out the docs for the basics of restructuredText (link below). Our extensions are all for the interactive elements.  One key hint about restructuredText:  Its like <strong>Python</strong> &#8211; <em>indentation matters!</em></p>
-<ul class="simple">
-<li><a class="reference external" href="http://docutils.sourceforge.net/rst.html">restructuredText Docs</a></li>
-<li><a class="reference external" href="http://runestoneinteractive.org/build/html/index.html">Runestone Docs</a></li>
-<li>Join the discussion on our <a class="reference external" href="https://groups.google.com/forum/#!forum/runestone_instructors">Google Group</a></li>
-<li>Tell us about problems on <a class="reference external" href="https://github.com/RunestoneInteractive/RunestoneComponents">Github</a></li>
-</ul>
-</div>
-<div class="section" id="section-3-sample-directives">
-<h2>SECTION 3: Sample Directives<a class="headerlink" href="#section-3-sample-directives" title="Enlazar permanentemente con este título">¶</a></h2>
-<div class="section" id="activecode">
-<h3>ActiveCode<a class="headerlink" href="#activecode" title="Enlazar permanentemente con este título">¶</a></h3>
-
-<div data-childcomponent="codeexample1" class="explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=codeexample1 data-lang="python"    data-timelimit=25000 data-coach="true" data-codelens="true" data-audio=''     data-caption='This is a caption'>
-print("My first program adds a list of numbers")
-myList = [2, 4, 6, 8, 10]
-total = 0
-for num in myList:
-    total = total + num
-print(total)
-</textarea>
-</div>
-</div>
-<div class="section" id="multiple-choice">
-<h3>Multiple Choice<a class="headerlink" href="#multiple-choice" title="Enlazar permanentemente con este título">¶</a></h3>
-
-            <ul data-component="multiplechoice" data-multipleanswers="true"  id="question1_2">
-            Q-1: Which colors might be found in a rainbow? (choose all that are correct)
-            <li data-component="answer" data-correct id="question1_2_opt_a">(A) red</li><li data-component="feedback" id="question1_2_opt_a">Red is a definitely on of the colors.</li>
-            
-            <li data-component="answer" data-correct id="question1_2_opt_b">(B) yellow</li><li data-component="feedback" id="question1_2_opt_b">Yes, yellow is correct.</li>
-            
-            <li data-component="answer"  id="question1_2_opt_c">(C) black</li><li data-component="feedback" id="question1_2_opt_c">Remember the acronym...ROY G BIV.  B stands for blue.</li>
-            
-            <li data-component="answer" data-correct id="question1_2_opt_d">(D) green</li><li data-component="feedback" id="question1_2_opt_d">Yes, green is one of the colors.</li>
-            
-
-            </ul>
-            <p>These are just two of the many interactive components for writing online course materials.  You can see examples of all of them <a class="reference external" href="http://interactivepython.org/runestone/static/overview/overview.html">On our Example Page</a></p>
-<p>Now feel free to modify this file to start creating your own interactive page.</p>
-</div>
 </div>
 </div>
 
 
   
       
-  <li id="relations-next" class="navLink" title='Capítulo siguiente - Prefacio' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - 1. Prefacio' data-toggle="tooltip" >
     <a href="prefacio.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="prefacio.html" >Next Section - Prefacio</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="prefacio.html" >Next Section - 1. Prefacio</a>
 
 <script type="text/javascript">
 

@@ -5,26 +5,26 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Navegación web con Python</title>
+    <title>25. Navegación web con Python</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="_static/poll.css" type="text/css" />
     <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
     <link rel="stylesheet" href="_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
-    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
-    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
-    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
@@ -36,7 +36,8 @@
         VERSION:     '0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
@@ -44,30 +45,6 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/livecode.js"></script>
-    <script type="text/javascript" src="_static/clike.js"></script>
-    <script type="text/javascript" src="_static/animationbase.js"></script>
-    <script type="text/javascript" src="_static/fitb.js"></script>
-    <script type="text/javascript" src="_static/timedfitb.js"></script>
-    <script type="text/javascript" src="_static/poll.js"></script>
-    <script type="text/javascript" src="_static/shortanswer.js"></script>
-    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="_static/dragndrop.js"></script>
-    <script type="text/javascript" src="_static/timeddnd.js"></script>
-    <script type="text/javascript" src="_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
-    <script type="text/javascript" src="_static/datafile.js"></script>
-    <script type="text/javascript" src="_static/mchoice.js"></script>
-    <script type="text/javascript" src="_static/timedmc.js"></script>
-    <script type="text/javascript" src="_static/timed.js"></script>
-    <script type="text/javascript" src="_static/clickable.js"></script>
-    <script type="text/javascript" src="_static/timedclickable.js"></script>
-    <script type="text/javascript" src="_static/reveal.js"></script>
-    <script type="text/javascript" src="_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="_static/parsons.js"></script>
-    <script type="text/javascript" src="_static/timedparsons.js"></script>
     <script type="text/javascript" src="_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="_static/bookfuncs.js"></script>
     <script type="text/javascript" src="_static/codemirror.js"></script>
@@ -81,11 +58,35 @@
     <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
     <script type="text/javascript" src="_static/clike.js"></script>
     <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
     <script type="text/javascript" src="_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="_static/pytutor.js"></script>
     <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/livecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
@@ -102,11 +103,11 @@
     <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="top" title="None" href="index.html" />
-    <link rel="next" title="Enumeración exhaustiva" href="Optimización.html" />
-    <link rel="prev" title="El problema de la mochila 0-1" href="mochila01.html" />
+    <link rel="next" title="26. Enumeración exhaustiva" href="Optimización.html" />
+    <link rel="prev" title="24. El problema de la mochila 0-1" href="mochila01.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -173,10 +174,10 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Navegación web con Python</a><ul>
-<li><a class="reference internal" href="#conceptos-previos">Conceptos previos</a></li>
-<li><a class="reference internal" href="#navegacion-con-urllib">Navegación con <code class="docutils literal"><span class="pre">urllib</span></code></a></li>
-<li><a class="reference internal" href="#navegacion-con-requests">Navegación con <code class="docutils literal"><span class="pre">requests</span></code></a></li>
+<li><a class="reference internal" href="#">25. Navegación web con Python</a><ul>
+<li><a class="reference internal" href="#conceptos-previos">25.1. Conceptos previos</a></li>
+<li><a class="reference internal" href="#navegacion-con-urllib">25.2. Navegación con <code class="docutils literal"><span class="pre">urllib</span></code></a></li>
+<li><a class="reference internal" href="#navegacion-con-requests">25.3. Navegación con <code class="docutils literal"><span class="pre">requests</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -186,13 +187,13 @@
         
         <!--
           
-  <li id="relations-prev" title="Previous Chapter - El problema de la mochila 0-1" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - 24. El problema de la mochila 0-1" data-toggle="tooltip">
     <a href="mochila01.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Enumeración exhaustiva' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - 26. Enumeración exhaustiva' data-toggle="tooltip" >
     <a href="Optimización.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -255,7 +256,7 @@
             <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
             
             <li>
-  <a href="_sources/Navegación web.txt"
+  <a href="_sources/Navegación web.rst.txt"
      rel="nofollow">Ver fuente</a></li>
             
             <li class="divider"></li>
@@ -278,12 +279,12 @@
 <div class="container" id="main-content">
   
   <div class="section" id="navegacion-web-con-python">
-<h1>Navegación web con Python<a class="headerlink" href="#navegacion-web-con-python" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>25. Navegación web con Python<a class="headerlink" href="#navegacion-web-con-python" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>El trabajo en grupo propuesto es solo una de las muchas situaciones en
 tu vida en las que los datos a procesar deben extraerse de páginas web o
 documentos colgados en un sitio web.</p>
 <div class="section" id="conceptos-previos">
-<h2>Conceptos previos<a class="headerlink" href="#conceptos-previos" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>25.1. Conceptos previos<a class="headerlink" href="#conceptos-previos" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>La <em>World Wide Web</em> es el servicio de navegación hipertexto más
 utilizado del Mundo. Lo que conocemos como páginas y servidores web, que
 nuestros mayores suelen identificar con Internet no es más que un
@@ -325,7 +326,7 @@ servicios web más elaborados que requieren del uso de los demás métodos.
 Vamos a empezar por lo más sencillo.</p>
 </div>
 <div class="section" id="navegacion-con-urllib">
-<h2>Navegación con <code class="docutils literal"><span class="pre">urllib</span></code><a class="headerlink" href="#navegacion-con-urllib" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>25.2. Navegación con <code class="docutils literal"><span class="pre">urllib</span></code><a class="headerlink" href="#navegacion-con-urllib" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>La biblioteca Python estándar incluye funciones suficientes para obtener
 la información de cualquier URL. La biblioteca <code class="docutils literal"><span class="pre">urllib</span></code> contiene la
 función <code class="docutils literal"><span class="pre">urlopen</span></code> que abre una URL como si se tratara de un archivo
@@ -377,7 +378,7 @@ De todas formas vamos a comentar brevemente alguna otra biblioteca más
 flexible.</p>
 </div>
 <div class="section" id="navegacion-con-requests">
-<h2>Navegación con <code class="docutils literal"><span class="pre">requests</span></code><a class="headerlink" href="#navegacion-con-requests" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>25.3. Navegación con <code class="docutils literal"><span class="pre">requests</span></code><a class="headerlink" href="#navegacion-con-requests" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Python 2 solo incluye <code class="docutils literal"><span class="pre">urllib</span></code> y <code class="docutils literal"><span class="pre">httplib</span></code> en la biblioteca estándar
 para tratar con contenidos web. Ambas bibliotecas son francamente
 incómodas para realizar aplicaciones modernas basadas en la <em>World Wide
@@ -438,19 +439,19 @@ simplifica notablemente el tratamiento de errores.</p>
 
   
       
-  <li id="relations-prev" class="navLink" title='Capítulo anterior - El problema de la mochila 0-1' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Capítulo anterior - 24. El problema de la mochila 0-1' data-toggle="tooltip">
     <a href="mochila01.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="mochila01.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Capítulo siguiente - Enumeración exhaustiva' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - 26. Enumeración exhaustiva' data-toggle="tooltip" >
     <a href="Optimización.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="Optimización.html" >Next Section - Enumeración exhaustiva</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="Optimización.html" >Next Section - 26. Enumeración exhaustiva</a>
 
 <script type="text/javascript">
 

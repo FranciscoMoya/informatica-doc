@@ -5,26 +5,26 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Prueba de progreso 1ºC</title>
+    <title>34. Prueba de progreso 1ºC</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="_static/poll.css" type="text/css" />
     <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
     <link rel="stylesheet" href="_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
-    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
-    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
-    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
@@ -36,7 +36,8 @@
         VERSION:     '0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
@@ -44,30 +45,6 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/livecode.js"></script>
-    <script type="text/javascript" src="_static/clike.js"></script>
-    <script type="text/javascript" src="_static/animationbase.js"></script>
-    <script type="text/javascript" src="_static/fitb.js"></script>
-    <script type="text/javascript" src="_static/timedfitb.js"></script>
-    <script type="text/javascript" src="_static/poll.js"></script>
-    <script type="text/javascript" src="_static/shortanswer.js"></script>
-    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="_static/dragndrop.js"></script>
-    <script type="text/javascript" src="_static/timeddnd.js"></script>
-    <script type="text/javascript" src="_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
-    <script type="text/javascript" src="_static/datafile.js"></script>
-    <script type="text/javascript" src="_static/mchoice.js"></script>
-    <script type="text/javascript" src="_static/timedmc.js"></script>
-    <script type="text/javascript" src="_static/timed.js"></script>
-    <script type="text/javascript" src="_static/clickable.js"></script>
-    <script type="text/javascript" src="_static/timedclickable.js"></script>
-    <script type="text/javascript" src="_static/reveal.js"></script>
-    <script type="text/javascript" src="_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="_static/parsons.js"></script>
-    <script type="text/javascript" src="_static/timedparsons.js"></script>
     <script type="text/javascript" src="_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="_static/bookfuncs.js"></script>
     <script type="text/javascript" src="_static/codemirror.js"></script>
@@ -81,11 +58,35 @@
     <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
     <script type="text/javascript" src="_static/clike.js"></script>
     <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
     <script type="text/javascript" src="_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="_static/pytutor.js"></script>
     <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/livecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
@@ -102,11 +103,11 @@
     <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="top" title="None" href="index.html" />
-    <link rel="next" title="Distancia Minkowski" href="Prueba de Progreso 2016 1ºA.html" />
-    <link rel="prev" title="Prueba de progreso 1ºB" href="Prueba de Progreso 1ºB.html" />
+    <link rel="next" title="35. Distancia Minkowski" href="Prueba de Progreso 2016 1ºA.html" />
+    <link rel="prev" title="33. Prueba de progreso 1ºB" href="Prueba de Progreso 1ºB.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -173,16 +174,16 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Prueba de progreso 1ºC</a><ul>
-<li><a class="reference internal" href="#convolucion-de-senales">1. Convolución de señales</a><ul>
-<li><a class="reference internal" href="#ejemplo-de-funcionamiento">Ejemplo de funcionamiento</a></li>
+<li><a class="reference internal" href="#">34. Prueba de progreso 1ºC</a><ul>
+<li><a class="reference internal" href="#convolucion-de-senales">34.1. 1. Convolución de señales</a><ul>
+<li><a class="reference internal" href="#ejemplo-de-funcionamiento">34.1.1. Ejemplo de funcionamiento</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#piedra-papel-o-tijera">2. Piedra, papel o tijera</a><ul>
-<li><a class="reference internal" href="#id1">Ejemplo de funcionamiento</a></li>
+<li><a class="reference internal" href="#piedra-papel-o-tijera">34.2. 2. Piedra, papel o tijera</a><ul>
+<li><a class="reference internal" href="#id1">34.2.1. Ejemplo de funcionamiento</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#rubrica-de-evaluacion">Rúbrica de evaluación</a></li>
+<li><a class="reference internal" href="#rubrica-de-evaluacion">34.3. Rúbrica de evaluación</a></li>
 </ul>
 </li>
 </ul>
@@ -192,13 +193,13 @@
         
         <!--
           
-  <li id="relations-prev" title="Previous Chapter - Prueba de progreso 1ºB" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - 33. Prueba de progreso 1ºB" data-toggle="tooltip">
     <a href="Prueba de Progreso 1ºB.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Distancia Minkowski' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - 35. Distancia Minkowski' data-toggle="tooltip" >
     <a href="Prueba de Progreso 2016 1ºA.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -261,7 +262,7 @@
             <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
             
             <li>
-  <a href="_sources/Prueba de Progreso 1ºC.txt"
+  <a href="_sources/Prueba de Progreso 1ºC.rst.txt"
      rel="nofollow">Ver fuente</a></li>
             
             <li class="divider"></li>
@@ -284,7 +285,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="prueba-de-progreso-1oc">
-<h1>Prueba de progreso 1ºC<a class="headerlink" href="#prueba-de-progreso-1oc" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>34. Prueba de progreso 1ºC<a class="headerlink" href="#prueba-de-progreso-1oc" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>Lee atentamente el enunciado de la prueba. El enunciado consiste en una
 serie de ejercicios que deben realizarse en un mismo archivo Python.
 Todas las funciones deben definirse en el mismo archivo y no debe
@@ -293,7 +294,7 @@ trabajo original del alumno que realiza la entrega.</p>
 <p>No se permite la comunicación con otras personas durante el examen. Se
 permiten libros, apuntes y búsquedas en Internet.</p>
 <div class="section" id="convolucion-de-senales">
-<h2>1. Convolución de señales<a class="headerlink" href="#convolucion-de-senales" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>34.1. 1. Convolución de señales<a class="headerlink" href="#convolucion-de-senales" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Dadas dos señales de tiempo discreto, definidas como secuencias de
 valores reales <span class="math">\(u(k)\)</span> y <span class="math">\(v(k)\)</span> se define la convolución de
 ambas señales como:</p>
@@ -323,7 +324,7 @@ longitud de la convolución de ``u`` y ``v`` es
 ``len(u) + len(v) - 1``.</em></li>
 </ol>
 <div class="section" id="ejemplo-de-funcionamiento">
-<h3>Ejemplo de funcionamiento<a class="headerlink" href="#ejemplo-de-funcionamiento" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>34.1.1. Ejemplo de funcionamiento<a class="headerlink" href="#ejemplo-de-funcionamiento" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span> <span class="p">]</span>
 <span class="n">v</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">1.</span> <span class="p">]</span>
 <span class="nb">print</span> <span class="n">convolucion</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
@@ -358,7 +359,7 @@ comprehensions</em>.</p>
 </div>
 </div>
 <div class="section" id="piedra-papel-o-tijera">
-<h2>2. Piedra, papel o tijera<a class="headerlink" href="#piedra-papel-o-tijera" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>34.2. 2. Piedra, papel o tijera<a class="headerlink" href="#piedra-papel-o-tijera" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Piedra, papel o tijera es un juego en el que dos jugadores eligen una de
 esas tres opciones a la vez. El que gana depende de lo elegido por
 ambos:</p>
@@ -374,7 +375,7 @@ texto. Cada parámetro puede contener una de estas tres palabras
 indicando cuál de los dos gana. Si el primero gana devolverá un <code class="docutils literal"><span class="pre">1</span></code>.
 Si el segundo gana devolverá un <code class="docutils literal"><span class="pre">2</span></code>. Si empatan devolverá un <code class="docutils literal"><span class="pre">0</span></code>.</p>
 <div class="section" id="id1">
-<h3>Ejemplo de funcionamiento<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>34.2.1. Ejemplo de funcionamiento<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">ganador</span><span class="p">(</span><span class="s1">&#39;piedra&#39;</span><span class="p">,</span><span class="s1">&#39;tijera&#39;</span><span class="p">)</span>
 <span class="mi">1</span>
 <span class="nb">print</span> <span class="n">ganador</span><span class="p">(</span><span class="s1">&#39;piedra&#39;</span><span class="p">,</span><span class="s1">&#39;papel&#39;</span><span class="p">)</span>
@@ -438,7 +439,7 @@ resultado.</p>
 </div>
 </div>
 <div class="section" id="rubrica-de-evaluacion">
-<h2>Rúbrica de evaluación<a class="headerlink" href="#rubrica-de-evaluacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>34.3. Rúbrica de evaluación<a class="headerlink" href="#rubrica-de-evaluacion" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Puntos totales: 10 puntos:</p>
 <ul class="simple">
 <li>1.1 Función <code class="docutils literal"><span class="pre">elem</span></code>: 2.5 puntos</li>
@@ -459,19 +460,19 @@ resultado.</p>
 
   
       
-  <li id="relations-prev" class="navLink" title='Capítulo anterior - Prueba de progreso 1ºB' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Capítulo anterior - 33. Prueba de progreso 1ºB' data-toggle="tooltip">
     <a href="Prueba de Progreso 1ºB.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="Prueba de Progreso 1ºB.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Capítulo siguiente - Distancia Minkowski' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - 35. Distancia Minkowski' data-toggle="tooltip" >
     <a href="Prueba de Progreso 2016 1ºA.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="Prueba de Progreso 2016 1ºA.html" >Next Section - Distancia Minkowski</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="Prueba de Progreso 2016 1ºA.html" >Next Section - 35. Distancia Minkowski</a>
 
 <script type="text/javascript">
 

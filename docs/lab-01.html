@@ -5,26 +5,26 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Lab 1.1: Familiarización</title>
+    <title>21. Lab 1.1: Familiarización</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="_static/poll.css" type="text/css" />
     <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
     <link rel="stylesheet" href="_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
-    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
-    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
-    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
@@ -36,7 +36,8 @@
         VERSION:     '0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
@@ -44,30 +45,6 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/livecode.js"></script>
-    <script type="text/javascript" src="_static/clike.js"></script>
-    <script type="text/javascript" src="_static/animationbase.js"></script>
-    <script type="text/javascript" src="_static/fitb.js"></script>
-    <script type="text/javascript" src="_static/timedfitb.js"></script>
-    <script type="text/javascript" src="_static/poll.js"></script>
-    <script type="text/javascript" src="_static/shortanswer.js"></script>
-    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="_static/dragndrop.js"></script>
-    <script type="text/javascript" src="_static/timeddnd.js"></script>
-    <script type="text/javascript" src="_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
-    <script type="text/javascript" src="_static/datafile.js"></script>
-    <script type="text/javascript" src="_static/mchoice.js"></script>
-    <script type="text/javascript" src="_static/timedmc.js"></script>
-    <script type="text/javascript" src="_static/timed.js"></script>
-    <script type="text/javascript" src="_static/clickable.js"></script>
-    <script type="text/javascript" src="_static/timedclickable.js"></script>
-    <script type="text/javascript" src="_static/reveal.js"></script>
-    <script type="text/javascript" src="_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="_static/parsons.js"></script>
-    <script type="text/javascript" src="_static/timedparsons.js"></script>
     <script type="text/javascript" src="_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="_static/bookfuncs.js"></script>
     <script type="text/javascript" src="_static/codemirror.js"></script>
@@ -81,11 +58,35 @@
     <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
     <script type="text/javascript" src="_static/clike.js"></script>
     <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
     <script type="text/javascript" src="_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="_static/pytutor.js"></script>
     <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/livecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
@@ -102,11 +103,11 @@
     <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="top" title="None" href="index.html" />
-    <link rel="next" title="Lab 2: Bucles, listas y cadenas" href="lab-02.html" />
-    <link rel="prev" title="Instalación del software del laboratorio" href="install.html" />
+    <link rel="next" title="22. Lab 2: Bucles, listas y cadenas" href="lab-02.html" />
+    <link rel="prev" title="20. Torres de Hanoi" href="hanoi.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -173,7 +174,7 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Lab 1.1: Familiarización</a></li>
+<li><a class="reference internal" href="#">21. Lab 1.1: Familiarización</a></li>
 </ul>
 </ul>
 </li>
@@ -181,13 +182,13 @@
         
         <!--
           
-  <li id="relations-prev" title="Previous Chapter - Instalación del software del laboratorio" data-toggle="tooltip">
-    <a href="install.html" >
+  <li id="relations-prev" title="Previous Chapter - 20. Torres de Hanoi" data-toggle="tooltip">
+    <a href="hanoi.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Lab 2: Bucles, listas y cadenas' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - 22. Lab 2: Bucles, listas y cadenas' data-toggle="tooltip" >
     <a href="lab-02.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -250,7 +251,7 @@
             <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
             
             <li>
-  <a href="_sources/lab-01.txt"
+  <a href="_sources/lab-01.rst.txt"
      rel="nofollow">Ver fuente</a></li>
             
             <li class="divider"></li>
@@ -273,7 +274,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="lab-1-1-familiarizacion">
-<h1>Lab 1.1: Familiarización<a class="headerlink" href="#lab-1-1-familiarizacion" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>21. Lab 1.1: Familiarización<a class="headerlink" href="#lab-1-1-familiarizacion" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>Bienvenidos al laboratorio. Ya nos hemos familiarizado con un buen
 número de características de Python y seguro que ya has hecho tus
 primeros programas. Llegó el momento de poner en práctica lo que has
@@ -415,19 +416,19 @@ redondeará en exceso, es decir 0.5 se redondeará como 1.</li>
 
   
       
-  <li id="relations-prev" class="navLink" title='Capítulo anterior - Instalación del software del laboratorio' data-toggle="tooltip">
-    <a href="install.html" >
+  <li id="relations-prev" class="navLink" title='Capítulo anterior - 20. Torres de Hanoi' data-toggle="tooltip">
+    <a href="hanoi.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="install.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="hanoi.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Capítulo siguiente - Lab 2: Bucles, listas y cadenas' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - 22. Lab 2: Bucles, listas y cadenas' data-toggle="tooltip" >
     <a href="lab-02.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="lab-02.html" >Next Section - Lab 2: Bucles, listas y cadenas</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="lab-02.html" >Next Section - 22. Lab 2: Bucles, listas y cadenas</a>
 
 <script type="text/javascript">
 

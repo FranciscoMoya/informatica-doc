@@ -5,26 +5,26 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Polígonos regulares</title>
+    <title>39. Polígonos regulares</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="_static/poll.css" type="text/css" />
     <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
     <link rel="stylesheet" href="_static/video.css" type="text/css" />
-    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
-    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
-    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
-    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
-    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
@@ -36,7 +36,8 @@
         VERSION:     '0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
@@ -44,30 +45,6 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/livecode.js"></script>
-    <script type="text/javascript" src="_static/clike.js"></script>
-    <script type="text/javascript" src="_static/animationbase.js"></script>
-    <script type="text/javascript" src="_static/fitb.js"></script>
-    <script type="text/javascript" src="_static/timedfitb.js"></script>
-    <script type="text/javascript" src="_static/poll.js"></script>
-    <script type="text/javascript" src="_static/shortanswer.js"></script>
-    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
-    <script type="text/javascript" src="_static/dragndrop.js"></script>
-    <script type="text/javascript" src="_static/timeddnd.js"></script>
-    <script type="text/javascript" src="_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
-    <script type="text/javascript" src="_static/datafile.js"></script>
-    <script type="text/javascript" src="_static/mchoice.js"></script>
-    <script type="text/javascript" src="_static/timedmc.js"></script>
-    <script type="text/javascript" src="_static/timed.js"></script>
-    <script type="text/javascript" src="_static/clickable.js"></script>
-    <script type="text/javascript" src="_static/timedclickable.js"></script>
-    <script type="text/javascript" src="_static/reveal.js"></script>
-    <script type="text/javascript" src="_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="_static/parsons.js"></script>
-    <script type="text/javascript" src="_static/timedparsons.js"></script>
     <script type="text/javascript" src="_static/jquery.highlight.js"></script>
     <script type="text/javascript" src="_static/bookfuncs.js"></script>
     <script type="text/javascript" src="_static/codemirror.js"></script>
@@ -81,11 +58,35 @@
     <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
     <script type="text/javascript" src="_static/clike.js"></script>
     <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
     <script type="text/javascript" src="_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="_static/pytutor.js"></script>
     <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/livecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
@@ -102,11 +103,11 @@
     <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="top" title="None" href="index.html" />
-    <link rel="next" title="Ley de Benford" href="Prueba de Progreso 2016 1ºC.html" />
-    <link rel="prev" title="Distancia Minkowski" href="Prueba de Progreso 2016 1ºA.html" />
+    <link rel="next" title="43. Ley de Benford" href="Prueba de Progreso 2016 1ºC.html" />
+    <link rel="prev" title="35. Distancia Minkowski" href="Prueba de Progreso 2016 1ºA.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -173,24 +174,24 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Polígonos regulares</a><ul>
-<li><a class="reference internal" href="#ejemplo-de-funcionamiento">Ejemplo de funcionamiento:</a></li>
-<li><a class="reference internal" href="#solucion">Solución</a></li>
+<li><a class="reference internal" href="#">39. Polígonos regulares</a><ul>
+<li><a class="reference internal" href="#ejemplo-de-funcionamiento">39.1. Ejemplo de funcionamiento:</a></li>
+<li><a class="reference internal" href="#solucion">39.2. Solución</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#estrella-cirscunscrita">Estrella cirscunscrita</a><ul>
-<li><a class="reference internal" href="#id3">Ejemplo de funcionamiento</a></li>
-<li><a class="reference internal" href="#id4">Solución</a></li>
+<li><a class="reference internal" href="#estrella-cirscunscrita">40. Estrella cirscunscrita</a><ul>
+<li><a class="reference internal" href="#id3">40.1. Ejemplo de funcionamiento</a></li>
+<li><a class="reference internal" href="#id4">40.2. Solución</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#mosaicos">Mosaicos</a><ul>
-<li><a class="reference internal" href="#id5">Ejemplo de funcionamiento:</a></li>
-<li><a class="reference internal" href="#id6">Solución</a></li>
+<li><a class="reference internal" href="#mosaicos">41. Mosaicos</a><ul>
+<li><a class="reference internal" href="#id5">41.1. Ejemplo de funcionamiento:</a></li>
+<li><a class="reference internal" href="#id6">41.2. Solución</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#curvas-fractales">Curvas fractales</a><ul>
-<li><a class="reference internal" href="#id7">Ejemplo de funcionamiento</a></li>
-<li><a class="reference internal" href="#id8">Solución</a></li>
+<li><a class="reference internal" href="#curvas-fractales">42. Curvas fractales</a><ul>
+<li><a class="reference internal" href="#id7">42.1. Ejemplo de funcionamiento</a></li>
+<li><a class="reference internal" href="#id8">42.2. Solución</a></li>
 </ul>
 </li>
 </ul>
@@ -200,13 +201,13 @@
         
         <!--
           
-  <li id="relations-prev" title="Previous Chapter - Distancia Minkowski" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - 35. Distancia Minkowski" data-toggle="tooltip">
     <a href="Prueba de Progreso 2016 1ºA.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Ley de Benford' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - 43. Ley de Benford' data-toggle="tooltip" >
     <a href="Prueba de Progreso 2016 1ºC.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -269,7 +270,7 @@
             <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
             
             <li>
-  <a href="_sources/Prueba de Progreso 2016 1ºB.txt"
+  <a href="_sources/Prueba de Progreso 2016 1ºB.rst.txt"
      rel="nofollow">Ver fuente</a></li>
             
             <li class="divider"></li>
@@ -292,7 +293,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="poligonos-regulares">
-<h1>Polígonos regulares<a class="headerlink" href="#poligonos-regulares" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>39. Polígonos regulares<a class="headerlink" href="#poligonos-regulares" title="Enlazar permanentemente con este título">¶</a></h1>
 <p><em>Asume que dispones de las siguientes funciones:</em></p>
 <table border="1" class="docutils">
 <colgroup>
@@ -353,7 +354,7 @@ lados y la longitud del lado respectivamente. La función debe dibujar un
 polígono regular con el número de lados indicados. Inicialmente el lápiz
 está orientado hacia la derecha.</em></p>
 <div class="section" id="ejemplo-de-funcionamiento">
-<h2>Ejemplo de funcionamiento:<a class="headerlink" href="#ejemplo-de-funcionamiento" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>39.1. Ejemplo de funcionamiento:<a class="headerlink" href="#ejemplo-de-funcionamiento" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">poligono</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -362,7 +363,7 @@ está orientado hacia la derecha.</em></p>
 </div>
 </div>
 <div class="section" id="solucion">
-<h2>Solución<a class="headerlink" href="#solucion" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>39.2. Solución<a class="headerlink" href="#solucion" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Primero copiamos la implementación de las funciones de dibujo.</p>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">SVG</span><span class="p">,</span><span class="n">display</span>
 <span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span>
@@ -430,7 +431,7 @@ está orientado hacia la derecha.</em></p>
 </div>
 </div>
 <div class="section" id="estrella-cirscunscrita">
-<h1>Estrella cirscunscrita<a class="headerlink" href="#estrella-cirscunscrita" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>40. Estrella cirscunscrita<a class="headerlink" href="#estrella-cirscunscrita" title="Enlazar permanentemente con este título">¶</a></h1>
 <p><em>Siguiendo con el ejemplo del polígono define una función estrella con
 dos argumentos (número de lados y longitud de cada segmento) que dibuja
 una estrella circunscrita en el polígono, como muestran los ejemplos a
@@ -441,7 +442,7 @@ de lados.</em></p>
 <p><em>Si solo funciona con número impar de lados se asumirá correcto pero se
 descontará un 20% de la calificación.</em></p>
 <div class="section" id="id3">
-<h2>Ejemplo de funcionamiento<a class="headerlink" href="#id3" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>40.1. Ejemplo de funcionamiento<a class="headerlink" href="#id3" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">estrella</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">150</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -456,7 +457,7 @@ descontará un 20% de la calificación.</em></p>
 </div>
 </div>
 <div class="section" id="id4">
-<h2>Solución<a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>40.2. Solución<a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>La estrella con n impar es igual ue el polígono, tan solo cambia el
 ángulo. Vamos a extraer la funcionalidad común en una función
 <code class="docutils literal"><span class="pre">poligonal</span></code>. El caso impar se descompone en dos líneas poligonales no
@@ -509,7 +510,7 @@ simplemente la semidiferencia de ambos.</p>
 </div>
 </div>
 <div class="section" id="mosaicos">
-<h1>Mosaicos<a class="headerlink" href="#mosaicos" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>41. Mosaicos<a class="headerlink" href="#mosaicos" title="Enlazar permanentemente con este título">¶</a></h1>
 <p><em>Suponiendo que dispones de la función poligono a la que se refiere el
 primer ejercicio y las funciones de dibujo descritas en el mismo
 ejercicio definir una función rosa que dibuja polígonos en cada lado de
@@ -517,7 +518,7 @@ otro polígono central formando una rosa como la de la figura.</em></p>
 <p><em>La función rosa debe tener dos argumentos similares a los de poligono,
 es decir, el número de lados y el tamaño del lado.</em></p>
 <div class="section" id="id5">
-<h2>Ejemplo de funcionamiento:<a class="headerlink" href="#id5" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>41.1. Ejemplo de funcionamiento:<a class="headerlink" href="#id5" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rosa</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -532,7 +533,7 @@ es decir, el número de lados y el tamaño del lado.</em></p>
 </div>
 </div>
 <div class="section" id="id6">
-<h2>Solución<a class="headerlink" href="#id6" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>41.2. Solución<a class="headerlink" href="#id6" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El problema es completamente análogo a la función que construye el
 polígono, pero en lugar de avanzar, simplemente llama a <code class="docutils literal"><span class="pre">poligono</span></code> y
 avanza un lado, y el giro lo realiza en el otro sentido.</p>
@@ -551,7 +552,7 @@ avanza un lado, y el giro lo realiza en el otro sentido.</p>
 </div>
 </div>
 <div class="section" id="curvas-fractales">
-<h1>Curvas fractales<a class="headerlink" href="#curvas-fractales" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>42. Curvas fractales<a class="headerlink" href="#curvas-fractales" title="Enlazar permanentemente con este título">¶</a></h1>
 <p><em>El copo de nieve de Koch es una curva fractal muy sencilla de obtener
 con ayuda de una función recursiva.</em></p>
 <p><em>Define una función copo con dos argumentos. El primero es el ancho
@@ -559,7 +560,7 @@ total del copo de nieve (en puntos), el segundo es un índice que limita
 la recursión. La función debe dibujar el copo de Koch con las funciones
 de dibujo descritas en el primer ejercicio.</em></p>
 <div class="section" id="id7">
-<h2>Ejemplo de funcionamiento<a class="headerlink" href="#id7" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>42.1. Ejemplo de funcionamiento<a class="headerlink" href="#id7" title="Enlazar permanentemente con este título">¶</a></h2>
 <p><em>El dibujo siguiente muestra el resultado de ``copo(300,n)`` con valores
 para n de 0, 1, 2, 4.</em></p>
 <div class="figure" id="id16">
@@ -567,7 +568,7 @@ para n de 0, 1, 2, 4.</em></p>
 </div>
 </div>
 <div class="section" id="id8">
-<h2>Solución<a class="headerlink" href="#id8" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>42.2. Solución<a class="headerlink" href="#id8" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>La forma más sencilla es dibujar 3 veces la curva de Koch con distintos
 ángulos.</p>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">pi</span>
@@ -598,19 +599,19 @@ para n de 0, 1, 2, 4.</em></p>
 
   
       
-  <li id="relations-prev" class="navLink" title='Capítulo anterior - Distancia Minkowski' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Capítulo anterior - 35. Distancia Minkowski' data-toggle="tooltip">
     <a href="Prueba de Progreso 2016 1ºA.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="Prueba de Progreso 2016 1ºA.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Capítulo siguiente - Ley de Benford' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - 43. Ley de Benford' data-toggle="tooltip" >
     <a href="Prueba de Progreso 2016 1ºC.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="Prueba de Progreso 2016 1ºC.html" >Next Section - Ley de Benford</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="Prueba de Progreso 2016 1ºC.html" >Next Section - 43. Ley de Benford</a>
 
 <script type="text/javascript">
 
