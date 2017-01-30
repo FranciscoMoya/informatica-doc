@@ -208,25 +208,17 @@ de la salida y dejarla igual que antes.
 
    print(*sorted([x,y,z]))
 
-¿Parece chino? Es lo que suele pasar con las bibliotecas de
-funciones.  Si sabes usarlas puedes ahorrar gran cantidad de
-tiempo, pero saber usarlas requiere también tiempo y dedicación.
-En este curso solo pretendemos que desarrolles tu pensamiento
-computacional. Pero recuerda que para la vida real necesitas
-invertir tiempo y esfuerzo en conocer lo que ya tienes disponible y
-aprender en qué situaciones puede resultarte útil.
-
 Por esta vez vamos a explicártelo en detalle, pero intenta usar la
 documentación oficial de http://docs.python.org para entender lo
 que hacen los programas que veremos más adelante.
 
 Seguramente habrás adivinado que ``sorted`` es una función que
-devuelve una versión ordenada de lo que se le pasa como argumento.
-Lo que pasamos como argumento a sorted es una :term:`lista`, un
-tipo de objeto de Python que agrupa una secuencia de objetos.
+devuelve una versión ordenada de lo que se le pasa como argumento.  Lo
+que pasamos como argumento a ``sorted`` es una :term:`lista`, un tipo
+de objeto de Python que agrupa una secuencia de objetos.
 
 Por tanto ``[x, y, z]`` no es más que una lista que contiene la
-secuencia de elementos ``x``, ``y``, ``z`` y ``sorted([x,y,z])`` es
+secuencia de elementos ``x``, ``y`` y ``z``.  Y ``sorted([x,y,z])`` es
 una versión ordenada de esa lista.
 
 Si queremos que la lista se muestre con otro formato no tenemos más
@@ -260,7 +252,7 @@ Iteración
 ---------
 
 Los bucles son construcciones que permiten volver atrás en la secuencia
-de sentencias. Cada ejecución del grupo de sentencias que compone el
+de sentencias. Cada ejecución del bloque de sentencias que compone el
 cuerpo del bucle se le llama :term:`iteración`.
 
 El más general es el :term:`bucle *while*` que repite un bloque de
@@ -312,19 +304,18 @@ Veamos un ejemplo muy similar a un conocido.
       else:
           print(raiz_cubica(x))
 
-   A lo mejor este ejemplo es muy sencillo y tú mismo ves que el
-   algoritmo es fácil de entender, pero las cosas en la vida real no
-   suelen ser tan fáciles. En general nos vamos a enfrentar al
-   problema de saber si lo que hemos escrito está bien o no hemos
-   entendido todos los casos posibles.  ¿Cómo sabemos que el bucle que
-   hemos escrito termina alguna vez? ¿Cómo sabemos que no se queda
-   indefinidamente en él?
+A lo mejor este ejemplo es muy sencillo y tú mismo ves que el
+algoritmo es fácil de entender, pero las cosas en la vida real no
+suelen ser tan fáciles. En general nos vamos a enfrentar al problema
+de saber si lo que hemos escrito está bien o no hemos entendido todos
+los casos posibles.  ¿Cómo sabemos que el bucle que hemos escrito
+termina alguna vez? ¿Cómo sabemos que no se queda indefinidamente en
+él?
 
-La respuesta es que debemos buscar una **:term:`función de
-decremento`**.  No hay que escribirla en el programa y en muchos casos
-ni siquiera hay que escribirla en papel, pero tiene que existir.  Una
-:term:`función de decremento` tiene que cumplir cuatro características
-básicas:
+La respuesta es que debemos buscar una :term:`función de decremento`.
+No hay que escribirla en el programa y en muchos casos ni siquiera hay
+que escribirla en papel, pero tiene que existir.  Una :term:`función
+de decremento` tiene que cumplir cuatro características básicas:
 
 1.  Se trata de una función que hace corresponder números enteros a
     valores de las variables del programa :math:`f:V \rightarrow
@@ -366,114 +357,387 @@ variar el comportamiento del bloque.  Por ejemplo:
    for i in [1, 2, 3, 4]:
        print(i)
 
+Prueba a cambiar la lista de valores, poniendo elementos desordenados
+e incluso cambiando el tipo de los elementos.
+
 Para crear secuencias de valores es muy conveniente el uso de la
-función ``range``.
+función ``range``.  Esta función devuelve un iterable que contiene un
+conjunto de números enteros consecutivos.
 
-.. activecode:: python
+.. activecode:: ejemplo-rango-10
 
-    range(10)
-
-
-
-
-.. parsed-literal::
-
-    range(0, 10)
-
-
+    print(range(10))
 
 Este rango contiene todos los valores desde 0 hasta el límite marcado
-sin contarlo. Podemos verlo usando nuevamente el operador ``*`` para
-expandir el rango:
+sin contarlo.  No es una lista, no podemos verlo imprimiendo sin más.
+Pero podemos verlo usando nuevamente el operador ``*`` para expandir
+el rango:
 
-.. code:: python
+.. activecode:: expande-rango-10
 
     print(*range(10))
 
 
-.. parsed-literal::
-
-    0 1 2 3 4 5 6 7 8 9
-
-
-También podemos especificar los límites inferior y superior. El límite
+También podemos especificar los límites inferior y superior.  El límite
 inferior está incluído en el rango.
 
-.. code:: python
+.. activecode:: ejemplo-rango-5-10
 
-    print(range(5,10))
-
-
-.. parsed-literal::
-
-    range(5, 10)
+    print(*range(5,10))
 
 
 Por último se puede especificar el incremento, de manera que solo se
 incluya uno de cada *n* números del rango. Por ejemplo:
 
-.. code:: python
+.. activecode:: ejemplo-rango-1-20-2
 
     print(*range(1, 20, 2))
 
+Con ``range`` es muy sencillo construir bucles *for*.
 
-.. parsed-literal::
+.. activecode:: ejemplo-rango-1-20-2
 
-    1 3 5 7 9 11 13 15 17 19
+   for i in range(10):
+       print(i)
 
+   for i in range(10,0,-1):
+       print(i)
 
 Ambos tipos de bucle pueden utilizarse en la mayoría de las situaciones.
 Es quizás más sencillo buscar la *función de decremento* en el caso del
 ``while`` pero también suele ser algo más largo. Cuál usar es cuestión
-de gustos o conveniencia. Para recorrer elementos en una secuencia el
+de gustos o conveniencia.  Para recorrer elementos en una secuencia el
 ``for`` seguramente será más apropiado, mientras que para hacer un
 número de iteraciones que depende de los valores calculados el ``while``
 es más natural.
 
 Veamos el ejemplo de la raiz cúbica con ``for``.
 
-.. code:: python
+.. activecode:: raiz-cubica-con-for
 
-    def raiz_cubica(n):
-        for i in range(n + 1):
-            if i**3 >= n: break
+   def raiz_cubica(n):
+       for i in range(n + 1):
+           if i**3 >= n: break
     
-        if i**3 == n:
-            return i
+       if i**3 == n:
+           return i
+
+   print(raiz_cubica(2406104))
 
 Las cadenas de texto también pueden ser recorridas carácter a carácter
-con un bucle for.
+con un bucle *for*.
 
-.. code:: python
+.. activecode:: ejemplo-for-cadena
 
-    for i in 'Hola':
-        print(i)
+   for i in 'Hola':
+       print(i)
 
-
-.. parsed-literal::
-
-    H
-    o
-    l
-    a
-
-
-El bucle ``for`` tiene otra forma interesante, con ayuda de la función
+El bucle *for* tiene otra forma interesante, con ayuda de la función
 ``enumerate``, en la que además de recorrer los elementos de la
 secuencia también recorre las posiciones de esos elementos.
 
+.. activecode:: ejemplo-for-enum
+
+   for pos, nombre in enumerate(['Pedro', 'Paco', 'Luis', 'Pocoyo']):
+       print(pos, ':', nombre)
+
+Aún hay otra forma de *for* que resulta muy útil.  Se utiliza con la
+función ``zip`` cuando queremos recorrer dos iterables de manera
+sincronizada.  Es decir, cuando tenemos que recorrer los dos primeros
+elementos de cada iterable, después los dos segundos, etc.
+
+.. activecode:: ejemplo-for-zip
+
+   for a, b in zip('ABCDEF', ['a', 'be', 'ce', 'de', 'e', 'efe']):
+       print(a, ':', b)
+
+Esto es suficiente para completar con facilidad todos los ejercicios
+del curso.  Evidentemente debes entrenar todas las formas de iteración
+vistas, así que procura hacer los ejercicios que se piden a
+continuación.
+
+Recuerda que los ejercicios tienen una función similar a los
+ejercicios deportivos.  No se trata de hacerlos, sino de perfeccionar
+su ejecución y plantearse retos.  Por ejemplo, después de hacer un
+ejercicio con un *for* prueba a hacerlo con un *while*.
+
+Ejercicios
+----------
+
+.. parsonsprob:: suma-10-input
+
+   Reordena las líneas para que el programa imprima la suma de los 10
+   números que se introduzcan por pantalla.
+   -----
+   suma = 0
+   for a in range(10):
+       suma = suma + int(input('Introduce un numero ')) 
+   print(suma)
+
+
+.. note:: Para que el usuario pueda introducir texto por pantalla se
+          usa la función ``input`` que devuelve una cadena de texto.
+          Fíjate bien en cómo convertimos el resultado de ``input`` a
+          un entero usando la función ``int``. ¿Qué pasaría si lo que
+          metemos no es un entero?
+   
+
+Haz un programa que imprima la tabla de multiplicar completa (del 1 al
+9).
+
 .. code:: python
 
-    for posicion, nombre in enumerate(['Pedro', 'Paco', 'Luis', 'Pocoyo', 'Marshall']):
-        print(posicion, ':', nombre)
+    def imprime_tablas_simple():
+        for i in range(1,10):
+            imprime_tabla(i)
+            print()
+    
+    def imprime_tabla(n):
+        for i in range(1,11):
+            imprime_linea(n,i)
+            print()
+    
+    def imprime_linea(n,i):
+        print(n,'x',i,'=',n*i,end='')
+
+Otra forma:
+
+.. code:: python
+
+    def imprime_mosaico():
+        for i in range(1,10,3):
+            imprime_tablas_mosaico(i)
+            
+    def imprime_tablas_mosaico(primera):
+        for i in range(1,11):
+            imprime_linea_mosaico(primera,i)
+        print()
+    
+    def imprime_linea_mosaico(primera, n):
+        for i in range(primera, primera+3):
+            imprime_linea(i,n)
+            print(end='\t')
+        print()
+    
+    def imprime_linea(n,i):
+        print(n,'x',i,'=',n*i,end='')
+    
+    imprime_mosaico()
 
 
 .. parsed-literal::
 
-    0 : Pedro
-    1 : Paco
-    2 : Luis
-    3 : Pocoyo
-    4 : Marshall
+    1 x 1 = 1	2 x 1 = 2	3 x 1 = 3	
+    1 x 2 = 2	2 x 2 = 4	3 x 2 = 6	
+    1 x 3 = 3	2 x 3 = 6	3 x 3 = 9	
+    1 x 4 = 4	2 x 4 = 8	3 x 4 = 12	
+    1 x 5 = 5	2 x 5 = 10	3 x 5 = 15	
+    1 x 6 = 6	2 x 6 = 12	3 x 6 = 18	
+    1 x 7 = 7	2 x 7 = 14	3 x 7 = 21	
+    1 x 8 = 8	2 x 8 = 16	3 x 8 = 24	
+    1 x 9 = 9	2 x 9 = 18	3 x 9 = 27	
+    1 x 10 = 10	2 x 10 = 20	3 x 10 = 30	
+    
+    4 x 1 = 4	5 x 1 = 5	6 x 1 = 6	
+    4 x 2 = 8	5 x 2 = 10	6 x 2 = 12	
+    4 x 3 = 12	5 x 3 = 15	6 x 3 = 18	
+    4 x 4 = 16	5 x 4 = 20	6 x 4 = 24	
+    4 x 5 = 20	5 x 5 = 25	6 x 5 = 30	
+    4 x 6 = 24	5 x 6 = 30	6 x 6 = 36	
+    4 x 7 = 28	5 x 7 = 35	6 x 7 = 42	
+    4 x 8 = 32	5 x 8 = 40	6 x 8 = 48	
+    4 x 9 = 36	5 x 9 = 45	6 x 9 = 54	
+    4 x 10 = 40	5 x 10 = 50	6 x 10 = 60	
+    
+    7 x 1 = 7	8 x 1 = 8	9 x 1 = 9	
+    7 x 2 = 14	8 x 2 = 16	9 x 2 = 18	
+    7 x 3 = 21	8 x 3 = 24	9 x 3 = 27	
+    7 x 4 = 28	8 x 4 = 32	9 x 4 = 36	
+    7 x 5 = 35	8 x 5 = 40	9 x 5 = 45	
+    7 x 6 = 42	8 x 6 = 48	9 x 6 = 54	
+    7 x 7 = 49	8 x 7 = 56	9 x 7 = 63	
+    7 x 8 = 56	8 x 8 = 64	9 x 8 = 72	
+    7 x 9 = 63	8 x 9 = 72	9 x 9 = 81	
+    7 x 10 = 70	8 x 10 = 80	9 x 10 = 90	
+    
+
+
+Haz un programa que imprima el siguiente dibujo
+
+::
+
+    +----------------+
+    |                |
+    |                |
+    |                |
+    |                |
+    |                |
+    |                |
+    |                |
+    |                |
+    +----------------+
+
+.. code:: python
+
+    def imprime_cuadrado(ancho):
+        imprime_borde(ancho)
+        for i in range(8):
+            imprime_cara(ancho)
+        imprime_borde(ancho)
+        
+    def imprime_borde(ancho):
+        print('+' + '-'*ancho + '+')
+    
+    def imprime_cara(ancho):
+        print('|' + ' '*ancho + '|')
+    
+    imprime_cuadrado(16)
+
+
+.. parsed-literal::
+
+    +----------------+
+    |                |
+    |                |
+    |                |
+    |                |
+    |                |
+    |                |
+    |                |
+    |                |
+    +----------------+
+
+
+Crear una función que valide una contraseña según estos criterios:
+
+-  La contraseña debe contener un mínimo de 8 caracteres.
+-  Una contraseña debe contener letras minúsculas, mayúsculas, números y
+   al menos 1 carácter no alfanumérico.
+-  La contraseña no puede contener espacios en blanco.
+-  Contraseña válida, retorna ``True``.
+-  Contraseña no válida, retorna el mensaje
+   ``"La contraseña elegida no es segura"``.
+
+.. code:: python
+
+    def valida_palabra_clave(palabra):
+        return  valida_8_caracteres(palabra) and \
+                valida_tipos_caracteres(palabra) and \
+                valida_no_espacios(palabra)
+    
+            
+    def valida_8_caracteres(palabra):
+        return len(palabra) >= 8
+    
+    
+    def valida_tipos_caracteres(palabra):
+        return valida_mayusculas(palabra) \
+            and valida_minusculas(palabra) \
+            and valida_numeros(palabra) \
+            and valida_simbolos(palabra)
+    
+            
+    def valida_no_espacios(palabra):
+        for c in palabra:
+            if c == ' ':
+                return False
+        return True
+    
+    
+    def valida_mayusculas(palabra):
+        for c in palabra:
+            if es_mayuscula(c):
+                return True
+        return False
+    
+    
+    def valida_minusculas(palabra):
+        for c in palabra:
+            if es_minuscula(c):
+                return True
+        return False
+    
+    
+    def valida_numeros(palabra):
+        for c in palabra:
+            if es_numero(c):
+                return True
+        return False
+    
+    
+    def valida_simbolos(palabra):
+        for c in palabra:
+            if es_simbolo(c):
+                return True
+        return False
+    
+    
+    def es_mayuscula(c):
+        return c >= 'A' and c <= 'Z'
+    
+    
+    def es_minuscula(c):
+        return c >= 'a' and c <= 'z'
+    
+    
+    def es_numero(c):
+        return c >= '0' and c <= '9'
+    
+    
+    def es_simbolo(c):
+        return not ( es_mayuscula(c) \
+            or es_minuscula(c) \
+            or es_numero(c) )
+    
+    
+    valida_palabra_clave('aLt0$€cr3t0')
+
+
+
+
+.. parsed-literal::
+
+    True
+
+
+
+¿No es muy repetitivo? Las validaciones de tipos de caracteres son
+prácticamente iguales. Solo se diferencian en la función que determina
+el tipo de cada caracter. Por tanto para no repetir código se puede
+pasar como parámetro.
+
+.. code:: python
+
+    def valida_tipos_caracteres(palabra):
+        return valida_tipo(es_mayuscula, palabra) \
+            and valida_tipo(es_minuscula, palabra) \
+            and valida_tipo(es_numero, palabra) \
+            and valida_tipo(es_simbolo, palabra)
+    
+            
+    def valida_no_espacios(palabra):
+        return not valida_tipo(es_espacio, palabra)
+    
+    
+    def valida_tipo(es_tipo, palabra):
+        for c in palabra:
+            if es_tipo(c):
+                return True
+        return False
+    
+    
+    def es_espacio(c):
+        return c == ' '
+    
+    
+    valida_palabra_clave('aLt0s€cr3T0')
+
+
+
+
+.. parsed-literal::
+
+    True
+
 
 

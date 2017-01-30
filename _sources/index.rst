@@ -14,8 +14,7 @@ Mancha*.
    prefacio.rst
    intro.rst
    elem.rst
-   python-04-ejercicios.rst
-   python-04.rst
+   bif-iter.rst
    python-05-06-07.rst
    python-09.rst
    python-10.rst

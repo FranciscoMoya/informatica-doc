@@ -21,12 +21,16 @@ Prueba ahora a sustituir todo el mensaje entre comillas, incluídas las
 comillas por un número y pulsa *Run*.  Prueba también a poner una
 expresión aritmética, por ejemplo `124 + (12 - 1.5) * 0.21`.
 
+Finalmente prueba a añadir un espacio antes de ``print``. Es bastante
+puntilloso, ¿verdad?
+
 Probar es esencial, aunque te parezca tonto hazlo, tienes que
 desarrollar tu intuición para ver cómo puedes cambiar un programa para
 que haga lo que tú quieres.
 
 Intérpretes y compiladores
 --------------------------
+
 
 
 Instalación del software
@@ -69,8 +73,8 @@ intérprete de órdenes:
 
 .. code::
    
-    setx PATH "%PATH%;C:\Users\<usuario>\AppData\Local\Programs\Python\Python35"
-    setx PATH "%PATH%;C:\Users\<usuario>\AppData\Local\Programs\Python\Python35\Scripts"
+   setx PATH "%PATH%;C:\Users\<usuario>\AppData\Local\Programs\Python\Python35"
+   setx PATH "%PATH%;C:\Users\<usuario>\AppData\Local\Programs\Python\Python35\Scripts"
 
 Ten en cuenta que debes cambiar ``<usuario>`` por tu nombre de usuario.
 Es el nombre que aparece en el *prompt* del intérprete de órdenes (por
@@ -517,9 +521,9 @@ bifurcación`.  La más simple de todas es la :term:`sentencia *if*`.
 
 .. activecode:: ejemplo-bifurcar
 
-    n = 200
-    if n > 100:
-        print('Demasiado')
+   n = 200
+   if n > 100:
+       print('Demasiado')
 
 Habrás podido comprobar que el valor de la variable ``n`` determina si
 se imprime o no el mensaje.  Fíjate que después de la condición hay un
@@ -546,13 +550,14 @@ las sentencias indentadas justo a continuación.  Pero después de
 ejecutarlas no continúa con la siguiente sentencia, sino que vuelve a
 evaluar la condición.  Así hasta que la condición no se cumpla.
 
+.. _tabla-del-3:
 .. activecode:: tabla-del-3
 
-    tabla = 3
-    i=0
-    while i<10:
-        print(tabla,'x',i,'=',tabla*i)
-        i = i + 1
+   tabla = 3
+   i=0
+   while i<10:
+       print(tabla,'x',i,'=',tabla*i)
+       i = i + 1
 
 Examina con *Show in Codelens* la ejecución paso a paso de este
 programa.  Observa cómo cambia el valor de la *variable*
@@ -567,9 +572,9 @@ sentencias indentadas del bucle.
 
 .. activecode:: tabla-del-3-for
 
-    tabla = 3
-    for i in range(10):
-        print(tabla,'x',i,'=',tabla*i)
+   tabla = 3
+   for i in range(10):
+       print(tabla,'x',i,'=',tabla*i)
 
 
 Trabaja sobre lo visto
@@ -589,8 +594,8 @@ Empecemos dando valores a un par de variables.
 .. activecode:: asigna-n-m
    :nocodelens:
 
-    n = 123
-    m = 187
+   n = 123
+   m = 187
 
 Si *n* no está entre 5 y 10 (ambos incluidos) imprimir un mensaje de
 error.
@@ -599,8 +604,8 @@ error.
    :nocodelens:
    :include: asigna-n-m
 
-    if n < 5 or n > 10:
-        print('No está en el rango permitido')
+   if n < 5 or n > 10:
+       print('No está en el rango permitido')
 
 
 Otra forma usando rangos. Los rangos son intervalos en
@@ -611,8 +616,8 @@ derecha.
    :nocodelens:
    :include: asigna-n-m
 
-    if n not in range(5,11):
-        print('No está en el rango permitido')
+   if n not in range(5,11):
+       print('No está en el rango permitido')
 
 
 Vamos a otro ejemplo. Si *m* es mayor que *n* restar *n* de *m*.
@@ -621,8 +626,8 @@ Vamos a otro ejemplo. Si *m* es mayor que *n* restar *n* de *m*.
    :nocodelens:
    :include: asigna-n-m
 
-    if m > n:
-        m = m - n
+   if m > n:
+       m = m - n
 
 Si n no es par multiplicar m por 10 y mostrar un mensaje de advertencia.
 
@@ -630,10 +635,10 @@ Si n no es par multiplicar m por 10 y mostrar un mensaje de advertencia.
    :nocodelens:
    :include: asigna-n-m
 
-    resto = n - (n//2)*2
-    if resto != 0:
-        m = m * 10
-        print('n no es divisible por 2')
+   resto = n - (n//2)*2
+   if resto != 0:
+       m = m * 10
+       print('n no es divisible por 2')
 
 El operador ``//`` es la :term:`división entera` (parte entera de la
 división) y ``!=`` es el :term:`operador distinto`. No te agobies con
@@ -646,9 +651,9 @@ Más fácil aún, usando el operador ``%`` (módulo o resto) y el operador
    :nocodelens:
    :include: asigna-n-m
 
-    if n % 2 != 0:
-        m *= 10
-        print('n no es divisible por 2')
+   if n % 2 != 0:
+       m *= 10
+       print('n no es divisible por 2')
 
 Es muy posible que a estas alturas esto te suene a chino.  No pasa
 nada, solo tienes que entender lo que hace.  Si no lo entiendes
@@ -662,9 +667,9 @@ evaluaría como ``True``. Por tanto se puede hacer todavía más corto así:
    :nocodelens:
    :include: asigna-n-m
 
-    if n % 2:
-        m *= 10
-        print('n no es divisible por 2')
+   if n % 2:
+       m *= 10
+       print('n no es divisible por 2')
 
 
 ¿Cuál de los dos números es más próximo a 100?
@@ -673,10 +678,10 @@ evaluaría como ``True``. Por tanto se puede hacer todavía más corto así:
    :nocodelens:
    :include: asigna-n-m
 
-    if abs(n-100) < abs(m-100):
-        print('n es más próximo a 100')
-    else:
-        print('m es más próximo a 100')
+   if abs(n-100) < abs(m-100):
+       print('n es más próximo a 100')
+   else:
+       print('m es más próximo a 100')
 
 Bueno, esta es la primera vez que vemos un ``else``.  Deberíamos
 aclarar algo, verdad?  La claúsula ``else`` es una parte opcional de
@@ -691,11 +696,11 @@ Veamos una vuelta de tuerca más sin repetir el mensaje.
    :nocodelens:
    :include: asigna-n-m
 
-    if abs(n-100) < abs(m-100):
-        print('n', end=' ')
-    else:
-        print('m', end=' ')
-    print('es más próximo a 100')
+   if abs(n-100) < abs(m-100):
+       print('n', end=' ')
+   else:
+       print('m', end=' ')
+   print('es más próximo a 100')
 
 Y todavía podemos acortarlo más, usando el operador ternario
 (*valor\_si\_true* **if** *condición* **else** *valor\_si\_false*).
@@ -706,7 +711,7 @@ suma.
    :nocodelens:
    :include: asigna-n-m
 
-    print('n' if abs(n-100) < abs(m-100) else 'm', 'es más próximo a 100')
+   print('n' if abs(n-100) < abs(m-100) else 'm', 'es más próximo a 100')
 
 
 Más corto significa menos código que leer y depurar, y eso es muy
@@ -742,16 +747,16 @@ haber resuelto el problema así?
 .. activecode:: tabla-del-3-v0
    :nocodelens:
 
-    print('3 x 0 = 0')
-    print('3 x 1 = 3')
-    print('3 x 2 = 6')
-    print('3 x 3 = 9')
-    print('3 x 4 = 12')
-    print('3 x 5 = 15')
-    print('3 x 6 = 18')
-    print('3 x 7 = 21')
-    print('3 x 8 = 24')
-    print('3 x 9 = 27')
+   print('3 x 0 = 0')
+   print('3 x 1 = 3')
+   print('3 x 2 = 6')
+   print('3 x 3 = 9')
+   print('3 x 4 = 12')
+   print('3 x 5 = 15')
+   print('3 x 6 = 18')
+   print('3 x 7 = 21')
+   print('3 x 8 = 24')
+   print('3 x 9 = 27')
 
 Evidentemente es correcto pero solo resuelve un problema muy concreto.
 Con muy poquito esfuerzo más se pueden resolver problemas parecidos.
@@ -759,17 +764,17 @@ Con muy poquito esfuerzo más se pueden resolver problemas parecidos.
 .. activecode:: tabla-del-3-v1
    :nocodelens:
 
-    i = 0
-    while i < 10:
-        print('3 x',i,'=',3*i)
-        i = i + 1
+   i = 0
+   while i < 10:
+       print('3 x',i,'=',3*i)
+       i = i + 1
 
 Ahora tenemos dos ventajas. Por un lado es mas corto y por tanto mas
 fácil de cambiar.  Por otro lado no necesitamos conocer los resultados
 de las expresiones.  Es lo lógico, a fin de cuentas estamos usando un
 computador.
 
-Compara esta solución con el ejemplo :ref:`tabla-del-3`.  Es
+Compara esta solución con el ejemplo :numref:`tabla-del-3`.  Es
 ciertamente parecido, pero en el ejemplo anterior podemos cambiar la
 tabla simplemente cambiando el 3 asignado a ``tabla``.  La propiedad
 que permite manejar casos similares con el mismo fragmento de programa
@@ -786,11 +791,11 @@ función.
 
 .. activecode:: imprimir_tabla_multiplicar
 
-    def imprimir_tabla_multiplicar(tabla):
-        i = 0
-        while i < 10:
-            print(tabla,'x',i,'=',tabla*i)
-            i = i + 1    
+   def imprimir_tabla_multiplicar(tabla):
+       i = 0
+       while i < 10:
+           print(tabla,'x',i,'=',tabla*i)
+           i = i + 1    
 
 Y podemos usarla con una expresión de llamada a función, igual que la
 propia función ``print``.
@@ -799,9 +804,9 @@ propia función ``print``.
    :include: imprimir_tabla_multiplicar
 
    imprimir_tabla_multiplicar(3)
-            
+
 Es posible que pienses que esta versión es la más larga, y tiene las
-mismas ventajas que la primera versión :ref:`tabla-del-3`.  Una
+mismas ventajas que la primera versión :numref:`tabla-del-3`.  Una
 ventaja de la función es que ya no es necesario copiar el texto del
 programa para imprimir otra tabla. Basta usar la función como si se
 tratara de una nueva sentencia.
@@ -818,13 +823,12 @@ experimentado:
 
 .. activecode:: imprimir_tabla_multiplicar_v2
 
-    def imprimir_tabla_multiplicar(tabla):
-        for i in range(10):
-            print('{} x {} = {}'.format(tabla, i, tabla*i))
+   def imprimir_tabla_multiplicar(tabla):
+       for i in range(10):
+           print('{} x {} = {}'.format(tabla, i, tabla*i))
     
-    imprimir_tabla_multiplicar(3)
+   imprimir_tabla_multiplicar(3)
 
 No te preocupes si no lo entiendes ahora. Es más importante saber
 resolver problemas con un ordenador que conocer el lenguaje al
 detalle.
-
