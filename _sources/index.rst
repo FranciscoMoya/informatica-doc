@@ -44,8 +44,6 @@ Mancha*.
    Prueba de Progreso 2016 1ºB.rst
    Prueba de Progreso 2016 1ºC.rst
    python-files.rst
-   PythonMinimo.rst
-   Resumen.rst
    sopa_letras.rst
    Sudoku 2.rst
    Sudoku 3.rst
@@ -53,4 +51,6 @@ Mancha*.
    tour-caballo.rst
    trabajo-grupo.rst
 
+   Resumen.rst
+   PythonMinimo.rst
    about.rst

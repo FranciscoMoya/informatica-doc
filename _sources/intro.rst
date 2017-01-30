@@ -468,8 +468,8 @@ salida estándar.  Por ejemplo:
 .. activecode:: hola-mundo-2-lineas
    :nocodelens:
 
-    print('Hola,')
-    print('Mundo')
+   print('Hola,')
+   print('Mundo')
 
 En algunas ocasiones nos puede interesar que diferentes llamadas a
 ``print`` impriman en la misma línea de la salida estándar.  Eso se
@@ -479,8 +479,8 @@ puede controlar con un argumento opcional de ``print`` llamado
 .. activecode:: hola-mundo-2-prints
    :nocodelens:
 
-    print('Hola,', end='')
-    print('Mundo')
+   print('Hola,', end='')
+   print('Mundo')
 
 Este argumento adicional es un :term:`argumento nombrado`. Es una
 característica muy interesante para evitar posibles errores en el
@@ -497,8 +497,8 @@ persona concreta.
 
 .. activecode:: hola-pedro
 
-    pers = 'Pedro'
-    print('Hola', pers)
+   pers = 'Pedro'
+   print('Hola', pers)
 
 La primera sentencia es una sentencia de :term:`asignación`.  La
 :term:`asignación` sirve para poner nombre a una zona de memoria que
