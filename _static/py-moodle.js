@@ -103,7 +103,7 @@ function isPython3Source() {
 	return py3.prop('checked');
 }
 
-function require(file,success,failure){
+function loadJS(file,success,failure){
     var head=document.getElementsByTagName("head")[0];
     var script=document.createElement('script');
     script.src=file;
@@ -123,11 +123,11 @@ function require(file,success,failure){
 function loadScript(src) {
 	var base = '//franciscomoya.github.io/informatica-doc/docs/_static/';
 	return new Zousan(function (resolve, reject) {
-		require(base + src, resolve, reject);
+		loadJS(base + src, resolve, reject);
 	});
 }
 
-require('https://cdn.rawgit.com/bluejava/zousan/master/zousan-min.js', 
+loadJS('https://cdn.rawgit.com/bluejava/zousan/master/zousan-min.js', 
 	function() {
 	    loadScript('skulpt.min.js').then(function(){
 		loadScript('skulpt-stdlib.js').then(function(){
