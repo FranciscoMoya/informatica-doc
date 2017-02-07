@@ -110,7 +110,8 @@ function loadScript(src) {
 		s.src = base + src;
 		s.onload = resolve;
 		s.onerror = reject;
-		document.head.appendChild(s);
+		document.getElementsByTagName('head')[0].appendChild(s);
+		Promise = Zousan;
 	});
 }
 
@@ -118,10 +119,10 @@ function loadZousan() {
 	if (typeof Promise == 'undefined') {
 		var s = document.createElement('script');
 		s.src = 'https://raw.githubusercontent.com/bluejava/zousan/master/zousan-min.js';
+		s.type = "text/javascript";
 		s.async = false;
-		document.head.appendChild(s);
+		document.getElementsByTagName('head')[0].appendChild(s);
 	}
-	Promise = Zousan;
 }
 
 loadZousan();
