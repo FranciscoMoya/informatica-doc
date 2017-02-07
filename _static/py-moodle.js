@@ -123,7 +123,7 @@ function require(file,success,failure){
 function loadScript(src) {
 	var base = '//franciscomoya.github.io/informatica-doc/docs/_static/';
 	return new Zousan(function (resolve, reject) {
-		require(s.src = base + src, resolve, reject);
+		require(base + src, resolve, reject);
 	});
 }
 
