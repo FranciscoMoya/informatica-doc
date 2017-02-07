@@ -123,7 +123,7 @@ function loadJS(file, success, failure){
 
 function loadScripts(src) {
     var base = '//franciscomoya.github.io/informatica-doc/docs/_static/';
-    if (!src)
+    if (src.length == 0)
         return
     return new Promise(function (resolve, reject) {
 	loadJS(base + src[0], resolve, reject);
@@ -139,7 +139,7 @@ loadJS('https://cdn.rawgit.com/bluejava/zousan/master/zousan-min.js',
            }
 	   loadScripts(['skulpt.min.js',
                         'skulpt-stdlib.js',
-		        'jquery.js']).then(function(){
+                        'jquery.js']).then(function(){
 		            $(document).ready(initPythonMoodleTask);
 		        });
        });
