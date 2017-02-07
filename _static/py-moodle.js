@@ -111,7 +111,6 @@ function loadScript(src) {
 		s.onload = resolve;
 		s.onerror = reject;
 		document.getElementsByTagName('head')[0].appendChild(s);
-		Promise = Zousan;
 	});
 }
 
@@ -122,6 +121,7 @@ function loadZousan() {
 		s.type = "text/javascript";
 		s.async = false;
 		document.getElementsByTagName('head')[0].appendChild(s);
+		Promise = Zousan;
 	}
 }
 
