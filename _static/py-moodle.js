@@ -114,6 +114,17 @@ function loadScript(src) {
 	});
 }
 
+function loadZousan() {
+	if (typeof Promise == 'undefined') {
+		var s = document.createElement('script');
+		s.src = 'https://raw.githubusercontent.com/bluejava/zousan/master/zousan-min.js';
+		s.async = false;
+		document.head.appendChild(s);
+	}
+	Promise = Zousan;
+}
+
+loadZousan();
 loadScript('skulpt.min.js').then(function(){
 	loadScript('skulpt-stdlib.js').then(function(){
 		loadScript('jquery.js').then(function(){
