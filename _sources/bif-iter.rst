@@ -434,7 +434,8 @@ con un bucle *for*.
 
 El bucle *for* tiene otra forma interesante, con ayuda de la función
 ``enumerate``, en la que además de recorrer los elementos de la
-secuencia también recorre las posiciones de esos elementos.
+secuencia también recorre las posiciones de esos elementos. Fíjate
+bien, ahora tenemos dos variables de control.
 
 .. activecode:: ejemplo-for-enum
 
@@ -482,10 +483,11 @@ Ejercicios
           metemos no es un entero?
    
 
-Haz un programa que imprima la tabla de multiplicar completa (del 1 al
-9).
+Vamos a enfrentarnos por primera vez a un prgrama de más de 5 líneas:
 
-.. code:: python
+| Haz un programa que imprima la tabla de multiplicar completa (del 1 al 9).
+
+.. activecode:: imprime-tabla-v1
 
     def imprime_tablas_simple():
         for i in range(1,10):
@@ -499,6 +501,8 @@ Haz un programa que imprima la tabla de multiplicar completa (del 1 al
     
     def imprime_linea(n,i):
         print(n,'x',i,'=',n*i,end='')
+
+
 
 Otra forma:
 
