@@ -118,7 +118,7 @@ function loadScript(src) {
 function loadZousan() {
 	if (typeof Promise == 'undefined') {
 		var s = document.createElement('script');
-		s.src = 'https://raw.githubusercontent.com/bluejava/zousan/master/zousan-min.js';
+		s.src = 'https://cdn.rawgit.com/bluejava/zousan/master/zousan-min.js';
 		s.type = "text/javascript";
 		s.async = false;
 		document.getElementsByTagName('head')[0].appendChild(s);
