@@ -103,33 +103,37 @@ function isPython3Source() {
 	return py3.prop('checked');
 }
 
+function require(file,success,failure){
+    var head=document.getElementsByTagName("head")[0];
+    var script=document.createElement('script');
+    script.src=file;
+    script.type='text/javascript';
+    //real browsers
+    script.onload = success;
+    script.onerror = failure;
+    //Internet explorer
+    script.onreadystatechange = function() {
+        if (this.readyState == 'complete') {
+            callback();
+        }
+    }
+    head.appendChild(script);
+}
+
 function loadScript(src) {
 	var base = '//franciscomoya.github.io/informatica-doc/docs/_static/';
-	return new Promise(function (resolve, reject) {
-		var s = document.createElement('script');
-		s.src = base + src;
-		s.onload = resolve;
-		s.onerror = reject;
-		document.getElementsByTagName('head')[0].appendChild(s);
+	return new Zousan(function (resolve, reject) {
+		require(s.src = base + src, resolve, reject);
 	});
 }
 
-function loadZousan() {
-	if (typeof Promise == 'undefined') {
-		var s = document.createElement('script');
-		s.src = 'https://cdn.rawgit.com/bluejava/zousan/master/zousan-min.js';
-		s.type = "text/javascript";
-		s.async = false;
-		document.getElementsByTagName('head')[0].appendChild(s);
-		Promise = Zousan;
-	}
-}
-
-loadZousan();
-loadScript('skulpt.min.js').then(function(){
-	loadScript('skulpt-stdlib.js').then(function(){
-		loadScript('jquery.js').then(function(){
+require('https://cdn.rawgit.com/bluejava/zousan/master/zousan-min.js', 
+	function() {
+	    loadScript('skulpt.min.js').then(function(){
+		loadScript('skulpt-stdlib.js').then(function(){
+		    loadScript('jquery.js').then(function(){
 			$(document).ready(initPythonMoodleTask);
+		    });
 		});
-	});
-});
+	    });
+	}, null);
