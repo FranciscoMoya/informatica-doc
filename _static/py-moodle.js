@@ -22,7 +22,7 @@ function installPythonFacade($) {
     editor.after('<div style="float:right; background-color:#FFF;">' +
                  '<input type="checkbox" id="python3" checked>Python 3</div>' + 
 	         '<textarea style="width:100%" id="code">' +
-                 $('#id_onlinetext_editor').val() + '</textarea>' +
+                 getSubmittedCode() + '</textarea>' +
 		 '<pre id="output"></pre>' +
 		 '<div id="canvas"></div>' + 
 		 '<div id="status"></div>');
@@ -49,10 +49,8 @@ function testAndSubmitPythonProgram(e) {
     (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = this.graphics;
     Sk.canvas = 'canvas';
     testPythonProgram(prog).then(
-	function success(r) {
-	    var prog = $('#code').val();
-	    var out = $('#output').text();
-	    $('#id_onlinetext_editor').val("''' " + r.toString() + "\n" + out + "'''\n" + prog);
+	function success(fail) {
+            updateSubmittedText(fail);
 	    $.post(form.attr('action'), form.serialize(), function(msg) {
 		form.replaceWith($('div.submissionstatustable', $(msg)));
 	    });
@@ -77,6 +75,22 @@ function testPythonProgram(prog) {
 		reject);
 	}, reject);
     });
+}
+
+function updateSubmittedText(fail) {
+    var prog = $('#code').val(),
+        out = $('#output').text(),
+        header = fail.toString() + " failures\n\n",
+        sep = $('#id_onlinetext_editor').attr("code-separator"),
+        doc = header + out + sep + prog;
+    $('#id_onlinetext_editor').val(doc);
+}
+
+function getSubmittedCode() {
+    var sep = "\n===='''\n\n";
+    $('#id_onlinetext_editor').attr("code-separator", sep);
+    var code = $('#id_onlinetext_editor').val().split(sep);
+    return code.length > 1? code[1]: code[0];
 }
 
 function builtinRead(x) {
@@ -116,12 +130,12 @@ function allowedFailures() {
     return f.text;
 }
 
-function loadJS (url, location, success){
+function loadJS (url, parent, success){
     var scriptTag = document.createElement('script');
     scriptTag.src = url;
     scriptTag.onload = success;
     scriptTag.onreadystatechange = success;
-    location.appendChild(scriptTag);
+    parent.appendChild(scriptTag);
 };
 
 function ghurl(file) {
