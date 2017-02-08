@@ -110,10 +110,16 @@ function allowedFailures() {
     return f.text;
 }
 
-requirejs(['https://franciscomoya.github.io/informatica-doc/docs/_static/jquery.js',
+requirejs.config({
+    baseUrl: 'https://franciscomoya.github.io/informatica-doc/docs/_static/'
+    paths: {
+        jquery: 'jquery'
+    }
+});
+requirejs(['jquery',
 	   'https://www.promisejs.org/polyfills/promise-7.0.4.min.js',
-	   'https://franciscomoya.github.io/informatica-doc/docs/_static/skulpt.min.js',
-           'https://franciscomoya.github.io/informatica-doc/docs/_static/skulpt-stdlib.js'], 
+	   'skulpt.min.js',
+           'skulpt-stdlib.js'], 
 	  function($){
 	      window.$ = $;
 	      var editor = $('div.felement.feditor');
