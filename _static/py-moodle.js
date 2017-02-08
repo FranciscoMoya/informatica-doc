@@ -148,8 +148,9 @@ function ghurl(file) {
 loadJS(ghurl('jquery.js'), document.head, function() {
     $ = window.jQuery;
     $(document).ready(installPythonFacade.bind(null, $));
+    loadJS('https://www.promisejs.org/polyfills/promise-7.0.4.min.js',
+           document.head, function(){});
     loadJS(ghurl('skulpt.min.js'), document.head, function() {
-	loadJS(ghurl('skulpt-stdlib.js'), document.head, function() {
-	});
+	loadJS(ghurl('skulpt-stdlib.js'), document.head, function(){});
     });
 });
