@@ -127,7 +127,7 @@ function loadScriptSeq(src) {
         return
     return new Promise(function (resolve, reject) {
 	var url = src[0];
-	if (!url.startsWith('http')
+	if (!url.startsWith('http'))
 	    url = base + url;
 	loadJS(url, resolve, reject);
     }).then(function() {
