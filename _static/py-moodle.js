@@ -95,7 +95,7 @@ function unittest(elem) {
 	elem.html() +
 	'\ndef test_():\n' +
 	' t=Test()\n t.main()\n' +
-	' return t.numFailed == 0'; 
+	' return t.numFailed'; 
 }
 
 function isPython3Source() {
@@ -104,15 +104,21 @@ function isPython3Source() {
     return py3.prop('checked');
 }
 
-require(['https://www.promisejs.org/polyfills/promise-7.0.4.min.js',
-	 'https://www.promisejs.org/polyfills/promise-done-7.0.4.js',
-	 'https://franciscomoya.github.io/informatica-doc/docs/_static/skulpt.min.js',
-         'https://franciscomoya.github.io/informatica-doc/docs/_static/skulpt-stdlib.js',
-         'https://franciscomoya.github.io/informatica-doc/docs/_static/jquery.js'], 
-	function(){
-	    var editor = $('div.felement.feditor');
-	    if (editor.length != 0)
-		editor.hide();
-	    $(document).ready(initPythonMoodleTask);
-	});
+function allowedFailures() {
+    var f = $('#failures')
+    if (f.length == 0) return 0;
+    return f.text;
+}
+
+requirejs(['https://franciscomoya.github.io/informatica-doc/docs/_static/jquery.js',
+	   'https://www.promisejs.org/polyfills/promise-7.0.4.min.js',
+	   'https://franciscomoya.github.io/informatica-doc/docs/_static/skulpt.min.js',
+           'https://franciscomoya.github.io/informatica-doc/docs/_static/skulpt-stdlib.js'], 
+	  function($){
+	      window.$ = $;
+	      var editor = $('div.felement.feditor');
+	      if (editor.length != 0)
+		  editor.hide();
+	      $(document).ready(initPythonMoodleTask);
+	  });
 }
