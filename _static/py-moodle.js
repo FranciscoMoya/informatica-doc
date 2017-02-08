@@ -135,12 +135,11 @@ function loadScriptSeq(src) {
     });
 }
 
-loadJS('https://www.promisejs.org/polyfills/promise-7.0.4.min.js', 
-       function success() {
-	   loadScriptSeq(['https://www.promisejs.org/polyfills/promise-done-7.0.4.js',
-			  'skulpt.min.js',
-                          'skulpt-stdlib.js',
-                          'jquery.js']).then(function(){
-		              $(document).ready(initPythonMoodleTask);
-		          });
-       });
+requirejs(['https://www.promisejs.org/polyfills/promise-7.0.4.min.js',
+	   'https://www.promisejs.org/polyfills/promise-done-7.0.4.js',
+	   'https://franciscomoya.github.io/informatica-doc/docs/_static/skulpt.min.js',
+           'https://franciscomoya.github.io/informatica-doc/docs/_static/skulpt-stdlib.js',
+           'https://franciscomoya.github.io/informatica-doc/docs/_static/jquery.js'], 
+	  function(){
+	      $(document).ready(initPythonMoodleTask);
+	  });
