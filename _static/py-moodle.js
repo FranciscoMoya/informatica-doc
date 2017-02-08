@@ -126,7 +126,7 @@ function ghurl(file) {
 }
 
 loadJS(ghurl('skulpt.min.js'), document.head, function() {
-    loadJS(ghurl('skulpt-stdlib.min.js'), document.head, function() {
+    loadJS(ghurl('skulpt-stdlib.js'), document.head, function() {
 	loadJS(ghurl('jquery'), document.head, function() {
 	    var editor = $('div.felement.feditor');
 	    if (editor.length != 0)
