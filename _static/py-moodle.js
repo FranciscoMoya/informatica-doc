@@ -13,8 +13,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-function installPythonFacade() {
-    var $ = window.jQuery;
+function installPythonFacade($) {
     var editor = $('div.felement.feditor');
     if (editor.length == 0)
 	return;
@@ -132,8 +131,8 @@ function ghurl(file) {
 }
 
 loadJS(ghurl('jquery.js'), document.body, function() {
-    var $ = window.jQuery;
-    $(document).ready(installPythonFacade);
+    $ = window.jQuery;
+    $(document).ready(installPythonFacade.bind(null, $));
     loadJS(ghurl('skulpt.min.js'), document.body, function() {
 	loadJS(ghurl('skulpt-stdlib.js'), document.body, function() {
 	});
