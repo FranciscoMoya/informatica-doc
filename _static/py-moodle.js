@@ -121,4 +121,3 @@ pyrec(['jquery',
 	      editor.hide();
 	  $(document).ready(initPythonMoodleTask);
       });
-}
