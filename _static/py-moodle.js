@@ -119,9 +119,10 @@ function loadJS (url, location, success){
 };
 
 function ghurl(file) {
+    var base = 'https://franciscomoya.github.io/informatica-doc/docs/_static/';
     if (file.startsWith('http') || file.startsWith('//'))
 	return file;
-    return 'https://rawgit.com/FranciscoMoya/informatica-doc/master/_static/' + file;
+    return base + file;
 }
 
 loadJS(ghurl('skulpt.min.js'), document.head, function() {
