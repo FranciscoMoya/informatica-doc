@@ -110,14 +110,19 @@ function allowedFailures() {
     return f.text;
 }
 
-
-var loadJS = function(url, location, success){
+function loadJS (url, location, success){
     var scriptTag = document.createElement('script');
     scriptTag.src = url;
     scriptTag.onload = success;
     scriptTag.onreadystatechange = success;
     location.appendChild(scriptTag);
 };
+
+function ghurl(file) {
+    if (file.startsWith('http') || file.startsWith('//'))
+	return file;
+    return 'https://rawgit.com/FranciscoMoya/informatica-doc/master/_static/' + file;
+}
 
 loadJS(ghurl('skulpt.min.js'), document.head, function() {
     loadJS(ghurl('skulpt-stdlib.min.js'), document.head, function() {
