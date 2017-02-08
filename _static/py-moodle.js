@@ -13,7 +13,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-function initPythonMoodleTask() {
+function installPythonFacade() {
     var editor = $('div.felement.feditor');
     if (editor.length == 0)
 	return;
@@ -104,42 +104,22 @@ function isPython3Source() {
     return py3.prop('checked');
 }
 
-function loadJS(file, success, failure){
-    var head = document.getElementsByTagName("head")[0];
-    var script = document.createElement('script');
-    script.src = file;
-    script.type = 'text/javascript';
-    //real browsers
-    script.onload = success;
-    script.onerror = failure;
-    //Internet explorer
-    script.onreadystatechange = function() {
-        if (this.readyState == 'complete') {
-            callback();
-        }
-    }
-    head.appendChild(script);
+function initPythonTask() {
+    require(['https://www.promisejs.org/polyfills/promise-7.0.4.min.js',
+	     'https://www.promisejs.org/polyfills/promise-done-7.0.4.js',
+	     'https://franciscomoya.github.io/informatica-doc/docs/_static/skulpt.min.js',
+             'https://franciscomoya.github.io/informatica-doc/docs/_static/skulpt-stdlib.js',
+             'https://franciscomoya.github.io/informatica-doc/docs/_static/jquery.js'], 
+	    function(){
+		var editor = $('div.felement.feditor');
+		if (editor.length != 0)
+		    editor.hide();
+		$(document).ready(initPythonMoodleTask);
+	    });
 }
 
-function loadScriptSeq(src) {
-    var base = '//franciscomoya.github.io/informatica-doc/docs/_static/';
-    if (src.length == 0)
-        return
-    return new Promise(function (resolve, reject) {
-	var url = src[0];
-	if (!url.startsWith('http'))
-	    url = base + url;
-	loadJS(url, resolve, reject);
-    }).then(function() {
-        return loadScriptSeq(src.slice(1));
-    });
-}
+var body = document.getElementsByTagName("body")[0];
+var script = document.createElement('script');
+script.innerHTML = 'initPythonTask();';
+body.appendChild(script);
 
-require(['https://www.promisejs.org/polyfills/promise-7.0.4.min.js',
-	 'https://www.promisejs.org/polyfills/promise-done-7.0.4.js',
-	 'https://franciscomoya.github.io/informatica-doc/docs/_static/skulpt.min.js',
-         'https://franciscomoya.github.io/informatica-doc/docs/_static/skulpt-stdlib.js',
-         'https://franciscomoya.github.io/informatica-doc/docs/_static/jquery.js'], 
-	function(){
-	    $(document).ready(initPythonMoodleTask);
-	});
