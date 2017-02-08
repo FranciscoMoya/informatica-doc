@@ -50,7 +50,7 @@ function testAndSubmitPythonProgram(e) {
     testPythonProgram(prog).then(
 	function success(r) {
 	    var prog = $('#code').val();
-	    var out = $('#output').text(),
+	    var out = $('#output').text();
 	    $('#id_onlinetext_editor').val("''' " + r.toString() + "\n" + out + "'''\n" + prog);
 	    $.post(form.attr('action'), form.serialize(), function(msg) {
 		form.replaceWith($('div.submissionstatustable', $(msg)));
