@@ -48,7 +48,10 @@ function testAndSubmitPythonProgram(e) {
     (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = this.graphics;
     Sk.canvas = 'canvas';
     testPythonProgram(prog).then(
-	function success(r) { 
+	function success(r) {
+	    var prog = $('#code').val();
+	    var out = $('#output').text(),
+	    $('#id_onlinetext_editor').val("''' " + r.toString() + "\n" + out + "'''\n" + prog);
 	    $.post(form.attr('action'), form.serialize(), function(msg) {
 		form.replaceWith($('div.submissionstatustable', $(msg)));
 	    });
@@ -66,7 +69,10 @@ function testPythonProgram(prog) {
 	}).then(function (module) {
 	    var test = module.tp$getattr('test_');
 	    Sk.misceval.callsimAsync(null, test).then(
-		function (r) { if (r.v) resolve(); else reject(testFail); },
+		function (r) { 
+		    if (r.v > allowedFailures()) reject(testFail);
+		    else resolve(r.v); 
+		},
 		reject);
 	}, reject);
     });
@@ -84,7 +90,6 @@ function stdOut(text) {
 
 function buildProg() {
     var prog = $('#code').val();
-    $('#id_onlinetext_editor').val(prog);
     return prog + unittest($('#unittest'));
 }
 
@@ -126,7 +131,7 @@ function ghurl(file) {
 }
 
 loadJS(ghurl('jquery.js'), document.body, function() {
-    var $ = window.jQuery;
+    window.$ = window.jQuery;
     $(document).ready(installPythonFacade);
     loadJS(ghurl('skulpt.min.js'), document.body, function() {
 	loadJS(ghurl('skulpt-stdlib.js'), document.body, function() {
