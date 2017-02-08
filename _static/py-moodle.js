@@ -121,14 +121,14 @@ function loadJS(file, success, failure){
     head.appendChild(script);
 }
 
-function loadScripts(src) {
+function loadScriptSeq(src) {
     var base = '//franciscomoya.github.io/informatica-doc/docs/_static/';
     if (src.length == 0)
         return
     return new Promise(function (resolve, reject) {
 	loadJS(base + src[0], resolve, reject);
     }).then(function() {
-        loadScripts(src.slice(1));
+        return loadScriptSeq(src.slice(1));
     });
 }
 
@@ -137,9 +137,9 @@ loadJS('https://cdn.rawgit.com/bluejava/zousan/master/zousan-min.js',
            if (!window.Promise) {
                window.Promise = Zousan;
            }
-	   loadScripts(['skulpt.min.js',
-                        'skulpt-stdlib.js',
-                        'jquery.js']).then(function(){
-		            $(document).ready(initPythonMoodleTask);
-		        });
+	   loadScriptSeq(['skulpt.min.js',
+                          'skulpt-stdlib.js',
+                          'jquery.js']).then(function(){
+		              $(document).ready(initPythonMoodleTask);
+		          });
        });
