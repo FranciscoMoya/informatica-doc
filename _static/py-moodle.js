@@ -14,6 +14,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 function installPythonFacade($) {
+    window.$ = $;
     var editor = $('div.felement.feditor');
     if (editor.length == 0)
 	return;
