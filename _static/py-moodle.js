@@ -14,6 +14,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 function installPythonFacade() {
+    var $ = window.jQuery;
     var editor = $('div.felement.feditor');
     if (editor.length == 0)
 	return;
@@ -131,7 +132,7 @@ function ghurl(file) {
 }
 
 loadJS(ghurl('jquery.js'), document.body, function() {
-    window.$ = window.jQuery;
+    var $ = window.jQuery;
     $(document).ready(installPythonFacade);
     loadJS(ghurl('skulpt.min.js'), document.body, function() {
 	loadJS(ghurl('skulpt-stdlib.js'), document.body, function() {
