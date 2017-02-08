@@ -1,3 +1,5 @@
+(function (require) {
+
 // Copyright (C) 2017 by Francisco Moya <francisco.moya@uclm.es>
 
 // This program is free software: you can redistribute it and/or modify
@@ -110,14 +112,22 @@ function allowedFailures() {
     return f.text;
 }
 
-pyrec(['jquery',
-       'https://www.promisejs.org/polyfills/promise-7.0.4.min.js',
-       'skulpt.min.js',
-       'skulpt-stdlib.js'], 
-      function($){
-	  window.$ = $;
-	  var editor = $('div.felement.feditor');
-	  if (editor.length != 0)
-	      editor.hide();
-	  $(document).ready(initPythonMoodleTask);
-      });
+
+var loadJS = function(url, location, success){
+    var scriptTag = document.createElement('script');
+    scriptTag.src = url;
+    scriptTag.onload = success;
+    scriptTag.onreadystatechange = success;
+    location.appendChild(scriptTag);
+};
+
+loadJS(ghurl('skulpt.min.js'), document.head, function() {
+    loadJS(ghurl('skulpt-stdlib.min.js'), document.head, function() {
+	loadJS(ghurl('jquery'), document.head, function() {
+	    var editor = $('div.felement.feditor');
+	    if (editor.length != 0)
+		editor.hide();
+	    $(document).ready(initPythonMoodleTask);
+	});
+    });
+});
