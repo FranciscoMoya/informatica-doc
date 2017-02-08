@@ -118,7 +118,7 @@ function initPythonTask() {
 	    });
 }
 
-var page = document.getElementsByTagNameId("page")[0];
+var page = document.getElementById("page");
 var script = document.createElement('script');
 script.innerHTML = 'initPythonTask();';
 page.appendChild(script);
