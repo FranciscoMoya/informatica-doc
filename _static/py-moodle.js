@@ -118,8 +118,8 @@ function initPythonTask() {
 	    });
 }
 
-var body = document.getElementsByTagName("body")[0];
+var page = document.getElementsByTagNameId("page")[0];
 var script = document.createElement('script');
 script.innerHTML = 'initPythonTask();';
-body.appendChild(script);
+page.appendChild(script);
 
