@@ -1,5 +1,3 @@
-(function (require) {
-
 // Copyright (C) 2017 by Francisco Moya <francisco.moya@uclm.es>
 
 // This program is free software: you can redistribute it and/or modify
