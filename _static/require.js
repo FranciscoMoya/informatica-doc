@@ -1,6 +1,6 @@
 var pyreq = (function () {
     var require = {
-	baseUrl: 'https://franciscomoya.github.io/informatica-doc/docs/_static/'
+	baseUrl: 'https://rawgit.com/FranciscoMoya/informatica-doc/master/_static/'
     };
 
     //INSERT require.js CONTENTS HERE
