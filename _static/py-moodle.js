@@ -126,18 +126,19 @@ function loadScriptSeq(src) {
     if (src.length == 0)
         return
     return new Promise(function (resolve, reject) {
-	loadJS(base + src[0], resolve, reject);
+	var url = src[0];
+	if (!url.startsWith('http')
+	    url = base + url;
+	loadJS(url, resolve, reject);
     }).then(function() {
         return loadScriptSeq(src.slice(1));
     });
 }
 
-loadJS('https://cdn.rawgit.com/bluejava/zousan/master/zousan-min.js', 
+loadJS('https://www.promisejs.org/polyfills/promise-7.0.4.min.js', 
        function success() {
-           if (!window.Promise) {
-               window.Promise = Zousan;
-           }
-	   loadScriptSeq(['skulpt.min.js',
+	   loadScriptSeq(['https://www.promisejs.org/polyfills/promise-done-7.0.4.js',
+			  'skulpt.min.js',
                           'skulpt-stdlib.js',
                           'jquery.js']).then(function(){
 		              $(document).ready(initPythonMoodleTask);
