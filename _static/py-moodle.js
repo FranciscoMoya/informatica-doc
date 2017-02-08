@@ -125,13 +125,10 @@ function ghurl(file) {
     return base + file;
 }
 
-loadJS(ghurl('skulpt.min.js'), document.head, function() {
-    loadJS(ghurl('skulpt-stdlib.js'), document.head, function() {
-	loadJS(ghurl('jquery'), document.head, function() {
-	    var editor = $('div.felement.feditor');
-	    if (editor.length != 0)
-		editor.hide();
-	    $(document).ready(initPythonMoodleTask);
+loadJS(ghurl('jquery'), document.head, function() {
+    $(document).ready(installPythonFacade);
+    loadJS(ghurl('skulpt.min.js'), document.head, function() {
+	loadJS(ghurl('skulpt-stdlib.js'), document.head, function() {
 	});
     });
 });
