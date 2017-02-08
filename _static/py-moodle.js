@@ -127,7 +127,7 @@ function isPython3Source() {
 function allowedFailures() {
     var f = $('#failures')
     if (f.length == 0) return 0;
-    return f.text;
+    return parseInt(f.text(), 10);
 }
 
 function loadJS (url, parent, success){
