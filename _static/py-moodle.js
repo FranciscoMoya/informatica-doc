@@ -110,21 +110,15 @@ function allowedFailures() {
     return f.text;
 }
 
-requirejs.config({
-    baseUrl: 'https://franciscomoya.github.io/informatica-doc/docs/_static/'
-    paths: {
-        jquery: 'jquery'
-    }
-});
-requirejs(['jquery',
-	   'https://www.promisejs.org/polyfills/promise-7.0.4.min.js',
-	   'skulpt.min.js',
-           'skulpt-stdlib.js'], 
-	  function($){
-	      window.$ = $;
-	      var editor = $('div.felement.feditor');
-	      if (editor.length != 0)
-		  editor.hide();
-	      $(document).ready(initPythonMoodleTask);
-	  });
+pyrec(['jquery',
+       'https://www.promisejs.org/polyfills/promise-7.0.4.min.js',
+       'skulpt.min.js',
+       'skulpt-stdlib.js'], 
+      function($){
+	  window.$ = $;
+	  var editor = $('div.felement.feditor');
+	  if (editor.length != 0)
+	      editor.hide();
+	  $(document).ready(initPythonMoodleTask);
+      });
 }
