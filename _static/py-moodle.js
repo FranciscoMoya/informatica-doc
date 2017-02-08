@@ -125,7 +125,7 @@ function ghurl(file) {
     return base + file;
 }
 
-loadJS(ghurl('jquery'), document.head, function() {
+loadJS(ghurl('jquery.js'), document.head, function() {
     $(document).ready(installPythonFacade);
     loadJS(ghurl('skulpt.min.js'), document.head, function() {
 	loadJS(ghurl('skulpt-stdlib.js'), document.head, function() {
