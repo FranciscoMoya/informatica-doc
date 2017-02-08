@@ -80,7 +80,7 @@ function testPythonProgram(prog) {
 function updateSubmittedText(fail) {
     var prog = $('#code').val(),
         out = $('#output').text(),
-        header = fail.toString() + " failures\n\n",
+        header = "''' " + fail.toString() + " failures\n\n",
         sep = $('#id_onlinetext_editor').attr("code-separator"),
         doc = header + out + sep + prog;
     $('#id_onlinetext_editor').val(doc);
