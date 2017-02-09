@@ -149,10 +149,10 @@ function loadJS (url, parent, success){
     parent.appendChild(scriptTag);
 };
 
-//loadJS('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
-loadJS('https://franciscomoya.github.io/informatica-doc/docs/_static/jquery.js',
+loadJS('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
+//loadJS('https://franciscomoya.github.io/informatica-doc/docs/_static/jquery.js',
        document.head, function() {
-    $ = window.jQuery;
+    //$ = window.jQuery;
     $(document).ready(installPythonFacade.bind(null, $));
     loadJS('https://www.promisejs.org/polyfills/promise-7.0.4.min.js',
            document.head, function(){});
