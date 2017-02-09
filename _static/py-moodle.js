@@ -80,7 +80,7 @@ function testPythonProgram(prog) {
 	    var test = module.tp$getattr('test__');
 	    Sk.misceval.callsimAsync(null, test).then(
 		function (r) {
-		    if (r.v > allowedFailures()) reject(testFail);
+		    if (r.v < minPassed()) reject(testFail);
 		    else resolve(r.v); 
 		},
 		reject);
