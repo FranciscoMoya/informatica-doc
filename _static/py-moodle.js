@@ -24,8 +24,7 @@
 // 3. Optionally define a container (em, span) with id failures containing the
 //    maximum number of allowed failures (0 by default).
 
-function installPythonFacade($) {
-    window.$ = $;
+function installPythonFacade() {
     var editor = $('div.felement.feditor');
     if (editor.length == 0)
 	return;
@@ -152,7 +151,7 @@ function loadJS (url, parent, success){
 loadJS('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
 //loadJS('https://franciscomoya.github.io/informatica-doc/docs/_static/jquery.js',
        document.head, function() {
-    $(document).ready(installPythonFacade.bind(null, $));
+    $(document).ready(installPythonFacade);
     loadJS('https://www.promisejs.org/polyfills/promise-7.0.4.min.js',
            document.head, function(){});
     var skulpt_base = 'https://rawgit.com/skulpt/skulpt-dist/master/';
