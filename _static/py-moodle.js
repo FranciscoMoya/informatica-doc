@@ -160,8 +160,8 @@ function loadJS (url, success){
 loadJS('https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', function(){
     loadJS('https://www.promisejs.org/polyfills/promise-7.0.4.min.js', function(){});
     var skulpt_base = 'https://rawgit.com/skulpt/skulpt-dist/master/';
-    loadJS(skulpt_base + 'skulpt.min.js', document.head, function() {
-	loadJS(skulpt_base + 'skulpt-stdlib.js', document.head, function(){});
+    loadJS(skulpt_base + 'skulpt.min.js', function() {
+	loadJS(skulpt_base + 'skulpt-stdlib.js', function(){});
     });
     $(document).ready(installPythonFacade);
 });
