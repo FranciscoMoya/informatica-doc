@@ -40,6 +40,7 @@ function installPythonFacade() {
 }
 
 function testAndSubmitPythonProgram(e) {
+    var $ = window.jQuery;
     e.preventDefault();
 
     var output = $('#output'), 
