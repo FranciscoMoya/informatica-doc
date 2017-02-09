@@ -149,7 +149,7 @@ function loadJS (url, parent, success){
     parent.appendChild(scriptTag);
 };
 
-loadJS('https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js',
+loadJS('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
        document.head, function() {
     $ = window.jQuery;
     $(document).ready(installPythonFacade.bind(null, $));
