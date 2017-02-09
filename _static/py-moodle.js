@@ -109,7 +109,7 @@ function buildProg() {
 
 function unittest(elem) {
     if (elem.length == 0)
-	return '\ndef test__():\n return 0';
+	return '\ndef test__():\n return 100';
     return '\nfrom unittest.gui import TestCaseGui\n' + 
 	elem.html() +
 	'\ndef test__():\n' +
