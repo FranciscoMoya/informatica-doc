@@ -99,8 +99,8 @@ function stdOut(text) {
 }
 
 function buildProg() {
-    var prog = $('#code').val();
-    return prog + unittest($('#unittest'));
+    var prog = $('#code').val() + unittest($('#unittest'));
+    return prog.replace('&lt;','<');
 }
 
 function unittest(elem) {
