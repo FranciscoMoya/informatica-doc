@@ -56,7 +56,7 @@ function testAndSubmitPythonProgram(e) {
 	python3: isPython3Source(),
 	inputfunTakesPrompt: true,
     });
-    (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = this.graphics;
+    (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
     Sk.canvas = 'canvas';
     testPythonProgram(prog).then(
 	function success(fail) {
