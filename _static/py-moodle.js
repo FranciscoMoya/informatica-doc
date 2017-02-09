@@ -31,11 +31,11 @@ function installPythonFacade() {
     editor.hide();
     editor.after('<div style="float:right; background-color:#FFF;">' +
                  '<input type="checkbox" id="python3" checked>Python 3</div>' + 
-	         '<textarea rows="8" style="width:97%;font-family:monospace;"' +
+	         '<textarea rows="7" style="width:97%;font-family:monospace;"' +
                  ' id="code">' + getSubmittedCode() + '</textarea>' +
-		 '<pre id="output"></pre>' +
+		 '<div id="status"></div>' +
 		 '<div id="canvas"></div>' + 
-		 '<div id="status"></div>');
+	         '<pre id="output"></pre>');
     $('#mform1').submit(testAndSubmitPythonProgram.bind(null,$));
 }
 
@@ -149,8 +149,8 @@ function loadJS (url, parent, success){
     parent.appendChild(scriptTag);
 };
 
-loadJS('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
-//loadJS('https://franciscomoya.github.io/informatica-doc/docs/_static/jquery.js',
+//loadJS('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
+loadJS('https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js',
        document.head, function() {
     $(document).ready(installPythonFacade);
     loadJS('https://www.promisejs.org/polyfills/promise-7.0.4.min.js',
