@@ -158,8 +158,9 @@ function loadJS (url, success){
 // https://campusvirtual.uclm.es/lib/requirejs.php/1476343773/core/first.js
 // therefore we stay at 2.2
 loadJS('https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', function(){
-    $(document).ready(installPythonFacade);
-    loadJS('https://cdn.rawgit.com/showdownjs/showdown/1.6.4/dist/showdown.min.js', function(){});
+    loadJS('https://cdn.rawgit.com/showdownjs/showdown/1.6.4/dist/showdown.min.js', function(){
+	    $(document).ready(installPythonFacade);
+    });
     loadJS('https://www.promisejs.org/polyfills/promise-7.0.4.min.js', function(){});
     var skulpt_base = 'https://rawgit.com/skulpt/skulpt-dist/master/';
     loadJS(skulpt_base + 'skulpt.min.js', document.head, function() {
