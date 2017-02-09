@@ -43,7 +43,7 @@ function installPythonFacade($) {
 function testAndSubmitPythonProgram(e) {
     e.preventDefault();
 
-    var	prog = buildProg(),
+    var	prog = buildProg($),
 	output = $('#output'), 
 	status = $('#status'),
 	form = $('#mform1');
@@ -97,7 +97,7 @@ function stdOut(text) {
     $('#output').append(text);
 }
 
-function buildProg() {
+function buildProg($) {
     var prog = $('#code').val();
     return prog + unittest($('#unittest'));
 }
