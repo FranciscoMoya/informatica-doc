@@ -13,6 +13,17 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+// Usage:
+//
+// 1. Insert a <script> tag in the task description:
+//    <script src="py-moodle.js">
+//
+// 2. Define a container (pre, div) with id unittest containing the TestCase.
+//    TestCase class must be named Test.
+//
+// 3. Optionally define a container (em, span) with id failures containing the
+//    maximum number of allowed failures (0 by default).
+
 function installPythonFacade($) {
     window.$ = $;
     var editor = $('div.felement.feditor');
@@ -21,8 +32,8 @@ function installPythonFacade($) {
     editor.hide();
     editor.after('<div style="float:right; background-color:#FFF;">' +
                  '<input type="checkbox" id="python3" checked>Python 3</div>' + 
-	         '<textarea style="width:100%" id="code">' +
-                 getSubmittedCode() + '</textarea>' +
+	         '<textarea rows="8" style="width:97%;font-family:monospace;"' +
+                 ' id="code">' + getSubmittedCode() + '</textarea>' +
 		 '<pre id="output"></pre>' +
 		 '<div id="canvas"></div>' + 
 		 '<div id="status"></div>');
@@ -43,7 +54,6 @@ function testAndSubmitPythonProgram(e) {
 	output: stdOut,
 	read: builtinRead,
 	python3: isPython3Source(),
-	imageProxy: 'http://image.runestone.academy:8080/320x',
 	inputfunTakesPrompt: true,
     });
     (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = this.graphics;
@@ -66,31 +76,15 @@ function testPythonProgram(prog) {
 	Sk.misceval.asyncToPromise(function () {
 	    return Sk.importMainWithBody("<stdin>", false, prog, true);
 	}).then(function (module) {
-	    var test = module.tp$getattr('test_');
+	    var test = module.tp$getattr('test__');
 	    Sk.misceval.callsimAsync(null, test).then(
-		function (r) { 
+		function (r) {
 		    if (r.v > allowedFailures()) reject(testFail);
 		    else resolve(r.v); 
 		},
 		reject);
 	}, reject);
     });
-}
-
-function updateSubmittedText(fail) {
-    var prog = $('#code').val(),
-        out = $('#output').text(),
-        header = "''' " + fail.toString() + " failures\n\n",
-        sep = $('#id_onlinetext_editor').attr("code-separator"),
-        doc = header + out + sep + prog;
-    $('#id_onlinetext_editor').val(doc);
-}
-
-function getSubmittedCode() {
-    var sep = "\n===='''\n\n";
-    $('#id_onlinetext_editor').attr("code-separator", sep);
-    var code = $('#id_onlinetext_editor').val().split(sep);
-    return code.length > 1? code[1]: code[0];
 }
 
 function builtinRead(x) {
@@ -110,12 +104,29 @@ function buildProg() {
 
 function unittest(elem) {
     if (elem.length == 0)
-	return '\ndef test_():\n return True';
+	return '\ndef test__():\n return True';
     return '\nimport unittest\n' + 
 	elem.html() +
-	'\ndef test_():\n' +
+	'\ndef test__():\n' +
 	' t=Test()\n t.main()\n' +
 	' return t.numFailed'; 
+}
+
+function updateSubmittedText(fail) {
+    var prog = $('#code').val(),
+        out = $('#output').text(),
+        header = "''' " + $("input[name=userid]").val() +
+                 " (" + fail.toString() + " failures)\n\n",
+        sep = $('#id_onlinetext_editor').attr("code-separator"),
+        doc = header + out + sep + prog;
+    $('#id_onlinetext_editor').val(doc);
+}
+
+function getSubmittedCode() {
+    var sep = "\n===='''\n\n";
+    $('#id_onlinetext_editor').attr("code-separator", sep);
+    var code = $('#id_onlinetext_editor').val().split(sep);
+    return code.length > 1? code[1]: code[0];
 }
 
 function isPython3Source() {
@@ -140,8 +151,6 @@ function loadJS (url, parent, success){
 
 function ghurl(file) {
     var base = 'https://franciscomoya.github.io/informatica-doc/docs/_static/';
-    if (file.startsWith('http') || file.startsWith('//'))
-	return file;
     return base + file;
 }
 
