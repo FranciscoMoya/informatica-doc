@@ -101,10 +101,10 @@ function stdOut(text) {
 function buildProg() {
     var prog = $('#code').val() + unittest($('#unittest'));
     return prog
-	.replace('&lt;','<')
-	.replace('&gt;','>')
-	.replace('&#34;','"')
-	.replace('&#39;', "'");
+	.replace(new RegExp('&lt;', 'g'), '<')
+	.replace(new RegExp('&gt;', 'g'), '>')
+	.replace(new RegExp('&#34;', 'g'), '"')
+	.replace(new RegExp('&#39;', 'g'), "'");
 }
 
 function unittest(elem) {
