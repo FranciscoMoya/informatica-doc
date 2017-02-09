@@ -19,10 +19,10 @@
 //    <script src="py-moodle.js">
 //
 // 2. Define a container (pre, div) with id unittest containing the TestCase.
-//    TestCase class must be named Test.
+//    either class Test(TestCase) or class Test(TestCaseGui).
 //
-// 3. Optionally define a container (em, span) with id failures containing the
-//    maximum number of allowed failures (0 by default).
+// 3. Optionally define a container (em, span) with id minpass containing the
+//    minimum percentage of tests required to submit (100 by default).
 
 function installPythonFacade() {
     var editor = $('div.felement.feditor');
@@ -37,6 +37,8 @@ function installPythonFacade() {
 		 '<div id="canvas"></div>' + 
 	         '<div id="test"><pre id="output"></pre></div>');
     $('#mform1').submit(testAndSubmitPythonProgram.bind(null,$));
+    var converter = new showdown.Converter();
+    $('pre.md').each(function(){ $(this).replaceWith(converter.makeHtml($(this).text()));    
 }
 
 function testAndSubmitPythonProgram($, e) {
@@ -60,8 +62,8 @@ function testAndSubmitPythonProgram($, e) {
     Sk.canvas = 'canvas';
     Sk.divid = 'test';
     testPythonProgram(prog).then(
-	function success(fail) {
-            updateSubmittedText(fail);
+	function success(mark) {
+            updateSubmittedText(mark);
 	    $.post(form.attr('action'), form.serialize(), function(msg) {
 		form.replaceWith($('div.submissionstatustable', $(msg)));
 	    });
@@ -110,14 +112,14 @@ function unittest(elem) {
 	elem.html() +
 	'\ndef test__():\n' +
 	' t=Test()\n t.main()\n' +
-	' return t.numFailed'; 
+	' return 100 * t.numPassed / (t.numPassed + t.numFailed)'; 
 }
 
-function updateSubmittedText(fail) {
+function updateSubmittedText(mark) {
     var prog = $('#code').val(),
         out = $('#output').text(),
         header = "''' " + $("input[name=userid]").val() +
-                 " (" + fail.toString() + " failures)\n\n",
+                 " (" + mark.toString() + ")\n\n",
         sep = $('#id_onlinetext_editor').attr("code-separator"),
         doc = header + out + sep + prog;
     $('#id_onlinetext_editor').val(doc);
@@ -136,28 +138,27 @@ function isPython3Source() {
     return py3.prop('checked');
 }
 
-function allowedFailures() {
-    var f = $('#failures')
-    if (f.length == 0) return 0;
+function minPassed() {
+    var f = $('#minpass')
+    if (f.length == 0) return 100;
     return parseInt(f.text(), 10);
 }
 
-function loadJS (url, parent, success){
+function loadJS (url, success){
     var scriptTag = document.createElement('script');
     scriptTag.src = url;
     scriptTag.onload = success;
     scriptTag.onreadystatechange = success;
-    parent.appendChild(scriptTag);
+    document.head.appendChild(scriptTag);
 };
 
 // There is an incompatibility between jQuery 3.1 and
 // https://campusvirtual.uclm.es/lib/requirejs.php/1476343773/core/first.js
 // therefore we stay at 2.2
-loadJS('https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js',
-       document.head, function() {
+loadJS('https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', function(){
     $(document).ready(installPythonFacade);
-    loadJS('https://www.promisejs.org/polyfills/promise-7.0.4.min.js',
-           document.head, function(){});
+    loadJS('https://cdn.rawgit.com/showdownjs/showdown/1.6.4/dist/showdown.min.js', function(){});
+    loadJS('https://www.promisejs.org/polyfills/promise-7.0.4.min.js', function(){});
     var skulpt_base = 'https://rawgit.com/skulpt/skulpt-dist/master/';
     loadJS(skulpt_base + 'skulpt.min.js', document.head, function() {
 	loadJS(skulpt_base + 'skulpt-stdlib.js', document.head, function(){});
