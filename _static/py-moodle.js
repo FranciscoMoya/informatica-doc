@@ -149,17 +149,14 @@ function loadJS (url, parent, success){
     parent.appendChild(scriptTag);
 };
 
-function ghurl(file) {
-    var base = 'https://franciscomoya.github.io/informatica-doc/docs/_static/';
-    return base + file;
-}
-
-loadJS(ghurl('jquery.js'), document.head, function() {
+loadJS('https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js',
+       document.head, function() {
     $ = window.jQuery;
     $(document).ready(installPythonFacade.bind(null, $));
+    var skulpt_base = 'https://rawgit.com/skulpt/skulpt-dist/master/';
     loadJS('https://www.promisejs.org/polyfills/promise-7.0.4.min.js',
            document.head, function(){});
-    loadJS(ghurl('skulpt.min.js'), document.head, function() {
-	loadJS(ghurl('skulpt-stdlib.js'), document.head, function(){});
+    loadJS(skulpt_base + 'skulpt.min.js', document.head, function() {
+	loadJS(skulpt_base + 'skulpt-stdlib.js', document.head, function(){});
     });
 });
