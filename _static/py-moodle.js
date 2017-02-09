@@ -24,7 +24,7 @@
 // 3. Optionally define a container (em, span) with id minpass containing the
 //    minimum percentage of tests required to submit (100 by default).
 
-function installPythonFacade() {
+function installPythonFacade(showdown) {
     var converter = new showdown.Converter();
     $('pre.md').each(function(){ 
 	$(this).replaceWith(converter.makeHtml($(this).text()));
@@ -159,7 +159,7 @@ function loadJS (url, success){
 // therefore we stay at 2.2
 loadJS('https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', function(){
     loadJS('https://cdn.rawgit.com/showdownjs/showdown/1.6.4/dist/showdown.min.js', function(){
-	    $(document).ready(installPythonFacade);
+	    $(document).ready(installPythonFacade.bind(null, showdown));
     });
     loadJS('https://www.promisejs.org/polyfills/promise-7.0.4.min.js', function(){});
     var skulpt_base = 'https://rawgit.com/skulpt/skulpt-dist/master/';
