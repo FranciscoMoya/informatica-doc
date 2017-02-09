@@ -100,7 +100,11 @@ function stdOut(text) {
 
 function buildProg() {
     var prog = $('#code').val() + unittest($('#unittest'));
-    return prog.replace('&lt;','<');
+    return prog
+	.replace('&lt;','<')
+	.replace('&gt;','>')
+	.replace('&#34;','"')
+	.replace('&#39;', "'");
 }
 
 function unittest(elem) {
