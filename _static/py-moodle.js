@@ -38,7 +38,9 @@ function installPythonFacade() {
 	         '<div id="test"><pre id="output"></pre></div>');
     $('#mform1').submit(testAndSubmitPythonProgram.bind(null,$));
     var converter = new showdown.Converter();
-    $('pre.md').each(function(){ $(this).replaceWith(converter.makeHtml($(this).text()));    
+    $('pre.md').each(function(){ 
+	$(this).replaceWith(converter.makeHtml($(this).text()));
+    });
 }
 
 function testAndSubmitPythonProgram($, e) {
