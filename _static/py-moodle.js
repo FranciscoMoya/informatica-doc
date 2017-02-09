@@ -35,7 +35,7 @@ function installPythonFacade() {
                  ' id="code">' + getSubmittedCode() + '</textarea>' +
 		 '<div id="status"></div>' +
 		 '<div id="canvas"></div>' + 
-	         '<pre id="output"></pre>');
+	         '<div id="test"><pre id="output"></pre></div>');
     $('#mform1').submit(testAndSubmitPythonProgram.bind(null,$));
 }
 
@@ -58,6 +58,7 @@ function testAndSubmitPythonProgram($, e) {
     });
     (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
     Sk.canvas = 'canvas';
+    Sk.divid = 'test';
     testPythonProgram(prog).then(
 	function success(fail) {
             updateSubmittedText(fail);
@@ -71,7 +72,7 @@ function testAndSubmitPythonProgram($, e) {
 }
 
 function testPythonProgram(prog) {
-    var testFail = 'Corrije los errores antes de enviar.'
+    var testFail = 'Corrije los errores que se muestran abajo antes de enviar.'
     return new Promise(function (resolve, reject) {
 	Sk.misceval.asyncToPromise(function () {
 	    return Sk.importMainWithBody("<stdin>", false, prog, true);
@@ -104,8 +105,8 @@ function buildProg() {
 
 function unittest(elem) {
     if (elem.length == 0)
-	return '\ndef test__():\n return True';
-    return '\nimport unittest\n' + 
+	return '\ndef test__():\n return 0';
+    return '\nfrom unittest.gui import TestCaseGui\n' + 
 	elem.html() +
 	'\ndef test__():\n' +
 	' t=Test()\n t.main()\n' +
@@ -149,9 +150,9 @@ function loadJS (url, parent, success){
     parent.appendChild(scriptTag);
 };
 
-// There is an incompatibility of jQuery 3.1 with
+// There is an incompatibility between jQuery 3.1 and
 // https://campusvirtual.uclm.es/lib/requirejs.php/1476343773/core/first.js
-//loadJS('https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js',
+// therefore we stay at 2.2
 loadJS('https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js',
        document.head, function() {
     $(document).ready(installPythonFacade);
