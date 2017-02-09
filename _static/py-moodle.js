@@ -149,9 +149,10 @@ function loadJS (url, parent, success){
     parent.appendChild(scriptTag);
 };
 
-//loadJS('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
-//loadJS('https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js',
-loadJS('https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js',
+// There is an incompatibility of jQuery 3.1 with
+// https://campusvirtual.uclm.es/lib/requirejs.php/1476343773/core/first.js
+//loadJS('https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js',
+loadJS('https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js',
        document.head, function() {
     $(document).ready(installPythonFacade);
     loadJS('https://www.promisejs.org/polyfills/promise-7.0.4.min.js',
