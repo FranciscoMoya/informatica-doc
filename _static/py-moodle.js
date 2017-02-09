@@ -25,6 +25,10 @@
 //    minimum percentage of tests required to submit (100 by default).
 
 function installPythonFacade() {
+    var converter = new showdown.Converter();
+    $('pre.md').each(function(){ 
+	$(this).replaceWith(converter.makeHtml($(this).text()));
+    });
     var editor = $('div.felement.feditor');
     if (editor.length == 0)
 	return;
@@ -37,10 +41,6 @@ function installPythonFacade() {
 		 '<div id="canvas"></div>' + 
 	         '<div id="test"><pre id="output"></pre></div>');
     $('#mform1').submit(testAndSubmitPythonProgram.bind(null,$));
-    var converter = new showdown.Converter();
-    $('pre.md').each(function(){ 
-	$(this).replaceWith(converter.makeHtml($(this).text()));
-    });
 }
 
 function testAndSubmitPythonProgram($, e) {
