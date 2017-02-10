@@ -116,6 +116,7 @@ function unittest(elem) {
     if (elem.length == 0)
 	return '\ndef test__():\n return [1,1]';
     return '\nfrom unittest.gui import TestCaseGui\n' + 
+	'from unittest import TestCase\n' + 
 	elem.html() +
 	'\ndef test__():\n' +
 	' t=Test()\n t.main()\n' +
