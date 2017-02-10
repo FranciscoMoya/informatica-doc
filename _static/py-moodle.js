@@ -24,6 +24,9 @@
 // 3. Optionally define a container (em, span) with id minpass containing the
 //    minimum number of tests (asserts) required to submit (0 by default).
 
+
+var code_separator = "\n===='''\n\n";
+
 function installPythonFacade() {
     var editor = $('div.felement.feditor');
     if (editor.length == 0)
@@ -83,7 +86,7 @@ function testPythonProgram(prog) {
 		    var ret = Sk.ffi.remapToJs(r);
 		    $('#test_unit_results p').hide(); // Remove missleading summaries
 		    if (ret[0] < minPassed()) reject(testFail);
-		    else resolve(ret); 
+		    else resolve(ret);
 		},
 		reject);
 	}, reject);
@@ -124,15 +127,12 @@ function updateSubmittedText(passed, failed) {
         out = $('#output').text(),
         header = "''' " + $("input[name=userid]").val() +
                  " (" + passed.toString() + "/" + failed.toString() + ")\n\n",
-        sep = $('#id_onlinetext_editor').attr("code-separator"),
-        doc = header + out + sep + prog;
+        doc = header + out + code_separator + prog;
     $('#id_onlinetext_editor').val(doc);
 }
 
 function getSubmittedCode() {
-    var sep = "\n===='''\n\n";
-    $('#id_onlinetext_editor').attr("code-separator", sep);
-    var code = $('#id_onlinetext_editor').val().split(sep);
+    var code = $('#id_onlinetext_editor').val().split(code_separator);
     return code.length > 1? code[1]: code[0];
 }
 
