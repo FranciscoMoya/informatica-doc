@@ -63,7 +63,7 @@ function testAndSubmitPythonProgram($, e) {
 	function success(passed, failed) {
             updateSubmittedText(passed, failed);
 	    $.post(form.attr('action'), form.serialize(), function(msg) {
-		form.replaceWith($('div.submissionstatustable', $(msg)));
+		form.replaceWith($('#test_unit_results table', $(msg)));
 	    });
 	}, 
 	function failure(err) { 
