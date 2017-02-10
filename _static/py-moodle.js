@@ -60,8 +60,8 @@ function testAndSubmitPythonProgram($, e) {
     Sk.canvas = 'canvas';
     Sk.divid = 'test';
     testPythonProgram(prog).then(
-	function success(passed, failed) {
-            updateSubmittedText(passed, failed);
+	function success(summary) {
+            updateSubmittedText(summary[0], summary[1]);
 	    $.post(form.attr('action'), form.serialize(), function(msg) {
 		form.replaceWith($('div.submissionstatustable', $(msg)));
 	    });
@@ -81,10 +81,9 @@ function testPythonProgram(prog) {
 	    Sk.misceval.callsimAsync(null, test).then(
 		function (r) {
 		    var ret = Sk.ffi.remapToJs(r);
-		    console.log('callsimAsync returns ', ret);
 		    $('#test_unit_results p').hide(); // Remove missleading summaries
 		    if (ret[0] < minPassed()) reject(testFail);
-		    else resolve(ret[0], ret[1]); 
+		    else resolve(ret); 
 		},
 		reject);
 	}, reject);
