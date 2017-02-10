@@ -81,6 +81,7 @@ function testPythonProgram(prog) {
 	    Sk.misceval.callsimAsync(null, test).then(
 		function (r) {
 		    var ret = Sk.ffi.remapToJs(r);
+		    console.log('callsimAsync returns ', ret);
 		    $('#test_unit_results p').hide(); // Remove missleading summaries
 		    if (ret[0] < minPassed()) reject(testFail);
 		    else resolve(ret[0], ret[1]); 
