@@ -82,8 +82,8 @@ function testPythonProgram(prog) {
 		function (r) {
 		    var ret = Sk.ffi.remapToJs(r);
 		    console.log('callSimAsync returned ' + ret);
-		    if (r.v[0] < minPassed()) reject(testFail);
-		    else resolve(r.v[0], r.v[1]); 
+		    if (ret[0] < minPassed()) reject(testFail);
+		    else resolve(ret[0], ret[1]); 
 		},
 		reject);
 	}, reject);
