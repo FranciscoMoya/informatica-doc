@@ -63,9 +63,7 @@ function testAndSubmitPythonProgram($, e) {
 	function success(passed, failed) {
             updateSubmittedText(passed, failed);
 	    $.post(form.attr('action'), form.serialize(), function(msg) {
-		var table = $('#test_unit_results > table', $(msg));
-		table.attr('id', 'mform1');
-		form.replaceWith(table);
+		form.replaceWith($('div.submissionstatustable', $(msg)));
 	    });
 	}, 
 	function failure(err) { 
@@ -83,7 +81,7 @@ function testPythonProgram(prog) {
 	    Sk.misceval.callsimAsync(null, test).then(
 		function (r) {
 		    var ret = Sk.ffi.remapToJs(r);
-		    //console.log('callSimAsync returned ' + ret);
+		    $('#test_unit_results p').hide(); // Remove missleading summaries
 		    if (ret[0] < minPassed()) reject(testFail);
 		    else resolve(ret[0], ret[1]); 
 		},
