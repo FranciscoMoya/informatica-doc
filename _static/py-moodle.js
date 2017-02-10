@@ -22,7 +22,7 @@
 //    either class Test(TestCase) or class Test(TestCaseGui).
 //
 // 3. Optionally define a container (em, span) with id minpass containing the
-//    minimum percentage of tests required to submit (100 by default).
+//    minimum number of tests (asserts) required to submit (0 by default).
 
 function installPythonFacade() {
     var editor = $('div.felement.feditor');
@@ -60,8 +60,8 @@ function testAndSubmitPythonProgram($, e) {
     Sk.canvas = 'canvas';
     Sk.divid = 'test';
     testPythonProgram(prog).then(
-	function success(mark) {
-            updateSubmittedText(mark);
+	function success(passed, failed) {
+            updateSubmittedText(passed, failed);
 	    $.post(form.attr('action'), form.serialize(), function(msg) {
 		form.replaceWith($('div.submissionstatustable', $(msg)));
 	    });
@@ -80,8 +80,8 @@ function testPythonProgram(prog) {
 	    var test = module.tp$getattr('test__');
 	    Sk.misceval.callsimAsync(null, test).then(
 		function (r) {
-		    if (r.v < minPassed()) reject(testFail);
-		    else resolve(r.v); 
+		    if (r.v[0] < minPassed()) reject(testFail);
+		    else resolve(r.v[0], r.v[1]); 
 		},
 		reject);
 	}, reject);
@@ -109,19 +109,19 @@ function buildProg() {
 
 function unittest(elem) {
     if (elem.length == 0)
-	return '\ndef test__():\n return 100';
+	return '\ndef test__():\n return [1,1]';
     return '\nfrom unittest.gui import TestCaseGui\n' + 
 	elem.html() +
 	'\ndef test__():\n' +
 	' t=Test()\n t.main()\n' +
-	' return 100 * t.numPassed / (t.numPassed + t.numFailed)'; 
+	' return [t.numPassed, t.numFailed]'; 
 }
 
-function updateSubmittedText(mark) {
+function updateSubmittedText(passed, failed) {
     var prog = $('#code').val(),
         out = $('#output').text(),
         header = "''' " + $("input[name=userid]").val() +
-                 " (" + mark.toString() + ")\n\n",
+                 " (" + passed.toString() + "/" + failed.toString() + ")\n\n",
         sep = $('#id_onlinetext_editor').attr("code-separator"),
         doc = header + out + sep + prog;
     $('#id_onlinetext_editor').val(doc);
@@ -142,7 +142,7 @@ function isPython3Source() {
 
 function minPassed() {
     var f = $('#minpass');
-    if (f.length == 0) return 100;
+    if (f.length == 0) return 0;
     return parseInt(f.text(), 10);
 }
 
