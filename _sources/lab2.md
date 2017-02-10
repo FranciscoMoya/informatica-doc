@@ -1,5 +1,6 @@
 -*- coding: utf-8 -*-
-# Bucles e iteración
+
+### Bucles e iteración
 
 Este segundo bloque está concebido para que utilices bucles y
 practiques iterando (recorriendo) estructuras de datos.
@@ -13,7 +14,7 @@ correctamente y no permitirá entregas con errores sintácticos.  **Sin
 embargo en este bloque se permitirán entregas que solo pasen el 50% de
 las pruebas.**
 
-## 11. Suma de rango de enteros
+#### 11. Suma de rango de enteros
 
 Define una función `suma_rango` que tenga dos argumentos enteros y
 devuelva la suma de todos los números desde el primero hasta el
@@ -21,21 +22,21 @@ segundo, sin contar este último. Se asume que el primer argumento es
 menor que el segundo.
 
 
-## 12 Contar negativos
+#### 12 Contar negativos
 
 Define una función `contar_negativos` que tenga un único argumento que
 es una lista de enteros. Debe devolver el número de enteros negativos
 que contiene.
 
 
-## 13. Números primos
+#### 13. Números primos
 
 Define una función de nombre `es_primo` que admita un único argumento
 entero. Esta función debe devolver `True` si el argumento es un número
 primo y `False` en caso contrario.
 
 
-## 14. Buscar vocal
+#### 14. Buscar vocal
 
 Define una función `buscar_vocal` que tenga un único argumento de tipo
 cadena de texto y devuelva la posición de la primera vocal
@@ -44,14 +45,14 @@ encontrada. Si no encuentra vocales debe devolver -1.
 **Nota: la primera letra tiene la posición 0.**
 
 
-## 15. Múltiplos de 7
+#### 15. Múltiplos de 7
 
 Define una función `multiplos_7_en_rango` que tenga dos argumentos
 enteros y devuelva una lista con todos los números enteros entre ambos
 argumentos (sin contar el segundo argumento) que sean múltiplos
 de 7. Se asume que el primer argumento es menor que el segundo.
 
-## 16. Cuadrado ASCII
+#### 16. Cuadrado ASCII
 
 Define una función `dibujar_cuadrado` que tenga un argumento entero
 que corresponde al ancho del cuadrado en caracteres. Esta función debe
@@ -70,7 +71,7 @@ debe imprimir exactamente el dibujo siguiente.
 que el ancho incluye los caracteres de los bordes y esquinas. Nótese
 que la altura del cuadrado es la mitad de la anchura.**
 
-## 17. Código César
+#### 17. Código César
 
 Escribe una función `codigo_cesar` que tenga un único argumento de
 tipo cadena de texto. Debe devolver otra cadena resultado de aplicar
@@ -86,7 +87,7 @@ import string
 print(string.ascii_letters)
 ```
 
-## 18. Números perfectos
+#### 18. Números perfectos
 
 Escribe una función `es_perfecto(n)` que devuelva `True` si el
 argumento es
@@ -94,13 +95,13 @@ un [número perfecto](https://es.wikipedia.org/wiki/Número_perfecto) y
 `False` si no lo es.
 
 
-## 19. Cifras decimales
+#### 19. Cifras decimales
 
 Escribe una función `cifras(n)` que devuelve una lista de las cifras
 decimales de su argumento. Por ejemplo, para el número 1984 devuelve
 `[1, 9, 8, 4]`.
 
-## 20. Las siete y media
+#### 20. Las siete y media
 
 Un popular juego de naipes llamado
 [las siete y media](https://es.wikipedia.org/wiki/Siete_y_media)
@@ -115,7 +116,7 @@ mano de dos jugadores y devuelve 1 si gana la primera lista, 2 si gana
 la segunda lista y 0 si hay empate. Por ejemplo,
 `compara_mano([1,5,12], [7,10])` debe devolver 2.
 
-## Pruebas
+#### Pruebas
 
 A continuación se incluyen las pruebas que será necesario pasar para
 aceptar esta entrega.  Debe pasar al menos el 50% de las pruebas para

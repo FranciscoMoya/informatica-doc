@@ -1,24 +1,32 @@
 
-Prueba de software
-==================
+Prueba y depuración de software
+===============================
+
+Casos de prueba
+---------------
 
 Las pruebas que se pasan en los ejercicios del laboratorio pueden servir
 de ejemplo para probar tus propios programas. Vemos como ejemplo el
-primer ejercicio.
+primer ejercicio del primer bloque.
 
-.. code:: python
+.. activecode:: correo-electronico
+    :nocodelens:
+    :caption: Correo electrónico
 
     def my_email():
         return 'francisco.moya@uclm.es'
 
-Definir la función que se indica en el enunciado no es tu único trabajo.
-**Es responsabilidad tuya probar el código *antes* de enviarlo**. Python
-incluye una biblioteca para pruebas denominada ``unittest``. El único
-problema es que exige definir una clase y es posible que todavía no
-sepas hacerlo. No te asustes, la herramienta de prácticas tiene multitud
-de ejemplos que puedes usar directamente como punto de partida.
+Definir la función que se indica en el enunciado no es tu único
+trabajo.  **Es responsabilidad tuya probar el código *antes* de
+enviarlo**. Python incluye una biblioteca para pruebas denominada
+``unittest``. El único problema es que exige definir una clase y es
+posible que todavía no sepas hacerlo. No te asustes, los enunciados de
+las prácticas tienen multitud de ejemplos que puedes usar directamente
+como punto de partida.
 
-.. code:: python
+.. activecode:: import-unittest
+    :nocodelens:
+    :caption: Correo electrónico
 
     import unittest
 

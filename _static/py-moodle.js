@@ -135,13 +135,13 @@ function getSubmittedCode() {
 }
 
 function isPython3Source() {
-    var py3 = $('#python3')
+    var py3 = $('#python3');
     if (py3.length == 0) return true;
     return py3.prop('checked');
 }
 
 function minPassed() {
-    var f = $('#minpass')
+    var f = $('#minpass');
     if (f.length == 0) return 100;
     return parseInt(f.text(), 10);
 }

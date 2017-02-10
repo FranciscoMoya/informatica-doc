@@ -18,7 +18,7 @@ Mancha*.
    python-05-06-07.rst
    python-09.rst
    python-10.rst
-   python-12.rst
+   test-debug.rst
    python-14.rst
    BisectionSearch.rst
    Datos_AEMET.rst
