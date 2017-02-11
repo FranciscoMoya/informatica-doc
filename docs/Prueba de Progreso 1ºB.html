@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Prueba de progreso 1ºB</title>
+    <title>33. Prueba de progreso 1ºB</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -36,7 +36,8 @@
         VERSION:     '0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
@@ -102,11 +103,11 @@
     <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="top" title="None" href="index.html" />
-    <link rel="next" title="Prueba de progreso 1ºC" href="Prueba de Progreso 1ºC.html" />
-    <link rel="prev" title="Prueba de progreso 1ºA" href="Prueba de Progreso 1ºA.html" />
+    <link rel="next" title="34. Prueba de progreso 1ºC" href="Prueba de Progreso 1ºC.html" />
+    <link rel="prev" title="32. Prueba de progreso 1ºA" href="Prueba de Progreso 1ºA.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -120,7 +121,7 @@
   eBookConfig.course = 'CS101';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
-  eBookConfig.build_info = "unknown";
+  eBookConfig.build_info = "py";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
@@ -173,16 +174,16 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Prueba de progreso 1ºB</a><ul>
-<li><a class="reference internal" href="#filtrado-de-senales-iir">1. Filtrado de señales (IIR)</a><ul>
-<li><a class="reference internal" href="#ejemplo-de-funcionamiento">Ejemplo de funcionamiento</a></li>
+<li><a class="reference internal" href="#">33. Prueba de progreso 1ºB</a><ul>
+<li><a class="reference internal" href="#filtrado-de-senales-iir">33.1. 1. Filtrado de señales (IIR)</a><ul>
+<li><a class="reference internal" href="#ejemplo-de-funcionamiento">33.1.1. Ejemplo de funcionamiento</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#diezmado-e-interpolacion">2. Diezmado e interpolación</a><ul>
-<li><a class="reference internal" href="#ejemplo-de-uso">Ejemplo de uso</a></li>
+<li><a class="reference internal" href="#diezmado-e-interpolacion">33.2. 2. Diezmado e interpolación</a><ul>
+<li><a class="reference internal" href="#ejemplo-de-uso">33.2.1. Ejemplo de uso</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#rubrica-de-evaluacion">Rúbrica de evaluación</a></li>
+<li><a class="reference internal" href="#rubrica-de-evaluacion">33.3. Rúbrica de evaluación</a></li>
 </ul>
 </li>
 </ul>
@@ -192,13 +193,13 @@
         
         <!--
           
-  <li id="relations-prev" title="Previous Chapter - Prueba de progreso 1ºA" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - 32. Prueba de progreso 1ºA" data-toggle="tooltip">
     <a href="Prueba de Progreso 1ºA.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Prueba de progreso 1ºC' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - 34. Prueba de progreso 1ºC' data-toggle="tooltip" >
     <a href="Prueba de Progreso 1ºC.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -261,7 +262,7 @@
             <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
             
             <li>
-  <a href="_sources/Prueba de Progreso 1ºB.txt"
+  <a href="_sources/Prueba de Progreso 1ºB.rst.txt"
      rel="nofollow">Ver fuente</a></li>
             
             <li class="divider"></li>
@@ -284,7 +285,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="prueba-de-progreso-1ob">
-<h1>Prueba de progreso 1ºB<a class="headerlink" href="#prueba-de-progreso-1ob" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>33. Prueba de progreso 1ºB<a class="headerlink" href="#prueba-de-progreso-1ob" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>Lee atentamente el enunciado de la prueba. El enunciado consiste en una
 serie de ejercicios que deben realizarse en un mismo archivo Python.
 Todas las funciones deben definirse en el mismo archivo y no debe
@@ -293,7 +294,7 @@ trabajo original del alumno que realiza la entrega.</p>
 <p>No se permite la comunicación con otras personas durante el examen. Se
 permiten libros, apuntes y búsquedas en Internet.</p>
 <div class="section" id="filtrado-de-senales-iir">
-<h2>1. Filtrado de señales (IIR)<a class="headerlink" href="#filtrado-de-senales-iir" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>33.1. 1. Filtrado de señales (IIR)<a class="headerlink" href="#filtrado-de-senales-iir" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Dada una señal de tiempo discreto, definida como una secuencia de
 valores reales <span class="math">\(x = \{x_0, x_1, ... x_n\}\)</span> se define la señal de
 salida de un filtro IIR como la secuencia de los valores:</p>
@@ -338,7 +339,7 @@ lista ``y`` con los elementos desde :math:`y_0` hasta
 :math:`y_{n-1}`.</em></li>
 </ol>
 <div class="section" id="ejemplo-de-funcionamiento">
-<h3>Ejemplo de funcionamiento<a class="headerlink" href="#ejemplo-de-funcionamiento" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>33.1.1. Ejemplo de funcionamiento<a class="headerlink" href="#ejemplo-de-funcionamiento" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">1.0000</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6090</span><span class="p">,</span> <span class="mf">0.5589</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2267</span><span class="p">,</span> <span class="mf">0.0552</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0059</span> <span class="p">]</span>
 <span class="n">b</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">0.0000</span><span class="p">,</span>  <span class="mf">0.1362</span><span class="p">,</span> <span class="mf">0.4609</span><span class="p">,</span>  <span class="mf">0.1703</span><span class="p">,</span> <span class="mf">0.0064</span><span class="p">,</span>  <span class="mf">0.0000</span> <span class="p">]</span>
 <span class="n">x</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">1.</span> <span class="p">]</span>
@@ -445,7 +446,7 @@ implementación y reducir la duplicación de código.</p>
 </div>
 </div>
 <div class="section" id="diezmado-e-interpolacion">
-<h2>2. Diezmado e interpolación<a class="headerlink" href="#diezmado-e-interpolacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>33.2. 2. Diezmado e interpolación<a class="headerlink" href="#diezmado-e-interpolacion" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Una operación de filtrado básica es la reducción del número de muestras,
 que equivale a reducir la frecuencia de muestreo. Esta operación se
 puede describir matemáticamente así:</p>
@@ -478,7 +479,7 @@ una lista con el doble de elementos, donde los elementos impares se
 calculan interpolando como se explica arriba.</em></li>
 </ol>
 <div class="section" id="ejemplo-de-uso">
-<h3>Ejemplo de uso<a class="headerlink" href="#ejemplo-de-uso" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>33.2.1. Ejemplo de uso<a class="headerlink" href="#ejemplo-de-uso" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">diezmar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
@@ -536,7 +537,7 @@ término i-ésimo, que puede ser aprovechada directamente de <code class="docuti
 </div>
 </div>
 <div class="section" id="rubrica-de-evaluacion">
-<h2>Rúbrica de evaluación<a class="headerlink" href="#rubrica-de-evaluacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>33.3. Rúbrica de evaluación<a class="headerlink" href="#rubrica-de-evaluacion" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Puntos totales: 10 puntos:</p>
 <ul class="simple">
 <li>1.1 Función <code class="docutils literal"><span class="pre">iir_elem</span></code>: 2.5 puntos</li>
@@ -557,19 +558,19 @@ término i-ésimo, que puede ser aprovechada directamente de <code class="docuti
 
   
       
-  <li id="relations-prev" class="navLink" title='Capítulo anterior - Prueba de progreso 1ºA' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Capítulo anterior - 32. Prueba de progreso 1ºA' data-toggle="tooltip">
     <a href="Prueba de Progreso 1ºA.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="Prueba de Progreso 1ºA.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Capítulo siguiente - Prueba de progreso 1ºC' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - 34. Prueba de progreso 1ºC' data-toggle="tooltip" >
     <a href="Prueba de Progreso 1ºC.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="Prueba de Progreso 1ºC.html" >Next Section - Prueba de progreso 1ºC</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="Prueba de Progreso 1ºC.html" >Next Section - 34. Prueba de progreso 1ºC</a>
 
 <script type="text/javascript">
 

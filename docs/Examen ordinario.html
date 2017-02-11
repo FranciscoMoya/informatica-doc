@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Bloque 1. Ejercicios sencillos</title>
+    <title>16. Bloque 1. Ejercicios sencillos</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -36,7 +36,8 @@
         VERSION:     '0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
@@ -102,11 +103,11 @@
     <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="top" title="None" href="index.html" />
-    <link rel="next" title="Gráficas con Python" href="Gráficas.html" />
-    <link rel="prev" title="Examen extraordinario (2016)" href="ExamenExtraordinario.html" />
+    <link rel="next" title="19. Gráficas con Python" href="Gráficas.html" />
+    <link rel="prev" title="15. Examen extraordinario (2016)" href="ExamenExtraordinario.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -120,7 +121,7 @@
   eBookConfig.course = 'CS101';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
-  eBookConfig.build_info = "unknown";
+  eBookConfig.build_info = "py";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
@@ -173,18 +174,18 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Bloque 1. Ejercicios sencillos</a><ul>
-<li><a class="reference internal" href="#rombo-con-caracteres-ascii">Rombo con caracteres ascii</a></li>
-<li><a class="reference internal" href="#suma-de-fecha-y-dias">Suma de fecha y días</a></li>
-<li><a class="reference internal" href="#regresion-lineal">Regresión lineal</a></li>
+<li><a class="reference internal" href="#">16. Bloque 1. Ejercicios sencillos</a><ul>
+<li><a class="reference internal" href="#rombo-con-caracteres-ascii">16.1. Rombo con caracteres ascii</a></li>
+<li><a class="reference internal" href="#suma-de-fecha-y-dias">16.2. Suma de fecha y días</a></li>
+<li><a class="reference internal" href="#regresion-lineal">16.3. Regresión lineal</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#bloque-2-ley-d-hont">Bloque 2. Ley D&#8217;Hont</a></li>
-<li><a class="reference internal" href="#recuperacion-de-prueba-de-progreso">Recuperación de prueba de progreso</a><ul>
-<li><a class="reference internal" href="#vocales-a-numeros">Vocales a números</a></li>
-<li><a class="reference internal" href="#iniciales">Iniciales</a></li>
-<li><a class="reference internal" href="#traza-de-una-matriz-cuadrada">Traza de una matriz cuadrada</a></li>
-<li><a class="reference internal" href="#opciones-de-compra">Opciones de compra</a></li>
+<li><a class="reference internal" href="#bloque-2-ley-d-hont">17. Bloque 2. Ley D&#8217;Hont</a></li>
+<li><a class="reference internal" href="#recuperacion-de-prueba-de-progreso">18. Recuperación de prueba de progreso</a><ul>
+<li><a class="reference internal" href="#vocales-a-numeros">18.1. Vocales a números</a></li>
+<li><a class="reference internal" href="#iniciales">18.2. Iniciales</a></li>
+<li><a class="reference internal" href="#traza-de-una-matriz-cuadrada">18.3. Traza de una matriz cuadrada</a></li>
+<li><a class="reference internal" href="#opciones-de-compra">18.4. Opciones de compra</a></li>
 </ul>
 </li>
 </ul>
@@ -194,13 +195,13 @@
         
         <!--
           
-  <li id="relations-prev" title="Previous Chapter - Examen extraordinario (2016)" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - 15. Examen extraordinario (2016)" data-toggle="tooltip">
     <a href="ExamenExtraordinario.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Gráficas con Python' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - 19. Gráficas con Python' data-toggle="tooltip" >
     <a href="Gráficas.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -263,7 +264,7 @@
             <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
             
             <li>
-  <a href="_sources/Examen ordinario.txt"
+  <a href="_sources/Examen ordinario.rst.txt"
      rel="nofollow">Ver fuente</a></li>
             
             <li class="divider"></li>
@@ -286,9 +287,9 @@
 <div class="container" id="main-content">
   
   <div class="section" id="bloque-1-ejercicios-sencillos">
-<h1>Bloque 1. Ejercicios sencillos<a class="headerlink" href="#bloque-1-ejercicios-sencillos" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>16. Bloque 1. Ejercicios sencillos<a class="headerlink" href="#bloque-1-ejercicios-sencillos" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="section" id="rombo-con-caracteres-ascii">
-<h2>Rombo con caracteres ascii<a class="headerlink" href="#rombo-con-caracteres-ascii" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>16.1. Rombo con caracteres ascii<a class="headerlink" href="#rombo-con-caracteres-ascii" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Dada la regularidad del dibujo lo más fácil es definir una función para
 imprimir una línea cualquiera y usarla tantas veces como se necesite.</p>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">imprimir_rombo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -315,7 +316,7 @@ imprimir una línea cualquiera y usarla tantas veces como se necesite.</p>
 </pre>
 </div>
 <div class="section" id="suma-de-fecha-y-dias">
-<h2>Suma de fecha y días<a class="headerlink" href="#suma-de-fecha-y-dias" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>16.2. Suma de fecha y días<a class="headerlink" href="#suma-de-fecha-y-dias" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El cálculo de la nueva fecha es relativamente complicado. Nuestra
 estrategia es empezar en el día uno del mes sumando el número del día
 menos uno a los días que hay que sumar. Una vez en este punto vamos
@@ -366,7 +367,7 @@ nos evitamos el problema de tener que corregir una fecha a posteriori.</p>
 </div>
 </div>
 <div class="section" id="regresion-lineal">
-<h2>Regresión lineal<a class="headerlink" href="#regresion-lineal" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>16.3. Regresión lineal<a class="headerlink" href="#regresion-lineal" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Este ejercicio es aplicación directa de la fórmula, no tiene nada
 especial.</p>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">regresion_lineal</span><span class="p">(</span><span class="n">puntos</span><span class="p">):</span>
@@ -405,7 +406,7 @@ especial.</p>
 </div>
 </div>
 <div class="section" id="bloque-2-ley-d-hont">
-<h1>Bloque 2. Ley D&#8217;Hont<a class="headerlink" href="#bloque-2-ley-d-hont" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>17. Bloque 2. Ley D&#8217;Hont<a class="headerlink" href="#bloque-2-ley-d-hont" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>El algoritmo que se propone en el bloque 2 es muy simple. Basta calcular
 la tabla de votos divididos por el número de escaños para cada partido.
 Las celdas de esa tabla se ordenan de manera que el que pueda pagar más
@@ -509,9 +510,9 @@ resultados de Madrid de las últimas elecciones generales.</p>
 </div>
 </div>
 <div class="section" id="recuperacion-de-prueba-de-progreso">
-<h1>Recuperación de prueba de progreso<a class="headerlink" href="#recuperacion-de-prueba-de-progreso" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>18. Recuperación de prueba de progreso<a class="headerlink" href="#recuperacion-de-prueba-de-progreso" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="section" id="vocales-a-numeros">
-<h2>Vocales a números<a class="headerlink" href="#vocales-a-numeros" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>18.1. Vocales a números<a class="headerlink" href="#vocales-a-numeros" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Es muy parecido a <code class="docutils literal"><span class="pre">codigo_cesar</span></code> de la práctica 2.</p>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vocales_a_numeros</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">letra_transformada</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">])</span>
@@ -533,7 +534,7 @@ resultados de Madrid de las últimas elecciones generales.</p>
 </div>
 </div>
 <div class="section" id="iniciales">
-<h2>Iniciales<a class="headerlink" href="#iniciales" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>18.2. Iniciales<a class="headerlink" href="#iniciales" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Simple manipulación de cadenas. Eliminamos todo lo que no sean letras
 porque no serían iniciales. Eso no se indica en el enunciado, por lo que
 se consideraría válido aunque no se haga.</p>
@@ -564,7 +565,7 @@ se consideraría válido aunque no se haga.</p>
 </div>
 </div>
 <div class="section" id="traza-de-una-matriz-cuadrada">
-<h2>Traza de una matriz cuadrada<a class="headerlink" href="#traza-de-una-matriz-cuadrada" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>18.3. Traza de una matriz cuadrada<a class="headerlink" href="#traza-de-una-matriz-cuadrada" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Es trivial con una <em>list comprehension</em>.</p>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">traza</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">sum</span><span class="p">([</span><span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">))])</span>
@@ -580,7 +581,7 @@ se consideraría válido aunque no se haga.</p>
 </div>
 </div>
 <div class="section" id="opciones-de-compra">
-<h2>Opciones de compra<a class="headerlink" href="#opciones-de-compra" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>18.4. Opciones de compra<a class="headerlink" href="#opciones-de-compra" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Básicamente consiste en filtrar las combinaciones de <code class="docutils literal"><span class="pre">precios</span></code> tomados
 de dos en dos. Es decir, el grueso del trabajo es conseguir estas
 combinaciones.</p>
@@ -623,19 +624,19 @@ que convertir cada elemento en una lista para generar la respuesta.</p>
 
   
       
-  <li id="relations-prev" class="navLink" title='Capítulo anterior - Examen extraordinario (2016)' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Capítulo anterior - 15. Examen extraordinario (2016)' data-toggle="tooltip">
     <a href="ExamenExtraordinario.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="ExamenExtraordinario.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Capítulo siguiente - Gráficas con Python' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - 19. Gráficas con Python' data-toggle="tooltip" >
     <a href="Gráficas.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="Gráficas.html" >Next Section - Gráficas con Python</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="Gráficas.html" >Next Section - 19. Gráficas con Python</a>
 
 <script type="text/javascript">
 

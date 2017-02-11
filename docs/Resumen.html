@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Resumen de métodos computacionales</title>
+    <title>54. Resumen de métodos computacionales</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -36,7 +36,8 @@
         VERSION:     '0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
@@ -102,11 +103,11 @@
     <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="top" title="None" href="index.html" />
-    <link rel="next" title="Sopa de letras" href="sopa_letras.html" />
-    <link rel="prev" title="Python básico" href="PythonMinimo.html" />
+    <link rel="next" title="55. Apéndice: Python básico" href="PythonMinimo.html" />
+    <link rel="prev" title="53. Trabajo en grupo (curso 2016-2017)" href="trabajo-grupo.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -120,7 +121,7 @@
   eBookConfig.course = 'CS101';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
-  eBookConfig.build_info = "unknown";
+  eBookConfig.build_info = "py";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
@@ -173,14 +174,14 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Resumen de métodos computacionales</a><ul>
-<li><a class="reference internal" href="#conjeturar-y-comprobar">Conjeturar y comprobar</a></li>
-<li><a class="reference internal" href="#enumeracion-exhaustiva">Enumeración exhaustiva</a></li>
-<li><a class="reference internal" href="#busqueda-por-biseccion">Búsqueda por bisección</a></li>
-<li><a class="reference internal" href="#metodo-de-newton-raphson">Método de Newton-Raphson</a></li>
-<li><a class="reference internal" href="#divide-y-venceras">Divide y vencerás</a></li>
-<li><a class="reference internal" href="#programacion-dinamica">Programación dinámica</a></li>
-<li><a class="reference internal" href="#poda-del-espacio-de-busqueda">Poda del espacio de búsqueda</a></li>
+<li><a class="reference internal" href="#">54. Resumen de métodos computacionales</a><ul>
+<li><a class="reference internal" href="#conjeturar-y-comprobar">54.1. Conjeturar y comprobar</a></li>
+<li><a class="reference internal" href="#enumeracion-exhaustiva">54.2. Enumeración exhaustiva</a></li>
+<li><a class="reference internal" href="#busqueda-por-biseccion">54.3. Búsqueda por bisección</a></li>
+<li><a class="reference internal" href="#metodo-de-newton-raphson">54.4. Método de Newton-Raphson</a></li>
+<li><a class="reference internal" href="#divide-y-venceras">54.5. Divide y vencerás</a></li>
+<li><a class="reference internal" href="#programacion-dinamica">54.6. Programación dinámica</a></li>
+<li><a class="reference internal" href="#poda-del-espacio-de-busqueda">54.7. Poda del espacio de búsqueda</a></li>
 </ul>
 </li>
 </ul>
@@ -190,14 +191,14 @@
         
         <!--
           
-  <li id="relations-prev" title="Previous Chapter - Python básico" data-toggle="tooltip">
-    <a href="PythonMinimo.html" >
+  <li id="relations-prev" title="Previous Chapter - 53. Trabajo en grupo (curso 2016-2017)" data-toggle="tooltip">
+    <a href="trabajo-grupo.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Sopa de letras' data-toggle="tooltip" >
-    <a href="sopa_letras.html" >
+  <li id="relations-next" title='Next Chapter - 55. Apéndice: Python básico' data-toggle="tooltip" >
+    <a href="PythonMinimo.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -259,7 +260,7 @@
             <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
             
             <li>
-  <a href="_sources/Resumen.txt"
+  <a href="_sources/Resumen.rst.txt"
      rel="nofollow">Ver fuente</a></li>
             
             <li class="divider"></li>
@@ -282,12 +283,12 @@
 <div class="container" id="main-content">
   
   <div class="section" id="resumen-de-metodos-computacionales">
-<h1>Resumen de métodos computacionales<a class="headerlink" href="#resumen-de-metodos-computacionales" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>54. Resumen de métodos computacionales<a class="headerlink" href="#resumen-de-metodos-computacionales" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>A lo largo del curso hemos aprendido un buen número de métodos para
 resolver problemas con un ordenador. Veamos un pequeño resumen con
 ejemplos sencillos.</p>
 <div class="section" id="conjeturar-y-comprobar">
-<h2>Conjeturar y comprobar<a class="headerlink" href="#conjeturar-y-comprobar" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>54.1. Conjeturar y comprobar<a class="headerlink" href="#conjeturar-y-comprobar" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Los métodos de <em>guess and check</em> engloban toda una familia de métodos,
 que incluyen métodos de enumeración exhaustiva, bisección, algunos
 métodos estocásticos, algoritmos genéticos, ...</p>
@@ -305,7 +306,7 @@ métodos estocásticos, algoritmos genéticos, ...</p>
 </div>
 </div>
 <div class="section" id="enumeracion-exhaustiva">
-<h2>Enumeración exhaustiva<a class="headerlink" href="#enumeracion-exhaustiva" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>54.2. Enumeración exhaustiva<a class="headerlink" href="#enumeracion-exhaustiva" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>La <em>enumeración exhaustiva</em> o <em>fuerza bruta</em> se utiliza cuando el número
 de casos a probar no es prohibitivamente alto y la evaluación de cada
 caso es sencilla. Por ejemplo:</p>
@@ -321,7 +322,7 @@ caso es sencilla. Por ejemplo:</p>
 </div>
 </div>
 <div class="section" id="busqueda-por-biseccion">
-<h2>Búsqueda por bisección<a class="headerlink" href="#busqueda-por-biseccion" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>54.3. Búsqueda por bisección<a class="headerlink" href="#busqueda-por-biseccion" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>La <em>búsqueda por bisección</em> se utiliza cuando las posibles soluciones
 están totalmente ordenadas y se puede determinar cuál es la posible
 solución que se encuentra entre dos dadas. Por ejemplo:</p>
@@ -339,7 +340,7 @@ solución que se encuentra entre dos dadas. Por ejemplo:</p>
 </div>
 </div>
 <div class="section" id="metodo-de-newton-raphson">
-<h2>Método de Newton-Raphson<a class="headerlink" href="#metodo-de-newton-raphson" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>54.4. Método de Newton-Raphson<a class="headerlink" href="#metodo-de-newton-raphson" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Para el problema particular de encontrar las raizes de un polinomio
 <span class="math">\(p(x) = 0\)</span> el mátodo de Newton Raphson establece un método que
 converge más rápidamente que la búsqueda por bisección. Se basa en esl
@@ -358,7 +359,7 @@ aproxima una raiz, es decir :math:`p(g) simeq 0`. Entonces
 </div>
 </div>
 <div class="section" id="divide-y-venceras">
-<h2>Divide y vencerás<a class="headerlink" href="#divide-y-venceras" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>54.5. Divide y vencerás<a class="headerlink" href="#divide-y-venceras" title="Enlazar permanentemente con este título">¶</a></h2>
 <p><em>Divide y vencerás</em> es un principio general para resolución de problemas
 que pueden ser descompuestos en problemas más pequeños. Debe cumplir un
 requisito:</p>
@@ -380,7 +381,7 @@ partir de soluciones a problemas más pequeños</li>
 </div>
 </div>
 <div class="section" id="programacion-dinamica">
-<h2>Programación dinámica<a class="headerlink" href="#programacion-dinamica" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>54.6. Programación dinámica<a class="headerlink" href="#programacion-dinamica" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Cuando la solución a un problema exige rehacer repetidamente los mismos
 cálculos es posible reducir el trabajo aplicando <em>memoization</em>
 (guardando los valores ya calculados). Deben cumplirse dos requisitos:</p>
@@ -405,7 +406,7 @@ repetidos.</li>
 </div>
 </div>
 <div class="section" id="poda-del-espacio-de-busqueda">
-<h2>Poda del espacio de búsqueda<a class="headerlink" href="#poda-del-espacio-de-busqueda" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>54.7. Poda del espacio de búsqueda<a class="headerlink" href="#poda-del-espacio-de-busqueda" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>En algunos casos la búsqueda exhaustiva no es posible por existir un
 número excesivo de posibles soluciones. En esos casos pueden utilizarse
 técnicas que reducen el espacio de búsqueda.</p>
@@ -429,19 +430,19 @@ ejemplo, en la solución al Sudoku:</p>
 
   
       
-  <li id="relations-prev" class="navLink" title='Capítulo anterior - Python básico' data-toggle="tooltip">
-    <a href="PythonMinimo.html" >
+  <li id="relations-prev" class="navLink" title='Capítulo anterior - 53. Trabajo en grupo (curso 2016-2017)' data-toggle="tooltip">
+    <a href="trabajo-grupo.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="PythonMinimo.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="trabajo-grupo.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Capítulo siguiente - Sopa de letras' data-toggle="tooltip" >
-    <a href="sopa_letras.html" >
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - 55. Apéndice: Python básico' data-toggle="tooltip" >
+    <a href="PythonMinimo.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="sopa_letras.html" >Next Section - Sopa de letras</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="PythonMinimo.html" >Next Section - 55. Apéndice: Python básico</a>
 
 <script type="text/javascript">
 

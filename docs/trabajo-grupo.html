@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Trabajo en grupo (curso 2016-2017)</title>
+    <title>53. Trabajo en grupo (curso 2016-2017)</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -36,7 +36,8 @@
         VERSION:     '0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
@@ -102,10 +103,11 @@
     <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="top" title="None" href="index.html" />
-    <link rel="prev" title="El tour del caballo" href="tour-caballo.html" />
+    <link rel="next" title="54. Resumen de métodos computacionales" href="Resumen.html" />
+    <link rel="prev" title="52. El tour del caballo" href="tour-caballo.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -119,7 +121,7 @@
   eBookConfig.course = 'CS101';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
-  eBookConfig.build_info = "unknown";
+  eBookConfig.build_info = "py";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
@@ -172,17 +174,17 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Trabajo en grupo (curso 2016-2017)</a><ul>
-<li><a class="reference internal" href="#rango-de-una-matriz">1. Rango de una matriz</a><ul>
-<li><a class="reference internal" href="#ejemplo-de-funcionamiento">Ejemplo de funcionamiento</a></li>
+<li><a class="reference internal" href="#">53. Trabajo en grupo (curso 2016-2017)</a><ul>
+<li><a class="reference internal" href="#rango-de-una-matriz">53.1. 1. Rango de una matriz</a><ul>
+<li><a class="reference internal" href="#ejemplo-de-funcionamiento">53.1.1. Ejemplo de funcionamiento</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#solucion-de-sistema-de-ecuaciones">2. Solución de sistema de ecuaciones</a><ul>
-<li><a class="reference internal" href="#id1">Ejemplo de funcionamiento</a></li>
+<li><a class="reference internal" href="#solucion-de-sistema-de-ecuaciones">53.2. 2. Solución de sistema de ecuaciones</a><ul>
+<li><a class="reference internal" href="#id1">53.2.1. Ejemplo de funcionamiento</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#inversa-de-una-matriz">3. Inversa de una matriz</a><ul>
-<li><a class="reference internal" href="#id2">Ejemplo de funcionamiento</a></li>
+<li><a class="reference internal" href="#inversa-de-una-matriz">53.3. 3. Inversa de una matriz</a><ul>
+<li><a class="reference internal" href="#id2">53.3.1. Ejemplo de funcionamiento</a></li>
 </ul>
 </li>
 </ul>
@@ -194,14 +196,18 @@
         
         <!--
           
-  <li id="relations-prev" title="Previous Chapter - El tour del caballo" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - 52. El tour del caballo" data-toggle="tooltip">
     <a href="tour-caballo.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-    <li class="divider-vertical"></li>
-  
+  <li id="relations-next" title='Next Chapter - 54. Resumen de métodos computacionales' data-toggle="tooltip" >
+    <a href="Resumen.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -259,7 +265,7 @@
             <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
             
             <li>
-  <a href="_sources/trabajo-grupo.txt"
+  <a href="_sources/trabajo-grupo.rst.txt"
      rel="nofollow">Ver fuente</a></li>
             
             <li class="divider"></li>
@@ -282,19 +288,19 @@
 <div class="container" id="main-content">
   
   <div class="section" id="trabajo-en-grupo-curso-2016-2017">
-<h1>Trabajo en grupo (curso 2016-2017)<a class="headerlink" href="#trabajo-en-grupo-curso-2016-2017" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>53. Trabajo en grupo (curso 2016-2017)<a class="headerlink" href="#trabajo-en-grupo-curso-2016-2017" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>En este curso el trabajo en grupo consistirá simplemente en el
 desarrollo en Python del método de Gauss-Jordan. Se proponen varios
 ejercicios relacionados con esto.</p>
 <div class="section" id="rango-de-una-matriz">
-<h2>1. Rango de una matriz<a class="headerlink" href="#rango-de-una-matriz" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>53.1. 1. Rango de una matriz<a class="headerlink" href="#rango-de-una-matriz" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Definir la función <code class="docutils literal"><span class="pre">rango_matriz(m)</span></code> que devuelve el rango de una
 matriz calculado por el <a class="reference external" href="http://matematicasies.com/Rango-de-una-matriz-por-el-metodo-de-Gauss">método de
 Gauss</a>.</p>
 <p>Deberá funcionar con cualquier número de filas y columnas. No se dará
 puntuación alguna a las entregas que no respeten este requisito.</p>
 <div class="section" id="ejemplo-de-funcionamiento">
-<h3>Ejemplo de funcionamiento<a class="headerlink" href="#ejemplo-de-funcionamiento" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>53.1.1. Ejemplo de funcionamiento<a class="headerlink" href="#ejemplo-de-funcionamiento" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rango_matriz</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
 <span class="go">3</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rango_matriz</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
@@ -304,13 +310,13 @@ puntuación alguna a las entregas que no respeten este requisito.</p>
 </div>
 </div>
 <div class="section" id="solucion-de-sistema-de-ecuaciones">
-<h2>2. Solución de sistema de ecuaciones<a class="headerlink" href="#solucion-de-sistema-de-ecuaciones" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>53.2. 2. Solución de sistema de ecuaciones<a class="headerlink" href="#solucion-de-sistema-de-ecuaciones" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Definir una función <code class="docutils literal"><span class="pre">lin_solve(A,B)</span></code> que resuelve el sistema lineal de
 ecuaciones <span class="math">\(A\cdot x = B\)</span> empleando el método de Gauss-Jordan. La
 función debe devolver la secuencia de operaciones a realizar sobre
 <code class="docutils literal"><span class="pre">A|B</span></code>, y el vector solución.</p>
 <div class="section" id="id1">
-<h3>Ejemplo de funcionamiento<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>53.2.1. Ejemplo de funcionamiento<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lin_solve</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 <span class="go">([(&#39;div&#39;, 1, 2), (&#39;mac&#39;, 2, 1, -2), (&#39;div&#39;, 2, 3)], [1, 0, 0])</span>
 </pre></div>
@@ -323,11 +329,11 @@ operaciones de forma diferente. Por ejemplo, se recomiendan clases.</p>
 </div>
 </div>
 <div class="section" id="inversa-de-una-matriz">
-<h2>3. Inversa de una matriz<a class="headerlink" href="#inversa-de-una-matriz" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>53.3. 3. Inversa de una matriz<a class="headerlink" href="#inversa-de-una-matriz" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Definir la función <code class="docutils literal"><span class="pre">inv_matriz(M)</span></code> que devuelve la matriz inversa de
 la que se pasa como argumento.</p>
 <div class="section" id="id2">
-<h3>Ejemplo de funcionamiento<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>53.3.1. Ejemplo de funcionamiento<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">inv_matriz</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">]])</span>
 <span class="go">[[1,0,0], [0,0.25,0], [0,0,0.1]]</span>
 </pre></div>
@@ -339,13 +345,19 @@ la que se pasa como argumento.</p>
 
   
       
-  <li id="relations-prev" class="navLink" title='Capítulo anterior - El tour del caballo' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Capítulo anterior - 52. El tour del caballo' data-toggle="tooltip">
     <a href="tour-caballo.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="tour-caballo.html" ></a>
   
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - 54. Resumen de métodos computacionales' data-toggle="tooltip" >
+    <a href="Resumen.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="Resumen.html" >Next Section - 54. Resumen de métodos computacionales</a>
 
 <script type="text/javascript">
 

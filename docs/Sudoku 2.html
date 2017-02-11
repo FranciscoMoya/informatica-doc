@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Resolución de Sudokus</title>
+    <title>49. Resolución de Sudokus</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -36,7 +36,8 @@
         VERSION:     '0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
@@ -102,11 +103,11 @@
     <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="top" title="None" href="index.html" />
-    <link rel="next" title="Sudoku al estilo de P. Norvig" href="Sudoku 3.html" />
-    <link rel="prev" title="Sopa de letras" href="sopa_letras.html" />
+    <link rel="next" title="50. Sudoku al estilo de P. Norvig" href="Sudoku 3.html" />
+    <link rel="prev" title="48. Sopa de letras" href="sopa_letras.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -120,7 +121,7 @@
   eBookConfig.course = 'CS101';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
-  eBookConfig.build_info = "unknown";
+  eBookConfig.build_info = "py";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
@@ -173,12 +174,12 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Resolución de Sudokus</a><ul>
-<li><a class="reference internal" href="#modelo-de-sudoku">Modelo de Sudoku</a></li>
-<li><a class="reference internal" href="#comprobaciones-del-invariante-de-representacion">Comprobaciones del invariante de representación</a></li>
-<li><a class="reference internal" href="#creacion-de-sudokus">Creación de Sudokus</a></li>
-<li><a class="reference internal" href="#restricciones-con-clases">Restricciones con clases</a></li>
-<li><a class="reference internal" href="#sudokus-dificiles">Sudokus difíciles</a></li>
+<li><a class="reference internal" href="#">49. Resolución de Sudokus</a><ul>
+<li><a class="reference internal" href="#modelo-de-sudoku">49.1. Modelo de Sudoku</a></li>
+<li><a class="reference internal" href="#comprobaciones-del-invariante-de-representacion">49.2. Comprobaciones del invariante de representación</a></li>
+<li><a class="reference internal" href="#creacion-de-sudokus">49.3. Creación de Sudokus</a></li>
+<li><a class="reference internal" href="#restricciones-con-clases">49.4. Restricciones con clases</a></li>
+<li><a class="reference internal" href="#sudokus-dificiles">49.5. Sudokus difíciles</a></li>
 </ul>
 </li>
 </ul>
@@ -188,13 +189,13 @@
         
         <!--
           
-  <li id="relations-prev" title="Previous Chapter - Sopa de letras" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - 48. Sopa de letras" data-toggle="tooltip">
     <a href="sopa_letras.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Sudoku al estilo de P. Norvig' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - 50. Sudoku al estilo de P. Norvig' data-toggle="tooltip" >
     <a href="Sudoku 3.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -257,7 +258,7 @@
             <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
             
             <li>
-  <a href="_sources/Sudoku 2.txt"
+  <a href="_sources/Sudoku 2.rst.txt"
      rel="nofollow">Ver fuente</a></li>
             
             <li class="divider"></li>
@@ -280,7 +281,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="resolucion-de-sudokus">
-<h1>Resolución de Sudokus<a class="headerlink" href="#resolucion-de-sudokus" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>49. Resolución de Sudokus<a class="headerlink" href="#resolucion-de-sudokus" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>Ya hemos resuelto el problema de comprobar un Sudoku. Vamos ahora a
 hacer un programa que resuelve Sudokus. Plantéatelo como un caso de
 estudio que se parece mucho a los problemas de exámen. Para ello vamos a
@@ -343,7 +344,7 @@ dado.</p>
 </pre></div>
 </div>
 <div class="section" id="modelo-de-sudoku">
-<h2>Modelo de Sudoku<a class="headerlink" href="#modelo-de-sudoku" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>49.1. Modelo de Sudoku<a class="headerlink" href="#modelo-de-sudoku" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>En lo que hemos hecho hasta ahora necesitamos una clase <code class="docutils literal"><span class="pre">Sudoku</span></code> que
 se pueda construir a partir de una lista de restricciones y que tenga un
 método <code class="docutils literal"><span class="pre">get</span></code> para obtener el elemento de coordenadas dadas. Cada
@@ -406,7 +407,7 @@ todos los números de 1 a 9.</p>
 </div>
 </div>
 <div class="section" id="comprobaciones-del-invariante-de-representacion">
-<h2>Comprobaciones del invariante de representación<a class="headerlink" href="#comprobaciones-del-invariante-de-representacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>49.2. Comprobaciones del invariante de representación<a class="headerlink" href="#comprobaciones-del-invariante-de-representacion" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Hemos delegado las comprobaciones en una función <code class="docutils literal"><span class="pre">comprobarNum</span></code>que
 comprueba que cada elemento de una casilla es una cifra válida, y
 <code class="docutils literal"><span class="pre">_comprobar9</span></code> que comprueba la consistencia de nueve casillas con cada
@@ -470,7 +471,7 @@ resto de casillas.</li>
 </div>
 </div>
 <div class="section" id="creacion-de-sudokus">
-<h2>Creación de Sudokus<a class="headerlink" href="#creacion-de-sudokus" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>49.3. Creación de Sudokus<a class="headerlink" href="#creacion-de-sudokus" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El constructor de Sudokus requiere una especificación de restricciones
 que puede ser un poco engorrosa de teclear. Para facilitar eso se puede
 hacer un <em>builder</em>, una función o clase que ayuda a construir Sudokus a
@@ -708,7 +709,7 @@ en lo mismo.</p>
 </div>
 </div>
 <div class="section" id="restricciones-con-clases">
-<h2>Restricciones con clases<a class="headerlink" href="#restricciones-con-clases" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>49.4. Restricciones con clases<a class="headerlink" href="#restricciones-con-clases" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Vamos a pararnos por un momento en el análisis de cómo hemos resuelto el
 filtrado de las restricciones. ¿No te has sentido incómodo con tanto
 paso de parámetros repetidos? Las clases tienen una ventaja. El paso de
@@ -862,7 +863,7 @@ y nos centremos en el problema desde una perspectiva más orientada a los
 datos.</p>
 </div>
 <div class="section" id="sudokus-dificiles">
-<h2>Sudokus difíciles<a class="headerlink" href="#sudokus-dificiles" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>49.5. Sudokus difíciles<a class="headerlink" href="#sudokus-dificiles" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Los sudokus más elementales se resuelven con suma facilidad. Sin embargo
 hay sudokus mucho más complejos. Puedes probar con
 <a class="reference external" href="http://www.sudoku-online.org/">sudoku-online</a> con el máximo grado de
@@ -941,19 +942,19 @@ encontrar la solución antes.</p>
 
   
       
-  <li id="relations-prev" class="navLink" title='Capítulo anterior - Sopa de letras' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Capítulo anterior - 48. Sopa de letras' data-toggle="tooltip">
     <a href="sopa_letras.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="sopa_letras.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Capítulo siguiente - Sudoku al estilo de P. Norvig' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - 50. Sudoku al estilo de P. Norvig' data-toggle="tooltip" >
     <a href="Sudoku 3.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="Sudoku 3.html" >Next Section - Sudoku al estilo de P. Norvig</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="Sudoku 3.html" >Next Section - 50. Sudoku al estilo de P. Norvig</a>
 
 <script type="text/javascript">
 

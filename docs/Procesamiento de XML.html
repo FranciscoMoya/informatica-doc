@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Procesamiento de XML</title>
+    <title>31. Procesamiento de XML</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -36,7 +36,8 @@
         VERSION:     '0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
@@ -102,11 +103,11 @@
     <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="top" title="None" href="index.html" />
-    <link rel="next" title="Prueba de progreso 1ºA" href="Prueba de Progreso 1ºA.html" />
-    <link rel="prev" title="Problema de las 8 damas" href="Problema de las 8 damas.html" />
+    <link rel="next" title="32. Prueba de progreso 1ºA" href="Prueba de Progreso 1ºA.html" />
+    <link rel="prev" title="30. Problema de las 8 damas" href="Problema de las 8 damas.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -120,7 +121,7 @@
   eBookConfig.course = 'CS101';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
-  eBookConfig.build_info = "unknown";
+  eBookConfig.build_info = "py";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
@@ -173,9 +174,9 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Procesamiento de XML</a><ul>
-<li><a class="reference internal" href="#leer-con-elementtree">Leer con <code class="docutils literal"><span class="pre">ElementTree</span></code></a></li>
-<li><a class="reference internal" href="#leer-con-beautifulsoup">Leer con <code class="docutils literal"><span class="pre">BeautifulSoup</span></code></a></li>
+<li><a class="reference internal" href="#">31. Procesamiento de XML</a><ul>
+<li><a class="reference internal" href="#leer-con-elementtree">31.1. Leer con <code class="docutils literal"><span class="pre">ElementTree</span></code></a></li>
+<li><a class="reference internal" href="#leer-con-beautifulsoup">31.2. Leer con <code class="docutils literal"><span class="pre">BeautifulSoup</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -185,13 +186,13 @@
         
         <!--
           
-  <li id="relations-prev" title="Previous Chapter - Problema de las 8 damas" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - 30. Problema de las 8 damas" data-toggle="tooltip">
     <a href="Problema de las 8 damas.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Prueba de progreso 1ºA' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - 32. Prueba de progreso 1ºA' data-toggle="tooltip" >
     <a href="Prueba de Progreso 1ºA.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -254,7 +255,7 @@
             <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
             
             <li>
-  <a href="_sources/Procesamiento de XML.txt"
+  <a href="_sources/Procesamiento de XML.rst.txt"
      rel="nofollow">Ver fuente</a></li>
             
             <li class="divider"></li>
@@ -277,7 +278,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="procesamiento-de-xml">
-<h1>Procesamiento de XML<a class="headerlink" href="#procesamiento-de-xml" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>31. Procesamiento de XML<a class="headerlink" href="#procesamiento-de-xml" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>XML es un lenguaje de marcado para escribir documentos estructurados. Se
 usa para multitud de aplicaciones y por tanto deben conocerse al menos
 los rudimentos.</p>
@@ -316,7 +317,7 @@ más sencillo. Consulta la <a class="reference external" href="https://docs.pyth
 Python</a> si necesitas
 ampliar más.</p>
 <div class="section" id="leer-con-elementtree">
-<h2>Leer con <code class="docutils literal"><span class="pre">ElementTree</span></code><a class="headerlink" href="#leer-con-elementtree" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>31.1. Leer con <code class="docutils literal"><span class="pre">ElementTree</span></code><a class="headerlink" href="#leer-con-elementtree" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El procesador de XML más simple y ligero de los incluidos en Python es
 <code class="docutils literal"><span class="pre">xml.etree.ElementTree</span></code>. Ilustraremos su uso con un archivo XML como
 los empleados en el trabajo en grupo.</p>
@@ -370,7 +371,7 @@ próximos días.</p>
 </div>
 </div>
 <div class="section" id="leer-con-beautifulsoup">
-<h2>Leer con <code class="docutils literal"><span class="pre">BeautifulSoup</span></code><a class="headerlink" href="#leer-con-beautifulsoup" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>31.2. Leer con <code class="docutils literal"><span class="pre">BeautifulSoup</span></code><a class="headerlink" href="#leer-con-beautifulsoup" title="Enlazar permanentemente con este título">¶</a></h2>
 <p><strong>Nota: En *BeautifulSoup* se usan atributos de Python para representar
 elementos XML. No confundas los *atributos* de Python con los
 *atributos* de un elemento XML. Los atributos de XML son parejas
@@ -431,19 +432,19 @@ dentro del elemento <code class="docutils literal"><span class="pre">root</span>
 
   
       
-  <li id="relations-prev" class="navLink" title='Capítulo anterior - Problema de las 8 damas' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Capítulo anterior - 30. Problema de las 8 damas' data-toggle="tooltip">
     <a href="Problema de las 8 damas.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="Problema de las 8 damas.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Capítulo siguiente - Prueba de progreso 1ºA' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - 32. Prueba de progreso 1ºA' data-toggle="tooltip" >
     <a href="Prueba de Progreso 1ºA.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="Prueba de Progreso 1ºA.html" >Next Section - Prueba de progreso 1ºA</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="Prueba de Progreso 1ºA.html" >Next Section - 32. Prueba de progreso 1ºA</a>
 
 <script type="text/javascript">
 

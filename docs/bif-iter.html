@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>4. Ramificación e iteración</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/livecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="5. Abstracción con funciones" href="python-05-06-07.html" />
+    <link rel="prev" title="3. Elementos de un programa" href="elem.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'CS101';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "py";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'informatica';
+  eBookConfig.runestone_version = '2.7.11';
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head>
+  <body role="document">
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <div style='float:left;display:block;background-size:90px 40px !important;height:40px;width:90px;background:transparent url("_static/eii_small.png") no-repeat 0px 0px;'>&nbsp; </div>
+        <a class="navbar-brand" href="index.html">Informática</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <!--<li class="divider-vertical"></li>-->
+        
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">4. Ramificación e iteración</a><ul>
+<li><a class="reference internal" href="#ramificacion">4.1. Ramificación</a></li>
+<li><a class="reference internal" href="#iteracion">4.2. Iteración</a></li>
+<li><a class="reference internal" href="#ejercicios">4.3. Ejercicios</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <!--<li class="divider-vertical"></li>-->
+        
+        <!--
+          
+  <li id="relations-prev" title="Previous Chapter - 3. Elementos de un programa" data-toggle="tooltip">
+    <a href="elem.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - 5. Abstracción con funciones' data-toggle="tooltip" >
+    <a href="python-05-06-07.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html'>Índice del libro</a></li>
+            
+            <li><a href="genindex.html">Índice alfabético</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Código activo de prueba</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Buscar en el libro" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
+            
+            <li>
+  <a href="_sources/bif-iter.rst.txt"
+     rel="nofollow">Ver fuente</a></li>
+            
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>Acerca de Runestone</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="ramificacion-e-iteracion">
+<h1>4. Ramificación e iteración<a class="headerlink" href="#ramificacion-e-iteracion" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Un computador está diseñado para ejecutar instrucciones en secuencia.
+En condiciones normales las sentencias de Python se ejecutan una
+después de otra (ejecución secuencial).  En Python el flujo normal se
+representa con una secuencia de sentencias, cada una empieza en una
+línea diferente y con el mismo margen a la izquierda.  Una de estas
+secuencias se denomina <span class="xref std std-term">bloque</span>.</p>
+<p>Ramificación e iteración son los mecanismos básicos que aporta Python
+para controlar el flujo del programa más allá de la secuencia normal
+de ejecución.  Se consigue con sentencias compuestas, que contienen
+bloques de sentencias en su interior, pero que por otro lado se
+comportan como una única sentencia.  Veamos las más importantes.</p>
+<div class="section" id="ramificacion">
+<h2>4.1. Ramificación<a class="headerlink" href="#ramificacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Es necesario emplear sentencias de <span class="xref std std-term">bifurcación</span> o
+<span class="xref std std-term">ramificación</span> siempre que se necesite ejecutar un conjunto de
+sentencias solo en determinados casos y no en otros.</p>
+<p>La sentencia básica de <span class="xref std std-term">ramificación</span> es la <span class="xref std std-term">sentencia
+*if*</span>.  La estructura más simple es la siguiente:</p>
+<pre class="literal-block">
+if <em>condición</em>:
+    <em>bloque_si_cierto</em>
+</pre>
+<p>La <em>condición</em> debe tener un valor booleano o debe ser posible
+convertirlo a un valor booleano.  Es decir, la <em>condición</em> debe poder
+evaluarse como uno de los valores <code class="docutils literal"><span class="pre">True</span></code> (cierto) o <code class="docutils literal"><span class="pre">False</span></code>
+(falso).  Si la <em>condición</em> es <code class="docutils literal"><span class="pre">True</span></code> entonces se ejecutará el
+<em>bloque_si_cierto</em>.  Después sigue con la ejecución secuencial.</p>
+<p>Todas las sentencias compuestas tienen la misma estructura.  Empiezan
+con una <span class="xref std std-term">palabra clave</span> que la identifica, luego pueden aparecer
+una serie de elementos sintácticos propios de la sentencia y termina
+la línea con un signo <code class="docutils literal"><span class="pre">:</span></code> (dos puntos).  A continuación viene al
+menos un bloque de sentencias que debe cambiar su margen respecto a la
+<span class="xref std std-term">palabra clave</span>. ¿Cuánto margen?  Da igual, mientras sea
+diferente del margen de la palabra clave a Python le da lo mismo.</p>
+<p>En el caso de la <span class="xref std std-term">sentencia *if*</span> existen versiones algo más
+complejas, que, no obstante, mantienen la misma estructura.  Por
+ejemplo, es posible indicar también un bloque de sentencias que se
+ejecuta solo si no se cumple la <em>condición</em>:</p>
+<pre class="literal-block">
+if <em>condición</em>:
+    <em>bloque_si_cierto</em>
+else:
+    <em>bloque_si_falso</em>
+</pre>
+<p>Funciona igual que el caso anterior pero en caso de que la <em>condición</em>
+se evalúe como <code class="docutils literal"><span class="pre">False</span></code> se ejecutará el bloque de sentencias
+<em>bloque_si_falso</em>, que sigue a la palabra clave <code class="docutils literal"><span class="pre">else</span></code>.  El nuevo
+añadido tiene la misma estructura de una sentencia compuesta
+cualquiera, pero es parte de la <span class="xref std std-term">sentencia *if*</span>.  Se denomina
+<span class="xref std std-term">claúsula *else*</span>.</p>
+<p>Todavía hay otra claúsula más en la <span class="xref std std-term">sentencia *if*</span>.  Se trata
+de la <span class="xref std std-term">claúsula *elif*</span> que puede repetirse tantas veces como
+sea necesario justo antes de la <span class="xref std std-term">claúsula *else*</span>:</p>
+<pre class="literal-block">
+if <em>condición1</em>:
+    <em>bloque_si_cierto_1</em>
+elif <em>condición2</em>:
+    <em>bloque_si_cierto_2</em>
+elif <em>condición3</em>:
+    <em>bloque_si_cierto_3</em>
+else:
+    <em>bloque_si_falso</em>
+</pre>
+<p>La palabra clave <code class="docutils literal"><span class="pre">elif</span></code> significa <em>else if</em>, es decir, <em>en caso
+contrario, si ...</em> Es equivalente a una claúsula <code class="docutils literal"><span class="pre">else</span></code> seguida de
+una nueva sentencia <code class="docutils literal"><span class="pre">if</span></code> pero es mucho más compacta.  Por ejemplo,
+el mismo caso que hemos puesto arriba sin claúsulas <em>elif</em> sería algo
+así:</p>
+<pre class="literal-block">
+if <em>condición1</em>:
+    <em>bloque_si_cierto_1</em>
+else:
+    if <em>condición2</em>:
+        <em>bloque_si_cierto_2</em>
+    else:
+        if <em>condición3</em>:
+            <em>bloque_si_cierto_3</em>
+        else:
+            <em>bloque_si_falso</em>
+</pre>
+<p>Como puedes ver este código está lleno de márgenes diferentes.  Eso es
+extremadamente feo.  Los programas de ordenador´, como toda labor
+artesanal, tienen también cierto sentido estético.  Un programa de
+ordenador bonito debe ser agradable de leer, fácil de entender y
+modificar, sin redundancias, sin código innecesario.  Este fragmento
+es muy difícil de entender y modificar, así que no lo hagas nunca.</p>
+<p>Las claúsulas <em>elif</em> hacen más legible un código como el de arriba.
+Pero debes pararte a pensar antes de usarlas.  Una <span class="xref std std-term">sentencia
+*if*</span> con claúsulas <em>elif</em> es mucho más compleja que un <em>if</em> sencillo.
+Procura evitarlas, procura también evitar las claúsulas <em>else</em>.</p>
+<p>Veamos unos ejemplos:</p>
+<ul>
+<li><p class="first">Imprimir por pantalla si un número <em>x</em> es par o impar.</p>
+
+<div data-childcomponent="numero-par-o-impar" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=numero-par-o-impar data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def es_par(n):
+    return n % 2 == 0
+
+x = 122
+if es_par(x):
+    print(x, 'es par')
+else:
+    print(x, 'es impar')
+</textarea>
+</div>
+<p>El mensaje a imprimir es diferente según <em>x</em> sea par o impar.  Es
+decir, lo que hay que hacer es diferente según el valor de una
+condición.  Eso claramente nos indica que tenemos que usar una
+sentencia de bifurcación.</p>
+<p>En realidad pronto veremos que podemos evitar hacer cosas
+diferentes en la mayoría de los casos, pero todavía no sabemos
+suficiente Python.</p>
+</li>
+<li><p class="first">Encontrar el mínimo de los números x, y, z.</p>
+
+<div data-childcomponent="minimo-de-x-y-z" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=minimo-de-x-y-z data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+x, y, z = 500, 250, 100
+
+if x < y and x < z:
+    print('x es el menor')
+elif y < z:
+    print('y es el menor')
+else:
+    print('z es el menor')
+</textarea>
+</div>
+<p>Este ejemplo ilustra dos aspectos interesantes.  Uno es la
+posibilidad de hacer expresiones complejas usando operadores <code class="docutils literal"><span class="pre">x</span> <span class="pre">&lt;</span>
+<span class="pre">y</span> <span class="pre">and</span> <span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">z</span></code>.  Otro es la posibilidad de asignar varias variables
+de golpe en una línea, separando los valores y las variables por
+comas.  Los detalles de esta construcción los veremos más adelante,
+pero empieza a usarla desde ya, ahorra mucho espacio.</p>
+</li>
+<li><p class="first">Imprimir por pantalla los números x, y, z en orden creciente.</p>
+
+<div data-childcomponent="define-x-y-z" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=define-x-y-z data-lang="python"    data-timelimit=25000   data-audio=''     >
+x, y, z = 13, 5, 10
+</textarea>
+</div>
+
+<div data-childcomponent="ordenar-x-y-z-v1" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ordenar-x-y-z-v1 data-lang="python"   data-include=define-x-y-z data-timelimit=25000  data-codelens="true" data-audio=''     >
+if x <= y and x <= z:
+    print(x, end=' ')
+    if y < z:
+        print(y, z)
+    else:
+        print(z, y)
+elif y <= z:
+    print(y, end=' ')
+    if x < z:
+        print(x, z)
+    else:
+        print(z, x)
+else:
+    print(z, end=' ')
+    if x < y:
+        print(x, y)
+    else:
+        print(y, x)
+</textarea>
+</div>
+<p>¿No te parece excesivamente largo para un problema tan pequeño?
+Puedes apostar a que no es la mejor solución, pero es un buen
+ejemplo de <em>if</em>.</p>
+</li>
+</ul>
+<p>No te vamos a dejar con ese mal sabor de boca, vamos a escribirlo
+bien.</p>
+
+<div data-childcomponent="ordenar-x-y-z-v2" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ordenar-x-y-z-v2 data-lang="python"   data-include=define-x-y-z data-timelimit=25000  data-codelens="true" data-audio=''     >
+print(sorted([x, y, z]))
+</textarea>
+</div>
+<p>No solo es mucho más corto, es además más general porque permite
+aplicarlo a cualquier número de argumentos.</p>
+<p>Esos corchetes seguro que ahora mismo no te resultan familiares,
+pero pronto serán de la familia. De todas formas los podemos quitar
+de la salida y dejarla igual que antes.</p>
+
+<div data-childcomponent="ordenar-x-y-z-v3" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ordenar-x-y-z-v3 data-lang="python"   data-include=define-x-y-z data-timelimit=25000  data-codelens="true" data-audio=''     >
+print(*sorted([x,y,z]))
+</textarea>
+</div>
+<p>Por esta vez vamos a explicártelo en detalle, pero intenta usar la
+documentación oficial de <a class="reference external" href="http://docs.python.org">http://docs.python.org</a> para entender lo
+que hacen los programas que veremos más adelante.</p>
+<p>Seguramente habrás adivinado que <code class="docutils literal"><span class="pre">sorted</span></code> es una función que
+devuelve una versión ordenada de lo que se le pasa como argumento.  Lo
+que pasamos como argumento a <code class="docutils literal"><span class="pre">sorted</span></code> es una <span class="xref std std-term">lista</span>, un tipo
+de objeto de Python que agrupa una secuencia de objetos.</p>
+<p>Por tanto <code class="docutils literal"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code> no es más que una lista que contiene la
+secuencia de elementos <code class="docutils literal"><span class="pre">x</span></code>, <code class="docutils literal"><span class="pre">y</span></code> y <code class="docutils literal"><span class="pre">z</span></code>.  Y <code class="docutils literal"><span class="pre">sorted([x,y,z])</span></code> es
+una versión ordenada de esa lista.</p>
+<p>Si queremos que la lista se muestre con otro formato no tenemos más
+remedio que imprimir nosotros cada elemento en lugar de usar
+<code class="docutils literal"><span class="pre">print</span></code>.  Por suerte sabemos que <code class="docutils literal"><span class="pre">print</span></code> imprime todos sus
+argumentos separados por un espacio.  Por tanto basta con pasar todos
+los elementos de la lista como argumentos independientes de <code class="docutils literal"><span class="pre">print</span></code>.
+Eso es lo que conseguimos con el asterisco antes de <code class="docutils literal"><span class="pre">sorted</span></code>.</p>
+<p>Hemos visto suficiente de ejecución condicional como para hacer con
+facilidad todos los ejercicios del curso, pero no queremos cerrar la
+sección sin mostrar otras posibilidades que ofrece Python de ejecución
+condicional.  El <span class="xref std std-term">operador ternario *if/else*</span> permite evaluar
+expresiones de forma condicional.  En el siguiente ejemplo el valor de
+<code class="docutils literal"><span class="pre">y</span></code> depende del valor de <code class="docutils literal"><span class="pre">x</span></code>. Si <code class="docutils literal"><span class="pre">x</span></code> es par <code class="docutils literal"><span class="pre">y</span></code> toma el valor
+<code class="docutils literal"><span class="pre">x/2</span></code>, en caso contrario <code class="docutils literal"><span class="pre">y</span></code> toma el valor <code class="docutils literal"><span class="pre">x</span></code>.</p>
+
+<div data-childcomponent="ejemplo-op-ternario" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ejemplo-op-ternario data-lang="python"   data-include=define-x-y-z data-timelimit=25000  data-codelens="true" data-audio=''     >
+x = 124
+y = x/2 if es_par(x) else x
+print(y)
+</textarea>
+</div>
+<p>El <span class="xref std std-term">operador ternario *if/else*</span> es distinto a la
+<span class="xref std std-term">sentencia *if*</span> con <span class="xref std std-term">claúsula *else*</span> aunque usan las
+mismas palabras reservadas.  En este caso no usamos los dos puntos
+para marcar inicios del bloque contenido.</p>
+</div>
+<div class="section" id="iteracion">
+<h2>4.2. Iteración<a class="headerlink" href="#iteracion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los bucles son construcciones que permiten volver atrás en la secuencia
+de sentencias. Cada ejecución del bloque de sentencias que compone el
+cuerpo del bucle se le llama <span class="xref std std-term">iteración</span>.</p>
+<p>El más general es el <span class="xref std std-term">bucle *while*</span> que repite un bloque de
+sentencias mientras se verifique una condición booleana y que ya
+conocemos de ejemplos anteriores.  La estructura general es:</p>
+<pre class="literal-block">
+while <em>condición</em>:
+    <em>bloque_si_cierto</em>
+</pre>
+<p>El bloque del <span class="xref std std-term">bucle *while*</span> se repite continuamente mientras
+se cumpla la condición.  Se comprueba la condición siempre al empezar
+cada repetición.</p>
+<p>Veamos un ejemplo muy similar a un conocido.</p>
+<ul>
+<li><p class="first">Encontrar la raiz cúbica de un número natural <em>n</em>.</p>
+
+<div data-childcomponent="raiz-cubica-entera" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=raiz-cubica-entera data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def raiz_cubica(n):
+    i = 1
+    while i**3 < n:
+        i = i + 1
+
+    if i**3 == n:
+        return i
+</textarea>
+</div>
+<p>Es un ejemplo de enumeración exhaustiva. Pasamos por todas las
+posibilidades comprobando si alguna de ellas es la respuesta
+correcta.  ¿Y qué pasa si el número <em>n</em> no tiene una raiz cúbica
+perfecta?  Nuestro algoritmo no sabe de números reales.</p>
+<p>No hay una respuesta universal para esta pregunta, pero aquí te
+proponemos una posibilidad, no devolver nada.  Otra posibilidad es
+devolver <code class="docutils literal"><span class="pre">False</span></code> y otra es utilizar un mecanismo de control de
+errores denominado <em>excepción</em>.  Esta última opción es seguramente
+la más recomendable pero aún no sabemos suficiente Python.</p>
+<p>Con nuestra propuesta de no devolver nada la función puede
+utilizarse con seguridad así:</p>
+
+<div data-childcomponent="uso-raiz-cubica-none" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=uso-raiz-cubica-none data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+x = 9
+if None == raiz_cubica(x):
+    print(x, 'no tiene raiz cúbica perfecta')
+else:
+    print(raiz_cubica(x))
+</textarea>
+</div>
+</li>
+</ul>
+<p>A lo mejor este ejemplo es muy sencillo y tú mismo ves que el
+algoritmo es fácil de entender, pero las cosas en la vida real no
+suelen ser tan fáciles. En general nos vamos a enfrentar al problema
+de saber si lo que hemos escrito está bien o no hemos entendido todos
+los casos posibles.  ¿Cómo sabemos que el bucle que hemos escrito
+termina alguna vez? ¿Cómo sabemos que no se queda indefinidamente en
+él?</p>
+<p>La respuesta es que debemos buscar una <span class="xref std std-term">función de decremento</span>.
+No hay que escribirla en el programa y en muchos casos ni siquiera hay
+que escribirla en papel, pero tiene que existir.  Una <span class="xref std std-term">función
+de decremento</span> tiene que cumplir cuatro características básicas:</p>
+<ol class="arabic simple">
+<li>Se trata de una función que hace corresponder números enteros a
+valores de las variables del programa <span class="math">\(f:V \rightarrow
+\mathbb{Z}\)</span>.</li>
+<li>Cuando el programa entra en el bucle tiene que tomar un valor no
+negativo.</li>
+<li>Cuando la función de decremento toma un valor &lt;= 0 el programa debe
+salir del bucle.</li>
+<li>En cada iteración del bucle la función toma un valor menor que en
+la anterior iteración (de ahí el nombre de <em>función de
+decremento</em>).</li>
+</ol>
+<p>Por ejemplo, en el caso anterior la función de decremento es
+<span class="math">\(f(i,n) = n - i^3\)</span>. Al entrar en el bucle con <code class="docutils literal"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">27</span></code> toma el
+valor 26.  En cada iteración se incrementa <code class="docutils literal"><span class="pre">i</span></code>, por lo que se
+decrementa la función (toma los valores 26, 19, 0).  La condición de
+permanencia en el bucle es precisamente la que impone la
+<span class="xref std std-term">función de decremento</span>, <span class="math">\(f(i,n) &gt; 0\)</span>, es decir, <span class="math">\(n
+&lt; i^3\)</span>.</p>
+<p>Otra forma de iteración soportada por Python es el <span class="xref std std-term">bucle
+*for*</span>.  En este caso una variable toma una secuencia de valores que
+se indica.  La forma general es:</p>
+<pre class="literal-block">
+for <em>variable</em> in <em>iterable</em>:
+    <em>bloque_del_bucle</em>
+</pre>
+<p>Un <em>iterable</em> no es más que una secuencia de valores.  La <em>variable</em>
+de control del bucle toma en cada iteración uno de los valores
+contenidos en el <em>iterable</em>.  El <em>bloque_del_bucle</em> se ejecuta tantas
+veces como valores tenga el <em>iterable</em>.  En cada iteración la variable
+de control toma uno de estos valores, lo que puede utilizarse para
+variar el comportamiento del bloque.  Por ejemplo:</p>
+
+<div data-childcomponent="ejemplo-bucle-for" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ejemplo-bucle-for data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+for i in [1, 2, 3, 4]:
+    print(i)
+</textarea>
+</div>
+<p>Prueba a cambiar la lista de valores, poniendo elementos desordenados
+e incluso cambiando el tipo de los elementos.</p>
+<p>Para crear secuencias de valores es muy conveniente el uso de la
+función <code class="docutils literal"><span class="pre">range</span></code>.  Esta función devuelve un iterable que contiene un
+conjunto de números enteros consecutivos.</p>
+
+<div data-childcomponent="ejemplo-rango-10" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ejemplo-rango-10 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+print(range(10))
+</textarea>
+</div>
+<p>Este rango contiene todos los valores desde 0 hasta el límite marcado
+sin contarlo.  No es una lista, no podemos verlo imprimiendo sin más.
+Pero podemos verlo usando nuevamente el operador <code class="docutils literal"><span class="pre">*</span></code> para expandir
+el rango:</p>
+
+<div data-childcomponent="expande-rango-10" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=expande-rango-10 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+print(*range(10))
+</textarea>
+</div>
+<p>También podemos especificar los límites inferior y superior.  El límite
+inferior está incluído en el rango.</p>
+
+<div data-childcomponent="ejemplo-rango-5-10" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ejemplo-rango-5-10 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+print(*range(5,10))
+</textarea>
+</div>
+<p>Por último se puede especificar el incremento, de manera que solo se
+incluya uno de cada <em>n</em> números del rango. Por ejemplo:</p>
+
+<div data-childcomponent="ejemplo-rango-1-20-2" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ejemplo-rango-1-20-2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+print(*range(1, 20, 2))
+</textarea>
+</div>
+<p>Con <code class="docutils literal"><span class="pre">range</span></code> es muy sencillo construir bucles <em>for</em>.</p>
+
+<div data-childcomponent="ejemplo-rango-1-20-2" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ejemplo-rango-1-20-2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+for i in range(10):
+    print(i)
+
+for i in range(10,0,-1):
+    print(i)
+</textarea>
+</div>
+<p>Ambos tipos de bucle pueden utilizarse en la mayoría de las situaciones.
+Es quizás más sencillo buscar la <em>función de decremento</em> en el caso del
+<code class="docutils literal"><span class="pre">while</span></code> pero también suele ser algo más largo. Cuál usar es cuestión
+de gustos o conveniencia.  Para recorrer elementos en una secuencia el
+<code class="docutils literal"><span class="pre">for</span></code> seguramente será más apropiado, mientras que para hacer un
+número de iteraciones que depende de los valores calculados el <code class="docutils literal"><span class="pre">while</span></code>
+es más natural.</p>
+<p>Veamos el ejemplo de la raiz cúbica con <code class="docutils literal"><span class="pre">for</span></code>.</p>
+
+<div data-childcomponent="raiz-cubica-con-for" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=raiz-cubica-con-for data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def raiz_cubica(n):
+    for i in range(n + 1):
+        if i**3 >= n: break
+
+    if i**3 == n:
+        return i
+
+print(raiz_cubica(2406104))
+</textarea>
+</div>
+<p>Las cadenas de texto también pueden ser recorridas carácter a carácter
+con un bucle <em>for</em>.</p>
+
+<div data-childcomponent="ejemplo-for-cadena" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ejemplo-for-cadena data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+for i in 'Hola':
+    print(i)
+</textarea>
+</div>
+<p>El bucle <em>for</em> tiene otra forma interesante, con ayuda de la función
+<code class="docutils literal"><span class="pre">enumerate</span></code>, en la que además de recorrer los elementos de la
+secuencia también recorre las posiciones de esos elementos. Fíjate
+bien, ahora tenemos dos variables de control.</p>
+
+<div data-childcomponent="ejemplo-for-enum" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ejemplo-for-enum data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+for pos, nombre in enumerate(['Pedro', 'Paco', 'Luis', 'Pocoyo']):
+    print(pos, ':', nombre)
+</textarea>
+</div>
+<p>Aún hay otra forma de <em>for</em> que resulta muy útil.  Se utiliza con la
+función <code class="docutils literal"><span class="pre">zip</span></code> cuando queremos recorrer dos iterables de manera
+sincronizada.  Es decir, cuando tenemos que recorrer los dos primeros
+elementos de cada iterable, después los dos segundos, etc.</p>
+
+<div data-childcomponent="ejemplo-for-zip" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ejemplo-for-zip data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+for a, b in zip('ABCDEF', ['a', 'be', 'ce', 'de', 'e', 'efe']):
+    print(a, ':', b)
+</textarea>
+</div>
+<p>Esto es suficiente para completar con facilidad todos los ejercicios
+del curso.  Evidentemente debes entrenar todas las formas de iteración
+vistas, así que procura hacer los ejercicios que se piden a
+continuación.</p>
+<p>Recuerda que los ejercicios tienen una función similar a los
+ejercicios deportivos.  No se trata de hacerlos, sino de perfeccionar
+su ejecución y plantearse retos.  Por ejemplo, después de hacer un
+ejercicio con un <em>for</em> prueba a hacerlo con un <em>while</em>.</p>
+</div>
+<div class="section" id="ejercicios">
+<h2>4.3. Ejercicios<a class="headerlink" href="#ejercicios" title="Enlazar permanentemente con este título">¶</a></h2>
+
+    <pre data-component="parsons" id="suma-10-input">
+        <span data-question>Q-1: Reordena las líneas para que el programa imprima la suma de los 10
+números que se introduzcan por pantalla.</span>suma = 0
+for a in range(10):
+    suma = suma + int(input('Introduce un numero '))
+print(suma)</pre>
+    <div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Para que el usuario pueda introducir texto por pantalla se
+usa la función <code class="docutils literal"><span class="pre">input</span></code> que devuelve una cadena de texto.
+Fíjate bien en cómo convertimos el resultado de <code class="docutils literal"><span class="pre">input</span></code> a
+un entero usando la función <code class="docutils literal"><span class="pre">int</span></code>. ¿Qué pasaría si lo que
+metemos no es un entero?</p>
+</div>
+<p>Vamos a enfrentarnos por primera vez a un prgrama de más de 5 líneas:</p>
+<div class="line-block">
+<div class="line">Haz un programa que imprima la tabla de multiplicar completa (del 1 al 9).</div>
+</div>
+
+<div data-childcomponent="imprime-tabla-v1" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=imprime-tabla-v1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def imprime_tablas_simple():
+    for i in range(1,10):
+        imprime_tabla(i)
+        print()
+
+def imprime_tabla(n):
+    for i in range(1,11):
+        imprime_linea(n,i)
+        print()
+
+def imprime_linea(n,i):
+    print(n,'x',i,'=',n*i,end='')
+</textarea>
+</div>
+<p>Otra forma:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">imprime_mosaico</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>
+        <span class="n">imprime_tablas_mosaico</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">imprime_tablas_mosaico</span><span class="p">(</span><span class="n">primera</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
+        <span class="n">imprime_linea_mosaico</span><span class="p">(</span><span class="n">primera</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">imprime_linea_mosaico</span><span class="p">(</span><span class="n">primera</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">primera</span><span class="p">,</span> <span class="n">primera</span><span class="o">+</span><span class="mi">3</span><span class="p">):</span>
+        <span class="n">imprime_linea</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">imprime_linea</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">i</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="p">,</span><span class="n">n</span><span class="o">*</span><span class="n">i</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="n">imprime_mosaico</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="n">x</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">1</span>   <span class="mi">2</span> <span class="n">x</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">2</span>       <span class="mi">3</span> <span class="n">x</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="mi">1</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">2</span>   <span class="mi">2</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">4</span>       <span class="mi">3</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="mi">1</span> <span class="n">x</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">3</span>   <span class="mi">2</span> <span class="n">x</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">6</span>       <span class="mi">3</span> <span class="n">x</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="mi">1</span> <span class="n">x</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">4</span>   <span class="mi">2</span> <span class="n">x</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">8</span>       <span class="mi">3</span> <span class="n">x</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="mi">1</span> <span class="n">x</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">5</span>   <span class="mi">2</span> <span class="n">x</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">10</span>      <span class="mi">3</span> <span class="n">x</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="mi">1</span> <span class="n">x</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">6</span>   <span class="mi">2</span> <span class="n">x</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">12</span>      <span class="mi">3</span> <span class="n">x</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="mi">1</span> <span class="n">x</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">7</span>   <span class="mi">2</span> <span class="n">x</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">14</span>      <span class="mi">3</span> <span class="n">x</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">21</span>
+<span class="mi">1</span> <span class="n">x</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">8</span>   <span class="mi">2</span> <span class="n">x</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">16</span>      <span class="mi">3</span> <span class="n">x</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">24</span>
+<span class="mi">1</span> <span class="n">x</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">9</span>   <span class="mi">2</span> <span class="n">x</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">18</span>      <span class="mi">3</span> <span class="n">x</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">27</span>
+<span class="mi">1</span> <span class="n">x</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">10</span> <span class="mi">2</span> <span class="n">x</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">20</span>     <span class="mi">3</span> <span class="n">x</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">30</span>
+
+<span class="mi">4</span> <span class="n">x</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">4</span>   <span class="mi">5</span> <span class="n">x</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">5</span>       <span class="mi">6</span> <span class="n">x</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="mi">4</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">8</span>   <span class="mi">5</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">10</span>      <span class="mi">6</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="mi">4</span> <span class="n">x</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">12</span>  <span class="mi">5</span> <span class="n">x</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">15</span>      <span class="mi">6</span> <span class="n">x</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="mi">4</span> <span class="n">x</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">16</span>  <span class="mi">5</span> <span class="n">x</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">20</span>      <span class="mi">6</span> <span class="n">x</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">24</span>
+<span class="mi">4</span> <span class="n">x</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">20</span>  <span class="mi">5</span> <span class="n">x</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">25</span>      <span class="mi">6</span> <span class="n">x</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="mi">4</span> <span class="n">x</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">24</span>  <span class="mi">5</span> <span class="n">x</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">30</span>      <span class="mi">6</span> <span class="n">x</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">36</span>
+<span class="mi">4</span> <span class="n">x</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">28</span>  <span class="mi">5</span> <span class="n">x</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">35</span>      <span class="mi">6</span> <span class="n">x</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="mi">4</span> <span class="n">x</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">32</span>  <span class="mi">5</span> <span class="n">x</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">40</span>      <span class="mi">6</span> <span class="n">x</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">48</span>
+<span class="mi">4</span> <span class="n">x</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">36</span>  <span class="mi">5</span> <span class="n">x</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">45</span>      <span class="mi">6</span> <span class="n">x</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">54</span>
+<span class="mi">4</span> <span class="n">x</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">40</span> <span class="mi">5</span> <span class="n">x</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">50</span>     <span class="mi">6</span> <span class="n">x</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">60</span>
+
+<span class="mi">7</span> <span class="n">x</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">7</span>   <span class="mi">8</span> <span class="n">x</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">8</span>       <span class="mi">9</span> <span class="n">x</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="mi">7</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">14</span>  <span class="mi">8</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">16</span>      <span class="mi">9</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="mi">7</span> <span class="n">x</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">21</span>  <span class="mi">8</span> <span class="n">x</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">24</span>      <span class="mi">9</span> <span class="n">x</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">27</span>
+<span class="mi">7</span> <span class="n">x</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">28</span>  <span class="mi">8</span> <span class="n">x</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">32</span>      <span class="mi">9</span> <span class="n">x</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">36</span>
+<span class="mi">7</span> <span class="n">x</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">35</span>  <span class="mi">8</span> <span class="n">x</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">40</span>      <span class="mi">9</span> <span class="n">x</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">45</span>
+<span class="mi">7</span> <span class="n">x</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">42</span>  <span class="mi">8</span> <span class="n">x</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">48</span>      <span class="mi">9</span> <span class="n">x</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">54</span>
+<span class="mi">7</span> <span class="n">x</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">49</span>  <span class="mi">8</span> <span class="n">x</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">56</span>      <span class="mi">9</span> <span class="n">x</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">63</span>
+<span class="mi">7</span> <span class="n">x</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">56</span>  <span class="mi">8</span> <span class="n">x</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">64</span>      <span class="mi">9</span> <span class="n">x</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">72</span>
+<span class="mi">7</span> <span class="n">x</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">63</span>  <span class="mi">8</span> <span class="n">x</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">72</span>      <span class="mi">9</span> <span class="n">x</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">81</span>
+<span class="mi">7</span> <span class="n">x</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">70</span> <span class="mi">8</span> <span class="n">x</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">80</span>     <span class="mi">9</span> <span class="n">x</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">90</span>
+</pre></div>
+</div>
+<p>Haz un programa que imprima el siguiente dibujo</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">+----------------+</span>
+<span class="o">|</span>                <span class="o">|</span>
+<span class="o">|</span>                <span class="o">|</span>
+<span class="o">|</span>                <span class="o">|</span>
+<span class="o">|</span>                <span class="o">|</span>
+<span class="o">|</span>                <span class="o">|</span>
+<span class="o">|</span>                <span class="o">|</span>
+<span class="o">|</span>                <span class="o">|</span>
+<span class="o">|</span>                <span class="o">|</span>
+<span class="o">+----------------+</span>
+</pre></div>
+</div>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">imprime_cuadrado</span><span class="p">(</span><span class="n">ancho</span><span class="p">):</span>
+    <span class="n">imprime_borde</span><span class="p">(</span><span class="n">ancho</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+        <span class="n">imprime_cara</span><span class="p">(</span><span class="n">ancho</span><span class="p">)</span>
+    <span class="n">imprime_borde</span><span class="p">(</span><span class="n">ancho</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">imprime_borde</span><span class="p">(</span><span class="n">ancho</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;+&#39;</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="n">ancho</span> <span class="o">+</span> <span class="s1">&#39;+&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">imprime_cara</span><span class="p">(</span><span class="n">ancho</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="n">ancho</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span><span class="p">)</span>
+
+<span class="n">imprime_cuadrado</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">+----------------+</span>
+<span class="o">|</span>                <span class="o">|</span>
+<span class="o">|</span>                <span class="o">|</span>
+<span class="o">|</span>                <span class="o">|</span>
+<span class="o">|</span>                <span class="o">|</span>
+<span class="o">|</span>                <span class="o">|</span>
+<span class="o">|</span>                <span class="o">|</span>
+<span class="o">|</span>                <span class="o">|</span>
+<span class="o">|</span>                <span class="o">|</span>
+<span class="o">+----------------+</span>
+</pre></div>
+</div>
+<p>Crear una función que valide una contraseña según estos criterios:</p>
+<ul class="simple">
+<li>La contraseña debe contener un mínimo de 8 caracteres.</li>
+<li>Una contraseña debe contener letras minúsculas, mayúsculas, números y
+al menos 1 carácter no alfanumérico.</li>
+<li>La contraseña no puede contener espacios en blanco.</li>
+<li>Contraseña válida, retorna <code class="docutils literal"><span class="pre">True</span></code>.</li>
+<li>Contraseña no válida, retorna el mensaje
+<code class="docutils literal"><span class="pre">&quot;La</span> <span class="pre">contraseña</span> <span class="pre">elegida</span> <span class="pre">no</span> <span class="pre">es</span> <span class="pre">segura&quot;</span></code>.</li>
+</ul>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">valida_palabra_clave</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
+    <span class="k">return</span>  <span class="n">valida_8_caracteres</span><span class="p">(</span><span class="n">palabra</span><span class="p">)</span> <span class="ow">and</span> \
+            <span class="n">valida_tipos_caracteres</span><span class="p">(</span><span class="n">palabra</span><span class="p">)</span> <span class="ow">and</span> \
+            <span class="n">valida_no_espacios</span><span class="p">(</span><span class="n">palabra</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">valida_8_caracteres</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">palabra</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">8</span>
+
+
+<span class="k">def</span> <span class="nf">valida_tipos_caracteres</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">valida_mayusculas</span><span class="p">(</span><span class="n">palabra</span><span class="p">)</span> \
+        <span class="ow">and</span> <span class="n">valida_minusculas</span><span class="p">(</span><span class="n">palabra</span><span class="p">)</span> \
+        <span class="ow">and</span> <span class="n">valida_numeros</span><span class="p">(</span><span class="n">palabra</span><span class="p">)</span> \
+        <span class="ow">and</span> <span class="n">valida_simbolos</span><span class="p">(</span><span class="n">palabra</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">valida_no_espacios</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">palabra</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+
+
+<span class="k">def</span> <span class="nf">valida_mayusculas</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">palabra</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">es_mayuscula</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+
+<span class="k">def</span> <span class="nf">valida_minusculas</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">palabra</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">es_minuscula</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+
+<span class="k">def</span> <span class="nf">valida_numeros</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">palabra</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">es_numero</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+
+<span class="k">def</span> <span class="nf">valida_simbolos</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">palabra</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">es_simbolo</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+
+<span class="k">def</span> <span class="nf">es_mayuscula</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">c</span> <span class="o">&gt;=</span> <span class="s1">&#39;A&#39;</span> <span class="ow">and</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="s1">&#39;Z&#39;</span>
+
+
+<span class="k">def</span> <span class="nf">es_minuscula</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">c</span> <span class="o">&gt;=</span> <span class="s1">&#39;a&#39;</span> <span class="ow">and</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="s1">&#39;z&#39;</span>
+
+
+<span class="k">def</span> <span class="nf">es_numero</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">c</span> <span class="o">&gt;=</span> <span class="s1">&#39;0&#39;</span> <span class="ow">and</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="s1">&#39;9&#39;</span>
+
+
+<span class="k">def</span> <span class="nf">es_simbolo</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="k">return</span> <span class="ow">not</span> <span class="p">(</span> <span class="n">es_mayuscula</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> \
+        <span class="ow">or</span> <span class="n">es_minuscula</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> \
+        <span class="ow">or</span> <span class="n">es_numero</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="p">)</span>
+
+
+<span class="n">valida_palabra_clave</span><span class="p">(</span><span class="s1">&#39;aLt0$€cr3t0&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kc">True</span>
+</pre></div>
+</div>
+<p>¿No es muy repetitivo? Las validaciones de tipos de caracteres son
+prácticamente iguales. Solo se diferencian en la función que determina
+el tipo de cada caracter. Por tanto para no repetir código se puede
+pasar como parámetro.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">valida_tipos_caracteres</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">valida_tipo</span><span class="p">(</span><span class="n">es_mayuscula</span><span class="p">,</span> <span class="n">palabra</span><span class="p">)</span> \
+        <span class="ow">and</span> <span class="n">valida_tipo</span><span class="p">(</span><span class="n">es_minuscula</span><span class="p">,</span> <span class="n">palabra</span><span class="p">)</span> \
+        <span class="ow">and</span> <span class="n">valida_tipo</span><span class="p">(</span><span class="n">es_numero</span><span class="p">,</span> <span class="n">palabra</span><span class="p">)</span> \
+        <span class="ow">and</span> <span class="n">valida_tipo</span><span class="p">(</span><span class="n">es_simbolo</span><span class="p">,</span> <span class="n">palabra</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">valida_no_espacios</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
+    <span class="k">return</span> <span class="ow">not</span> <span class="n">valida_tipo</span><span class="p">(</span><span class="n">es_espacio</span><span class="p">,</span> <span class="n">palabra</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">valida_tipo</span><span class="p">(</span><span class="n">es_tipo</span><span class="p">,</span> <span class="n">palabra</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">palabra</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">es_tipo</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+
+<span class="k">def</span> <span class="nf">es_espacio</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span>
+
+
+<span class="n">valida_palabra_clave</span><span class="p">(</span><span class="s1">&#39;aLt0s€cr3T0&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Capítulo anterior - 3. Elementos de un programa' data-toggle="tooltip">
+    <a href="elem.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="elem.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - 5. Abstracción con funciones' data-toggle="tooltip" >
+    <a href="python-05-06-07.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="python-05-06-07.html" >Next Section - 5. Abstracción con funciones</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017 Francisco Moya.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

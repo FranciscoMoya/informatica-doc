@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Archivos con Python</title>
+    <title>47. Archivos con Python</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -36,7 +36,8 @@
         VERSION:     '0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
@@ -102,11 +103,11 @@
     <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="top" title="None" href="index.html" />
-    <link rel="next" title="Python básico" href="PythonMinimo.html" />
-    <link rel="prev" title="Ley de Benford" href="Prueba de Progreso 2016 1ºC.html" />
+    <link rel="next" title="48. Sopa de letras" href="sopa_letras.html" />
+    <link rel="prev" title="43. Ley de Benford" href="Prueba de Progreso 2016 1ºC.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -120,7 +121,7 @@
   eBookConfig.course = 'CS101';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
-  eBookConfig.build_info = "unknown";
+  eBookConfig.build_info = "py";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
@@ -173,9 +174,9 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Archivos con Python</a><ul>
-<li><a class="reference internal" href="#lectura-de-archivos-csv">Lectura de archivos CSV</a></li>
-<li><a class="reference internal" href="#caso-de-estudio-censo-de-viviendas">Caso de estudio: Censo de viviendas</a></li>
+<li><a class="reference internal" href="#">47. Archivos con Python</a><ul>
+<li><a class="reference internal" href="#lectura-de-archivos-csv">47.1. Lectura de archivos CSV</a></li>
+<li><a class="reference internal" href="#caso-de-estudio-censo-de-viviendas">47.2. Caso de estudio: Censo de viviendas</a></li>
 </ul>
 </li>
 </ul>
@@ -185,14 +186,14 @@
         
         <!--
           
-  <li id="relations-prev" title="Previous Chapter - Ley de Benford" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - 43. Ley de Benford" data-toggle="tooltip">
     <a href="Prueba de Progreso 2016 1ºC.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Python básico' data-toggle="tooltip" >
-    <a href="PythonMinimo.html" >
+  <li id="relations-next" title='Next Chapter - 48. Sopa de letras' data-toggle="tooltip" >
+    <a href="sopa_letras.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -254,7 +255,7 @@
             <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
             
             <li>
-  <a href="_sources/python-files.txt"
+  <a href="_sources/python-files.rst.txt"
      rel="nofollow">Ver fuente</a></li>
             
             <li class="divider"></li>
@@ -277,7 +278,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="archivos-con-python">
-<h1>Archivos con Python<a class="headerlink" href="#archivos-con-python" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>47. Archivos con Python<a class="headerlink" href="#archivos-con-python" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>En los próximos ejercicios vamos a usar frecuentemente archivos de
 datos, así que es un buen momento para leer en detalle el capítulo 11
 del libro de texto. Las funciones básicas de escritura son muy
@@ -332,7 +333,7 @@ También puede que te resulten útiles los módulos
 <a class="reference external" href="https://docs.python.org/2.7/library/string.html?highlight=string#module-string">string</a>
 y <a class="reference external" href="https://docs.python.org/2.7/library/re.html#module-re">re</a>.</p>
 <div class="section" id="lectura-de-archivos-csv">
-<h2>Lectura de archivos CSV<a class="headerlink" href="#lectura-de-archivos-csv" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>47.1. Lectura de archivos CSV<a class="headerlink" href="#lectura-de-archivos-csv" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Los archivos CSV no son diferentes de los demás, son simples archivos de
 texto en los que cada línea corresponde a una fila de una tabla. Cada
 campo en una línea se separa con una coma. (El nombre CSV deriva
@@ -359,7 +360,7 @@ Canarias,"11164.0","6181.0"</pre><div class="code python highlight-default"><div
 </div>
 </div>
 <div class="section" id="caso-de-estudio-censo-de-viviendas">
-<h2>Caso de estudio: Censo de viviendas<a class="headerlink" href="#caso-de-estudio-censo-de-viviendas" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>47.2. Caso de estudio: Censo de viviendas<a class="headerlink" href="#caso-de-estudio-censo-de-viviendas" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El INE distribuye datos del <a class="reference external" href="http://www.ine.es/prodyser/micro_censopv.htm">Censo de Población y
 Viviendas</a> que incluyen
 dos archivos interesantes para nuestros propósitos:</p>
@@ -586,19 +587,19 @@ indentación. Aprenderemos a mejorarlo cuando veamos clases.</p>
 
   
       
-  <li id="relations-prev" class="navLink" title='Capítulo anterior - Ley de Benford' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Capítulo anterior - 43. Ley de Benford' data-toggle="tooltip">
     <a href="Prueba de Progreso 2016 1ºC.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="Prueba de Progreso 2016 1ºC.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Capítulo siguiente - Python básico' data-toggle="tooltip" >
-    <a href="PythonMinimo.html" >
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - 48. Sopa de letras' data-toggle="tooltip" >
+    <a href="sopa_letras.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="PythonMinimo.html" >Next Section - Python básico</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="sopa_letras.html" >Next Section - 48. Sopa de letras</a>
 
 <script type="text/javascript">
 

@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Prefacio</title>
+    <title>1. Prefacio</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -36,7 +36,8 @@
         VERSION:     '0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
@@ -102,10 +103,10 @@
     <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="top" title="None" href="index.html" />
-    <link rel="next" title="1. Introducción" href="python-00.html" />
+    <link rel="next" title="2. Introducción" href="intro.html" />
     <link rel="prev" title="Informática para ingenieros" href="index.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -120,7 +121,7 @@
   eBookConfig.course = 'CS101';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
-  eBookConfig.build_info = "unknown";
+  eBookConfig.build_info = "py";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
@@ -173,17 +174,17 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Prefacio</a><ul>
-<li><a class="reference internal" href="#acerca-de-la-asignatura">Acerca de la asignatura</a></li>
-<li><a class="reference internal" href="#informatica-en-la-ingenieria">Informática en la ingeniería</a></li>
-<li><a class="reference internal" href="#estructura-del-libro">Estructura del libro</a></li>
-<li><a class="reference internal" href="#organizacion-del-curso">Organización del curso</a><ul>
-<li><a class="reference internal" href="#trabajo-en-clase">Trabajo en clase</a></li>
-<li><a class="reference internal" href="#trabajo-en-el-laboratorio">Trabajo en el laboratorio</a></li>
-<li><a class="reference internal" href="#trabajo-en-casa">Trabajo en casa</a></li>
+<li><a class="reference internal" href="#">1. Prefacio</a><ul>
+<li><a class="reference internal" href="#acerca-de-la-asignatura">1.1. Acerca de la asignatura</a></li>
+<li><a class="reference internal" href="#informatica-en-la-ingenieria">1.2. Informática en la ingeniería</a></li>
+<li><a class="reference internal" href="#estructura-del-libro">1.3. Estructura del libro</a></li>
+<li><a class="reference internal" href="#organizacion-del-curso">1.4. Organización del curso</a><ul>
+<li><a class="reference internal" href="#trabajo-en-clase">1.4.1. Trabajo en clase</a></li>
+<li><a class="reference internal" href="#trabajo-en-el-laboratorio">1.4.2. Trabajo en el laboratorio</a></li>
+<li><a class="reference internal" href="#trabajo-en-casa">1.4.3. Trabajo en casa</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#politica-de-copias">Política de copias</a></li>
+<li><a class="reference internal" href="#politica-de-copias">1.5. Política de copias</a></li>
 </ul>
 </li>
 </ul>
@@ -199,8 +200,8 @@
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 1. Introducción' data-toggle="tooltip" >
-    <a href="python-00.html" >
+  <li id="relations-next" title='Next Chapter - 2. Introducción' data-toggle="tooltip" >
+    <a href="intro.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -262,7 +263,7 @@
             <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
             
             <li>
-  <a href="_sources/prefacio.txt"
+  <a href="_sources/prefacio.rst.txt"
      rel="nofollow">Ver fuente</a></li>
             
             <li class="divider"></li>
@@ -285,7 +286,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="prefacio">
-<h1>Prefacio<a class="headerlink" href="#prefacio" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>1. Prefacio<a class="headerlink" href="#prefacio" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>Para nosotros, el equipo docente de la asignatura <em>Informática</em>, la
 informática que necesita un ingeniero es fundamentalmente una
 introducción a la programación.  El objetivo es uno: <strong>desarrollar el
@@ -302,7 +303,7 @@ capacidad.  Solo hay una forma de desarrollarla, con práctica.  Esta
 asignatura tiene poca materia que estudiar, pero necesita mucha
 práctica.</p>
 <div class="section" id="acerca-de-la-asignatura">
-<h2>Acerca de la asignatura<a class="headerlink" href="#acerca-de-la-asignatura" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>1.1. Acerca de la asignatura<a class="headerlink" href="#acerca-de-la-asignatura" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Desgraciadamente esta asignatura tiene una tasa de éxito baja, pero no
 se debe a una dificultad intrínseca, sino a abandono temprano. Los
 contenidos de la asignatura son accesibles para niños de 12 años y no
@@ -347,26 +348,31 @@ todo lo relacionado con ella.  Lo malo es que toda tu vida
 profesional se verá afectada, porque la programación de computadores
 es la herramienta más efectiva del ingeniero moderno.</li>
 </ul>
-<p>Por favor, sigue este consejo al pie de la letra.  Destina 6 horas a
-la semana a practicar, a programar.  No dejes pasar ninguna semana con
-menos de 4.5 horas de dedicación a la asignatura y compensa las
-semanas que dedicas menos de 6 horas dedicando más horas en la
-siguiente.  Es igual si se trata de los ejercicios, el trabajo en
-grupo u otros retos que encuentres en Internet.  Lee el libro a toda
-velocidad y practica.  Ya volverás al libro cuando lo necesites.  Los
-ejercicios no son escoyos que hay que superar, sino instrumentos para
-desarrollar y mejorar tu pensamiento computacional.  Piensa en ellos
-como ejercicios de gimnasia.  Por tanto no se trata de entregarlos
-cuando funcionan, sino de re-elaborarlos hasta que creas que están
-como deben.  No dudes en rehacer ejercicios que funcionan si crees que
-no han quedado suficientemente claros y, especialmente, cuando
-aprendas nuevas técnicas o construcciones.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Advertencia</p>
+<p class="last">Destina 6 horas a la semana a practicar, a programar. No
+dejes pasar ninguna semana con menos de 4.5 horas de
+dedicación a la asignatura y compensa las semanas que
+dedicas menos de 6 horas dedicando más horas en la
+siguiente.</p>
+</div>
+<p>Es esencial practicar.  Es igual si se trata de los ejercicios, el
+trabajo en grupo u otros retos que encuentres en Internet.  Lee el
+libro a toda velocidad y practica.  Ya volverás al libro cuando lo
+necesites.</p>
+<p>Los ejercicios no son escoyos que hay que superar, sino instrumentos
+para desarrollar y mejorar tu pensamiento computacional.  Piensa en
+ellos como ejercicios de gimnasia.  Por tanto no se trata de
+entregarlos cuando funcionan, sino de re-elaborarlos hasta que creas
+que están como deben.  No dudes en rehacer ejercicios que funcionan si
+crees que no han quedado suficientemente claros y, especialmente,
+cuando aprendas nuevas técnicas o construcciones.</p>
 <p>Un último consejo. Hay una infinidad de recursos para aprender a
 programar pero los mejores están en inglés.  Si eso es un problema
 para tí arréglalo cuanto antes.  Un ingeniero necesita el inglés.</p>
 </div>
 <div class="section" id="informatica-en-la-ingenieria">
-<h2>Informática en la ingeniería<a class="headerlink" href="#informatica-en-la-ingenieria" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>1.2. Informática en la ingeniería<a class="headerlink" href="#informatica-en-la-ingenieria" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Un computador es una de las máquinas más flexibles que se han
 inventado.  Su flexibilidad, unido a la bajada de los costes de
 producción derivada de la producción en masa, han dado lugar a un
@@ -420,7 +426,7 @@ profesional.  En el último capítulo te contaremos las áreas que en
 nuestra opinión tendrás que fortalecer poco a poco.</p>
 </div>
 <div class="section" id="estructura-del-libro">
-<h2>Estructura del libro<a class="headerlink" href="#estructura-del-libro" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>1.3. Estructura del libro<a class="headerlink" href="#estructura-del-libro" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Este pequeño libro evoluciona día a día de las notas de clase.  No era
 nuestra intención crear un nuevo libro, hay muchos y algunos muy
 buenos.  El problema es que nuestro alumno típico no sabe inglés, y
@@ -431,10 +437,12 @@ pase.</p>
 <p>Este pequeño libro recoge las notas de clase elaboradas durante varios
 años.  La estructura responde aproximadamente al libro de John Guttag,
 <a class="reference external" href="https://mitpress.mit.edu/books/introduction-computation-and-programming-using-python-0">Introduction to Computation and Programming Using Python</a>
-con clara influencia de <a class="reference external" href="http://www.composingprograms.com/">Composing Programs</a> de John DeNero.  Cuando el
-inglés deje de ser un problema para ti consulta los originales, están
-maravillosamente escritos, contienen mucha más información y están
-ampliamente revisados.</p>
+con clara influencia de <a class="reference external" href="http://www.composingprograms.com/">Composing Programs</a> de John DeNero.  La forma en que
+resolvemos los casos de estudio está inspirada en <a class="reference external" href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a>
+de Robert C. Martin, uno de los libros más influyentes de los últimos
+años.  Cuando el inglés deje de ser un problema para ti consulta los
+originales, están maravillosamente escritos, contienen mucha más
+información y están ampliamente revisados.</p>
 <p>No vamos a describir un lenguaje de programación de principio a fin.
 Para eso hay muchos libros, incluso en castellano.  Déjame
 recomendarte algunos:</p>
@@ -454,9 +462,44 @@ querido centrarlo en la solución de problemas.  Trataremos de darte un
 conjunto de consejos que te garantizarán el éxito en la mayoría de tus
 proyectos.  Te describimos un proceso sistemático y un abanico de
 métodos para resolver problemas.</p>
+<p>El libro consta de tres materias relativamente independientes que se
+entrelazan para impartirse de forma concurrente.  Aunque hemos puesto
+cuidado de respetar las dependencias entre ellas es posible que en
+algún punto tengamos que anticipar aspectos que serán descritos más
+adelante.</p>
+<ol class="arabic simple">
+<li>En primer lugar hay un bloque de capítulos dedicados a la
+<strong>programación en Python</strong>.  Nuestro objetivo es ir tan rápido como
+podamos en la primera parte del curso para llegar al punto en el
+que podemos trabajar con los tres elementos básicos de la
+programación de computadores: primitivas, composición y
+abstracción.  Introducimos las funciones mucho antes que la mayoría
+de los textos sobre Python, porque es el mecanismo de abstracción
+básico sobre el que vamos a construir.  En cambio estructuras de
+datos, iteradores y generadores quedan relegados hasta que tenemos
+bien establecida la metodología de resolución de problemas.  Si te
+confunde esta forma de enfocarlo lee antes uno de los libros de
+Python que te recomendamos.</li>
+<li>De forma concurrente vemos un conjunto de <strong>métodos de resolución de
+problemas</strong> con un computador.  Entre los métodos que veremos está la
+enumeración exhaustiva, la búsqueda por bisección, el método de
+Newton-Raphson, el método de divide y vencerás, programación
+dinámica, programación orientada a objetos, métodos voraces,
+backtracking, etc.  Ilustraremos los métodos con algoritmos de todo
+tipo (aritméticos, de ordenación, de búsqueda, de clasificación,
+etc.)</li>
+<li>También de forma concurrente y repartido por el texto intentamos
+plasmar nuestra visión de <strong>cómo debes programar</strong>.  Vamos a
+insistir mucho en diseño <em>top-down</em>, descomponer en funciones muy
+pequeñas, usar nombres con sentido y evitar los problemas
+potenciales con programación defensiva, con pruebas unitarias y con
+funciones sin efectos de lado.  Te enseñaremos a encontrar los
+errores de tus programas pero esto funcionará especialmente bien si
+sigues el resto de consejos.</li>
+</ol>
 </div>
 <div class="section" id="organizacion-del-curso">
-<h2>Organización del curso<a class="headerlink" href="#organizacion-del-curso" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>1.4. Organización del curso<a class="headerlink" href="#organizacion-del-curso" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El curso se organiza en tres sesiones de una hora en clase a la semana y
 una sesión de dos horas en laboratorio cada dos semanas. Se estima que
 por cada hora de clase el alumno deben invertir 1.5 horas de estudio en
@@ -477,7 +520,7 @@ Puedes probar los ejemplos durante la clase e interrumpir la clase con
 cualquier duda. Es más importante entenderlo todo que avanzar según la
 planificación.</p>
 <div class="section" id="trabajo-en-clase">
-<h3>Trabajo en clase<a class="headerlink" href="#trabajo-en-clase" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>1.4.1. Trabajo en clase<a class="headerlink" href="#trabajo-en-clase" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Tu trabajo en clase consiste en entender todo lo explicado. Todas las
 clases tienen un material asociado, que se intentará poner a disposición
 de los alumnos con suficiente antelación, y que puede constar de uno o
@@ -507,7 +550,7 @@ correspondiente a cada clase (que se publicará un día después de a
 clase) para un seguimiento óptimo de la asignatura.</p>
 </div>
 <div class="section" id="trabajo-en-el-laboratorio">
-<h3>Trabajo en el laboratorio<a class="headerlink" href="#trabajo-en-el-laboratorio" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>1.4.2. Trabajo en el laboratorio<a class="headerlink" href="#trabajo-en-el-laboratorio" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>En general las actividades de laboratorio consistirán en la realización
 de pequeños programas. La evaluación y/o corrección se realizará de
 forma completamente automática a través de una actividad del Campus
@@ -527,7 +570,7 @@ con las herramientas que elijas para que en el exámen no pierdas el
 tiempo innecesariamente.</p>
 </div>
 <div class="section" id="trabajo-en-casa">
-<h3>Trabajo en casa<a class="headerlink" href="#trabajo-en-casa" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>1.4.3. Trabajo en casa<a class="headerlink" href="#trabajo-en-casa" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>El trabajo en casa tiene dos partes bien diferenciadas:</p>
 <ol class="arabic simple">
 <li>Por un lado hay que asimilar los (escasos) conocimientos teóricos de
@@ -568,7 +611,7 @@ programas de ejemplo te resultan muy fáciles.</p>
 </div>
 </div>
 <div class="section" id="politica-de-copias">
-<h2>Política de copias<a class="headerlink" href="#politica-de-copias" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>1.5. Política de copias<a class="headerlink" href="#politica-de-copias" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>En esta asignatura hay y habrá tolerancia cero con la copia y el engaño.
 Es un comportamiento totalmente inaceptable para cualquier profesional
 cualificado y será perseguido con la máxima dureza que permita la
@@ -616,7 +659,7 @@ no has hecho estás engañando.</li>
 </ul>
 <p>Ahora es tu turno, disfruta la asignatura y buena suerte en los
 exámenes.</p>
-<p>Toledo, 25 de enero de 2017</p>
+<p>Toledo, 12 de febrero de 2017</p>
 <p>Francisco Moya</p>
 </div>
 </div>
@@ -631,12 +674,12 @@ exámenes.</p>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="index.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Capítulo siguiente - 1. Introducción' data-toggle="tooltip" >
-    <a href="python-00.html" >
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - 2. Introducción' data-toggle="tooltip" >
+    <a href="intro.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="python-00.html" >Next Section - 1. Introducción</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="intro.html" >Next Section - 2. Introducción</a>
 
 <script type="text/javascript">
 

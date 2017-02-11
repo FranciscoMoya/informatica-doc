@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>2. Introducción</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/livecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="3. Elementos de un programa" href="elem.html" />
+    <link rel="prev" title="1. Prefacio" href="prefacio.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'CS101';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "py";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'informatica';
+  eBookConfig.runestone_version = '2.7.11';
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head>
+  <body role="document">
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <div style='float:left;display:block;background-size:90px 40px !important;height:40px;width:90px;background:transparent url("_static/eii_small.png") no-repeat 0px 0px;'>&nbsp; </div>
+        <a class="navbar-brand" href="index.html">Informática</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <!--<li class="divider-vertical"></li>-->
+        
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">2. Introducción</a><ul>
+<li><a class="reference internal" href="#interpretes-y-compiladores">2.1. Intérpretes y compiladores</a></li>
+<li><a class="reference internal" href="#instalacion-del-software">2.2. Instalación del software</a><ul>
+<li><a class="reference internal" href="#microsoft-windows">2.2.1. Microsoft Windows</a></li>
+<li><a class="reference internal" href="#mac-os-x">2.2.2. Mac OS X</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ejecutar-python">2.3. Ejecutar Python</a><ul>
+<li><a class="reference internal" href="#hola-mundo-con-idle">2.3.1. Hola mundo con IDLE</a></li>
+<li><a class="reference internal" href="#hola-mundo-con-jupyter">2.3.2. Hola mundo con Jupyter</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#elegir-un-entorno-de-programacion">2.4. Elegir un entorno de programación</a></li>
+<li><a class="reference internal" href="#modo-interactivo-y-modo-script">2.5. Modo interactivo y modo <em>script</em></a></li>
+<li><a class="reference internal" href="#un-paseo-por-la-sintaxis-de-python">2.6. Un paseo por la sintaxis de Python</a><ul>
+<li><a class="reference internal" href="#asignacion">2.6.1. Asignación</a></li>
+<li><a class="reference internal" href="#bifurcacion">2.6.2. Bifurcación</a></li>
+<li><a class="reference internal" href="#bucles">2.6.3. Bucles</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#trabaja-sobre-lo-visto">2.7. Trabaja sobre lo visto</a><ul>
+<li><a class="reference internal" href="#ejecucion-condicional">2.7.1. Ejecución condicional</a></li>
+<li><a class="reference internal" href="#abstraccion-y-funciones">2.7.2. Abstracción y funciones</a></li>
+<li><a class="reference internal" href="#la-tabla-de-multiplicar">2.7.3. La tabla de multiplicar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <!--<li class="divider-vertical"></li>-->
+        
+        <!--
+          
+  <li id="relations-prev" title="Previous Chapter - 1. Prefacio" data-toggle="tooltip">
+    <a href="prefacio.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - 3. Elementos de un programa' data-toggle="tooltip" >
+    <a href="elem.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html'>Índice del libro</a></li>
+            
+            <li><a href="genindex.html">Índice alfabético</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Código activo de prueba</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Buscar en el libro" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
+            
+            <li>
+  <a href="_sources/intro.rst.txt"
+     rel="nofollow">Ver fuente</a></li>
+            
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>Acerca de Runestone</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="introduccion">
+<h1>2. Introducción<a class="headerlink" href="#introduccion" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Empieza a programar ya. No tienes excusa, si estás leyendo ésto es que
+tienes un navegador y por tanto puedes probar el código que aparece en
+la siguiente celda editable:</p>
+
+<div data-childcomponent="Hola_Mundo" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=Hola_Mundo data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Hola Mundo'>
+print('Hola, Mundo')
+</textarea>
+</div>
+<p>Ahora pulsa el botón <em>Run</em> de la barra de botones. Verás que el
+mensaje entre comillas aparece junto a la celda editable. Ya has hecho
+tu primer programa, es así de simple.  Prueba a cambiar el mensaje,
+poniendo eñes, tildes o signos de puntuación y volviendo a pulsar
+<em>Run</em>.</p>
+<p>Prueba ahora a sustituir todo el mensaje entre comillas, incluídas las
+comillas por un número y pulsa <em>Run</em>.  Prueba también a poner una
+expresión aritmética, por ejemplo <code class="docutils literal"><span class="pre">124</span> <span class="pre">+</span> <span class="pre">(12</span> <span class="pre">-</span> <span class="pre">1.5)</span> <span class="pre">*</span> <span class="pre">0.21</span></code>.</p>
+<p>Finalmente prueba a añadir un espacio antes de <code class="docutils literal"><span class="pre">print</span></code>. Es bastante
+puntilloso, ¿verdad?</p>
+<p>Probar es esencial, aunque te parezca tonto hazlo, tienes que
+desarrollar tu intuición para ver cómo puedes cambiar un programa para
+que haga lo que tú quieres.</p>
+<div class="section" id="interpretes-y-compiladores">
+<h2>2.1. Intérpretes y compiladores<a class="headerlink" href="#interpretes-y-compiladores" title="Enlazar permanentemente con este título">¶</a></h2>
+</div>
+<div class="section" id="instalacion-del-software">
+<h2>2.2. Instalación del software<a class="headerlink" href="#instalacion-del-software" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para trabajar desconectado de la red puede ser útil instalar software
+en tu propio ordenador.  Sigue estos sencillos pasos y podrás editar
+cuadernos interactivos similares a los que usamos en clase en tu
+ordenador.</p>
+<div class="section" id="microsoft-windows">
+<h3>2.2.1. Microsoft Windows<a class="headerlink" href="#microsoft-windows" title="Enlazar permanentemente con este título">¶</a></h3>
+<ol class="arabic simple">
+<li>Descarga e instala la distribución oficial de <a class="reference external" href="https://www.python.org/downloads/">Python
+3</a>. Pincha en el botón
+<em>Download Python 3.x.y</em>. En el momento de escribir este documento era
+<em>Download Python 3.5.2</em> pero no repares en instalar la última
+versión. Ese botón descarga un ejecutable que contiene el instalador
+de Python que debes <em>ejecutar</em>. En este documento asumiremos que lo
+has instalado con las opciones por defecto, pulsando directamente en
+la opción <em>Install Now</em> del instalador, pero procura activar la
+opción <em>Add Python 3.5 to PATH</em>.</li>
+<li>Ejecuta el intérprete de órdenes de Windows pulsando la tecla con el
+logo de Windows y teclando <code class="docutils literal"><span class="pre">cmd.exe</span></code>.</li>
+<li>Escribe las siguientes órdenes en la ventana del intérprete de
+órdenes:</li>
+</ol>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ipython</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">jupyter</span>
+</pre></div>
+</div>
+<p>En algunos casos hemos visto instalaciones en las que esto no funciona
+porque <code class="docutils literal"><span class="pre">pip</span></code> no está en la ruta por defecto. Esto ocurre cuando Python
+no se ha añadido correctamente al <code class="docutils literal"><span class="pre">PATH</span></code>. Añade manualmente las
+siguientes rutas a la variable de entorno <code class="docutils literal"><span class="pre">Path</span></code>. En el propio
+intérprete de órdenes:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">setx</span> <span class="n">PATH</span> <span class="s2">&quot;%PATH%;C:\Users\&lt;usuario&gt;\AppData\Local\Programs\Python\Python35&quot;</span>
+<span class="n">setx</span> <span class="n">PATH</span> <span class="s2">&quot;%PATH%;C:\Users\&lt;usuario&gt;\AppData\Local\Programs\Python\Python35\Scripts&quot;</span>
+</pre></div>
+</div>
+<p>Ten en cuenta que debes cambiar <code class="docutils literal"><span class="pre">&lt;usuario&gt;</span></code> por tu nombre de usuario.
+Es el nombre que aparece en el <em>prompt</em> del intérprete de órdenes (por
+ejemplo, en mi caso el <em>prompt</em> es <code class="docutils literal"><span class="pre">C:\Users\Francisco.Moya&gt;</span></code> y mi
+nombre de usuario es <code class="docutils literal"><span class="pre">Francisco.Moya</span></code>). Ahora debería funcionar <code class="docutils literal"><span class="pre">pip</span></code>.</p>
+</div>
+<div class="section" id="mac-os-x">
+<h3>2.2.2. Mac OS X<a class="headerlink" href="#mac-os-x" title="Enlazar permanentemente con este título">¶</a></h3>
+<ol class="arabic simple">
+<li>Descarga e instala la distribución oficial de <a class="reference external" href="https://www.python.org/downloads/">Python
+3</a>. Pincha en el botón
+<em>Download Python 3.x.y</em>. En el momento de escribir este documento era
+<em>Download Python 3.5.2</em> pero no repares en instalar la última
+versión. Ese botón descarga un paquete que debes <em>instalar</em>. Tendrás
+una nueva carpeta <em>MacPython 3.5</em> en la carpeta de <em>Aplicaciones</em>.</li>
+<li>Ejecuta la aplicación <em>Terminal</em> dentro de la carpeta <em>Utilidades</em>.</li>
+<li>Introduce las siguientes órdenes en la ventana del <em>Terminal</em>.</li>
+</ol>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ipython</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">jupyter</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="ejecutar-python">
+<h2>2.3. Ejecutar Python<a class="headerlink" href="#ejecutar-python" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Si has seguido el procedimiento indicado tendrás dos entornos de
+programación muy útiles: <em>IDLE</em> y <em>Jupyter</em>.</p>
+<p><em>IDLE</em> es el entorno incluído en la distribución oficial de Python.
+No es muy avanzado pero es más que suficiente para los objetivos del
+curso.  Tiene una interfaz gráfica primitiva, con una consola
+interactiva de Python y un editor multi-ventana integrado para
+escribir los programas.</p>
+<p><em>Jupyter</em> es un entorno para la programación desde un navegador web.
+Se trata de una herramienta interactiva con capacidad de integrar
+textos, gráficos y programas.  Es una forma interesante de construir
+documentos que explican poco a poco los programas.  Puedes probarlo
+también en línea, sin instalar nada, visitando <a class="reference external" href="https://try.jupyter.org/">try.jupyter.org</a>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Advertencia</p>
+<p class="last">En lo sucesivo asumiremos que el alumno usa Microsoft
+Windows porque es la opción más frecuente.  Si eres
+usuario de otro sistema operativo trata de adaptar las
+instrucciones o pide ayuda en el foro del Campus Virtual.</p>
+</div>
+<div class="section" id="hola-mundo-con-idle">
+<h3>2.3.1. Hola mundo con IDLE<a class="headerlink" href="#hola-mundo-con-idle" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Pulsa la tecla del logo de <code class="kbd docutils literal"><span class="pre">Windows</span></code> y teclea <code class="docutils literal"><span class="pre">idle</span></code>.  Si has
+instalado correctamente Python aparecerá <code class="docutils literal"><span class="pre">IDLE</span> <span class="pre">(Python</span> <span class="pre">3.5)</span></code> o algo
+similar.  Pulsa <code class="kbd docutils literal"><span class="pre">Intro</span></code> y la ventana principal de IDLE aparecerá.</p>
+<div class="figure align-center" style="width: 60%">
+<img alt="Ventana principal de IDLE." src="_static/idle-main.png" />
+</div>
+<p>La ventana principal es una consola interactiva de Python.  El símbolo
+<code class="docutils literal"><span class="pre">&gt;&gt;&gt;</span></code> invita a introducir nuevas órdenes en Python.  Se conoce por
+su nombre en inglés, <em>prompt</em>.</p>
+<p>Cuando Python se ejecuta en modo interactivo ejecuta las órdenes tan
+pronto como se introducen.  Por ejemplo, si introducimos el contenido
+del programa <code class="docutils literal"><span class="pre">Hola_Mundo</span></code> veremos el resultado inmediatamente.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>&gt;&gt;&gt; print(&#39;Hola Mundo&#39;)
+Hola Mundo
+&gt;&gt;&gt; ▂
+</pre></div>
+</div>
+<p>El modo interactivo es extraordinariamente útil para experimentar.
+Una característica interesante de este modo es que el resultado de las
+expresiones que se introducen se muestra automáticamente, como si
+hubiéramos usado <code class="docutils literal"><span class="pre">print</span></code>.  Por ejemplo:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>&gt;&gt;&gt; 123.92 * 0.21
+26.0232
+&gt;&gt;&gt; ▂
+</pre></div>
+</div>
+<p>Es decir, funciona como una calculadora avanzada.</p>
+<p>Sin embargo lo normal será que utilicemos archivos de texto para
+escribir nuestros programas.  De esta forma podrán almacenarse en el
+disco para ejecutarlos tantas veces como deseemos.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Advertencia</p>
+<p>Los programas se escriben en archivos de texto, no en
+documentos.  No utilices <em>Microsoft Word</em> para programar.
+Utiliza IDLE o Jupyter.</p>
+<p class="last">Un archivo de texto solo contiene el programa.  Por
+contra, un documento contiene además gran cantidad de
+información acerca de estilos, tipos de letra, formato de
+página, alineamiento, etc.  Nada de eso será capaz de
+entenderlo el intérprete de Python.</p>
+</div>
+<p>Selecciona ahora la opción de menú <span class="menuselection">File‣New File</span> o
+pulsa las teclas <code class="kbd docutils literal"><span class="pre">Control-N</span></code>.  Aparecerá una nueva ventana
+similar a la principal, pero en este caso no hay intérprete de Python.</p>
+<div class="figure align-center" style="width: 60%">
+<img alt="Nuevo archivo en IDLE." src="_static/idle-new-file.png" />
+</div>
+<p>Es un editor de archivos de texto especialmente indicado para editar
+programas en Python. Escribe ahora el programa <code class="docutils literal"><span class="pre">Hola_Mundo</span></code> en la
+nueva ventana.  Cuando termines selecciona el menú
+<span class="menuselection">Run‣Run Module</span> o pulsa <code class="kbd docutils literal"><span class="pre">F5</span></code>.  La primera vez
+que lo hagas IDLE avisará de que el archivo no está guardado y debe
+guardarse antes de ejecutarlo.</p>
+<div class="figure align-center" style="width: 60%">
+<img alt="Advertencia para grabar archivo." src="_static/idle-must-save.png" />
+</div>
+<p>Pulsa <em>OK</em> y escribe un nombre (por ejemplo <code class="docutils literal"><span class="pre">hola</span></code>) en el cuadro de
+diálogo que se muestra a continuación:</p>
+<div class="figure align-center" style="width: 60%">
+<img alt="Diálogo para guardar archivo." src="_static/idle-save-as.png" />
+</div>
+<p>Inmediatamente aparecerá en la ventana principal lo siguiente:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>======================== RESTART: /home/paco/hola.py ========================
+Hola Mundo
+&gt;&gt;&gt; ▂
+</pre></div>
+</div>
+<p>Como ves los programas Python se ejecutan siempre en la ventana
+principal.  Sin embargo puedes tener un número arbitrario de ventanas
+de edición en las que editas tus programas.</p>
+<p>El ciclo <em>editar - ejecutar</em> debe ser muy ágil. Debes acostumbrarte a
+editar rápido con pequeños cambios que puedas probar y ejecutar
+pulsando <code class="kbd docutils literal"><span class="pre">F5</span></code> para comprobar esos cambios.  Evita escribir mucho
+código sin probarlo.  Lo más probable es que no funcione a la primera
+y es mucho más difícil depurar (corregir) un programa grande que uno
+pequeño.</p>
+</div>
+<div class="section" id="hola-mundo-con-jupyter">
+<h3>2.3.2. Hola mundo con Jupyter<a class="headerlink" href="#hola-mundo-con-jupyter" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Otra forma de ejecutar Python es mediante un cuaderno <em>Jupyter</em>.  Este
+entorno es más bien un editor de documentos en los que puedes insertar
+programas o fragmentos de un programa, así como los resultados
+producidos por su ejecución.  Un aspecto interesante es que utiliza un
+navegador web como interfaz de usuario.  Entre otras cosas eso hace
+que el usuario pueda disponer de un sinfín de características
+avanzadas del navegador (gráficos, animaciones, tipografía avanzada,
+etc.).</p>
+<p><em>Jupyter</em> puede utilizarse en línea sin necesidad de instalar nada
+pero te recomendamos instalarlo en tu propio ordenador para evitar
+problemas.  Los servicios en línea de <em>Jupyter</em> que son gratuitos no
+tienen muchas garantías de disponibilidad.  Por si quieres probar
+éstos son algunos de los mejores:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://notebooks.azure.com/">Microsoft Azure Notebooks</a> es la
+versión de Microsoft desplegada sobre sus servicios en la nube,
+Azure.  Está en fase de pruebas (<em>preview</em>) y mientras eso ocurra es
+totalmente gratuito.  Tarde o temprano será un servicio de pago,
+pero siempre habrá una capa gratuita (<em>free tier</em>).  Es decir, con
+ciertas limitaciones siempre podrás utilizarlo de forma gratuita.</li>
+<li><a class="reference external" href="https://datascientistworkbench.com/">IBM Data Scientist Workbench</a> es algo lento para
+arrancar un cuaderno y la interfaz no está tan cuidada como en otros
+servicios, pero el soporte para computación científica es excelente.</li>
+<li><a class="reference external" href="https://cloud.sagemath.com/settings">SageMathCloud</a> es mucho más
+que cuadernos <em>Jupyter</em>, pero una de las cosas que permite hacer en
+un proyecto es crear cuadernos de Jupyter.  El uso sin <em>upgrades</em> es
+gratuito pero puede no estar disponible en las horas pico.</li>
+<li><a class="reference external" href="http://mybinder.org/">Binder</a> te permite almacenar cuadernos
+Jupyter en un repositorio <a class="reference external" href="https://github.com">GitHub</a> y el
+servicio de <em>binder</em> los permite ejecutar en línea.  Es una forma
+excelente de colaborar en trabajos que puedes haber editado con
+cualquiera de las otras opciones, o en tu propio ordenador.</li>
+<li>Cuadernos Jupyter <a class="reference external" href="https://try.jupyter.org">temporales</a> es una
+demo de Jupyter que mantiene la propia organización de Jupyter.
+Siempre tienen la última versión liberada pero la disponibilidad en
+horas pico se resiente.</li>
+</ul>
+<p>Para ejecutar un entorno similar en tu propio ordenador con la
+capacidad de guardar los cuadernos en tu propio disco sigue estos pasos.</p>
+<ol class="arabic">
+<li><p class="first">Ejecuta un navegador web.</p>
+</li>
+<li><p class="first">Ejecuta el intérprete de órdenes.  En Windows puedes ejecutarlo
+pulsando la tecla <code class="kbd docutils literal"><span class="pre">Windows</span></code> y escribiendo <strong class="program">cmd</strong>.  En
+Mac OS X ejecuta la aplicación <strong class="program">Terminal</strong>.</p>
+</li>
+<li><p class="first">Introduce la siguiente orden:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">notebook</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Utiliza la ventana que se abre en el navegador para interactuar con
+Jupyter.  Si no se abre ninguna ventana abre una nueva pestaña en
+el navegador y escribe la siguiente URL en la barra de direcciones:
+<code class="docutils literal"><span class="pre">localhost:8888</span></code>.</p>
+</li>
+</ol>
+<p>La ventana principal de Jupyter tiene el siguiente aspecto.</p>
+<div class="figure align-center" style="width: 60%">
+<img alt="Ventana principal de Jupyter." src="_static/jupyter-main.png" />
+</div>
+<p>Se trata del administrador de archivos.  Para crear un nuevo cuaderno
+selecciona el menú <span class="menuselection">New‣Python 3</span>.  Aparecerá la
+interfaz de edición de documentos, como la que se muestra a
+continuación.</p>
+<div class="figure align-center" style="width: 60%">
+<img alt="Nuevo documento en Jupyter." src="_static/jupyter-new.png" />
+</div>
+<p>Al crear un nuevo documento aparece automáticamente una nueva <em>celda</em>
+editable.  Las celdas de Jupyter pueden servir para diversos
+propósitos, pero por defecto son para introducir programas.  Así que
+escribe en la celda el programa <code class="docutils literal"><span class="pre">Hola_Mundo</span></code>.  Después pulsa sobre el
+botón con el signo de <em>ejecutar y avanzar</em> como muestra la figura.
+Alternativamente se puede usar el menú <span class="menuselection">Cell‣Run
+Cells</span> o directamente pulsando <code class="kbd docutils literal"><span class="pre">Mays</span> <span class="pre">Intro</span></code> (<code class="kbd docutils literal"><span class="pre">Shift</span> <span class="pre">Enter</span></code>).</p>
+<div class="figure align-center" style="width: 60%">
+<img alt="Ejecutar celda en Jupyter." src="_static/jupyter-run.png" />
+</div>
+<p>El resultado se mostrará justo bajo la celda y automáticamente
+avanzará a la siguiente celda.  En este caso no hay celda siguiente y
+por tanto crea una nueva.  Cada celda puede contener un fragmento del
+programa y se pueden ejecutar en cualquier orden, aunque lo normal es
+que se ejecuten en secuencia.</p>
+<p>El documento se guarda automáticamente en el disco, pero con el nombre
+<code class="docutils literal"><span class="pre">Untitled</span></code>.  Si deseas ponerle un nombre más adecuado basta hacer
+doble click sobre el nombre en la cabecera.</p>
+<div class="figure align-center" style="width: 60%">
+<img alt="Renombrar documento Jupyter." src="_static/jupyter-rename.png" />
+</div>
+<p>Jupyter añadirá automáticamente la extensión <code class="docutils literal"><span class="pre">.ipynb</span></code> a los
+documentos.</p>
+<p>Cuando hayas terminado de editar el documento selecciona el menú
+<span class="menuselection">File‣Close and Halt</span>.  De esta forma nos aseguramos
+de que la copia del disco estará completamente al día.</p>
+</div>
+</div>
+<div class="section" id="elegir-un-entorno-de-programacion">
+<h2>2.4. Elegir un entorno de programación<a class="headerlink" href="#elegir-un-entorno-de-programacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La elección del entorno en el que vas a trabajar depende
+exclusivamente de tu gusto personal.  En esta asignatura no vamos a
+necesitar manejar grandes cantidades de código, ni vamos a utilizar
+bibliotecas externas.  Por tanto el entorno va a aportar relativamente
+poco.</p>
+<p>Nuestro consejo es que empieces con IDLE, que está incluido en la
+distribución oficial de Python. Por tanto está disponible en todos
+los ordenadores que dispongan de Python.</p>
+<p>Más adelante, cuando domines el lenguaje, empieza a probar otros, como
+<a class="reference external" href="http://jupyter.org/">Jupyter</a>, <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a>, <a class="reference external" href="http://www.pydev.org/">Eclipse PyDev</a>, <a class="reference external" href="http://wiki.netbeans.org/Python">Netbeans Python</a>,
+<a class="reference external" href="https://www.visualstudio.com/es/vs/python/">Visual Studio con Python Development Tools</a>, etc.</p>
+<p>No te rindas a la primera.  Un buen entorno es normalmente complejo y
+requiere algo de tiempo acostumbrarse a él.  Ese tiempo se recupera
+con creces en el futuro debido a los incrementos de productividad que
+permite.</p>
+<p>A partir de este momento asumiremos que el entorno de programación que
+usaremos es IDLE.  Si no es así en tu caso adapta las instrucciones a
+tu entorno.</p>
+</div>
+<div class="section" id="modo-interactivo-y-modo-script">
+<h2>2.5. Modo interactivo y modo <em>script</em><a class="headerlink" href="#modo-interactivo-y-modo-script" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Python tiene dos modos de funcionamiento que se aprecian perfectamente
+en el entorno IDLE.  El modo interactivo es el de la ventana principal
+de IDLE.  En este modo Python imprime automáticamente el resultado de
+las expresiones que se le pasen, sin necesidad de usar <code class="docutils literal"><span class="pre">print</span></code>.
+Esto permite utilizarlo como si fuera una calculadora o para hacer
+pequeñas pruebas.  Las órdenes se ejecutan conforme se introducen en
+el intérprete.</p>
+<p>El modo <em>script</em> está pensado para cuando tenemos un programa completo
+y queremos ejecutarlo completamente.  En ese caso el propio programa
+debe encargarse de mostrar los resultados que más nos interesan.</p>
+<p>Averigua si las celdas de este libro interactivo usan el modo
+interactivo o el modo <em>script</em>.  Para ello basta introducir una
+expresión sin ningún <code class="docutils literal"><span class="pre">print</span></code> y comprobar si al ejecutarse se muestra
+la expresión.  Por ejemplo:</p>
+
+<div data-childcomponent="Hola_Mundo_Interactivo" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=Hola_Mundo_Interactivo data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='Hola mundo interactivo'>
+'Hola, Mundo'
+</textarea>
+</div>
+
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question1_1">
+            Q-4: Examina la salida del programa de arriba y en base a ello
+selecciona el modo de ejecución de estas celdas.
+            <li data-component="answer"  id="question1_1_opt_a">(A) Modo interactivo</li><li data-component="feedback" id="question1_1_opt_a">Si te fijas en la salida del programa cuando se
+ejecuta no hay nada.  Eso significa que el intérprete
+no imprime las expresiones a menos que se le indique.
+Es decir, no es interactivo.</li>
+            
+            <li data-component="answer" data-correct id="question1_1_opt_b">(B) Modo *script*</li><li data-component="feedback" id="question1_1_opt_b">Exactamente, no puedes usar usar las celdas de código
+activo como una calculadora a menos que utilices
+``print``.</li>
+            
+
+            </ul>
+            <p>Si en algún momento necesitas probar algo de lo que te contamos en el
+libro no necesitas tener una instalación de Python a mano.  Basta que
+pinches en el icono de la lupa de la parte superior.  En el menú que
+aparece selecciona <span class="menuselection">Código activo de prueba</span>.</p>
+<div class="figure align-center" style="width: 60%">
+<img alt="Ventana de código activo de prueba." src="_static/runestone-scratch.png" />
+</div>
+</div>
+<div class="section" id="un-paseo-por-la-sintaxis-de-python">
+<h2>2.6. Un paseo por la sintaxis de Python<a class="headerlink" href="#un-paseo-por-la-sintaxis-de-python" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>De momento solo hemos visto un programa, el <em>Hola mundo</em>.  Es un
+clásico que se utiliza para enseñar la estructura básica de un
+programa en cualquier lenguaje de programación.  En Python es
+extremadamente simple, pero ya se pueden identificar elementos
+básicos.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hola, Mundo&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>La única línea de la que consta el programa es una <span class="xref std std-term">sentencia</span>.
+Un programa es una secuencia de <em>sentencias</em> que se ejecutan en orden.</p>
+<p>Nuestra sentencia es una <span class="xref std std-term">llamada a función</span>, muy similar al uso
+de una función en matemáticas.  La función <code class="docutils literal"><span class="pre">print</span></code> imprime sus
+argumentos en la <span class="xref std std-term">salida estándar</span> y no devuelve nada.  Las
+funciones en matemáticas siempre devuelven algo, y esto también ocurre
+en Python, pero existe un valor especial <code class="docutils literal"><span class="pre">None</span></code> que se interpreta
+como <em>nada</em>.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Truco</p>
+<p class="last">No es lo mismo devolver algo que imprimir algo.  Un ejemplo
+de ello es la función <code class="docutils literal"><span class="pre">print</span></code>.  Imprime sus argumentos,
+pero no devuelve nada.  Insistiremos mucho en esta idea
+porque es una fuente de confusión frecuente.</p>
+</div>
+<p>En este caso solo pasamos un argumento a la función <code class="docutils literal"><span class="pre">print</span></code>.  Se
+trata de la cadena de texto <code class="docutils literal"><span class="pre">'Hola,</span> <span class="pre">Mundo'</span></code>.  Las cadenas de texto
+(secuencias de letras) van entre comillas.</p>
+<p>Cada vez que llamamos a <code class="docutils literal"><span class="pre">print</span></code> se escribe una nueva línea en la
+salida estándar.  Por ejemplo:</p>
+
+<div data-childcomponent="hola-mundo-2-lineas" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=hola-mundo-2-lineas data-lang="python"    data-timelimit=25000   data-audio=''     >
+print('Hola,')
+print('Mundo')
+</textarea>
+</div>
+<p>En algunas ocasiones nos puede interesar que diferentes llamadas a
+<code class="docutils literal"><span class="pre">print</span></code> impriman en la misma línea de la salida estándar.  Eso se
+puede controlar con un argumento opcional de <code class="docutils literal"><span class="pre">print</span></code> llamado
+<code class="docutils literal"><span class="pre">end</span></code>.</p>
+
+<div data-childcomponent="hola-mundo-2-prints" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=hola-mundo-2-prints data-lang="python"    data-timelimit=25000   data-audio=''     >
+print('Hola,', end='')
+print('Mundo')
+</textarea>
+</div>
+<p>Este argumento adicional es un <span class="xref std std-term">argumento nombrado</span>. Es una
+característica muy interesante para evitar posibles errores en el
+orden de argumentos.</p>
+<div class="section" id="asignacion">
+<h3>2.6.1. Asignación<a class="headerlink" href="#asignacion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>La función <code class="docutils literal"><span class="pre">print</span></code> no solo imprime textos.  Imprime el resultado de
+cualquier expresión.  En el siguiente ejemplo utilizamos una
+<span class="xref std std-term">variable</span> para almacenar la persona a la que hay que saludar y
+en el print utilizamos el nombre de la variable en lugar de una
+persona concreta.</p>
+
+<div data-childcomponent="hola-pedro" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=hola-pedro data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+pers = 'Pedro'
+print('Hola', pers)
+</textarea>
+</div>
+<p>La primera sentencia es una sentencia de <span class="xref std std-term">asignación</span>.  La
+<span class="xref std std-term">asignación</span> sirve para poner nombre a una zona de memoria que
+contiene un valor determinado.  En este caso la cadena <code class="docutils literal"><span class="pre">'Pedro'</span></code> se
+almacena en memoria y la posición en la que se almacena recibe el
+nombre <code class="docutils literal"><span class="pre">pers</span></code>.  Puedes verlo en detalle si pulsas en el botón <em>Show
+in Codelens</em>.  <em>Codelens</em> es una herramienta educativa que permite
+entender cómo funciona el programa paso a paso.  Utiliza los botones
+<em>Forward</em> y <em>Back</em> para avanzar y retroceder.  Observa cómo aparece la
+variable cuando se ejecuta la sentencia de asignación.  Aparece en una
+tabla llamada <em>Global frame</em>.  Ya veremos eso con más detalle más
+adelante.</p>
+</div>
+<div class="section" id="bifurcacion">
+<h3>2.6.2. Bifurcación<a class="headerlink" href="#bifurcacion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>A veces es necesario ejecutar determinadas sentencias solo si se
+cumple una condición.  Esto se consigue con una <span class="xref std std-term">sentencia de
+bifurcación</span>.  La más simple de todas es la <span class="xref std std-term">sentencia *if*</span>.</p>
+
+<div data-childcomponent="ejemplo-bifurcar" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ejemplo-bifurcar data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+n = 200
+if n > 100:
+    print('Demasiado')
+</textarea>
+</div>
+<p>Habrás podido comprobar que el valor de la variable <code class="docutils literal"><span class="pre">n</span></code> determina si
+se imprime o no el mensaje.  Fíjate que después de la condición hay un
+signo <code class="docutils literal"><span class="pre">:</span></code> y que las sentencias que se ejecutan en caso de que se
+cumpla están indentadas (con un margen mayor a la izquierda).  Prueba
+a cambiar el valor de la variable, la condición, los espacios antes
+del <code class="docutils literal"><span class="pre">print</span></code> e incluso a poner varios <code class="docutils literal"><span class="pre">print</span></code> que se ejecuten si se
+cumple la condición.  Verás que Python es bastante relajado con la
+forma en que escribes el programa, solo necesita que respetes los
+márgenes.  Por ejemplo, si quieres ejecutar dos <code class="docutils literal"><span class="pre">print</span></code> en caso de
+que se cumpla la condición, tendrás que ponerlos con el mismo margen
+ambos.  Da igual cuántos espacios, pero que sean los mismos.</p>
+</div>
+<div class="section" id="bucles">
+<h3>2.6.3. Bucles<a class="headerlink" href="#bucles" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>En no pocas ocasiones necesitaremos repetir una serie de operaciones
+idénticas o casi idénticas.  Para repetir están los bucles.  El más
+sencillo de todos es el <span class="xref std std-term">bucle *while*</span>:</p>
+<p>El <span class="xref std std-term">bucle *while*</span> funciona de forma similar a la
+<span class="xref std std-term">sentencia *if*</span>.  Evalúa la condición y si se cumple ejecuta
+las sentencias indentadas justo a continuación.  Pero después de
+ejecutarlas no continúa con la siguiente sentencia, sino que vuelve a
+evaluar la condición.  Así hasta que la condición no se cumpla.</p>
+
+<div data-childcomponent="tabla-del-3" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=tabla-del-3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+tabla = 3
+i=0
+while i<10:
+    print(tabla,'x',i,'=',tabla*i)
+    i = i + 1
+</textarea>
+</div>
+<p>Examina con <em>Show in Codelens</em> la ejecución paso a paso de este
+programa.  Observa cómo cambia el valor de la <em>variable</em>
+<code class="docutils literal"><span class="pre">i</span></code>. ¿Entiendes ahora por qué se les llama variables?</p>
+<p>Aunque es un poco pronto para entenderlo completamente quiero también
+que pruebes este otro fragmento.  Hace lo mismo pero es
+significativamente más breve.  Utiliza el <span class="xref std std-term">bucle *for*</span> que es
+capaz de recorrer una serie de valores.  Cada uno de los valores es
+asignando a la variable de control (<code class="docutils literal"><span class="pre">i</span></code> en este caso) y ejecuta las
+sentencias indentadas del bucle.</p>
+
+<div data-childcomponent="tabla-del-3-for" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=tabla-del-3-for data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+tabla = 3
+for i in range(10):
+    print(tabla,'x',i,'=',tabla*i)
+</textarea>
+</div>
+</div>
+</div>
+<div class="section" id="trabaja-sobre-lo-visto">
+<h2>2.7. Trabaja sobre lo visto<a class="headerlink" href="#trabaja-sobre-lo-visto" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>No te quedes con los ejemplos de este capítulo.  Lee ejemplos de otros
+sitios, prueba tú mismo otros ejemplos, cambia los ejemplos para
+entenderlos plenamente. A continuación veremos más ejemplos para
+motivar vuestra propia exploración del lenguaje. No te quedes solo en
+ellos, prueba y resuelve tus propios problemas.</p>
+<div class="section" id="ejecucion-condicional">
+<h3>2.7.1. Ejecución condicional<a class="headerlink" href="#ejecucion-condicional" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Empecemos dando valores a un par de variables.</p>
+
+<div data-childcomponent="asigna-n-m" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=asigna-n-m data-lang="python"    data-timelimit=25000   data-audio=''     >
+n = 123
+m = 187
+</textarea>
+</div>
+<p>Si <em>n</em> no está entre 5 y 10 (ambos incluidos) imprimir un mensaje de
+error.</p>
+
+<div data-childcomponent="ejemplo-if-or" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ejemplo-if-or data-lang="python"   data-include=asigna-n-m data-timelimit=25000   data-audio=''     >
+if n < 5 or n > 10:
+    print('No está en el rango permitido')
+</textarea>
+</div>
+<p>Otra forma usando rangos. Los rangos son intervalos en
+<span class="math">\(\mathbb{Z}\)</span> cerrados por la izquierda y abiertos por la
+derecha.</p>
+
+<div data-childcomponent="ejemplo-if-range" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ejemplo-if-range data-lang="python"   data-include=asigna-n-m data-timelimit=25000   data-audio=''     >
+if n not in range(5,11):
+    print('No está en el rango permitido')
+</textarea>
+</div>
+<p>Vamos a otro ejemplo. Si <em>m</em> es mayor que <em>n</em> restar <em>n</em> de <em>m</em>.</p>
+
+<div data-childcomponent="resta-si-m-mayor" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=resta-si-m-mayor data-lang="python"   data-include=asigna-n-m data-timelimit=25000   data-audio=''     >
+if m > n:
+    m = m - n
+</textarea>
+</div>
+<p>Si n no es par multiplicar m por 10 y mostrar un mensaje de advertencia.</p>
+
+<div data-childcomponent="impar-por-10" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=impar-por-10 data-lang="python"   data-include=asigna-n-m data-timelimit=25000   data-audio=''     >
+resto = n - (n//2)*2
+if resto != 0:
+    m = m * 10
+    print('n no es divisible por 2')
+</textarea>
+</div>
+<p>El operador <code class="docutils literal"><span class="pre">//</span></code> es la <span class="xref std std-term">división entera</span> (parte entera de la
+división) y <code class="docutils literal"><span class="pre">!=</span></code> es el <span class="xref std std-term">operador distinto</span>. No te agobies con
+los operadores, los irás conociendo poco a poco.</p>
+<p>Más fácil aún, usando el operador <code class="docutils literal"><span class="pre">%</span></code> (módulo o resto) y el operador
+<code class="docutils literal"><span class="pre">*=</span></code> que combina multiplicación y asignación.</p>
+
+<div data-childcomponent="impar-por-10-mod" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=impar-por-10-mod data-lang="python"   data-include=asigna-n-m data-timelimit=25000   data-audio=''     >
+if n % 2 != 0:
+    m *= 10
+    print('n no es divisible por 2')
+</textarea>
+</div>
+<p>Es muy posible que a estas alturas esto te suene a chino.  No pasa
+nada, solo tienes que entender lo que hace.  Si no lo entiendes
+experimenta.  En unos meses esto te parecerá tan claro como el agua.</p>
+<p>En Python un entero se puede utilizar directamente como condición.  Si
+su valor es 0 se evaluaría como <code class="docutils literal"><span class="pre">False</span></code>, si es distinto de 0 se
+evaluaría como <code class="docutils literal"><span class="pre">True</span></code>. Por tanto se puede hacer todavía más corto así:</p>
+
+<div data-childcomponent="impar-por-10-peque" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=impar-por-10-peque data-lang="python"   data-include=asigna-n-m data-timelimit=25000   data-audio=''     >
+if n % 2:
+    m *= 10
+    print('n no es divisible por 2')
+</textarea>
+</div>
+<p>¿Cuál de los dos números es más próximo a 100?</p>
+
+<div data-childcomponent="proximo-a-100" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=proximo-a-100 data-lang="python"   data-include=asigna-n-m data-timelimit=25000   data-audio=''     >
+if abs(n-100) < abs(m-100):
+    print('n es más próximo a 100')
+else:
+    print('m es más próximo a 100')
+</textarea>
+</div>
+<p>Bueno, esta es la primera vez que vemos un <code class="docutils literal"><span class="pre">else</span></code>.  Deberíamos
+aclarar algo, verdad?  La claúsula <code class="docutils literal"><span class="pre">else</span></code> es una parte opcional de
+la sentencia <code class="docutils literal"><span class="pre">if</span></code>.  Indica que en caso de que no se cumpla la
+condición ejecute las sentencias indentadas a continuación.  Te
+aseguro que no es tan útil como el <code class="docutils literal"><span class="pre">if</span></code> pero a veces puede ser
+práctico.</p>
+<p>Veamos una vuelta de tuerca más sin repetir el mensaje.</p>
+
+<div data-childcomponent="proximo-a-100-v2" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=proximo-a-100-v2 data-lang="python"   data-include=asigna-n-m data-timelimit=25000   data-audio=''     >
+if abs(n-100) < abs(m-100):
+    print('n', end=' ')
+else:
+    print('m', end=' ')
+print('es más próximo a 100')
+</textarea>
+</div>
+<p>Y todavía podemos acortarlo más, usando el operador ternario
+(<em>valor_si_true</em> <strong>if</strong> <em>condición</em> <strong>else</strong> <em>valor_si_false</em>).
+No lo confundas con la sentencia <code class="docutils literal"><span class="pre">if</span></code>.  Es un operador, como la
+suma.</p>
+
+<div data-childcomponent="proximo-a-100-v3" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=proximo-a-100-v3 data-lang="python"   data-include=asigna-n-m data-timelimit=25000   data-audio=''     >
+print('n' if abs(n-100) < abs(m-100) else 'm', 'es más próximo a 100')
+</textarea>
+</div>
+<p>Más corto significa menos código que leer y depurar, y eso es muy
+importante.  Pero también puede significar más difícil de entender.
+Elige tu propio límite entre legibilidad y longitud, pero debes ser
+consciente de que otros tienen límites diferentes.  Es decir, escribe
+como tú crees que es más legible, pero aprende a leer código escrito
+con otros criterios.</p>
+</div>
+<div class="section" id="abstraccion-y-funciones">
+<h3>2.7.2. Abstracción y funciones<a class="headerlink" href="#abstraccion-y-funciones" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Volveremos a los bucles en futuras sesiones pero merece la pena
+detenerse un poco en ellos.  A priori parece que los bucles son una forma
+de abreviar cuando el código es muy repetitivo.</p>
+<p>Imagina que no tuvieras bucles en Python. ¿Crees que podrías realizar
+cualquier operación computable? Piensa en esos cálculos que necesitan
+días o meses para realizarse. Por ejemplo, la predicción meteorológica.
+¿Podría hacerse con un lenguaje sin bucles?</p>
+<p>Pista. Piensa en el tiempo que tardaría en ejecutarse un programa sin
+bucles. ¿De qué depende? ¿Puede depender de los datos? Analiza los casos
+de un programa lineal y un programa con bifurcaciones (sentencias
+<strong>if</strong>).</p>
+</div>
+<div class="section" id="la-tabla-de-multiplicar">
+<h3>2.7.3. La tabla de multiplicar<a class="headerlink" href="#la-tabla-de-multiplicar" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El ejemplo de bucle que hemos visto es ciertamente simple. ¿No podríamos
+haber resuelto el problema así?</p>
+
+<div data-childcomponent="tabla-del-3-v0" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=tabla-del-3-v0 data-lang="python"    data-timelimit=25000   data-audio=''     >
+print('3 x 0 = 0')
+print('3 x 1 = 3')
+print('3 x 2 = 6')
+print('3 x 3 = 9')
+print('3 x 4 = 12')
+print('3 x 5 = 15')
+print('3 x 6 = 18')
+print('3 x 7 = 21')
+print('3 x 8 = 24')
+print('3 x 9 = 27')
+</textarea>
+</div>
+<p>Evidentemente es correcto pero solo resuelve un problema muy concreto.
+Con muy poquito esfuerzo más se pueden resolver problemas parecidos.</p>
+
+<div data-childcomponent="tabla-del-3-v1" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=tabla-del-3-v1 data-lang="python"    data-timelimit=25000   data-audio=''     >
+i = 0
+while i < 10:
+    print('3 x',i,'=',3*i)
+    i = i + 1
+</textarea>
+</div>
+<p>Ahora tenemos dos ventajas. Por un lado es mas corto y por tanto mas
+fácil de cambiar.  Por otro lado no necesitamos conocer los resultados
+de las expresiones.  Es lo lógico, a fin de cuentas estamos usando un
+computador.</p>
+<p>Compara esta solución con el ejemplo <code class="xref std std-numref docutils literal"><span class="pre">tabla-del-3</span></code>.  Es
+ciertamente parecido, pero en el ejemplo anterior podemos cambiar la
+tabla simplemente cambiando el 3 asignado a <code class="docutils literal"><span class="pre">tabla</span></code>.  La propiedad
+que permite manejar casos similares con el mismo fragmento de programa
+se llama <span class="xref std std-term">abstracción</span>.  No es una simple comodidad, es
+imprescindible para poder resolver problemas complejos con un
+computador.</p>
+<p>Uno de los mecanismos más poderosos de abstracción son las funciones.
+Permiten poner un nombre a un fragmento de programa y además permiten
+definir parámetros que pueden cambiar en cada uso.  Es como si
+definiéramos nuestro propio lenguaje.  Volveremos a ellas en el
+próximo capítulo, pero veamos cómo queda nuestro ejemplo usando una
+función.</p>
+
+<div data-childcomponent="imprimir_tabla_multiplicar" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=imprimir_tabla_multiplicar data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def imprimir_tabla_multiplicar(tabla):
+    i = 0
+    while i < 10:
+        print(tabla,'x',i,'=',tabla*i)
+        i = i + 1
+</textarea>
+</div>
+<p>Y podemos usarla con una expresión de llamada a función, igual que la
+propia función <code class="docutils literal"><span class="pre">print</span></code>.</p>
+
+<div data-childcomponent="tabla-funcion-3" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=tabla-funcion-3 data-lang="python"   data-include=imprimir_tabla_multiplicar data-timelimit=25000  data-codelens="true" data-audio=''     >
+imprimir_tabla_multiplicar(3)
+</textarea>
+</div>
+<p>Es posible que pienses que esta versión es la más larga, y tiene las
+mismas ventajas que la primera versión <code class="xref std std-numref docutils literal"><span class="pre">tabla-del-3</span></code>.  Una
+ventaja de la función es que ya no es necesario copiar el texto del
+programa para imprimir otra tabla. Basta usar la función como si se
+tratara de una nueva sentencia.</p>
+
+<div data-childcomponent="tabla-funcion-5" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=tabla-funcion-5 data-lang="python"   data-include=imprimir_tabla_multiplicar data-timelimit=25000  data-codelens="true" data-audio=''     >
+imprimir_tabla_multiplicar(5)
+</textarea>
+</div>
+<p>Ya está bien por ahora, pero no creas que es la única forma de resolver el
+problema. En Python siempre hay más formas de escribir las cosas. Por
+ejemplo, ésto sería más cercano a lo que haría un programador
+experimentado:</p>
+
+<div data-childcomponent="imprimir_tabla_multiplicar_v2" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=imprimir_tabla_multiplicar_v2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def imprimir_tabla_multiplicar(tabla):
+    for i in range(10):
+        print('{} x {} = {}'.format(tabla, i, tabla*i))
+
+imprimir_tabla_multiplicar(3)
+</textarea>
+</div>
+<p>No te preocupes si no lo entiendes ahora. Es más importante saber
+resolver problemas con un ordenador que conocer el lenguaje al
+detalle.</p>
+</div>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Capítulo anterior - 1. Prefacio' data-toggle="tooltip">
+    <a href="prefacio.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="prefacio.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - 3. Elementos de un programa' data-toggle="tooltip" >
+    <a href="elem.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="elem.html" >Next Section - 3. Elementos de un programa</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017 Francisco Moya.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

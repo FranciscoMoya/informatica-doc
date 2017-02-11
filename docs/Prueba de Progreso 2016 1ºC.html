@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Ley de Benford</title>
+    <title>43. Ley de Benford</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -36,7 +36,8 @@
         VERSION:     '0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
@@ -102,11 +103,11 @@
     <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="top" title="None" href="index.html" />
-    <link rel="next" title="Archivos con Python" href="python-files.html" />
-    <link rel="prev" title="Polígonos regulares" href="Prueba de Progreso 2016 1ºB.html" />
+    <link rel="next" title="47. Archivos con Python" href="python-files.html" />
+    <link rel="prev" title="39. Polígonos regulares" href="Prueba de Progreso 2016 1ºB.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -120,7 +121,7 @@
   eBookConfig.course = 'CS101';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
-  eBookConfig.build_info = "unknown";
+  eBookConfig.build_info = "py";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
@@ -173,22 +174,22 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Ley de Benford</a><ul>
-<li><a class="reference internal" href="#ejemplo-de-funcionamiento">Ejemplo de funcionamiento:</a></li>
-<li><a class="reference internal" href="#solucion">Solución</a></li>
+<li><a class="reference internal" href="#">43. Ley de Benford</a><ul>
+<li><a class="reference internal" href="#ejemplo-de-funcionamiento">43.1. Ejemplo de funcionamiento:</a></li>
+<li><a class="reference internal" href="#solucion">43.2. Solución</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#error-cuadratico-medio">Error cuadrático medio</a><ul>
-<li><a class="reference internal" href="#id1">Ejemplo de funcionamiento:</a></li>
-<li><a class="reference internal" href="#id2">Solución</a></li>
+<li><a class="reference internal" href="#error-cuadratico-medio">44. Error cuadrático medio</a><ul>
+<li><a class="reference internal" href="#id1">44.1. Ejemplo de funcionamiento:</a></li>
+<li><a class="reference internal" href="#id2">44.2. Solución</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#problema-del-asno-de-buridan">Problema del asno de Buridán</a><ul>
-<li><a class="reference internal" href="#id3">Solución</a></li>
+<li><a class="reference internal" href="#problema-del-asno-de-buridan">45. Problema del asno de Buridán</a><ul>
+<li><a class="reference internal" href="#id3">45.1. Solución</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#triangulo-numerico">Triángulo numérico</a><ul>
-<li><a class="reference internal" href="#id4">Solución</a></li>
+<li><a class="reference internal" href="#triangulo-numerico">46. Triángulo numérico</a><ul>
+<li><a class="reference internal" href="#id4">46.1. Solución</a></li>
 </ul>
 </li>
 </ul>
@@ -198,13 +199,13 @@
         
         <!--
           
-  <li id="relations-prev" title="Previous Chapter - Polígonos regulares" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - 39. Polígonos regulares" data-toggle="tooltip">
     <a href="Prueba de Progreso 2016 1ºB.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Archivos con Python' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - 47. Archivos con Python' data-toggle="tooltip" >
     <a href="python-files.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -267,7 +268,7 @@
             <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
             
             <li>
-  <a href="_sources/Prueba de Progreso 2016 1ºC.txt"
+  <a href="_sources/Prueba de Progreso 2016 1ºC.rst.txt"
      rel="nofollow">Ver fuente</a></li>
             
             <li class="divider"></li>
@@ -290,7 +291,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="ley-de-benford">
-<h1>Ley de Benford<a class="headerlink" href="#ley-de-benford" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>43. Ley de Benford<a class="headerlink" href="#ley-de-benford" title="Enlazar permanentemente con este título">¶</a></h1>
 <p><em>La `ley de los números anómalos de Frank
 Benford &lt;https://es.wikipedia.org/wiki/Ley_de_Benford&gt;`__ postula que en
 muchos conjuntos de datos la frecuencia de aparición de las cifras del 1
@@ -304,14 +305,14 @@ segundo elemento es la frecuencia del 2, etc. La frecuencia de una cifra
 se medirá como la cantidad de números que empiezan por esa cifra
 dividida por el total de números en el argumento.</em></p>
 <div class="section" id="ejemplo-de-funcionamiento">
-<h2>Ejemplo de funcionamiento:<a class="headerlink" href="#ejemplo-de-funcionamiento" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>43.1. Ejemplo de funcionamiento:<a class="headerlink" href="#ejemplo-de-funcionamiento" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">frecuencia_cifras</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">200</span><span class="p">))</span>
 <span class="go">(0.555, 0.055, 0.055, 0.055, 0.055, 0.055, 0.055, 0.055, 0.055)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="solucion">
-<h2>Solución<a class="headerlink" href="#solucion" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>43.2. Solución<a class="headerlink" href="#solucion" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El problema está relacionado con la ley de Benford, pero lo que se pide
 no tiene nada que ver con esa ley. Solo nos pide que calculemos las
 frecuencias de las cifras de 1 a 9 en un conjunto de números.</p>
@@ -328,7 +329,7 @@ frecuencias de las cifras de 1 a 9 en un conjunto de números.</p>
 </div>
 </div>
 <div class="section" id="error-cuadratico-medio">
-<h1>Error cuadrático medio<a class="headerlink" href="#error-cuadratico-medio" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>44. Error cuadrático medio<a class="headerlink" href="#error-cuadratico-medio" title="Enlazar permanentemente con este título">¶</a></h1>
 <p><em>Siguiendo con el ejemplo de la ley de Benford, en este ejercicio debes
 definir una función ecm_benford que admita un único argumento que es
 una tupla de nueve números correspondientes a las frecuencias de
@@ -339,14 +340,14 @@ que responde a la ecuación:</em></p>
 <div class="math">
 \[p(n) = log_{10}(n+1) - log_{10}(n)\]</div>
 <div class="section" id="id1">
-<h2>Ejemplo de funcionamiento:<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>44.1. Ejemplo de funcionamiento:<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ecm_benford</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
 <span class="go">0.06259926375341245</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id2">
-<h2>Solución<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>44.2. Solución<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Evidentemente nos piden calcular un error cuadrático medio, pero el
 valor de referencia teórico es el correspondiente a la ley de Benford.</p>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">log10</span>
@@ -367,7 +368,7 @@ valor de referencia teórico es el correspondiente a la ley de Benford.</p>
 </div>
 </div>
 <div class="section" id="problema-del-asno-de-buridan">
-<h1>Problema del asno de Buridán<a class="headerlink" href="#problema-del-asno-de-buridan" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>45. Problema del asno de Buridán<a class="headerlink" href="#problema-del-asno-de-buridan" title="Enlazar permanentemente con este título">¶</a></h1>
 <p><em>El asno de Buridán es el protagonista de un argumento de reducción al
 absurdo contra Jean Buridan.</em></p>
 <p><em>En dos lugares de un prado se colocan dos montones iguales de alfalfa.
@@ -388,7 +389,7 @@ x_{2n+1} = \frac{1 + x_{2n}}{2}\end{split}\]</div>
 <p><em>Definir una función ``buridan(a,n)`` que devuelve el valor de
 :math:`x_n`.</em></p>
 <div class="section" id="id3">
-<h2>Solución<a class="headerlink" href="#id3" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>45.1. Solución<a class="headerlink" href="#id3" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El ejercicio nos define directamente una recurrencia, solo hay que
 escribirla en Python. La unica dificultad estriba en que la recurrencia
 se define para términos pares y para términos impares de forma
@@ -412,7 +413,7 @@ diferente.</p>
 </div>
 </div>
 <div class="section" id="triangulo-numerico">
-<h1>Triángulo numérico<a class="headerlink" href="#triangulo-numerico" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>46. Triángulo numérico<a class="headerlink" href="#triangulo-numerico" title="Enlazar permanentemente con este título">¶</a></h1>
 <p><em>Escribir una función triangulo_numerico sin argumentos que encuentre
 las cifras del 1 al 9 que deben escribirse en los círculos de la
 siguiente figura para que la suma de cualquiera de sus lados valga 20.</em></p>
@@ -421,7 +422,7 @@ devolver una tupla o lista con la secuencia de las cifras que va en cada
 círculo empezando por el superior y en el sentido de las agujas del
 reloj.</em></p>
 <div class="section" id="id4">
-<h2>Solución<a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>46.1. Solución<a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El problema es extremadamente simple si tenemos en cuenta que se dispone
 de todos los ejercicios resueltos en el CampusVirtual. Nos piden
 encontrar una permutación de los números de 1 a 9 que cumpla una serie
@@ -460,19 +461,19 @@ rangos correspondientes a cada segmento.</p>
 
   
       
-  <li id="relations-prev" class="navLink" title='Capítulo anterior - Polígonos regulares' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Capítulo anterior - 39. Polígonos regulares' data-toggle="tooltip">
     <a href="Prueba de Progreso 2016 1ºB.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="Prueba de Progreso 2016 1ºB.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Capítulo siguiente - Archivos con Python' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - 47. Archivos con Python' data-toggle="tooltip" >
     <a href="python-files.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="python-files.html" >Next Section - Archivos con Python</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="python-files.html" >Next Section - 47. Archivos con Python</a>
 
 <script type="text/javascript">
 

@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Operaciones con listas</title>
+    <title>9. Operaciones con listas</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -36,7 +36,8 @@
         VERSION:     '0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
@@ -102,11 +103,11 @@
     <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="top" title="None" href="index.html" />
-    <link rel="next" title="Pago de balance de tarjeta de crédito en un año" href="BisectionSearch.html" />
-    <link rel="prev" title="Prueba de software" href="python-12.html" />
+    <link rel="next" title="11. Pago de balance de tarjeta de crédito en un año" href="BisectionSearch.html" />
+    <link rel="prev" title="8. Prueba y depuración de software" href="test-debug.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -120,7 +121,7 @@
   eBookConfig.course = 'CS101';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
-  eBookConfig.build_info = "unknown";
+  eBookConfig.build_info = "py";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
@@ -173,23 +174,23 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Operaciones con listas</a><ul>
-<li><a class="reference internal" href="#subconjunto-de-una-lista">Subconjunto de una lista</a></li>
-<li><a class="reference internal" href="#interseccion-de-listas">Intersección de listas</a></li>
-<li><a class="reference internal" href="#powerset"><em>Powerset</em></a></li>
+<li><a class="reference internal" href="#">9. Operaciones con listas</a><ul>
+<li><a class="reference internal" href="#subconjunto-de-una-lista">9.1. Subconjunto de una lista</a></li>
+<li><a class="reference internal" href="#interseccion-de-listas">9.2. Intersección de listas</a></li>
+<li><a class="reference internal" href="#powerset">9.3. <em>Powerset</em></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#operaciones-con-bits">Operaciones con bits</a><ul>
-<li><a class="reference internal" href="#sistemas-de-numeracion-posicionales">Sistemas de numeración posicionales</a></li>
-<li><a class="reference internal" href="#conversiones-de-base">Conversiones de base</a></li>
-<li><a class="reference internal" href="#numeros-con-signo">Números con signo</a><ul>
-<li><a class="reference internal" href="#signo-magnitud">Signo-magnitud</a></li>
-<li><a class="reference internal" href="#complemento-a-1">Complemento a 1</a></li>
-<li><a class="reference internal" href="#complemento-a-2">Complemento a 2</a></li>
+<li><a class="reference internal" href="#operaciones-con-bits">10. Operaciones con bits</a><ul>
+<li><a class="reference internal" href="#sistemas-de-numeracion-posicionales">10.1. Sistemas de numeración posicionales</a></li>
+<li><a class="reference internal" href="#conversiones-de-base">10.2. Conversiones de base</a></li>
+<li><a class="reference internal" href="#numeros-con-signo">10.3. Números con signo</a><ul>
+<li><a class="reference internal" href="#signo-magnitud">10.3.1. Signo-magnitud</a></li>
+<li><a class="reference internal" href="#complemento-a-1">10.3.2. Complemento a 1</a></li>
+<li><a class="reference internal" href="#complemento-a-2">10.3.3. Complemento a 2</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#operadores-de-bits">Operadores de bits</a></li>
-<li><a class="reference internal" href="#seleccionar-bits-de-un-numero">Seleccionar bits de un número</a></li>
+<li><a class="reference internal" href="#operadores-de-bits">10.4. Operadores de bits</a></li>
+<li><a class="reference internal" href="#seleccionar-bits-de-un-numero">10.5. Seleccionar bits de un número</a></li>
 </ul>
 </li>
 </ul>
@@ -199,13 +200,13 @@
         
         <!--
           
-  <li id="relations-prev" title="Previous Chapter - Prueba de software" data-toggle="tooltip">
-    <a href="python-12.html" >
+  <li id="relations-prev" title="Previous Chapter - 8. Prueba y depuración de software" data-toggle="tooltip">
+    <a href="test-debug.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Pago de balance de tarjeta de crédito en un año' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - 11. Pago de balance de tarjeta de crédito en un año' data-toggle="tooltip" >
     <a href="BisectionSearch.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -268,7 +269,7 @@
             <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
             
             <li>
-  <a href="_sources/python-14.txt"
+  <a href="_sources/python-14.rst.txt"
      rel="nofollow">Ver fuente</a></li>
             
             <li class="divider"></li>
@@ -291,11 +292,11 @@
 <div class="container" id="main-content">
   
   <div class="section" id="operaciones-con-listas">
-<h1>Operaciones con listas<a class="headerlink" href="#operaciones-con-listas" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>9. Operaciones con listas<a class="headerlink" href="#operaciones-con-listas" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>En este cuaderno veremos una serie de operaciones con listas que
 resultan muy útiles en muchos contextos.</p>
 <div class="section" id="subconjunto-de-una-lista">
-<h2>Subconjunto de una lista<a class="headerlink" href="#subconjunto-de-una-lista" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>9.1. Subconjunto de una lista<a class="headerlink" href="#subconjunto-de-una-lista" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Dadas dos listas <code class="docutils literal"><span class="pre">L1</span></code> y <code class="docutils literal"><span class="pre">L2</span></code> se trata de comprobar si <code class="docutils literal"><span class="pre">L1</span></code> es un
 subconjunto de la lista <code class="docutils literal"><span class="pre">L2</span></code>.</p>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">esSubconjunto</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">):</span>
@@ -317,7 +318,7 @@ subconjunto de la lista <code class="docutils literal"><span class="pre">L2</spa
 </div>
 </div>
 <div class="section" id="interseccion-de-listas">
-<h2>Intersección de listas<a class="headerlink" href="#interseccion-de-listas" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>9.2. Intersección de listas<a class="headerlink" href="#interseccion-de-listas" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Dadas dos listas <code class="docutils literal"><span class="pre">L1</span></code> y <code class="docutils literal"><span class="pre">L2</span></code> se trata de determinar la lista de los
 elementos que están en las dos listas.</p>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">interseccion</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span><span class="n">L2</span><span class="p">):</span>
@@ -349,7 +350,7 @@ elementos que están en las dos listas.</p>
 </div>
 </div>
 <div class="section" id="powerset">
-<h2><em>Powerset</em><a class="headerlink" href="#powerset" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>9.3. <em>Powerset</em><a class="headerlink" href="#powerset" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Dada una lista <code class="docutils literal"><span class="pre">L</span></code>, se define su <em>powerset</em> como el conjunto de todas
 las posibles combinaciones de elementos que podemos hacer con los
 elementos de <code class="docutils literal"><span class="pre">L</span></code>. Por ejemplo, para la lista <code class="docutils literal"><span class="pre">[1,</span> <span class="pre">2]</span></code> su <em>powerset</em>
@@ -389,11 +390,11 @@ detalle la segunda parte de este documento.</p>
 </div>
 </div>
 <div class="section" id="operaciones-con-bits">
-<h1>Operaciones con bits<a class="headerlink" href="#operaciones-con-bits" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>10. Operaciones con bits<a class="headerlink" href="#operaciones-con-bits" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>Python ofrece una amplia variedad de características para trabajar con
 los bits de un número. Vamos a ver algunas de ellas.</p>
 <div class="section" id="sistemas-de-numeracion-posicionales">
-<h2>Sistemas de numeración posicionales<a class="headerlink" href="#sistemas-de-numeracion-posicionales" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>10.1. Sistemas de numeración posicionales<a class="headerlink" href="#sistemas-de-numeracion-posicionales" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El ordenador trabaja con números almacenados en bits. Cada bit solo
 puede almacenar un 0 o un 1. Por tanto si queremos almacenar un número
 más grande tenemos que guardar más de un bit. Al guardarlos de esta
@@ -472,7 +473,7 @@ por 2 equivale a quitar el dígito binario menos significativo,
 multiplicar por 2 equivale a añadir un cero a la derecha.</p>
 </div>
 <div class="section" id="conversiones-de-base">
-<h2>Conversiones de base<a class="headerlink" href="#conversiones-de-base" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>10.2. Conversiones de base<a class="headerlink" href="#conversiones-de-base" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Pasar de un número binario a su valor decimal se puede hacer
 directamente con la fórmula mencionada anteriormente:</p>
 <p>$ v = <a href="#id17"><span class="problematic" id="id18">:raw-latex:`\sum`</span></a><a href="#id19"><span class="problematic" id="id20">:raw-latex:`\limits`</span></a>_{i=0}^{n-1} b_i
@@ -601,14 +602,14 @@ orden inverso. Por ejemplo:</p>
 <p>Y tomando los restos en orden inverso obtenemos <span class="math">\(1111000_2\)</span>.</p>
 </div>
 <div class="section" id="numeros-con-signo">
-<h2>Números con signo<a class="headerlink" href="#numeros-con-signo" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>10.3. Números con signo<a class="headerlink" href="#numeros-con-signo" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Recuerda que la memoria de un ordenador solo puede guardar 0 o 1 en cada
 una de sus celdas elementales (bits). Entonces ¿cómo almacenamos el
 signo de los números negativos? Está claro que tenemos que guardarlo
 como un 0 o como un 1. Hay varias formas de hacerlo, veamos las más
 frecuentes.</p>
 <div class="section" id="signo-magnitud">
-<h3>Signo-magnitud<a class="headerlink" href="#signo-magnitud" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>10.3.1. Signo-magnitud<a class="headerlink" href="#signo-magnitud" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>La forma más simple es reservar un bit (el más significativo
 normalmente) para representar el signo. Si ese bit vale 0 el número es
 positivo, si vale 1 el número es negativo. Y la magnitud corresponde al
@@ -642,7 +643,7 @@ ordenadores modernos.</p>
 </table>
 </div>
 <div class="section" id="complemento-a-1">
-<h3>Complemento a 1<a class="headerlink" href="#complemento-a-1" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>10.3.2. Complemento a 1<a class="headerlink" href="#complemento-a-1" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>La representación en complemento a 1 también tiene un bit más que
 almacena el signo y también en este caso es 0 para los positivos y 1
 para los negativos. Sin embargo en este caso la magnitud de los números
@@ -676,7 +677,7 @@ ordenadores modernos, pero es esencial para entender la siguiente</p>
 </table>
 </div>
 <div class="section" id="complemento-a-2">
-<h3>Complemento a 2<a class="headerlink" href="#complemento-a-2" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>10.3.3. Complemento a 2<a class="headerlink" href="#complemento-a-2" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>El problema de las representaciones anteriores es que el 0 tiene dos
 representaciones válidas (una con signo positivo y otra con signo
 negativo). Ésto es una anomalía que dificulta las operaciones. En la
@@ -732,7 +733,7 @@ representan en complemento a 2.</p>
 </div>
 </div>
 <div class="section" id="operadores-de-bits">
-<h2>Operadores de bits<a class="headerlink" href="#operadores-de-bits" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>10.4. Operadores de bits<a class="headerlink" href="#operadores-de-bits" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Para manipular bits de forma independiente en Python se utilizan una
 serie de operadores que realizan operaciones lógicas bit a bit. Se
 realiza la operación lógica con el bit 0 de ambos argumentos y su
@@ -900,7 +901,7 @@ como <code class="docutils literal"><span class="pre">(1&lt;&lt;32)</span> <span
 </div>
 </div>
 <div class="section" id="seleccionar-bits-de-un-numero">
-<h2>Seleccionar bits de un número<a class="headerlink" href="#seleccionar-bits-de-un-numero" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>10.5. Seleccionar bits de un número<a class="headerlink" href="#seleccionar-bits-de-un-numero" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Un ejercicio interesante es el siguiente. Hacer una función <code class="docutils literal"><span class="pre">getbits</span></code>
 que extrae un rango de bits de un valor que se pasa como argumento.</p>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">getbits</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">primero</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
@@ -1257,19 +1258,19 @@ tenemos que hacer el <em>and</em> bit a bit.</p>
 
   
       
-  <li id="relations-prev" class="navLink" title='Capítulo anterior - Prueba de software' data-toggle="tooltip">
-    <a href="python-12.html" >
+  <li id="relations-prev" class="navLink" title='Capítulo anterior - 8. Prueba y depuración de software' data-toggle="tooltip">
+    <a href="test-debug.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="python-12.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="test-debug.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Capítulo siguiente - Pago de balance de tarjeta de crédito en un año' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Capítulo siguiente - 11. Pago de balance de tarjeta de crédito en un año' data-toggle="tooltip" >
     <a href="BisectionSearch.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="BisectionSearch.html" >Next Section - Pago de balance de tarjeta de crédito en un año</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="BisectionSearch.html" >Next Section - 11. Pago de balance de tarjeta de crédito en un año</a>
 
 <script type="text/javascript">
 
