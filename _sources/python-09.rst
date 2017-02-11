@@ -10,7 +10,7 @@ Directa o indirectamente hemos conocido varias formas de agrupar
 elementos en Python. La que hemos utilizado con más frecuencia es la
 *lista*, que se crea con corchetes. Alguna vez han aparecido las
 *tuplas* que aparecen entre paréntesis. Y aún hay otra forma, que son
-los conjuntos, que se expresan como una seuencia de elementos entre
+los conjuntos, que se expresan como una secuencia de elementos entre
 llaves.
 
 .. code:: python

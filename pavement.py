@@ -12,7 +12,7 @@ sys.path.append(os.getcwd())
 home_dir = os.getcwd()
 master_url = 'http://127.0.0.1:8000'
 master_app = 'runestone'
-serving_dir = "./docs/informatica"
+serving_dir = "./docs"
 dest = "../../static"
 
 options(

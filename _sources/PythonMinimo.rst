@@ -1,6 +1,6 @@
 
-Python básico
-=============
+Apéndice: Python básico
+=======================
 
 Por diversos problemas administrativos y logísticos parece que hay
 alumnos con un evidente desconocimiento de partes de Python que
