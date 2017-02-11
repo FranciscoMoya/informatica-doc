@@ -119,9 +119,11 @@ la segunda lista y 0 si hay empate. Por ejemplo,
 #### Pruebas
 
 A continuación se incluyen las pruebas que será necesario pasar para
-aceptar esta entrega.  Debe pasar al menos el 50% de las pruebas para
-aceptar la entrega.  Consulta [esta página]() para aprender cómo
-pueden ayudarte las pruebas a desarrollar tu propio programa.
+aceptar esta entrega.  Debe pasar al menos <span id="minpass">5</span>
+pruebas (50% del total) para aceptar la entrega.  Consulta [esta
+página](https://franciscomoya.github.io/informatica-doc/docs/test-debug.html)
+para aprender cómo pueden ayudarte las pruebas a desarrollar tu propio
+programa.
 
 
 ```

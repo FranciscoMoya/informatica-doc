@@ -19,7 +19,7 @@ poniendo eñes, tildes o signos de puntuación y volviendo a pulsar
 
 Prueba ahora a sustituir todo el mensaje entre comillas, incluídas las
 comillas por un número y pulsa *Run*.  Prueba también a poner una
-expresión aritmética, por ejemplo `124 + (12 - 1.5) * 0.21`.
+expresión aritmética, por ejemplo ``124 + (12 - 1.5) * 0.21``.
 
 Finalmente prueba a añadir un espacio antes de ``print``. Es bastante
 puntilloso, ¿verdad?
@@ -143,7 +143,7 @@ su nombre en inglés, *prompt*.
 
 Cuando Python se ejecuta en modo interactivo ejecuta las órdenes tan
 pronto como se introducen.  Por ejemplo, si introducimos el contenido
-del programa `Hola_Mundo` veremos el resultado inmediatamente.
+del programa ``Hola_Mundo`` veremos el resultado inmediatamente.
 
 .. code::
 
@@ -189,7 +189,7 @@ similar a la principal, pero en este caso no hay intérprete de Python.
    :alt: Nuevo archivo en IDLE.
 
 Es un editor de archivos de texto especialmente indicado para editar
-programas en Python. Escribe ahora el programa `Hola_Mundo` en la
+programas en Python. Escribe ahora el programa ``Hola_Mundo`` en la
 nueva ventana.  Cuando termines selecciona el menú
 :menuselection:`Run-->Run Module` o pulsa :kbd:`F5`.  La primera vez
 que lo hagas IDLE avisará de que el archivo no está guardado y debe
@@ -200,7 +200,7 @@ guardarse antes de ejecutarlo.
    :figwidth: 60%
    :alt: Advertencia para grabar archivo.
 
-Pulsa *OK* y escribe un nombre (por ejemplo `hola`) en el cuadro de
+Pulsa *OK* y escribe un nombre (por ejemplo ``hola``) en el cuadro de
 diálogo que se muestra a continuación:
 
 .. figure:: _static/idle-save-as.png
@@ -314,7 +314,7 @@ continuación.
 Al crear un nuevo documento aparece automáticamente una nueva *celda*
 editable.  Las celdas de Jupyter pueden servir para diversos
 propósitos, pero por defecto son para introducir programas.  Así que
-escribe en la celda el programa `Hola_Mundo`.  Después pulsa sobre el
+escribe en la celda el programa ``Hola_Mundo``.  Después pulsa sobre el
 botón con el signo de *ejecutar y avanzar* como muestra la figura.
 Alternativamente se puede usar el menú :menuselection:`Cell-->Run
 Cells` o directamente pulsando :kbd:`Mays Intro` (:kbd:`Shift Enter`).
