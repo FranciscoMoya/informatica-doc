@@ -1,4 +1,0 @@
-<svg height="200" width="320">
-  <line stroke="gray" stroke-width="20" x1="150" x2="150" y1="10" y2="150"/>
-  <rect fill="lightblue" height="30" rx="15" ry="15" stroke="gray" stroke-width="1" width="200" x="50" y="150"/>
-</svg>
