@@ -115,9 +115,11 @@ function buildProg() {
 function unittest(elem) {
     if (elem.length == 0)
 	return '\ndef test__():\n return [1,1]';
-    return '\ntry:\n Test, unittest, TestCase, TestCaseGui' +
-        '\n raise SystemError("No envies pruebas con tu entrega")' +
-        '\nexcept NameError: pass' + 
+    return 
+        '\nfor n in ["Test","unittest","TestCase","TestCaseGui"]:' +
+        '\n try:\n  eval(n)' +
+        '\n  raise SystemError("No incluyas pruebas ({})".format(n))' +
+        '\n except NameError: pass' + 
         '\nfrom unittest.gui import TestCaseGui\n' + 
 	'from unittest import TestCase\n' + 
 	elem.html() +
