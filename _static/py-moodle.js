@@ -117,9 +117,8 @@ function unittest(elem) {
 	return '\ndef test__():\n return [1,1]';
     return 
         '\nfor n in ["Test","unittest","TestCase","TestCaseGui"]:' +
-        '\n try:\n  eval(n)' +
+        '\n if n in globals():' +
         '\n  raise SystemError("No incluyas pruebas ({})".format(n))' +
-        '\n except NameError: pass' + 
         '\nfrom unittest.gui import TestCaseGui\n' + 
 	'from unittest import TestCase\n' + 
 	elem.html() +

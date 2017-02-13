@@ -5,9 +5,10 @@ Prueba y depuración de software
 Casos de prueba
 ---------------
 
-Las pruebas que se pasan en los ejercicios del laboratorio pueden servir
-de ejemplo para probar tus propios programas. Vemos como ejemplo el
-primer ejercicio del primer bloque.
+Las pruebas que se pasan automáticamente en los ejercicios del
+laboratorio pueden servir de ejemplo para ayudarte a probar tus
+propios programas. Vemos como ejemplo el primer ejercicio del primer
+bloque.
 
 .. activecode:: correo-electronico
     :nocodelens:
