@@ -1,4 +1,15 @@
+<<<<<<< Updated upstream
 ### Manos a la obra
+=======
+### Ponte a programar
+
+Hasta ahora los ejercicios no tenian´dificultad alguna.  No era preciso dividir el problema.  Queramos´que 
+
+Sin embargo habr
+
+Buscar texto
+Escribe una función `buscar_texto` que devuelva el número de veces que aparece la cadena que se pasa como segundo argumento en la cadena que se pasa como primer argumento. Por ejemplo `buscar_texto('No por mucho madrugar amanece mas temprano', 'ma')` debe devolver 3.
+>>>>>>> Stashed changes
 
 Hasta ahora los programas que te hemos propuesto eran muy simples.
 Tenían como propósito familiarizarse con las construcciones del
