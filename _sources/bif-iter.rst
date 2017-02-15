@@ -113,11 +113,15 @@ Veamos unos ejemplos:
 
 -  Imprimir por pantalla si un número *x* es par o impar.
 
-   .. activecode:: numero-par-o-impar
+   .. activecode:: es-par
+      :nocodelens:
 
       def es_par(n):
           return n % 2 == 0
-    
+
+   .. activecode:: numero-par-o-impar
+      :include: es-par
+
       x = 122
       if es_par(x):
           print(x, 'es par')
@@ -237,7 +241,7 @@ expresiones de forma condicional.  En el siguiente ejemplo el valor de
 ``x/2``, en caso contrario ``y`` toma el valor ``x``.
 
 .. activecode:: ejemplo-op-ternario
-   :include: define-x-y-z
+   :include: define-x-y-z, es-par
 
    x = 124
    y = x/2 if es_par(x) else x

@@ -61,9 +61,9 @@ matriz (empezando en cero).
 
 Definir la función `inv_matriz(M)` que devuelve la matriz inversa de
 la que se pasa como argumento y la lista de operaciones que se deben
-aplicar sobre la matriz *M* para obtener la matriz inversa.  Debe
-utilizar el método de Gauss-Jordan y las operaciones descritas en el
-ejercicio anterior.
+aplicar sobre la matriz identidad del mismo rango para obtener la
+matriz inversa.  Debe utilizar el método de Gauss-Jordan y las
+operaciones descritas en el ejercicio anterior.
 
 ##### Ejemplo de funcionamiento
 
