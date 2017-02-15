@@ -25,7 +25,7 @@
 //    minimum number of tests (asserts) required to submit (0 by default).
 
 
-var code_separator = "\n===='''\n\n";
+var code_separator = "\n==== \n";
 
 function installPythonFacade() {
     var editor = $('div.felement.feditor');
@@ -129,9 +129,9 @@ function unittest(elem) {
 function updateSubmittedText(passed, failed) {
     var prog = $('#code').val(),
         out = $('#output').text(),
-        header = "''' " + $("input[name=userid]").val() +
+        header = $("input[name=userid]").val() +
                  " (" + passed.toString() + "/" + failed.toString() + ")\n\n",
-        doc = header + out + code_separator + prog;
+        doc = "<pre>" + header + out + code_separator + prog + code_separator + "</pre>";
     $('#id_onlinetext_editor').val(doc);
 }
 
