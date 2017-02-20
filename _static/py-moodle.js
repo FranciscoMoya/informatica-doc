@@ -94,8 +94,11 @@ function testPythonProgram(prog) {
 }
 
 function builtinRead(x) {
-    if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+    if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined) {
+	var div = document.getElementById(x);
+	if (div) return div.textContent;
 	throw "File not found: '" + x + "'";
+    }
     return Sk.builtinFiles["files"][x];
 }
 
