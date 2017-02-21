@@ -108,7 +108,8 @@ function stdOut(text) {
 
 function buildProg() {
     var prog = $('#code').val() + unittest($('#unittest'));
-    return unsanitize(prog)
+    return unsanitize(prog);
+}
 
 function unittest(elem) {
     if (elem.length == 0)
