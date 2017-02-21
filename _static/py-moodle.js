@@ -108,13 +108,7 @@ function stdOut(text) {
 
 function buildProg() {
     var prog = $('#code').val() + unittest($('#unittest'));
-    return prog
-	.replace(new RegExp('&amp;', 'g'), '&')
-	.replace(new RegExp('&lt;', 'g'), '<')
-	.replace(new RegExp('&gt;', 'g'), '>')
-	.replace(new RegExp('&#34;', 'g'), '"')
-	.replace(new RegExp('&#39;', 'g'), "'");
-}
+    return unsanitize(prog)
 
 function unittest(elem) {
     if (elem.length == 0)
@@ -130,8 +124,18 @@ function unittest(elem) {
 	' return [t.numPassed, t.numFailed]'; 
 }
 
+function unsanitize(text) {
+    return text
+	.replace(new RegExp('&amp;', 'g'), '&')
+	.replace(new RegExp('&lt;', 'g'), '<')
+	.replace(new RegExp('&gt;', 'g'), '>')
+	.replace(new RegExp('&#34;', 'g'), '"')
+	.replace(new RegExp('&#39;', 'g'), "'");
+}
+
 function sanitize(text) {
-    return prog
+    /* unsanitize to avoid double encoding */
+    return unsanitize(text)
 	.replace('<', '&lt;')
 	.replace('&', '&amp;')
 	.replace('"', '&#34;')
