@@ -109,6 +109,7 @@ function stdOut(text) {
 function buildProg() {
     var prog = $('#code').val() + unittest($('#unittest'));
     return prog
+	.replace(new RegExp('&amp;', 'g'), '&')
 	.replace(new RegExp('&lt;', 'g'), '<')
 	.replace(new RegExp('&gt;', 'g'), '>')
 	.replace(new RegExp('&#34;', 'g'), '"')
@@ -123,10 +124,18 @@ function unittest(elem) {
         '\n  raise ImportError("No incluyas pruebas ({})".format(n))' +
         '\nfrom unittest.gui import TestCaseGui\n' + 
 	'from unittest import TestCase\n' + 
-	elem.html() +
+	elem.text() +
 	'\ndef test__():\n' +
 	' t=Test()\n t.main()\n' +
 	' return [t.numPassed, t.numFailed]'; 
+}
+
+function sanitize(text) {
+    return prog
+	.replace('<', '&lt;')
+	.replace('&', '&amp;')
+	.replace('"', '&#34;')
+	.replace("'", '&#39;');
 }
 
 function updateSubmittedText(passed, failed) {
@@ -134,8 +143,8 @@ function updateSubmittedText(passed, failed) {
         out = $('#output').text(),
         header = $("input[name=userid]").val() +
                  " (" + passed.toString() + "/" + failed.toString() + ")\n\n",
-        doc = "<pre>" + header + out + code_separator + prog + code_separator + "</pre>";
-    $('#id_onlinetext_editor').val(doc);
+        doc = header + out + code_separator + prog + code_separator;
+    $('#id_onlinetext_editor').val('<pre>' + sanitize(doc) + '</pre>');
 }
 
 function getSubmittedCode() {
