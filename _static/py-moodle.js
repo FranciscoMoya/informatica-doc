@@ -25,7 +25,7 @@
 //    minimum number of tests (asserts) required to submit (0 by default).
 
 
-var code_separator = "\n==== \n";
+var code_separator = "\n---- \n==== \n";
 
 function installPythonFacade() {
     var editor = $('div.felement.feditor');
@@ -35,7 +35,7 @@ function installPythonFacade() {
     editor.after('<div style="float:right; background-color:#FFF;">' +
                  '<input type="checkbox" id="python3" checked>Python 3</div>' + 
 	         '<textarea rows="7" style="width:97%;font-family:monospace;"' +
-                 ' id="code">' + getSubmittedCode() + '</textarea>' +
+                 ' id="code">' + sanitize(getSubmittedCode()) + '</textarea>' +
 		 '<div id="status"></div>' +
 		 '<div id="canvas"></div>' + 
 	         '<div id="test"><pre id="output"></pre></div>');
@@ -103,7 +103,7 @@ function builtinRead(x) {
 }
 
 function stdOut(text) {
-    $('#output').append(text);
+    $('#output').append(sanitize(text));
 }
 
 function buildProg() {
@@ -148,8 +148,8 @@ function updateSubmittedText(passed, failed) {
         out = $('#output').text(),
         header = $("input[name=userid]").val() +
                  " (" + passed.toString() + "/" + failed.toString() + ")\n\n",
-        doc = header + out + code_separator + prog + code_separator;
-    $('#id_onlinetext_editor').val('<pre>' + sanitize(doc) + '</pre>');
+        doc = '<pre>' + header + out + code_separator + prog + code_separator + '</pre>';
+    $('#id_onlinetext_editor').val(sanitize(doc));
 }
 
 function getSubmittedCode() {
