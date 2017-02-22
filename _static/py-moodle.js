@@ -35,11 +35,12 @@ function installPythonFacade() {
     editor.after('<div style="float:right; background-color:#FFF;">' +
                  '<input type="checkbox" id="python3" checked>Python 3</div>' + 
 	         '<textarea rows="7" style="width:97%;font-family:monospace;"' +
-                 ' id="code">' + sanitize(getSubmittedCode()) + '</textarea>' +
+                 ' id="code">Leyendo entrega...</textarea>' +
 		 '<div id="status"></div>' +
 		 '<div id="canvas"></div>' + 
 	         '<div id="test"><pre id="output"></pre></div>');
     $('#mform1').submit(testAndSubmitPythonProgram.bind(null,$));
+    $('#code').val(getSubmittedCode());
 }
 
 function testAndSubmitPythonProgram($, e) {
@@ -144,17 +145,19 @@ function sanitize(text) {
 }
 
 function updateSubmittedText(passed, failed) {
+    /* submitted text must be able to be embedded into HTML elements */
     var prog = $('#code').val(),
         out = $('#output').text(),
         header = $("input[name=userid]").val() +
                  " (" + passed.toString() + "/" + failed.toString() + ")\n\n",
-        doc = '<pre>' + header + out + code_separator + prog + code_separator + '</pre>';
-    $('#id_onlinetext_editor').val(sanitize(doc));
+        doc = header + out + code_separator + prog + code_separator;
+    $('#id_onlinetext_editor').val('<pre>' + sanitize(doc) + '</pre>');
 }
 
 function getSubmittedCode() {
     var code = $('#id_onlinetext_editor').val().split(code_separator);
-    return code.length > 1? code[1]: code[0];
+    var prog = code.length > 1? code[1]: code[0];
+    return unsanitize(prog.replace('<pre>','').replace('</pre>',''));
 }
 
 function isPython3Source() {
