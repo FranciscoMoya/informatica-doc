@@ -137,10 +137,10 @@ function unsanitize(text) {
 function sanitize(text) {
     /* unsanitize to avoid double encoding */
     return unsanitize(text)
-	.replace('<', '&lt;')
-	.replace('&', '&amp;')
-	.replace('"', '&#34;')
-	.replace("'", '&#39;');
+	.replace(new RegExp('<', 'g'), '&lt;')
+	.replace(new RegExp('&', 'g'), '&amp;')
+	.replace(new RegExp('"', 'g'), '&#34;')
+	.replace(new RegExp("'", 'g'), '&#39;');
 }
 
 function updateSubmittedText(passed, failed) {
