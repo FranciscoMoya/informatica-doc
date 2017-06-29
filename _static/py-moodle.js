@@ -43,7 +43,7 @@ function installPythonFacade() {
 		 '<div id="status"></div>' +
 		 '<div id="canvas"></div>' + 
 	         '<div id="test"><pre id="output"></pre></div>');
-    $('#mform1').show().submit(testAndSubmitPythonProgram.bind(null,$));
+    $('#mform1').submit(testAndSubmitPythonProgram.bind(null,$));
     $('#code').val(getSubmittedCode());
 }
 
@@ -183,19 +183,5 @@ function loadJS (url, success){
     scriptTag.onreadystatechange = success;
     document.head.appendChild(scriptTag);
 };
-
-function hideFormAndPreventSubmits(form){
-    form.addEventListener('submit', function(e){
-	e.preventDefault();
-    });
-    form.style.display = 'none';
-}
-
-// In case jquery does not get loaded at least inhibit submission
-document.addEventListener && document.addEventListener('DOMContentLoaded', function(event) {
-    event.target.removeEventListener(event.type, arguments.callee);
-    var form = document.getElementById('mform1');
-    form && hideFormAndPreventSubmits(form);
-});
 
 $(document).ready(installPythonFacade);
