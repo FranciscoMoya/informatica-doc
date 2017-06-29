@@ -176,12 +176,4 @@ function minPassed() {
     return parseInt(f.text(), 10);
 }
 
-function loadJS (url, success){
-    var scriptTag = document.createElement('script');
-    scriptTag.src = url;
-    scriptTag.onload = success;
-    scriptTag.onreadystatechange = success;
-    document.head.appendChild(scriptTag);
-};
-
 $(document).ready(installPythonFacade);
