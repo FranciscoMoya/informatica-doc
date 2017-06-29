@@ -294,12 +294,14 @@ varios de los siguientes recursos:
    complementarios, pero también pueden ser vídeos o artículos
    disponibles en Internet.
 
-Es muy conveniente comprobar frecuentemente la documentación disponible
-en el Campus Virtual de la UCLM, sobre todo el día antes de cada clase y
-cuando así se diga en las clases. Todas aquellas personas que no pueden
-asistir con regularidad a las clases deberían ver el video
-correspondiente a cada clase (que se publicará un día después de a
-clase) para un seguimiento óptimo de la asignatura.
+Es muy conveniente comprobar frecuentemente la documentación
+disponible en el Campus Virtual de la UCLM, sobre todo el día antes de
+cada clase y cuando así se diga en las clases. Todas aquellas personas
+que no pueden asistir con regularidad a las clases deberían ver el
+video correspondiente a cada clase [#]_, si está disponible, para un
+seguimiento óptimo de la asignatura.
+
+.. [#] Estamos en proceso de grabación de las clases en vídeo. Es posible que algunas clases no estén todavía disponibles. Comprueba el progreso en nuestro `canal de YouTube <https://www.youtube.com/channel/UCMvJ1Uyt9J9PQlrUqOwyYDg>`_.
 
 Trabajo en el laboratorio
 ~~~~~~~~~~~~~~~~~~~~~~~~~

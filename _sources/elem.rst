@@ -33,9 +33,9 @@ números, o los nombres de las variables son expresiones primitivas.
 Las sentencias de asignación o las sentencias en las que simplemente
 llamábamos a una función son sentencias primitivas.
 
-La :term:`sentencia *if*`, o el :term:`bucle *while*` son formas de
+La :term:`sentencia if`, o el :term:`bucle while` son formas de
 combinar sentencias que se ejecutan en unos casos pero no en otros.
-El conjunto de la :term:`sentencia *if*` junto a todas las sentencias
+El conjunto de la :term:`sentencia if` junto a todas las sentencias
 indentadas después de la condición se comportan como una única
 sentencia compuesta.  También las expresiones que combinan varias
 expresiones primitivas con la ayuda de operadores son expresiones
@@ -112,7 +112,7 @@ llamada decimos que la función ``max`` es llamada con los argumentos
 7.5 y 9.5 y devuelve el valor 9.5.
 
 El orden de los argumentos en una expresión de llamada importa.  Por
-ejemplo, la función pow eleva su primer argumento a la potencia
+ejemplo, la función ``pow`` eleva su primer argumento a la potencia
 indicada en su segundo argumento.
 
 .. activecode:: orden-argumentos-importa
@@ -133,7 +133,7 @@ Los operadores aritméticos también podemos verlos como funciones.
 
    from operator import add, sub, mul, div
 
-Lo siguiente es un ejemplo de llamada al operador ``+`` (suma) usando
+Lo siguiente es un ejemplo de llamada al ``operador +`` (suma) usando
 notación de llamada a función.
 
 .. activecode:: suma-con-funcion
@@ -143,12 +143,17 @@ notación de llamada a función.
    print(add(1,3))
 
 
+Como puedes ver las expresiones aritméticas pueden escribirse
+indistintamente con una notación infija (con operadores matemáticos
+normales) o con una notación funcional.  Vamos a analizar brevemente
+la ventaja de esta última aproximación.
+
 Notación funcional
 ~~~~~~~~~~~~~~~~~~
 
 La notación funcional tiene una serie de ventajas:
 
--  Primero se extiende de forma natural a cualquier número de
+-  Primero, se extiende de forma natural a cualquier número de
    argumentos.
 
    .. activecode:: max-n-argumentos
@@ -156,7 +161,7 @@ La notación funcional tiene una serie de ventajas:
 
       print(max(1,-2,3,-4))
 
--  Segundo se extiende fácilmente a expresiones anidadas, donde los
+-  Segundo, se extiende fácilmente a expresiones anidadas, donde los
    elementos son a su vez expresiones compuestas. La estructura del
    anidamiento es completamente explícita, a diferencia de las
    expresiones infijas compuestas.
@@ -179,6 +184,12 @@ La notación funcional tiene una serie de ventajas:
 
       from operator import add, sub, mul
       print(mul(add(2,mul(4, 6)), add(3, 5)))
+
+No tomes ésto como una indicación para usar siempre la notación
+funcional.  Usa la que represente de forma más natural lo que quieres
+expresar.  Pero ten en cuenta las ventajas de las funciones, porque
+van a ser el mecanismo fundamental que te permitirá construir
+programas grandes.
 
 
 Tipos de datos en Python
@@ -208,7 +219,7 @@ texto.
    print(type(c), c)
 
 El tipo de la expresión resultante de una suma de enteros es
-``'int'``. Es decir, otro entero.
+``<class 'int'>``. Es decir, otro entero.
 
 .. activecode:: ejemplo-enteros-hidden
    :nocanvas:
@@ -227,6 +238,12 @@ El tipo de la expresión resultante de una suma de enteros es
 El tipo de una comparación es ``<class 'bool'>``.  Corresponde a un
 tipo *booleano*, que solo puede tomar dos valores: ``True``
 (verdadero) y ``False`` (falso).
+
+.. tip:: Fíjate bien en cómo se escribe ``True`` y ``False``. La
+         primera letra en mayúscula y sin utilizar comillas.  Si
+         escribes ``'True'`` lo interpretará como una cadena y si
+         escribes ``true`` no lo entenderá.  Por razones que
+         desconozco ésto es una fuente errores frecuente.
 
 Algunas veces es posible combinar operandos de distinto tipo en una
 expresión.
@@ -315,7 +332,21 @@ cúbica:
    def es_raiz_cubica(raiz, num):
       return cubo(raiz) == num
 
-Éste es **conocimiento declarativo**, sabemos hechos matemáticamente
+En este fragmento se definen dos funciones de usuario.  La función
+*cubo* devuelve el cubo de un número que se le pasa como argumento, y
+la función *es_raiz_cubica* devuelve ``True`` si el primer argumento
+es raiz cúbica exacta del número que se pasa como segundo argumento.
+Por ejemplo:
+
+.. activecode:: raiz-cubica-e-exhaustiva
+   :include: raiz-cubica-entera
+
+   x = 3
+   print('El cubo de', x, 'es', cubo(x))
+   if es_raiz_cubica(x, cubo(x)):
+       print('Funciona, porque la raiz cúbica de', cubo(x), 'es', x)
+
+Ésto es **conocimiento declarativo**, sabemos hechos matemáticamente
 ciertos porque se derivan de definiciones y axiomas. Pero este
 conocimiento no nos permite por sí solo encontrar una solución a
 nuestro problema, un método para encontrar la raiz cuadrada de un
@@ -335,15 +366,17 @@ exhaustiva`.
            n = n + 1
        return n
 
-El método que hemos utilizado es la **:term:`enumeración exhaustiva`**
+El método que hemos utilizado es la :term:`enumeración exhaustiva`
 de todos los números hasta encontrar la respuesta correcta. Los
 ordenadores son increíblemente rápidos y muchas veces este método
 puede generar una respuesta en un tiempo pequeño.
 
-La :term:`enumeración exhaustiva` es un método muy sencillo de
-implementar, pero no siempre es utilizable. En muchas ocasiones el
-número de posibles respuestas es tan elevado que no podemos
-enumerarlas todas en un tiempo razonable.
+.. tip::
+
+   La **enumeración exhaustiva** es un método muy sencillo de
+   implementar, pero no siempre es utilizable. En muchas ocasiones el
+   número de posibles respuestas es tan elevado que no podemos
+   enumerarlas todas en un tiempo razonable.
 
 Examina el ejemplo anterior para distintos valores. Por ejemplo:
 

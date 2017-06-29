@@ -22,8 +22,12 @@
 //    either class Test(TestCase) or class Test(TestCaseGui).
 //
 // 3. Optionally define a container (em, span) with id minpass containing the
-//    minimum number of tests (asserts) required to submit (0 by default).
+//    minimum number of tests (asserts) required to submit.
 
+// Note: minpass has a different meaning when using TestCase (number
+// of test_ methods successfully executed) or TestCaseGui (number of
+// asserts successfully passed). This is an issue related to Skulpt
+// unittest.gui
 
 var code_separator = "\n---- \n==== \n";
 
@@ -180,14 +184,17 @@ function loadJS (url, success){
     document.head.appendChild(scriptTag);
 };
 
-// There is an incompatibility between jQuery 3.1 and
-// https://campusvirtual.uclm.es/lib/requirejs.php/1476343773/core/first.js
-// therefore we stay at 2.2
-loadJS('https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', function(){
-    loadJS('https://www.promisejs.org/polyfills/promise-7.0.4.min.js', function(){});
-    var skulpt_base = 'https://rawgit.com/skulpt/skulpt-dist/master/';
-    loadJS(skulpt_base + 'skulpt.min.js', function() {
-	loadJS(skulpt_base + 'skulpt-stdlib.js', function(){});
+function hideFormAndPreventSubmits(form){
+    form.addEventListener('submit', function(e){
+	e.preventDefault();
     });
-    $(document).ready(installPythonFacade);
+    form.style.display = 'none';
+}
+
+// In case jquery does not get loaded at least inhibit submission
+document.addEventListener && document.addEventListener('DOMContentLoaded', function(event) {
+    var form = document.getElementById('mform1');
+    form && hideFormAndPreventSubmits(form);
 });
+
+$(document).ready(installPythonFacade);

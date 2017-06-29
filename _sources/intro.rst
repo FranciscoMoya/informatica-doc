@@ -31,6 +31,55 @@ que haga lo que tú quieres.
 Intérpretes y compiladores
 --------------------------
 
+El computador es una máquina bastante simple. Ejecuta de manera
+secuencial una serie de instrucciones elementales. Solo sabe ejecutar
+un repertorio limitado de operaciones muy sencillas que se denomina
+:term:`lenguaje máquina`. Sin embargo nadie programa los ordenadores
+utilizando directamente lenguaje máquina.  Eso sería de locos,
+complicaría incluso entender lo que hace un programa.
+
+En la actualidad los computadores se programan usando un
+:term:`lenguaje de alto nivel`. Se trata de un lenguaje más abstracto,
+fácil de entender, y muy regular.  Los programas escritos en uno de
+estos lenguajes deben ser primero traducidos a *lenguaje
+máquina*. Esta traducción puede realizarse de dos formas.
+
+1. En los :term:`lenguajes compilados` el programa es traducido
+   previamente a lenguaje máquina antes de su ejecución, empleando un
+   programa especial denominado :term:`compilador`.  El resultado
+   puede ejecutarse directamente, sin necesidad de que vuelva a
+   producirse un proceso de traducción.
+
+2. En los :term:`lenguajes interpretados` el programa no se ejecuta
+   directamente.  En su lugar se ejecuta otro programa, denominado
+   :term:`intérprete`, que va leyendo el programa y ejecutando las
+   instrucciones máquina correspondientes a cada fragmento
+   identificado.
+
+Cada una de estas opciones tiene sus ventajas y sus
+inconvenientes. 
+
+Los lenguajes compilados requieren un paso previo de *compilación*
+para poder ejecutar, pero esto solo se realiza una vez y el resultado
+puede ser optimizado globalmente. Sin embargo el resultado de la
+compilación (programa ejecutable) solo es válido para ordenadores que
+entienden el lenguaje máquina que ha generado, es decir, para una
+:term:`arquitectura de repertorio de instrucciones`.
+
+Por contra un intérprete no necesita este paso previo, por lo que el
+programa es válido para cualquier arquitectura.  Sin embargo la
+traducción a lenguaje máquina se produce en cada ejecución, por lo que
+suelen ser sensiblemente más lentos.
+
+.. warning:: En la actualidad la mayoría de los intérpretes utilizan
+             una técnica híbrida entre el compilador y el intérprete
+             clásico. Por un lado el intérprete realiza un
+             procesamiento previo y almacena una versión
+             extremadamente simplificada del programa que no llega a
+             ser lenguaje máquina pero se parece (*bytecode*). Por
+             otro lado suelen utilizar una técnica conocida como
+             compilación *just in time*.  El programa se traduce a
+             lenguaje máquina la primera vez que se ejecuta
 
 
 Instalación del software
