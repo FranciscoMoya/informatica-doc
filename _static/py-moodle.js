@@ -193,6 +193,7 @@ function hideFormAndPreventSubmits(form){
 
 // In case jquery does not get loaded at least inhibit submission
 document.addEventListener && document.addEventListener('DOMContentLoaded', function(event) {
+    event.target.removeEventListener(event.type, arguments.callee);
     var form = document.getElementById('mform1');
     form && hideFormAndPreventSubmits(form);
 });
