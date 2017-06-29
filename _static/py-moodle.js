@@ -43,7 +43,7 @@ function installPythonFacade() {
 		 '<div id="status"></div>' +
 		 '<div id="canvas"></div>' + 
 	         '<div id="test"><pre id="output"></pre></div>');
-    $('#mform1').submit(testAndSubmitPythonProgram.bind(null,$));
+    $('#mform1').show().submit(testAndSubmitPythonProgram.bind(null,$));
     $('#code').val(getSubmittedCode());
 }
 
