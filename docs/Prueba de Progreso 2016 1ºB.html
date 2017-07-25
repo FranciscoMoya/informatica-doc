@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>39. Polígonos regulares</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/livecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="43. Ley de Benford" href="Prueba de Progreso 2016 1ºC.html" />
+    <link rel="prev" title="35. Distancia Minkowski" href="Prueba de Progreso 2016 1ºA.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'CS101';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "py";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'informatica';
+  eBookConfig.runestone_version = '2.7.15';
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head>
+  <body role="document">
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="index.html">Informática</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/CS101/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/CS101/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=CS101&page=Prueba de Progreso 2016 1ºB'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">39. Polígonos regulares</a><ul>
+<li><a class="reference internal" href="#ejemplo-de-funcionamiento">39.1. Ejemplo de funcionamiento:</a></li>
+<li><a class="reference internal" href="#solucion">39.2. Solución</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#estrella-cirscunscrita">40. Estrella cirscunscrita</a><ul>
+<li><a class="reference internal" href="#id3">40.1. Ejemplo de funcionamiento</a></li>
+<li><a class="reference internal" href="#id4">40.2. Solución</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#mosaicos">41. Mosaicos</a><ul>
+<li><a class="reference internal" href="#id5">41.1. Ejemplo de funcionamiento:</a></li>
+<li><a class="reference internal" href="#id6">41.2. Solución</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#curvas-fractales">42. Curvas fractales</a><ul>
+<li><a class="reference internal" href="#id7">42.1. Ejemplo de funcionamiento</a></li>
+<li><a class="reference internal" href="#id8">42.2. Solución</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - 35. Distancia Minkowski" data-toggle="tooltip">
+    <a href="Prueba de Progreso 2016 1ºA.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - 43. Ley de Benford' data-toggle="tooltip" >
+    <a href="Prueba de Progreso 2016 1ºC.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li>
+  <a href="_sources/Prueba de Progreso 2016 1ºB.rst.txt"
+     rel="nofollow">Source</a></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="poligonos-regulares">
+<h1>39. Polígonos regulares<a class="headerlink" href="#poligonos-regulares" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><em>Asume que dispones de las siguientes funciones:</em></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="58%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Función</th>
+<th class="head">Descripción</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a href="#id1"><span class="problematic" id="id2">``</span></a>avanzar
+(puntos)`
+`</td>
+<td>Avanza
+pintando una
+línea el
+número de
+puntos que
+indica el
+argumento.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">girar(a</span>
+<span class="pre">ngulo)</span></code></td>
+<td>Gira los
+radianes que
+indica el
+argumento.
+Positivo
+indica giro a
+la derecha,
+negativo
+indica giro a
+la izquierda.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">comenza</span>
+<span class="pre">r()</span></code></td>
+<td>Sitúa el
+lápiz en el
+punto de
+partida sin
+pintar nada.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">saltar(</span>
+<span class="pre">puntos)</span></code></td>
+<td>Avanza sin
+pintar el
+número de
+puntos que
+indica el
+argumento.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Define una función poligono con dos argumentos que indican el número de
+lados y la longitud del lado respectivamente. La función debe dibujar un
+polígono regular con el número de lados indicados. Inicialmente el lápiz
+está orientado hacia la derecha.</em></p>
+<div class="section" id="ejemplo-de-funcionamiento">
+<h2>39.1. Ejemplo de funcionamiento:<a class="headerlink" href="#ejemplo-de-funcionamiento" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">poligono</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure" id="id9">
+<img alt="Pentágono" src="https://cdn.rawgit.com/FranciscoMoya/informatica/master/notebooks/poligono_5.svg" /><p class="caption"><span class="caption-text">Pentágono</span></p>
+</div>
+</div>
+<div class="section" id="solucion">
+<h2>39.2. Solución<a class="headerlink" href="#solucion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Primero copiamos la implementación de las funciones de dibujo.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">SVG</span><span class="p">,</span><span class="n">display</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span>
+
+<span class="k">def</span> <span class="nf">avanzar</span><span class="p">(</span><span class="n">puntos</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">current_pos</span><span class="p">,</span> <span class="n">current_drawing</span>
+    <span class="n">pos1</span> <span class="o">=</span> <span class="n">current_pos</span>
+    <span class="n">saltar</span><span class="p">(</span><span class="n">puntos</span><span class="p">)</span>
+    <span class="n">current_drawing</span> <span class="o">+=</span> <span class="n">line</span><span class="p">(</span><span class="n">pos1</span><span class="p">,</span> <span class="n">current_pos</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">saltar</span><span class="p">(</span><span class="n">puntos</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">current_pos</span><span class="p">,</span> <span class="n">current_angle</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">current_pos</span>
+    <span class="n">current_pos</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">puntos</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">current_angle</span><span class="p">),</span> <span class="n">y</span> <span class="o">+</span> <span class="n">puntos</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">current_angle</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">girar</span><span class="p">(</span><span class="n">radianes</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">current_angle</span>
+    <span class="n">current_angle</span> <span class="o">+=</span> <span class="n">radianes</span>
+
+<span class="k">def</span> <span class="nf">goto</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">current_pos</span>
+    <span class="n">current_pos</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">comenzar</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">current_pos</span><span class="p">,</span> <span class="n">current_angle</span>
+    <span class="n">current_pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">current_angle</span> <span class="o">=</span> <span class="mf">0.</span>
+
+<span class="k">def</span> <span class="nf">limpiar</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">current_drawing</span>
+    <span class="n">current_drawing</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">comenzar</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">dibujo</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">current_drawing</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">SVG</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;&lt;svg width=&quot;200&quot; height=&quot;200&quot; viewBox=&quot;0 0 200 200&quot;</span>
+<span class="s1">                      xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;</span><span class="si">{}</span><span class="s1">&lt;/svg&gt;&#39;&#39;&#39;</span>\
+               <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">current_drawing</span><span class="p">))</span>
+    <span class="n">limpiar</span><span class="p">()</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">line</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">):</span>
+    <span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">),</span> <span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span> <span class="o">=</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span>
+    <span class="k">return</span> <span class="s1">&#39;&#39;&#39;&lt;line x1=&quot;</span><span class="si">{}</span><span class="s1">&quot; y1=&quot;</span><span class="si">{}</span><span class="s1">&quot;</span>
+<span class="s1">                    x2=&quot;</span><span class="si">{}</span><span class="s1">&quot; y2=&quot;</span><span class="si">{}</span><span class="s1">&quot;</span>
+<span class="s1">                    stroke-width=&quot;1&quot; stroke=&quot;black&quot;/&gt;&#39;&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span><span class="p">)</span>
+
+<span class="n">limpiar</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>La función para crear un polígono es un simple bucle.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">pi</span>
+
+<span class="k">def</span> <span class="nf">poligono</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">lado</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">avanzar</span><span class="p">(</span><span class="n">lado</span><span class="p">)</span>
+        <span class="n">girar</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Vamos a probarla.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">poligono</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">40</span><span class="p">)</span>
+<span class="n">dibujo</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="estrella-cirscunscrita">
+<h1>40. Estrella cirscunscrita<a class="headerlink" href="#estrella-cirscunscrita" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><em>Siguiendo con el ejemplo del polígono define una función estrella con
+dos argumentos (número de lados y longitud de cada segmento) que dibuja
+una estrella circunscrita en el polígono, como muestran los ejemplos a
+continuación. Observa que se trata de la estrella resultante de saltar
+uno de cada dos vértices. Observa también que cuando el número de lados
+es par la estrella está compuesta por dos líneas poligonales de la mitad
+de lados.</em></p>
+<p><em>Si solo funciona con número impar de lados se asumirá correcto pero se
+descontará un 20% de la calificación.</em></p>
+<div class="section" id="id3">
+<h2>40.1. Ejemplo de funcionamiento<a class="headerlink" href="#id3" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">estrella</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">150</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure" id="id10">
+<img alt="Pentagrama" src="https://cdn.rawgit.com/FranciscoMoya/informatica/master/notebooks/estrella_5.svg" /><p class="caption"><span class="caption-text">Pentagrama</span></p>
+</div>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">estrella</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">150</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure" id="id11">
+<img alt="Pentagrama" src="https://cdn.rawgit.com/FranciscoMoya/informatica/master/notebooks/estrella_6.svg" /><p class="caption"><span class="caption-text">Pentagrama</span></p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>40.2. Solución<a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La estrella con n impar es igual ue el polígono, tan solo cambia el
+ángulo. Vamos a extraer la funcionalidad común en una función
+<code class="docutils literal"><span class="pre">poligonal</span></code>. El caso impar se descompone en dos líneas poligonales no
+conectadas.</p>
+<div class="figure" id="id12">
+<img alt="Ángulo de giro en estrella" src="estrella-circunscrita.png" />
+<p class="caption"><span class="caption-text">Ángulo de giro en estrella</span></p>
+</div>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">estrella</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">lado</span><span class="p">):</span>
+    <span class="n">angulo</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="n">n</span>
+    <span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">poligonal</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">lado</span><span class="p">,</span> <span class="n">angulo</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="n">poligonal</span><span class="p">(</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">,</span> <span class="n">lado</span><span class="p">,</span> <span class="n">angulo</span><span class="p">)</span>
+    <span class="n">siguiente_vertice</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">lado</span><span class="p">)</span>
+    <span class="n">poligonal</span><span class="p">(</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">,</span> <span class="n">lado</span><span class="p">,</span> <span class="n">angulo</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">poligonal</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">lado</span><span class="p">,</span><span class="n">angulo</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">avanzar</span><span class="p">(</span><span class="n">lado</span><span class="p">)</span>
+        <span class="n">girar</span><span class="p">(</span><span class="n">angulo</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>La parte más difícil es cómo viajar hasta el siguiente vértice una vez
+que hemos terminado de dibujar la primera línea poligonal de las
+estrellas con n par. Hay que hacer un poco de razonamiento geométrico
+para calcular el giro y salto necesario. Basta calcular los ángulos
+<span class="math">\(\alpha\)</span> y <span class="math">\(\beta\)</span> de la figura y el ángulo de giro será
+simplemente la semidiferencia de ambos.</p>
+<div class="figure" id="id13">
+<img alt="Ángulos en caso de n par" src="caso-par.png" />
+<p class="caption"><span class="caption-text">Ángulos en caso de n par</span></p>
+</div>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">siguiente_vertice</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">lado</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">pi</span><span class="o">/</span><span class="n">n</span>
+    <span class="n">girar</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">saltar</span><span class="p">(</span><span class="n">lado</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="n">cos</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+    <span class="n">girar</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Y la probamos</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">estrella</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">dibujo</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">estrella</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">dibujo</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="mosaicos">
+<h1>41. Mosaicos<a class="headerlink" href="#mosaicos" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><em>Suponiendo que dispones de la función poligono a la que se refiere el
+primer ejercicio y las funciones de dibujo descritas en el mismo
+ejercicio definir una función rosa que dibuja polígonos en cada lado de
+otro polígono central formando una rosa como la de la figura.</em></p>
+<p><em>La función rosa debe tener dos argumentos similares a los de poligono,
+es decir, el número de lados y el tamaño del lado.</em></p>
+<div class="section" id="id5">
+<h2>41.1. Ejemplo de funcionamiento:<a class="headerlink" href="#id5" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rosa</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure" id="id14">
+<img alt="Rosa pentagonal" src="https://cdn.rawgit.com/FranciscoMoya/informatica/master/notebooks/rosa_5.svg" /><p class="caption"><span class="caption-text">Rosa pentagonal</span></p>
+</div>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rosa</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure" id="id15">
+<img alt="Rosa heptagonal" src="https://cdn.rawgit.com/FranciscoMoya/informatica/master/notebooks/rosa_7.svg" /><p class="caption"><span class="caption-text">Rosa heptagonal</span></p>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>41.2. Solución<a class="headerlink" href="#id6" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El problema es completamente análogo a la función que construye el
+polígono, pero en lugar de avanzar, simplemente llama a <code class="docutils literal"><span class="pre">poligono</span></code> y
+avanza un lado, y el giro lo realiza en el otro sentido.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rosa</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">lado</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">poligono</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">lado</span><span class="p">)</span>
+        <span class="n">saltar</span><span class="p">(</span><span class="n">lado</span><span class="p">)</span>
+        <span class="n">girar</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Vamos a probarla.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">rosa</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">dibujo</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="curvas-fractales">
+<h1>42. Curvas fractales<a class="headerlink" href="#curvas-fractales" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><em>El copo de nieve de Koch es una curva fractal muy sencilla de obtener
+con ayuda de una función recursiva.</em></p>
+<p><em>Define una función copo con dos argumentos. El primero es el ancho
+total del copo de nieve (en puntos), el segundo es un índice que limita
+la recursión. La función debe dibujar el copo de Koch con las funciones
+de dibujo descritas en el primer ejercicio.</em></p>
+<div class="section" id="id7">
+<h2>42.1. Ejemplo de funcionamiento<a class="headerlink" href="#id7" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><em>El dibujo siguiente muestra el resultado de ``copo(300,n)`` con valores
+para n de 0, 1, 2, 4.</em></p>
+<div class="figure" id="id16">
+<img alt="Copo de Koch para n=0,1,2,4" src="https://cdn.rawgit.com/FranciscoMoya/informatica/master/notebooks/copo.svg" /><p class="caption"><span class="caption-text">Copo de Koch para n=0,1,2,4</span></p>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>42.2. Solución<a class="headerlink" href="#id8" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La forma más sencilla es dibujar 3 veces la curva de Koch con distintos
+ángulos.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">pi</span>
+
+<span class="k">def</span> <span class="nf">copo</span><span class="p">(</span><span class="n">lado</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">koch</span><span class="p">(</span><span class="n">lado</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">girar</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">koch</span><span class="p">(</span><span class="n">lado</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">avanzar</span><span class="p">(</span><span class="n">lado</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="k">for</span> <span class="n">angulo</span> <span class="ow">in</span> <span class="p">(</span><span class="o">-</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="n">koch</span><span class="p">(</span><span class="n">lado</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">girar</span><span class="p">(</span><span class="n">angulo</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>A probarla.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">goto</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">copo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">dibujo</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - 35. Distancia Minkowski' data-toggle="tooltip">
+    <a href="Prueba de Progreso 2016 1ºA.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="Prueba de Progreso 2016 1ºA.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - 43. Ley de Benford' data-toggle="tooltip" >
+    <a href="Prueba de Progreso 2016 1ºC.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="Prueba de Progreso 2016 1ºC.html" >Next Section - 43. Ley de Benford</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017 Francisco Moya.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

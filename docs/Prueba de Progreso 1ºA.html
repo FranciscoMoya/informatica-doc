@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>32. Prueba de progreso 1ºA</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/livecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="33. Prueba de progreso 1ºB" href="Prueba de Progreso 1ºB.html" />
+    <link rel="prev" title="31. Procesamiento de XML" href="Procesamiento de XML.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'CS101';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "py";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'informatica';
+  eBookConfig.runestone_version = '2.7.15';
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head>
+  <body role="document">
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="index.html">Informática</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/CS101/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/CS101/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=CS101&page=Prueba de Progreso 1ºA'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">32. Prueba de progreso 1ºA</a><ul>
+<li><a class="reference internal" href="#filtrado-de-senales">32.1. 1. Filtrado de señales</a><ul>
+<li><a class="reference internal" href="#ejemplo-de-funcionamiento">32.1.1. Ejemplo de funcionamiento</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nota-numerica">32.2. 2. Nota numérica</a><ul>
+<li><a class="reference internal" href="#ejemplo-de-uso">32.2.1. Ejemplo de uso</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rubrica-de-evaluacion">32.3. Rúbrica de evaluación</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - 31. Procesamiento de XML" data-toggle="tooltip">
+    <a href="Procesamiento de XML.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - 33. Prueba de progreso 1ºB' data-toggle="tooltip" >
+    <a href="Prueba de Progreso 1ºB.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li>
+  <a href="_sources/Prueba de Progreso 1ºA.rst.txt"
+     rel="nofollow">Source</a></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="prueba-de-progreso-1oa">
+<h1>32. Prueba de progreso 1ºA<a class="headerlink" href="#prueba-de-progreso-1oa" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Lee atentamente el enunciado de la prueba. El enunciado consiste en una
+serie de ejercicios que deben realizarse en un mismo archivo Python.
+Todas las funciones deben definirse en el mismo archivo y no debe
+incuirse ningún fragmento de código de prueba. Las entregas deberán ser
+trabajo original del alumno que realiza la entrega.</p>
+<p>No se permite la comunicación con otras personas durante el examen. Se
+permiten libros, apuntes y búsquedas en Internet.</p>
+<div class="section" id="filtrado-de-senales">
+<h2>32.1. 1. Filtrado de señales<a class="headerlink" href="#filtrado-de-senales" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Dada una señal de tiempo discreto, definida como una secuencia de
+valores reales <span class="math">\(x = \{x_0, x_1, ... x_n\}\)</span> se define la señal de
+salida de un filtro FIR como la secuencia de los valores:</p>
+<div class="math">
+\[y_n = \sum_{k=0}^{N-1} h_k\cdot x_{n-k}\]</div>
+<p>donde <span class="math">\(h_k\)</span> para <span class="math">\(k\in\{0..N-1\}\)</span> son los coeficientes del
+filtro, y <code class="docutils literal"><span class="pre">n</span></code> es e índice del elemento correspondiente.</p>
+<p><strong>Nota: Una señal :math:`u = {u_0, u_1, ... u_{M-1}}` se modela como
+una lista de Python ``u`` con la secuencia de los números reales de la
+señal. Todos los demás elementos se asume que valen 0. Es decir
+:math:`u_k = 0, forall k notin {0..M-1}` siendo :math:`M` el número
+de elementos de ``u``.</strong></p>
+<ol class="arabic">
+<li><p class="first"><em>Definir una función ``fir_elem`` con tres parámetros. El primer
+parámetro es una lista ``h`` que contiene los coeficientes del
+filtro. El segundo parámetro es una lista ``x`` conteniendo una señal
+discreta. El tercer parámetro es un entero ``n`` que corresponde al
+índice del elemento de la señal de salida. La función debe devolver
+el resultado de calcular :math:`y_n` según la fórmula de arriba. Se
+recomienda emplear una función ``elem(u,k)`` que devuelve
+:math:`u_k`, es decir, el elemento k-ésimo de la señal que recibe
+como argumento. Se recuerda que :math:`k` puede estar fuera del rango
+de índices válidos para la lista ``u`` y que en ese caso el valor
+debe ser cero.</em></p>
+</li>
+<li><p class="first"><em>Definir una función ``fir`` con dos parámetros. El primer parámetro
+es una lista ``h`` que contiene los coeficientes del filtro. El
+segundo parámetro es una lista ``x`` conteniendo una señal discreta.
+La función debe devolver la señal de salida del filtro FIR
+correspondiente. Es decir, debe devolver la lista de todos los
+elementos distintos de cero. La longitud de la salida de un filtro
+FIR es :math:`N+M-1` siendo :math:`N` la longitud de ``h`` y
+:math:`M` la longitud de ``x``.</em></p>
+</li>
+<li><p class="first"><a href="#id1"><span class="problematic" id="id2">*</span></a>Una característica interesante de los filtros FIR es que pueden
+tener respuesta de fase lineal, pero para eso los coeficiente de
+<code class="docutils literal"><span class="pre">h</span></code> deben cumplir una condición.</p>
+<div class="math">
+\[ \begin{align}\begin{aligned}h_n = \pm h_{M-1-n}\ \ \ \forall n \in \{0..M-1\}\\Es decir, los coeficientes del fitro deben ser simétricos o\end{aligned}\end{align} \]</div>
+<p>antisimétricos. Según se cumpla la condición con signo positivo o
+negativo, y según el número de elementos de <code class="docutils literal"><span class="pre">h</span></code> sea par o impar,
+los filtros FIR se clasifican en cuatro tipos que se usan para fines
+diferentes. Definir una función <code class="docutils literal"><span class="pre">tipo_fir</span></code> que acepte un argumento
+<code class="docutils literal"><span class="pre">h</span></code> de tipo lista de reales y devuelva un valor entero de acuerdo a
+la siguiente tabla.*</p>
+</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="63%" />
+<col width="22%" />
+<col width="16%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Simetría de los coeficientes</th>
+<th class="head"># Coefs</th>
+<th class="head">Tipo</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><span class="math">\(h(n) = h(M-1-n)\)</span></td>
+<td>Impar</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td><span class="math">\(h(n) = h(M-1-n)\)</span></td>
+<td>Par</td>
+<td>2</td>
+</tr>
+<tr class="row-even"><td><span class="math">\(h(n) = -h(M-1-n)\)</span></td>
+<td>Impar</td>
+<td>3</td>
+</tr>
+<tr class="row-odd"><td><span class="math">\(h(n) = -h(M-1-n)\)</span></td>
+<td>Par</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>Sin simetría</td>
+<td>&#160;</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="ejemplo-de-funcionamiento">
+<h3>32.1.1. Ejemplo de funcionamiento<a class="headerlink" href="#ejemplo-de-funcionamiento" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="mi">10</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<span class="n">h</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="mf">1.</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="mf">1.</span><span class="o">/</span><span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span> <span class="n">fir</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">tipo_fir</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+
+<span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.3333333333333333</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.9999999999999998</span><span class="p">,</span> <span class="mf">2.9999999999999996</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mf">7.999999999999999</span><span class="p">,</span> <span class="mf">5.666666666666666</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<p>El primer ejercicio es aplicar directamente la fórmula con la única
+precaución de usar una función intermediaria para no indexar las listas
+fuera de rango.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">elem</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">u</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">u</span><span class="p">))</span> <span class="k">else</span> <span class="mf">0.</span>
+
+<span class="k">def</span> <span class="nf">fir_elem</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+    <span class="nb">sum</span><span class="o">=</span><span class="mf">0.</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">h</span><span class="p">)):</span>
+        <span class="nb">sum</span> <span class="o">+=</span> <span class="n">elem</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">elem</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="n">k</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">sum</span>
+</pre></div>
+</div>
+<p>El segundo ejercicio es más sencillo aún, basta con usar la función
+desarrollada en el ejercicio anterior en todo el rango de la señal de
+salida.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fir</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">fir_elem</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>También se puede hacer sin <em>list comprehensions</em>.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fir</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fir_elem</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">i</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">y</span>
+</pre></div>
+</div>
+<p>El tercer ejercicio lo podemos hacer con <em>list comprehensions</em> y
+diccionarios. Calculamos los tres parámetros que permiten saber el tipo
+de filtro: si los coeficientes son simétricos, si son antisimétricos, y
+si el número de elementos en par o impar.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tipo_fir</span><span class="p">(</span><span class="n">h</span><span class="p">):</span>
+    <span class="n">M</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+    <span class="n">sim</span> <span class="o">=</span> <span class="nb">all</span><span class="p">([</span><span class="n">h</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">h</span><span class="p">[</span><span class="n">M</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="o">//</span><span class="mi">2</span><span class="p">)])</span>
+    <span class="n">asim</span> <span class="o">=</span> <span class="nb">all</span><span class="p">([</span><span class="n">h</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==-</span><span class="n">h</span><span class="p">[</span><span class="n">M</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="o">//</span><span class="mi">2</span><span class="p">)])</span>
+    <span class="n">par</span> <span class="o">=</span> <span class="p">(</span><span class="n">M</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="p">(</span><span class="kc">True</span><span class="p">,</span><span class="kc">False</span><span class="p">,</span><span class="kc">False</span><span class="p">)</span> <span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+        <span class="p">(</span><span class="kc">True</span><span class="p">,</span><span class="kc">False</span><span class="p">,</span><span class="kc">True</span><span class="p">)</span>  <span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+        <span class="p">(</span><span class="kc">False</span><span class="p">,</span><span class="kc">True</span><span class="p">,</span><span class="kc">False</span><span class="p">)</span> <span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+        <span class="p">(</span><span class="kc">False</span><span class="p">,</span><span class="kc">True</span><span class="p">,</span><span class="kc">True</span><span class="p">)</span>  <span class="p">:</span><span class="mi">4</span><span class="p">,</span>
+        <span class="p">(</span><span class="kc">False</span><span class="p">,</span><span class="kc">False</span><span class="p">,</span><span class="kc">False</span><span class="p">):</span><span class="mi">0</span><span class="p">,</span>
+        <span class="p">(</span><span class="kc">False</span><span class="p">,</span><span class="kc">False</span><span class="p">,</span><span class="kc">True</span><span class="p">)</span> <span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+        <span class="p">}[(</span><span class="n">sim</span><span class="p">,</span><span class="n">asim</span><span class="p">,</span><span class="n">par</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>También se puede hacer con <code class="docutils literal"><span class="pre">if</span></code> y sin <em>list comprehensions</em>.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tipo_fir</span><span class="p">(</span><span class="n">h</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">es_simetrico</span><span class="p">(</span><span class="n">h</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">2</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">h</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">es_antisimetrico</span><span class="p">(</span><span class="n">h</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">4</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">h</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">3</span>
+    <span class="k">return</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">es_simetrico</span><span class="p">(</span><span class="n">h</span><span class="p">):</span>
+    <span class="n">M</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="o">//</span><span class="mi">2</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">h</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">h</span><span class="p">[</span><span class="n">M</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+
+<span class="k">def</span> <span class="nf">es_antisimetrico</span><span class="p">(</span><span class="n">h</span><span class="p">):</span>
+    <span class="n">M</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="o">//</span><span class="mi">2</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">h</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="n">h</span><span class="p">[</span><span class="n">M</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p>Ya solo falta probarlo.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="mi">10</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<span class="n">h</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="mf">1.</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="mf">1.</span><span class="o">/</span><span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fir</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">x</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tipo_fir</span><span class="p">(</span><span class="n">h</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.3333333333333333</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.9999999999999998</span><span class="p">,</span> <span class="mf">2.9999999999999996</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mf">7.999999999999999</span><span class="p">,</span> <span class="mf">5.666666666666666</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="nota-numerica">
+<h2>32.2. 2. Nota numérica<a class="headerlink" href="#nota-numerica" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En muchas becas se calcula la nota media del expediente a partir de las
+notas alfabéticas. Así una nota de <code class="docutils literal"><span class="pre">Matricula</span> <span class="pre">de</span> <span class="pre">honor</span></code> computa como
+un 10.0, un <code class="docutils literal"><span class="pre">Sobresaliente</span></code> computa como un 9.0, un <code class="docutils literal"><span class="pre">Notable</span></code> como
+un 7.5, un <code class="docutils literal"><span class="pre">Aprobado</span></code> como un 5.5 y un <code class="docutils literal"><span class="pre">Suspenso</span></code> como un 3.0.</p>
+<p><em>Define la función ``nota_media`` que calcula la nota media de un
+expediente a partir de sus valores alfabéticos. La función tiene un
+único argumento que es una lista de cadenas de texto, y debe devolver un
+número real con la nota media del expediente de acuerdo a lo descrito en
+el párrafo anterior.</em></p>
+<p><strong>Nota: Fíjate en que las cadenas de texto no llevan tildes y comienzan
+por un letra mayúscula. Deben ser exactamente así:
+``Matricula de honor``, ``Sobresaliente``, ``Notable``, ``Aprobado``,
+``Suspenso``.</strong></p>
+<div class="section" id="ejemplo-de-uso">
+<h3>32.2.1. Ejemplo de uso<a class="headerlink" href="#ejemplo-de-uso" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">expediente</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sobresaliente&#39;</span><span class="p">,</span> <span class="s1">&#39;Notable&#39;</span><span class="p">,</span> <span class="s1">&#39;Notable&#39;</span><span class="p">,</span> <span class="s1">&#39;Aprobado&#39;</span><span class="p">,</span> <span class="s1">&#39;Suspenso&#39;</span><span class="p">]</span>
+<span class="nb">print</span> <span class="n">nota_media</span><span class="p">(</span><span class="n">expediente</span><span class="p">)</span>
+
+<span class="mf">6.5</span>
+</pre></div>
+</div>
+<p>La forma más fácil de hacerlo es con un diccionario.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nota_media</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
+    <span class="nb">sum</span><span class="o">=</span><span class="mf">0.</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">sum</span> <span class="o">+=</span> <span class="n">nota</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">nota</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;Matricula de honor&#39;</span><span class="p">:</span><span class="mf">10.</span><span class="p">,</span>
+        <span class="s1">&#39;Sobresaliente&#39;</span><span class="p">:</span><span class="mf">9.</span><span class="p">,</span>
+        <span class="s1">&#39;Notable&#39;</span><span class="p">:</span><span class="mf">7.5</span><span class="p">,</span>
+        <span class="s1">&#39;Aprobado&#39;</span><span class="p">:</span><span class="mf">5.5</span><span class="p">,</span>
+        <span class="s1">&#39;Suspenso&#39;</span><span class="p">:</span><span class="mi">3</span>
+        <span class="p">}[</span><span class="n">s</span><span class="p">]</span>
+
+<span class="n">expediente</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sobresaliente&#39;</span><span class="p">,</span> <span class="s1">&#39;Notable&#39;</span><span class="p">,</span> <span class="s1">&#39;Notable&#39;</span><span class="p">,</span> <span class="s1">&#39;Aprobado&#39;</span><span class="p">,</span> <span class="s1">&#39;Suspenso&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nota_media</span><span class="p">(</span><span class="n">expediente</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mf">6.5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="rubrica-de-evaluacion">
+<h2>32.3. Rúbrica de evaluación<a class="headerlink" href="#rubrica-de-evaluacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Puntos totales: 10 puntos:</p>
+<ul class="simple">
+<li>1.1 Función <code class="docutils literal"><span class="pre">fir_elem</span></code>: 2.5 puntos</li>
+<li>1.2 Función <code class="docutils literal"><span class="pre">fir</span></code>: 2.5 puntos</li>
+<li>1.3 Función <code class="docutils literal"><span class="pre">tipo_fir</span></code>: 2.5 puntos</li>
+<li>2 Función <code class="docutils literal"><span class="pre">nota_media</span></code>: 2.5 puntos</li>
+</ul>
+<p>Penalizaciones:</p>
+<ul class="simple">
+<li>Errores de sintaxis: 100% de los puntos de la función</li>
+<li>Errores de ejecución (excepciones): 50% de los puntos de la función</li>
+<li>Errores en límites de recorridos: 20% de los puntos de la función</li>
+<li>Código repetitivo: 10% de los puntos de la función</li>
+</ul>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - 31. Procesamiento de XML' data-toggle="tooltip">
+    <a href="Procesamiento de XML.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="Procesamiento de XML.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - 33. Prueba de progreso 1ºB' data-toggle="tooltip" >
+    <a href="Prueba de Progreso 1ºB.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="Prueba de Progreso 1ºB.html" >Next Section - 33. Prueba de progreso 1ºB</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017 Francisco Moya.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

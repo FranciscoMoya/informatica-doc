@@ -2,9 +2,9 @@
 Elementos de un programa
 ========================
 
-Un lenguaje de programación es más que un mecanismo para decirle al
-ordenador qué operaciones tiene que realizar. Sirve también como un
-entorno en el que organizar nuestras ideas sobre procesos
+Un lenguaje de programación es bastante más que un mecanismo para
+decirle al ordenador qué operaciones tiene que realizar. Sirve también
+como un entorno en el que organizar nuestras ideas sobre procesos
 computacionales.  Los programas sirven para comunicar esas ideas a los
 miembros de la comunidad.  Es decir, los programas tienen que
 escribirse fundamentalmente para que la gente los lea y eventualmente
@@ -18,14 +18,18 @@ Prácticamente todos los lenguajes de propósito general incluyen tres
 tipos de elementos:
 
 - Sentencias y expresiones **primitivas**, que representan los bloques
-  más simples proporcionados por el lenguaje.
+  más simples proporcionados por el lenguaje.  Puedes verlo como
+  piezas de LEGO.
 
 - Mecanismos de **combinación**, con los que se construyen elementos
-  compuestos a partir de otros más sencillos.
+  compuestos a partir de otros más sencillos.  Son los mecanismos para
+  encajar unas piezas con otras para formar bloques más complejos.
 
 - Mecanismos de **abstracción**, mediante los que se puede dar nombre
   a los elementos compuestos y usarlos como elementos nuevos sin
-  atender a los detalles internos.
+  atender a los detalles internos.  Piensa por ejemplo en un avión
+  hecho con piezas de LEGO.  Lo de menos son las piezas que lo
+  componen, se maneja como un todo que actúa como cualquier avión.
 
 Si recapacitas en lo que vimos en el capítulo anterior hemos visto un
 poco de todo.  Las cadenas de texto como ``'Hola Mundo'``, los
@@ -175,7 +179,7 @@ La notación funcional tiene una serie de ventajas:
 -  Tercero, la notación matemática infija tiene una amplia variedad de
    formas de representación, que en algunos casos es muy difícil de
    teclear en un ordenador. Piensa por ejemplo en el signo de la raiz
-   cuadrada, o las fracciones. En cambio, la notación funcional es
+   cúbica, o las fracciones. En cambio, la notación funcional es
    completamente homogénea y fácil de teclear. Incluso los operadores
    matemáticos habituales pueden expresarse con notación funcional.
 
@@ -204,12 +208,22 @@ expresiones:
    saludo = 'Hola'
    quien = 'Mundo'
    mensaje = saludo + ', ' + quien
+
+El tipo de ``mensaje`` se puede obtener fácilmente preguntándoselo al
+propio intérprete de Python.
+
+.. activecode:: imprime-tipo-ejemplo-cadenas
+   :include: ejemplo-cadenas
+   :nocodelens:
+
    print(type(mensaje), mensaje)
 
 El tipo de una expresión puede averiguarse con la función ``type``.
 Como puedes comprobar el tipo de la expresión resultante de sumar
 cadenas de texto es ``<class 'str'>``.  Es decir, otra cadena de
-texto.
+texto. En otros intérpretes de Python verás el resultado de forma
+ligeramente distinta, como un simple ``'str'``.  Da igual, quédate con
+la idea de que ``type(mensaje) == type('')``.
 
 .. activecode:: ejemplo-enteros
 
@@ -231,6 +245,7 @@ El tipo de la expresión resultante de una suma de enteros es
 
 .. activecode:: ejemplo-comparacion
    :include: ejemplo-enteros-hidden
+   :nocodelens:
 
    mayor = a > 3
    print(type(mayor), mayor)
@@ -250,6 +265,7 @@ expresión.
 
 .. activecode:: ejemplo-cadena-entero
    :include: ejemplo-cadenas
+   :nocodelens:
 
    triple = saludo * 3
    print(type(triple), triple)
@@ -258,7 +274,8 @@ Multiplicar una cadena por un entero equivale a una nueva cadena que
 repite la cadena original tantas veces como indique el entero.
 
 .. activecode:: ejemplo-complejos
-   :include: ejemplo-enteros
+   :include: ejemplo-enteros-hidden
+   :nocodelens:
 
    d = .5j
    e = a + d
@@ -269,6 +286,7 @@ no tienen sentido. En ese caso Python se queja imprimiendo un error.
 
 .. activecode:: error-semantica-estatica
    :include: ejemplo-cadenas
+   :nocodelens:
 
    error = saludo / 3
    print(type(error), error)
@@ -281,8 +299,9 @@ Utiliza ``type`` para determinar el tipo de la expresión
 
 .. activecode:: busca-tipo-expr
    :include: ejemplo-cadenas
+   :nocodelens:
 
-   a = pow(2,600)
+   a = pow(2,30)
    # ¿Cuál es el tipo de a?
 
 
@@ -381,7 +400,7 @@ puede generar una respuesta en un tiempo pequeño.
 Examina el ejemplo anterior para distintos valores. Por ejemplo:
 
 .. activecode:: python
-   :include: raiz-cubica-e-exhaustiva
+   :include: raiz-cubica-entera, raiz-cubica-e-exhaustiva
 
    print(raiz_cubica(8))
    print(raiz_cubica(1971935064))
@@ -389,3 +408,21 @@ Examina el ejemplo anterior para distintos valores. Por ejemplo:
 ¿Qué pasaría si se llama con el argumento 9? ¿Qué debería devolver? No
 son preguntas que debas saber a priori, ni preguntas con trampa. Piensa
 cómo debería comportarse según tu propio criterio.
+
+Cuando el programa no tiene una buena respuesta es mejor no dar
+respuesta.  ¿Pero cómo detectamos esta condición anómala en nuestros
+programas?  Hoy en día probablemente la mejor solución está en el uso
+de **excepciones**, una construcción para el manejo estructurado de
+errores, que veremos en un capítulo posterior.
+
+De momento puedes apañarte no devolviendo nada.  Pero recuerda que es
+una medida temporal, hasta que conozcas las excepciones.
+
+.. tip:: Cuando una función no puede devolver ningún valor razonable
+         debes utilizar excepciones.  Temporalmente, hasta que veamos
+         el mecanismo, no devuelvas nada o devuelve ``None``, que es
+         el literal de Python equivalente a *nada*.
+
+	 Nunca devuelvas algo que no tiene nada que ver, como una
+	 cadena de texto con un error.  Eso complica enormemente el
+	 uso de la función.

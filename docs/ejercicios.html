@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>14. Ejercicios simples</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/livecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="15. Examen extraordinario (2016)" href="ExamenExtraordinario.html" />
+    <link rel="prev" title="13. Trabajo en grupo 2015 (Datos AEMET)" href="Datos_AEMET.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'CS101';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "py";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'informatica';
+  eBookConfig.runestone_version = '2.7.15';
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head>
+  <body role="document">
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="index.html">Informática</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/CS101/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/CS101/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=CS101&page=ejercicios'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">14. Ejercicios simples</a><ul>
+<li><a class="reference internal" href="#coordenadas-geograficas">14.1. Coordenadas geográficas</a></li>
+<li><a class="reference internal" href="#reproduccion-de-insectos">14.2. Reproducción de insectos</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - 13. Trabajo en grupo 2015 (Datos AEMET)" data-toggle="tooltip">
+    <a href="Datos_AEMET.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - 15. Examen extraordinario (2016)' data-toggle="tooltip" >
+    <a href="ExamenExtraordinario.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li>
+  <a href="_sources/ejercicios.rst.txt"
+     rel="nofollow">Source</a></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="ejercicios-simples">
+<h1>14. Ejercicios simples<a class="headerlink" href="#ejercicios-simples" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="coordenadas-geograficas">
+<h2>14.1. Coordenadas geográficas<a class="headerlink" href="#coordenadas-geograficas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Dadas unas coordenadas de latitud y longitud representarlas en grados,
+minutos y segundos.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">imprimir_coord</span><span class="p">(</span><span class="n">latitud</span><span class="p">,</span> <span class="n">longitud</span><span class="p">):</span>
+    <span class="n">hemi</span> <span class="o">=</span> <span class="s1">&#39;N&#39;</span> <span class="k">if</span> <span class="n">latitud</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="k">else</span> <span class="s1">&#39;S&#39;</span>
+    <span class="n">g</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">s</span> <span class="o">=</span> <span class="n">coord_a_grados_min_seg</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">latitud</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Latitud </span><span class="si">{}</span><span class="s1">º </span><span class="si">{}</span><span class="se">\&#39;</span><span class="s1"> </span><span class="si">{}</span><span class="s1">&quot; </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">hemi</span><span class="p">))</span>
+    <span class="n">hemi</span> <span class="o">=</span> <span class="s1">&#39;W&#39;</span> <span class="k">if</span> <span class="n">longitud</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="k">else</span> <span class="s1">&#39;E&#39;</span>
+    <span class="n">g</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">s</span> <span class="o">=</span> <span class="n">coord_a_grados_min_seg</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">longitud</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Longitud </span><span class="si">{}</span><span class="s1">º </span><span class="si">{}</span><span class="se">\&#39;</span><span class="s1"> </span><span class="si">{}</span><span class="s1">&quot; </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">hemi</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">coord_a_grados_min_seg</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+    <span class="n">grados</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">v</span> <span class="o">-</span> <span class="n">grados</span>
+    <span class="n">v</span> <span class="o">*=</span> <span class="mi">60</span>
+    <span class="n">minutos</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">v</span> <span class="o">-</span> <span class="n">minutos</span>
+    <span class="n">v</span> <span class="o">*=</span> <span class="mi">60</span>
+    <span class="n">segundos</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">grados</span><span class="p">,</span> <span class="n">minutos</span><span class="p">,</span> <span class="n">segundos</span>
+</pre></div>
+</div>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">imprimir_coord</span><span class="p">(</span><span class="mf">40.76</span><span class="p">,</span> <span class="mf">10.15</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Latitud</span> <span class="mi">40</span><span class="n">º</span> <span class="mi">45</span><span class="s1">&#39; 35&quot; N</span>
+<span class="n">Longitud</span> <span class="mi">10</span><span class="n">º</span> <span class="mi">9</span><span class="s1">&#39; 0&quot; W</span>
+</pre></div>
+</div>
+<p>La única cosa destacable es la forma en la que se devuelven múltiples
+valores de una función y cómo se introduce una comilla en una cadena
+delimitada por comilla simple.</p>
+</div>
+<div class="section" id="reproduccion-de-insectos">
+<h2>14.2. Reproducción de insectos<a class="headerlink" href="#reproduccion-de-insectos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Solución al reto <a class="reference external" href="http://www.solveet.com/exercises/java/645">645</a> de
+Solveet!</p>
+<blockquote>
+<div><p>Un estudiante de biologia esta realizando un experimento con unos
+insectos que se descubrieron en una expedición al centro de la selva
+amazonica, estos insectos son muy coloridos y les encanta comer
+hojas secas, siendo las de eucalipto sus favoritas.</p>
+<p>Además nota que estos insectos colocan 3 huevos cada 2 días, de cada
+huevo como es de esperar sale un nuevo insecto a los dos días de
+haber sido colocado y estos insectos solo viven por 5 días.</p>
+<p>El estudiante teme que los insectos se apoderen de los ambientes
+donde estan siendo estudiados, puesto que el sabe que solo tiene una
+capacidad limitada de espacio para ellos, te pide que le ayudes a
+determinar en cuantos días la población de insectos llegara a
+superar la capacidad con la que cuenta. Para ello el te dira con
+cuantos insectos cuenta en un determinado momento y hasta cuantos
+insectos puede manejar.</p>
+</div></blockquote>
+<p>La forma más sencilla, que no requiere análisis detallado es simular la
+evolución de la población. Para eso tenemos que simular el nacimiento,
+la muerte, la puesta y la eclosión.</p>
+<p>Hay infinidad de maneras de modelar los datos asociados. Nosotros hemos
+utilizado para los insectos tuplas <em>(num_insectos,
+dias_sin_poner_huevos, dias_vida)</em>. Estas ternas se van actualizando
+conforme evoluciona el sistema. Para los huevos usamos tuplas <em>(huevos,
+dias_desde_puesta)</em> que también se actualizan cada día.</p>
+<p>Por tanto usamos tres variables para almacenar el estado: <code class="docutils literal"><span class="pre">insectos</span></code>
+con la población total de insectos, <code class="docutils literal"><span class="pre">huevos</span></code> con el inventario total
+de huevos, y <code class="docutils literal"><span class="pre">dia</span></code> para mantener el día actual. Sería normal usar
+listas para las dos primeras, pero vamos a hacerlo con tuplas para
+ilustrar cómo podemos evitar manipulaciones imprevistas.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dias</span><span class="p">(</span><span class="n">inicial</span><span class="p">,</span> <span class="n">final</span><span class="p">):</span>
+    <span class="n">insectos</span> <span class="o">=</span> <span class="p">((</span><span class="n">inicial</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),)</span>
+    <span class="n">huevos</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">()</span>
+    <span class="n">dia</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">insectos</span><span class="p">,</span> <span class="n">huevos</span> <span class="o">=</span> <span class="n">poblacion_dia_siguiente</span><span class="p">(</span><span class="n">insectos</span><span class="p">,</span> <span class="n">huevos</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">total_insectos</span><span class="p">(</span><span class="n">insectos</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">final</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">dia</span>
+        <span class="n">dia</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;DIA </span><span class="si">{}</span><span class="s1"> --------------</span><span class="se">\n</span><span class="s1"> insectos: </span><span class="si">{}</span><span class="se">\n</span><span class="s1"> huevos: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span>
+               <span class="nb">format</span><span class="p">(</span><span class="n">dia</span><span class="p">,</span> <span class="n">insectos</span><span class="p">,</span> <span class="n">huevos</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>La simulación es sencilla, lo más complejo es calcular la población del
+día siguiente. Empezaremos por contabilizar la población total de
+insectos con la función <code class="docutils literal"><span class="pre">total_insectos</span></code>.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">total_insectos</span><span class="p">(</span><span class="n">insectos</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">insectos</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>La población del día siguiente tiene que tener en cuenta todos los
+procesos que indica el enunciado. En primer lugar hay que incrementar el
+número de días que llevan los insectos sin poner huevos y de vida total,
+y los días que llevan los huevos sin eclosionar. Luego tratamos la
+muerte de los insectos viejos, la puesta de huevos, y la eclosión.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">poblacion_dia_siguiente</span><span class="p">(</span><span class="n">insectos</span><span class="p">,</span> <span class="n">huevos</span><span class="p">):</span>
+    <span class="n">insectos</span><span class="p">,</span> <span class="n">huevos</span> <span class="o">=</span> <span class="n">incrementar_dia</span><span class="p">(</span><span class="n">insectos</span><span class="p">,</span> <span class="n">huevos</span><span class="p">)</span>
+    <span class="n">insectos</span> <span class="o">=</span> <span class="n">matar_viejos</span><span class="p">(</span><span class="n">insectos</span><span class="p">)</span>
+    <span class="n">insectos</span><span class="p">,</span> <span class="n">huevos</span> <span class="o">=</span> <span class="n">poner_huevos</span><span class="p">(</span><span class="n">insectos</span><span class="p">,</span> <span class="n">huevos</span><span class="p">)</span>
+    <span class="n">insectos</span><span class="p">,</span> <span class="n">huevos</span> <span class="o">=</span> <span class="n">eclosionar_huevos</span><span class="p">(</span><span class="n">insectos</span><span class="p">,</span> <span class="n">huevos</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">insectos</span><span class="p">,</span> <span class="n">huevos</span>
+</pre></div>
+</div>
+<p>Incrementar el día implica construir nuevas tuplas con los campos
+correspondientes a días incrementados en una unidad.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">incrementar_dia</span><span class="p">(</span><span class="n">insectos</span><span class="p">,</span> <span class="n">huevos</span><span class="p">):</span>
+    <span class="k">return</span>  <span class="nb">tuple</span><span class="p">(</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">insectos</span> <span class="p">),</span> \
+            <span class="nb">tuple</span><span class="p">(</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">huevos</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Los insectos que cumplan 5 días ya no deben figurar en la lista.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">matar_viejos</span><span class="p">(</span><span class="n">insectos</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">insectos</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">5</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Poner huevos implica primero calcular a cuántos insectos les toca poner
+(llevan 2 días sin poner). Fíjate bien en cómo generamos la tupla de
+todos los huevos. Podemos concatenar dos tuplas para formar una tupla
+mayor, pero no podemos usar <code class="docutils literal"><span class="pre">append</span></code> ni sumar un simple elemento. Por
+eso es importante la coma del final de la última línea.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">poner_huevos</span><span class="p">(</span><span class="n">insectos</span><span class="p">,</span> <span class="n">huevos</span><span class="p">):</span>
+    <span class="n">ponen</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">insectos</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ponen</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">insectos</span><span class="p">,</span> <span class="n">huevos</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="k">else</span> <span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">insectos</span> <span class="p">),</span> \
+           <span class="n">huevos</span> <span class="o">+</span> <span class="p">((</span><span class="n">ponen</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">),)</span>
+</pre></div>
+</div>
+<p>Los huevos que lleven dos días puestos deben eclosionar. Esto los debe
+eliminar de la tupla de huevos y convertir en nuevos insectos en la
+tupla de insectos.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">eclosionar_huevos</span><span class="p">(</span><span class="n">insectos</span><span class="p">,</span> <span class="n">huevos</span><span class="p">):</span>
+    <span class="n">nuevos</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">huevos</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="p">])</span>
+    <span class="k">if</span> <span class="n">nuevos</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">insectos</span><span class="p">,</span> <span class="n">huevos</span>
+    <span class="k">return</span> <span class="n">insectos</span> <span class="o">+</span> <span class="p">((</span><span class="n">nuevos</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),),</span> \
+           <span class="nb">tuple</span><span class="p">(</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">huevos</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="p">)</span>
+</pre></div>
+</div>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">dias</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">DIA</span> <span class="mi">1</span> <span class="o">--------------</span>
+ <span class="n">insectos</span><span class="p">:</span> <span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),)</span>
+ <span class="n">huevos</span><span class="p">:</span> <span class="p">()</span>
+<span class="n">DIA</span> <span class="mi">2</span> <span class="o">--------------</span>
+ <span class="n">insectos</span><span class="p">:</span> <span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),)</span>
+ <span class="n">huevos</span><span class="p">:</span> <span class="p">((</span><span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">),)</span>
+<span class="n">DIA</span> <span class="mi">3</span> <span class="o">--------------</span>
+ <span class="n">insectos</span><span class="p">:</span> <span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),)</span>
+ <span class="n">huevos</span><span class="p">:</span> <span class="p">((</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">),)</span>
+<span class="n">DIA</span> <span class="mi">4</span> <span class="o">--------------</span>
+ <span class="n">insectos</span><span class="p">:</span> <span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+ <span class="n">huevos</span><span class="p">:</span> <span class="p">((</span><span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">),)</span>
+<span class="n">DIA</span> <span class="mi">5</span> <span class="o">--------------</span>
+ <span class="n">insectos</span><span class="p">:</span> <span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+ <span class="n">huevos</span><span class="p">:</span> <span class="p">((</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">),)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - 13. Trabajo en grupo 2015 (Datos AEMET)' data-toggle="tooltip">
+    <a href="Datos_AEMET.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="Datos_AEMET.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - 15. Examen extraordinario (2016)' data-toggle="tooltip" >
+    <a href="ExamenExtraordinario.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="ExamenExtraordinario.html" >Next Section - 15. Examen extraordinario (2016)</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017 Francisco Moya.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

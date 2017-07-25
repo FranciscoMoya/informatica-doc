@@ -1,0 +1,4 @@
+py-stats.js: py-stats.tmpl
+
+eventListener.polyfill.js:
+	curl https://gist.githubusercontent.com/jonathantneal/3748027/raw/d262ccf278902705d61658a2fc5cd60409846b98/eventListener.polyfill.js

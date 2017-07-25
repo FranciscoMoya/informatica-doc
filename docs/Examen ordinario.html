@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>16. Bloque 1. Ejercicios sencillos</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/livecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Sobre este documento" href="about.html" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="19. Gráficas con Python" href="Gráficas.html" />
+    <link rel="prev" title="15. Examen extraordinario (2016)" href="ExamenExtraordinario.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'CS101';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "py";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'informatica';
+  eBookConfig.runestone_version = '2.7.15';
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head>
+  <body role="document">
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="index.html">Informática</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/CS101/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/CS101/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=CS101&page=Examen ordinario'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">16. Bloque 1. Ejercicios sencillos</a><ul>
+<li><a class="reference internal" href="#rombo-con-caracteres-ascii">16.1. Rombo con caracteres ascii</a></li>
+<li><a class="reference internal" href="#suma-de-fecha-y-dias">16.2. Suma de fecha y días</a></li>
+<li><a class="reference internal" href="#regresion-lineal">16.3. Regresión lineal</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bloque-2-ley-d-hont">17. Bloque 2. Ley D&#8217;Hont</a></li>
+<li><a class="reference internal" href="#recuperacion-de-prueba-de-progreso">18. Recuperación de prueba de progreso</a><ul>
+<li><a class="reference internal" href="#vocales-a-numeros">18.1. Vocales a números</a></li>
+<li><a class="reference internal" href="#iniciales">18.2. Iniciales</a></li>
+<li><a class="reference internal" href="#traza-de-una-matriz-cuadrada">18.3. Traza de una matriz cuadrada</a></li>
+<li><a class="reference internal" href="#opciones-de-compra">18.4. Opciones de compra</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - 15. Examen extraordinario (2016)" data-toggle="tooltip">
+    <a href="ExamenExtraordinario.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - 19. Gráficas con Python' data-toggle="tooltip" >
+    <a href="Gráficas.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li>
+  <a href="_sources/Examen ordinario.rst.txt"
+     rel="nofollow">Source</a></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="bloque-1-ejercicios-sencillos">
+<h1>16. Bloque 1. Ejercicios sencillos<a class="headerlink" href="#bloque-1-ejercicios-sencillos" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="rombo-con-caracteres-ascii">
+<h2>16.1. Rombo con caracteres ascii<a class="headerlink" href="#rombo-con-caracteres-ascii" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Dada la regularidad del dibujo lo más fácil es definir una función para
+imprimir una línea cualquiera y usarla tantas veces como se necesite.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">imprimir_rombo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;El argumento debe ser par&#39;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;El argumento debe ser mayor o igual a 2&#39;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">imprimir_linea_rombo</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">)):</span>
+        <span class="n">imprimir_linea_rombo</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">imprimir_linea_rombo</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">a</span><span class="o">+</span><span class="s1">&#39; &#39;</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="n">b</span>
+</pre></div>
+</div>
+<p>Vamos a hacer alguna prueba.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">imprimir_rombo</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+<pre class="literal-block">
+   /  /   /    /           /
+    /
+   /
+   /
+</pre>
+</div>
+<div class="section" id="suma-de-fecha-y-dias">
+<h2>16.2. Suma de fecha y días<a class="headerlink" href="#suma-de-fecha-y-dias" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El cálculo de la nueva fecha es relativamente complicado. Nuestra
+estrategia es empezar en el día uno del mes sumando el número del día
+menos uno a los días que hay que sumar. Una vez en este punto vamos
+sumando los días de cada mes hasta que ya no nos queden suficientes días
+que sumar y ese resto se suma al número de día inicial. De esta forma
+nos evitamos el problema de tener que corregir una fecha a posteriori.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sumar_dias</span><span class="p">(</span><span class="n">fecha</span><span class="p">,</span> <span class="n">dias</span><span class="p">):</span>
+    <span class="n">dias</span> <span class="o">+=</span> <span class="n">fecha</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">fecha</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">fecha</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">fecha</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">while</span> <span class="n">dias</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">fecha</span><span class="p">,</span> <span class="n">dias</span> <span class="o">=</span> <span class="n">sumar_mes</span><span class="p">(</span><span class="n">fecha</span><span class="p">,</span> <span class="n">dias</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">fecha</span>
+
+<span class="k">def</span> <span class="nf">sumar_mes</span><span class="p">(</span><span class="n">fecha</span><span class="p">,</span> <span class="n">dias</span><span class="p">):</span>
+    <span class="n">dm</span> <span class="o">=</span> <span class="n">dias_mes</span><span class="p">(</span><span class="n">fecha</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dm</span> <span class="o">&gt;</span> <span class="n">dias</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">dias</span><span class="p">,</span><span class="n">fecha</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">fecha</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">siguiente_mes</span><span class="p">(</span><span class="n">fecha</span><span class="p">),</span> <span class="n">dias</span> <span class="o">-</span> <span class="n">dm</span>
+
+<span class="k">def</span> <span class="nf">dias_mes</span><span class="p">(</span><span class="n">fecha</span><span class="p">):</span>
+    <span class="n">ndias</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">31</span><span class="p">],</span>
+             <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">31</span><span class="p">]]</span>
+    <span class="k">return</span> <span class="n">ndias</span><span class="p">[</span><span class="n">es_bisiesto</span><span class="p">(</span><span class="n">fecha</span><span class="p">[</span><span class="mi">2</span><span class="p">])][</span><span class="n">fecha</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+
+<span class="k">def</span> <span class="nf">siguiente_mes</span><span class="p">(</span><span class="n">fecha</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">fecha</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">12</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">fecha</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">,</span> <span class="n">fecha</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">fecha</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">fecha</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">fecha</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">es_bisiesto</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">y</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="p">(</span><span class="n">y</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Algunas pruebas para verificar que todo funciona como debe.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">sumar_dias</span><span class="p">((</span><span class="mi">21</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2016</span><span class="p">),</span> <span class="mi">15</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">sumar_dias</span><span class="p">((</span><span class="mi">21</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2016</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">sumar_dias</span><span class="p">((</span><span class="mi">31</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2016</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">sumar_dias</span><span class="p">((</span><span class="mi">31</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2016</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">sumar_dias</span><span class="p">((</span><span class="mi">21</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2016</span><span class="p">),</span> <span class="mi">366</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2016</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2016</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2016</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">31</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2016</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">21</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2017</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="regresion-lineal">
+<h2>16.3. Regresión lineal<a class="headerlink" href="#regresion-lineal" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Este ejercicio es aplicación directa de la fórmula, no tiene nada
+especial.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">regresion_lineal</span><span class="p">(</span><span class="n">puntos</span><span class="p">):</span>
+    <span class="n">xm</span> <span class="o">=</span> <span class="n">media</span><span class="p">([</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">puntos</span><span class="p">])</span>
+    <span class="n">ym</span> <span class="o">=</span> <span class="n">media</span><span class="p">([</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">puntos</span><span class="p">])</span>
+    <span class="n">xy</span> <span class="o">=</span> <span class="mf">0.</span>
+    <span class="n">xx</span> <span class="o">=</span> <span class="mf">0.</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">puntos</span><span class="p">:</span>
+        <span class="n">xy</span> <span class="o">+=</span> <span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">xm</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">ym</span><span class="p">)</span>
+        <span class="n">xx</span> <span class="o">+=</span> <span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">xm</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">xy</span><span class="o">/</span><span class="n">xx</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">ym</span> <span class="o">-</span> <span class="n">a</span><span class="o">*</span><span class="n">xm</span>
+    <span class="k">return</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span>
+
+<span class="k">def</span> <span class="nf">media</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Verificaremos el ejemplo del enunciado y algún otro.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">regresion_lineal</span><span class="p">([(</span><span class="mf">0.</span><span class="p">,</span><span class="mf">1.</span><span class="p">),</span>
+                        <span class="p">(</span><span class="mf">1.</span><span class="p">,</span><span class="mf">4.</span><span class="p">),</span>
+                        <span class="p">(</span><span class="o">-</span><span class="mf">1.</span><span class="p">,</span><span class="o">-</span><span class="mf">2.</span><span class="p">)])</span>
+<span class="nb">print</span> <span class="n">regresion_lineal</span><span class="p">([(</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="p">),</span>
+                        <span class="p">(</span><span class="mf">2.</span><span class="p">,</span><span class="mf">2.</span><span class="p">),</span>
+                        <span class="p">(</span><span class="mf">8.</span><span class="p">,</span><span class="mf">8.</span><span class="p">)])</span>
+<span class="nb">print</span> <span class="n">regresion_lineal</span><span class="p">([(</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="p">),</span>
+                        <span class="p">(</span><span class="mf">2.</span><span class="p">,</span><span class="mf">2.</span><span class="p">),</span>
+                        <span class="p">(</span><span class="mf">8.</span><span class="p">,</span><span class="mf">8.1</span><span class="p">)])</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="p">(</span><span class="mf">1.0151162790697674</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.02209302325581408</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="bloque-2-ley-d-hont">
+<h1>17. Bloque 2. Ley D&#8217;Hont<a class="headerlink" href="#bloque-2-ley-d-hont" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>El algoritmo que se propone en el bloque 2 es muy simple. Basta calcular
+la tabla de votos divididos por el número de escaños para cada partido.
+Las celdas de esa tabla se ordenan de manera que el que pueda pagar más
+por cada escaño vaya primero. Por último basta coger solo tantas celdas
+como escaños haya disponibles y contar a quién corresponde cada escaño.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reparto_d_hont</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">votos</span><span class="p">):</span>
+    <span class="n">precios_ordenados</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">precios_por_escanno_partido</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span>
+                               <span class="n">key</span> <span class="o">=</span> <span class="n">celda_precio</span><span class="p">,</span>
+                               <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cuenta_escannos</span><span class="p">(</span><span class="n">precios_ordenados</span><span class="p">[:</span><span class="n">n</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>En esta implementación hemos usado algunas características avanzadas de
+la función <code class="docutils literal"><span class="pre">sorted</span></code> pero es simplemente por brevedad. Lo mismo puede
+conseguirse con una simple función auxiliar y escribiendo las tuplas en
+el orden adecuado para que las comparaciones se produzcan como queremos.</p>
+<p>La tabla de precios por escaño y partido, es decir, los votos divididos
+por número de escaños, la implementamos como una simple lista de tuplas
+con el nombre del partido y el coste del escaño. Esto facilita
+enormemente la ordenación.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">precios_por_escanno_partido</span><span class="p">(</span><span class="n">votos</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">precios</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">partido</span> <span class="ow">in</span> <span class="n">votos</span><span class="p">:</span>
+        <span class="n">precios</span> <span class="o">+=</span> <span class="n">precios_por_escanno</span><span class="p">(</span><span class="n">partido</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">precios</span>
+</pre></div>
+</div>
+<p>Donde el precio por escaño que podría pagar cada partido, siguiendo la
+ley de oferta y demanda es simplemente el número de votos dividido por
+el número de escaños disponibles (que pueden ser entre 1 y <code class="docutils literal"><span class="pre">n</span></code>). Es
+decir:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">precios_por_escanno</span><span class="p">(</span><span class="n">partido</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span> <span class="p">(</span><span class="n">partido</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">partido</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">]</span>
+</pre></div>
+</div>
+<p>Contar los escaños es simplemente contar cuántas celdas de cada partido
+han quedado. Por comodidad lo hacemos con un diccionario y lo ordenamos
+por número decreciente de escaños, como en los resultados electorales
+oficiales.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cuenta_escannos</span><span class="p">(</span><span class="n">precios</span><span class="p">):</span>
+    <span class="n">escannos</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">precios</span><span class="p">:</span>
+        <span class="n">incrementa_cuenta_escannos</span><span class="p">(</span><span class="n">escannos</span><span class="p">,</span> <span class="n">celda_partido</span><span class="p">(</span><span class="n">p</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">([(</span><span class="n">k</span><span class="p">,</span> <span class="n">escannos</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">escannos</span> <span class="p">],</span>
+                  <span class="n">key</span> <span class="o">=</span> <span class="n">celda_precio</span><span class="p">,</span>
+                  <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Al utilizar un diccionario inicialmente vacío tenemos que tratar de
+forma especial el caso del escaño inicial. También podríamos haber
+inicializado el diccionario con todos los partidos y una cuenta inicial
+a cero.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">incrementa_cuenta_escannos</span><span class="p">(</span><span class="n">escannos</span><span class="p">,</span> <span class="n">partido</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">partido</span> <span class="ow">in</span> <span class="n">escannos</span><span class="p">:</span>
+        <span class="n">escannos</span><span class="p">[</span><span class="n">partido</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">escannos</span><span class="p">[</span><span class="n">partido</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Cada celda contiene el nombre del partido y el precio que puede pagar.
+Para no llenar el código con índices que son muy propensos a error
+utilizamos funciones auxiliares que dada una celda devuelve cada uno de
+sus elementos.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">celda_precio</span><span class="p">(</span><span class="n">celda</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">celda</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">celda_partido</span><span class="p">(</span><span class="n">celda</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">celda</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Solo falta probar. Haremos dos casos de prueba, el del enunciado y los
+resultados de Madrid de las últimas elecciones generales.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">reparto_d_hont</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span>
+                     <span class="p">[(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">4000000</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">3500000</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="mi">2000000</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="mi">1500000</span><span class="p">)])</span>
+
+<span class="nb">print</span> <span class="n">reparto_d_hont</span><span class="p">(</span><span class="mi">36</span><span class="p">,</span>
+                     <span class="p">[(</span><span class="s1">&#39;PP&#39;</span><span class="p">,</span> <span class="mi">1203837</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">&#39;Podemos&#39;</span><span class="p">,</span> <span class="mi">750477</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">&#39;Cs&#39;</span><span class="p">,</span> <span class="mi">676389</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">&#39;PSOE&#39;</span><span class="p">,</span> <span class="mi">643158</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">&#39;Unidad Popular en Comun&#39;</span><span class="p">,</span> <span class="mi">189237</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">&#39;UPyD&#39;</span><span class="p">,</span> <span class="mi">43103</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">&#39;PACMA&#39;</span><span class="p">,</span> <span class="mi">28302</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">&#39;VOX&#39;</span><span class="p">,</span> <span class="mi">22441</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">&#39;X La Izquierda-Los Verdes&#39;</span><span class="p">,</span> <span class="mi">5007</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">&#39;FE de las JONS&#39;</span><span class="p">,</span> <span class="mi">4688</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">&#39;Recortes Cero-Grupo Verde&#39;</span><span class="p">,</span> <span class="mi">4009</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">&#39;PUM+J&#39;</span><span class="p">,</span> <span class="mi">2832</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">&#39;PH&#39;</span><span class="p">,</span> <span class="mi">1848</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">&#39;PCPE&#39;</span><span class="p">,</span> <span class="mi">1730</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">&#39;SAIn&#39;</span><span class="p">,</span> <span class="mi">1229</span><span class="p">),</span>
+                      <span class="p">(</span><span class="s1">&#39;P-LIB&#39;</span><span class="p">,</span> <span class="mi">1053</span><span class="p">)])</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+<span class="p">[(</span><span class="s1">&#39;PP&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Podemos&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Cs&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;PSOE&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Unidad Popular en Comun&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="recuperacion-de-prueba-de-progreso">
+<h1>18. Recuperación de prueba de progreso<a class="headerlink" href="#recuperacion-de-prueba-de-progreso" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="vocales-a-numeros">
+<h2>18.1. Vocales a números<a class="headerlink" href="#vocales-a-numeros" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Es muy parecido a <code class="docutils literal"><span class="pre">codigo_cesar</span></code> de la práctica 2.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vocales_a_numeros</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">letra_transformada</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">letra_transformada</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="n">vocales</span> <span class="o">=</span> <span class="s1">&#39;aeioAEIO&#39;</span>
+    <span class="n">numeros</span> <span class="o">=</span> <span class="s1">&#39;43104310&#39;</span>
+    <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">vocales</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">numeros</span><span class="p">[</span><span class="n">vocales</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">c</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">c</span>
+</pre></div>
+</div>
+<p>Vamos a probar lo del enunciado.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">vocales_a_numeros</span><span class="p">(</span><span class="s1">&#39;Examen&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">3</span><span class="n">x4m3n</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="iniciales">
+<h2>18.2. Iniciales<a class="headerlink" href="#iniciales" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Simple manipulación de cadenas. Eliminamos todo lo que no sean letras
+porque no serían iniciales. Eso no se indica en el enunciado, por lo que
+se consideraría válido aunque no se haga.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">iniciales</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">palabras</span> <span class="o">=</span> <span class="n">normalizar_cadena</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">palabras</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">normalizar_cadena</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">noletra_a_espacio</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">])</span>
+
+<span class="kn">import</span> <span class="nn">string</span>
+
+<span class="k">def</span> <span class="nf">noletra_a_espacio</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="n">transtab</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;ÁÉÍÓÚÜáéíóúü&#39;</span><span class="p">,</span><span class="s1">&#39;AEIOUUaeiouu&#39;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">transtab</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">transtab</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
+    <span class="n">validas</span><span class="o">=</span><span class="n">string</span><span class="o">.</span><span class="n">letters</span> <span class="o">+</span> <span class="sa">u</span><span class="s1">&#39;Ññ&#39;</span>
+    <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">validas</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">c</span>
+    <span class="k">return</span> <span class="s1">&#39; &#39;</span>
+</pre></div>
+</div>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">iniciales</span><span class="p">(</span><span class="s1">&#39;No por mucho madrugar,amanece mas temprano&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Npmmamt</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="traza-de-una-matriz-cuadrada">
+<h2>18.3. Traza de una matriz cuadrada<a class="headerlink" href="#traza-de-una-matriz-cuadrada" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Es trivial con una <em>list comprehension</em>.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">traza</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">([</span><span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">))])</span>
+</pre></div>
+</div>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">traza</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]])</span>
+<span class="nb">print</span> <span class="n">traza</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">15</span>
+<span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones-de-compra">
+<h2>18.4. Opciones de compra<a class="headerlink" href="#opciones-de-compra" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Básicamente consiste en filtrar las combinaciones de <code class="docutils literal"><span class="pre">precios</span></code> tomados
+de dos en dos. Es decir, el grueso del trabajo es conseguir estas
+combinaciones.</p>
+<p>Las combinaciones las generamos con una simple función recursiva. Las
+diferentes combinaciones de <code class="docutils literal"><span class="pre">precios</span></code> tomados de <code class="docutils literal"><span class="pre">n</span></code> en <code class="docutils literal"><span class="pre">n</span></code> es,
+para el caso general, la lista de las combinaciones que empiezan por el
+primer elemento de <code class="docutils literal"><span class="pre">precios</span></code> mas la lista de las combinaciones que no
+empiezan por el primer elemento de <code class="docutils literal"><span class="pre">precios</span></code>. El primer término
+consiste en la lista de los elementos que contienen al primero y además
+a <code class="docutils literal"><span class="pre">n-1</span></code> elementos del resto, es decir,
+<code class="docutils literal"><span class="pre">combinaciones_n(precios[1:],</span> <span class="pre">n-1)</span></code>. El segundo término es
+directamente <code class="docutils literal"><span class="pre">combinaciones_n(precios[1:],</span> <span class="pre">n)</span></code>.</p>
+<p>El caso base lo constituyen los dos casos extremos. Cuando <code class="docutils literal"><span class="pre">n</span></code>
+coincide con la longitud de <code class="docutils literal"><span class="pre">precios</span></code>, en cuyo caso no hay nada que
+elegir, es toda la lista. Y cuando <code class="docutils literal"><span class="pre">n</span></code> es uno en cuyo caso solo hay
+que convertir cada elemento en una lista para generar la respuesta.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">opciones_de_compra</span><span class="p">(</span><span class="n">precios</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">total</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span> <span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">combinaciones_n</span><span class="p">(</span><span class="n">precios</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="k">if</span> <span class="nb">sum</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">total</span> <span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">combinaciones_n</span><span class="p">(</span><span class="n">precios</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">precios</span><span class="p">)</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span> <span class="n">precios</span> <span class="p">]</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span> <span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">precios</span> <span class="p">]</span>
+    <span class="k">return</span> <span class="p">[</span> <span class="p">[</span><span class="n">precios</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">combinaciones_n</span><span class="p">(</span><span class="n">precios</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span> \
+        <span class="o">+</span> <span class="n">combinaciones_n</span><span class="p">(</span><span class="n">precios</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">opciones_de_compra</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">opciones_de_compra</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
+<span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - 15. Examen extraordinario (2016)' data-toggle="tooltip">
+    <a href="ExamenExtraordinario.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="ExamenExtraordinario.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - 19. Gráficas con Python' data-toggle="tooltip" >
+    <a href="Gráficas.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="Gráficas.html" >Next Section - 19. Gráficas con Python</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017 Francisco Moya.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
