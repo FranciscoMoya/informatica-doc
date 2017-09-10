@@ -31,6 +31,55 @@ que haga lo que tú quieres.
 Intérpretes y compiladores
 --------------------------
 
+El computador es una máquina bastante simple. Ejecuta de manera
+secuencial una serie de instrucciones elementales. Solo sabe ejecutar
+un repertorio limitado de operaciones muy sencillas que se denomina
+:term:`lenguaje máquina`. Sin embargo nadie programa los ordenadores
+utilizando directamente lenguaje máquina.  Eso sería de locos,
+complicaría incluso entender lo que hace un programa.
+
+En la actualidad los computadores se programan usando un
+:term:`lenguaje de alto nivel`. Se trata de un lenguaje más abstracto,
+fácil de entender, y muy regular.  Los programas escritos en uno de
+estos lenguajes deben ser primero traducidos a *lenguaje
+máquina*. Esta traducción puede realizarse de dos formas.
+
+1. En los :term:`lenguajes compilados` el programa es traducido
+   previamente a lenguaje máquina antes de su ejecución, empleando un
+   programa especial denominado :term:`compilador`.  El resultado
+   puede ejecutarse directamente, sin necesidad de que vuelva a
+   producirse un proceso de traducción.
+
+2. En los :term:`lenguajes interpretados` el programa no se ejecuta
+   directamente.  En su lugar se ejecuta otro programa, denominado
+   :term:`intérprete`, que va leyendo el programa y ejecutando las
+   instrucciones máquina correspondientes a cada fragmento
+   identificado.
+
+Cada una de estas opciones tiene sus ventajas y sus
+inconvenientes. 
+
+Los lenguajes compilados requieren un paso previo de *compilación*
+para poder ejecutar, pero esto solo se realiza una vez y el resultado
+puede ser optimizado globalmente. Sin embargo el resultado de la
+compilación (programa ejecutable) solo es válido para ordenadores que
+entienden el lenguaje máquina que ha generado, es decir, para una
+:term:`arquitectura de repertorio de instrucciones`.
+
+Por contra un intérprete no necesita este paso previo, por lo que el
+programa es válido para cualquier arquitectura.  Sin embargo la
+traducción a lenguaje máquina se produce en cada ejecución, por lo que
+suelen ser sensiblemente más lentos.
+
+.. warning:: En la actualidad la mayoría de los intérpretes utilizan
+             una técnica híbrida entre el compilador y el intérprete
+             clásico. Por un lado el intérprete realiza un
+             procesamiento previo y almacena una versión
+             extremadamente simplificada del programa que no llega a
+             ser lenguaje máquina pero se parece (*bytecode*). Por
+             otro lado suelen utilizar una técnica conocida como
+             compilación *just in time*.  El programa se traduce a
+             lenguaje máquina la primera vez que se ejecuta
 
 
 Instalación del software
@@ -361,12 +410,13 @@ distribución oficial de Python. Por tanto está disponible en todos
 los ordenadores que dispongan de Python.
 
 Más adelante, cuando domines el lenguaje, empieza a probar otros, como
-`Jupyter <http://jupyter.org/>`_, `PyCharm
-<https://www.jetbrains.com/pycharm/>`_, `Eclipse PyDev
-<http://www.pydev.org/>`_, `Netbeans Python
-<http://wiki.netbeans.org/Python>`_,
+`Jupyter <http://jupyter.org/>`_, 
+`PyCharm <https://www.jetbrains.com/pycharm/>`_, 
+`Eclipse PyDev <http://www.pydev.org/>`_, 
+`Netbeans Python <http://wiki.netbeans.org/Python>`_,
 `Visual Studio con Python Development Tools
-<https://www.visualstudio.com/es/vs/python/>`_, etc.
+<https://www.visualstudio.com/es/vs/python/>`_, 
+etc.
 
 No te rindas a la primera.  Un buen entorno es normalmente complejo y
 requiere algo de tiempo acostumbrarse a él.  Ese tiempo se recupera
@@ -444,7 +494,9 @@ básicos.
     print('Hola, Mundo')
 
 La única línea de la que consta el programa es una :term:`sentencia`.
-Un programa es una secuencia de *sentencias* que se ejecutan en orden.
+Un programa es una secuencia de *sentencias* que se ejecutan en orden [#]_.
+
+.. [#] La palabra *sentencia* es un calco léxico del inglés *sentence*, que en otros contextos se traduciría como *frase*. En informática los calcos léxicos son habituales, muy a pesar de los académicos de la RAE.
 
 Nuestra sentencia es una :term:`llamada a función`, muy similar al uso
 de una función en matemáticas.  La función ``print`` imprime sus
@@ -479,7 +531,7 @@ puede controlar con un argumento opcional de ``print`` llamado
 .. activecode:: hola-mundo-2-prints
    :nocodelens:
 
-   print('Hola,', end='')
+   print('Hola, ', end='')
    print('Mundo')
 
 Este argumento adicional es un :term:`argumento nombrado`. Es una
@@ -509,15 +561,14 @@ in Codelens*.  *Codelens* es una herramienta educativa que permite
 entender cómo funciona el programa paso a paso.  Utiliza los botones
 *Forward* y *Back* para avanzar y retroceder.  Observa cómo aparece la
 variable cuando se ejecuta la sentencia de asignación.  Aparece en una
-tabla llamada *Global frame*.  Ya veremos eso con más detalle más
-adelante.
+tabla llamada *Global frame*.  Ya veremos eso en detalle más adelante.
 
 Bifurcación
 ~~~~~~~~~~~
 
 A veces es necesario ejecutar determinadas sentencias solo si se
 cumple una condición.  Esto se consigue con una :term:`sentencia de
-bifurcación`.  La más simple de todas es la :term:`sentencia *if*`.
+bifurcación`.  La más simple de todas es la :term:`sentencia if`.
 
 .. activecode:: ejemplo-bifurcar
 
@@ -535,28 +586,37 @@ cumple la condición.  Verás que Python es bastante relajado con la
 forma en que escribes el programa, solo necesita que respetes los
 márgenes.  Por ejemplo, si quieres ejecutar dos ``print`` en caso de
 que se cumpla la condición, tendrás que ponerlos con el mismo margen
-ambos.  Da igual cuántos espacios, pero que sean los mismos.
+ambos.  Da igual cuántos espacios, pero que sean los mismos.  Por
+ejemplo:
+
+.. activecode:: ejemplo-bifurcar-2
+
+   n = 2
+   if n > 1:
+       print('n es mayor que 1')
+       print('n es', n)
+
 
 Bucles
 ~~~~~~
 
 En no pocas ocasiones necesitaremos repetir una serie de operaciones
 idénticas o casi idénticas.  Para repetir están los bucles.  El más
-sencillo de todos es el :term:`bucle *while*`:
+sencillo de todos es el :term:`bucle while`:
 
-El :term:`bucle *while*` funciona de forma similar a la
-:term:`sentencia *if*`.  Evalúa la condición y si se cumple ejecuta
-las sentencias indentadas justo a continuación.  Pero después de
-ejecutarlas no continúa con la siguiente sentencia, sino que vuelve a
-evaluar la condición.  Así hasta que la condición no se cumpla.
+El :term:`bucle while` funciona de forma similar a la :term:`sentencia
+if`.  Evalúa la condición y si se cumple ejecuta las sentencias
+indentadas justo a continuación.  Pero después de ejecutarlas no
+continúa con la siguiente sentencia, sino que vuelve a evaluar la
+condición.  Así hasta que la condición no se cumpla.
 
 .. _tabla-del-3:
 .. activecode:: tabla-del-3
 
    tabla = 3
-   i=0
-   while i<10:
-       print(tabla,'x',i,'=',tabla*i)
+   i = 0
+   while i < 10:
+       print(tabla, 'x', i, '=', tabla*i)
        i = i + 1
 
 Examina con *Show in Codelens* la ejecución paso a paso de este
@@ -574,7 +634,7 @@ sentencias indentadas del bucle.
 
    tabla = 3
    for i in range(10):
-       print(tabla,'x',i,'=',tabla*i)
+       print(tabla, 'x', i, '=', tabla*i)
 
 
 Trabaja sobre lo visto
@@ -684,7 +744,7 @@ evaluaría como ``True``. Por tanto se puede hacer todavía más corto así:
        print('m es más próximo a 100')
 
 Bueno, esta es la primera vez que vemos un ``else``.  Deberíamos
-aclarar algo, verdad?  La claúsula ``else`` es una parte opcional de
+aclarar algo, ¿verdad?  La claúsula ``else`` es una parte opcional de
 la sentencia ``if``.  Indica que en caso de que no se cumpla la
 condición ejecute las sentencias indentadas a continuación.  Te
 aseguro que no es tan útil como el ``if`` pero a veces puede ser
@@ -766,7 +826,7 @@ Con muy poquito esfuerzo más se pueden resolver problemas parecidos.
 
    i = 0
    while i < 10:
-       print('3 x',i,'=',3*i)
+       print('3 x', i, '=', 3*i)
        i = i + 1
 
 Ahora tenemos dos ventajas. Por un lado es mas corto y por tanto mas
@@ -816,10 +876,10 @@ tratara de una nueva sentencia.
 
    imprimir_tabla_multiplicar(5)
 
-Ya está bien por ahora, pero no creas que es la única forma de resolver el
-problema. En Python siempre hay más formas de escribir las cosas. Por
-ejemplo, ésto sería más cercano a lo que haría un programador
-experimentado:
+Ya está bien por ahora, pero no creas que es la única forma de
+resolver el problema. En Python siempre hay más formas de escribir las
+cosas. Por ejemplo, ésto sería más cercano a lo que haría un
+programador experimentado:
 
 .. activecode:: imprimir_tabla_multiplicar_v2
 

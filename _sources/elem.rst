@@ -2,9 +2,9 @@
 Elementos de un programa
 ========================
 
-Un lenguaje de programación es más que un mecanismo para decirle al
-ordenador qué operaciones tiene que realizar. Sirve también como un
-entorno en el que organizar nuestras ideas sobre procesos
+Un lenguaje de programación es bastante más que un mecanismo para
+decirle al ordenador qué operaciones tiene que realizar. Sirve también
+como un entorno en el que organizar nuestras ideas sobre procesos
 computacionales.  Los programas sirven para comunicar esas ideas a los
 miembros de la comunidad.  Es decir, los programas tienen que
 escribirse fundamentalmente para que la gente los lea y eventualmente
@@ -18,14 +18,18 @@ Prácticamente todos los lenguajes de propósito general incluyen tres
 tipos de elementos:
 
 - Sentencias y expresiones **primitivas**, que representan los bloques
-  más simples proporcionados por el lenguaje.
+  más simples proporcionados por el lenguaje.  Puedes verlo como
+  piezas de LEGO.
 
 - Mecanismos de **combinación**, con los que se construyen elementos
-  compuestos a partir de otros más sencillos.
+  compuestos a partir de otros más sencillos.  Son los mecanismos para
+  encajar unas piezas con otras para formar bloques más complejos.
 
 - Mecanismos de **abstracción**, mediante los que se puede dar nombre
   a los elementos compuestos y usarlos como elementos nuevos sin
-  atender a los detalles internos.
+  atender a los detalles internos.  Piensa por ejemplo en un avión
+  hecho con piezas de LEGO.  Lo de menos son las piezas que lo
+  componen, se maneja como un todo que actúa como cualquier avión.
 
 Si recapacitas en lo que vimos en el capítulo anterior hemos visto un
 poco de todo.  Las cadenas de texto como ``'Hola Mundo'``, los
@@ -33,9 +37,9 @@ números, o los nombres de las variables son expresiones primitivas.
 Las sentencias de asignación o las sentencias en las que simplemente
 llamábamos a una función son sentencias primitivas.
 
-La :term:`sentencia *if*`, o el :term:`bucle *while*` son formas de
+La :term:`sentencia if`, o el :term:`bucle while` son formas de
 combinar sentencias que se ejecutan en unos casos pero no en otros.
-El conjunto de la :term:`sentencia *if*` junto a todas las sentencias
+El conjunto de la :term:`sentencia if` junto a todas las sentencias
 indentadas después de la condición se comportan como una única
 sentencia compuesta.  También las expresiones que combinan varias
 expresiones primitivas con la ayuda de operadores son expresiones
@@ -112,7 +116,7 @@ llamada decimos que la función ``max`` es llamada con los argumentos
 7.5 y 9.5 y devuelve el valor 9.5.
 
 El orden de los argumentos en una expresión de llamada importa.  Por
-ejemplo, la función pow eleva su primer argumento a la potencia
+ejemplo, la función ``pow`` eleva su primer argumento a la potencia
 indicada en su segundo argumento.
 
 .. activecode:: orden-argumentos-importa
@@ -133,7 +137,7 @@ Los operadores aritméticos también podemos verlos como funciones.
 
    from operator import add, sub, mul, div
 
-Lo siguiente es un ejemplo de llamada al operador ``+`` (suma) usando
+Lo siguiente es un ejemplo de llamada al ``operador +`` (suma) usando
 notación de llamada a función.
 
 .. activecode:: suma-con-funcion
@@ -143,12 +147,17 @@ notación de llamada a función.
    print(add(1,3))
 
 
+Como puedes ver las expresiones aritméticas pueden escribirse
+indistintamente con una notación infija (con operadores matemáticos
+normales) o con una notación funcional.  Vamos a analizar brevemente
+la ventaja de esta última aproximación.
+
 Notación funcional
 ~~~~~~~~~~~~~~~~~~
 
 La notación funcional tiene una serie de ventajas:
 
--  Primero se extiende de forma natural a cualquier número de
+-  Primero, se extiende de forma natural a cualquier número de
    argumentos.
 
    .. activecode:: max-n-argumentos
@@ -156,7 +165,7 @@ La notación funcional tiene una serie de ventajas:
 
       print(max(1,-2,3,-4))
 
--  Segundo se extiende fácilmente a expresiones anidadas, donde los
+-  Segundo, se extiende fácilmente a expresiones anidadas, donde los
    elementos son a su vez expresiones compuestas. La estructura del
    anidamiento es completamente explícita, a diferencia de las
    expresiones infijas compuestas.
@@ -170,7 +179,7 @@ La notación funcional tiene una serie de ventajas:
 -  Tercero, la notación matemática infija tiene una amplia variedad de
    formas de representación, que en algunos casos es muy difícil de
    teclear en un ordenador. Piensa por ejemplo en el signo de la raiz
-   cuadrada, o las fracciones. En cambio, la notación funcional es
+   cúbica, o las fracciones. En cambio, la notación funcional es
    completamente homogénea y fácil de teclear. Incluso los operadores
    matemáticos habituales pueden expresarse con notación funcional.
 
@@ -179,6 +188,12 @@ La notación funcional tiene una serie de ventajas:
 
       from operator import add, sub, mul
       print(mul(add(2,mul(4, 6)), add(3, 5)))
+
+No tomes ésto como una indicación para usar siempre la notación
+funcional.  Usa la que represente de forma más natural lo que quieres
+expresar.  Pero ten en cuenta las ventajas de las funciones, porque
+van a ser el mecanismo fundamental que te permitirá construir
+programas grandes.
 
 
 Tipos de datos en Python
@@ -193,12 +208,22 @@ expresiones:
    saludo = 'Hola'
    quien = 'Mundo'
    mensaje = saludo + ', ' + quien
+
+El tipo de ``mensaje`` se puede obtener fácilmente preguntándoselo al
+propio intérprete de Python.
+
+.. activecode:: imprime-tipo-ejemplo-cadenas
+   :include: ejemplo-cadenas
+   :nocodelens:
+
    print(type(mensaje), mensaje)
 
 El tipo de una expresión puede averiguarse con la función ``type``.
 Como puedes comprobar el tipo de la expresión resultante de sumar
 cadenas de texto es ``<class 'str'>``.  Es decir, otra cadena de
-texto.
+texto. En otros intérpretes de Python verás el resultado de forma
+ligeramente distinta, como un simple ``'str'``.  Da igual, quédate con
+la idea de que ``type(mensaje) == type('')``.
 
 .. activecode:: ejemplo-enteros
 
@@ -208,7 +233,7 @@ texto.
    print(type(c), c)
 
 El tipo de la expresión resultante de una suma de enteros es
-``'int'``. Es decir, otro entero.
+``<class 'int'>``. Es decir, otro entero.
 
 .. activecode:: ejemplo-enteros-hidden
    :nocanvas:
@@ -220,6 +245,7 @@ El tipo de la expresión resultante de una suma de enteros es
 
 .. activecode:: ejemplo-comparacion
    :include: ejemplo-enteros-hidden
+   :nocodelens:
 
    mayor = a > 3
    print(type(mayor), mayor)
@@ -228,11 +254,18 @@ El tipo de una comparación es ``<class 'bool'>``.  Corresponde a un
 tipo *booleano*, que solo puede tomar dos valores: ``True``
 (verdadero) y ``False`` (falso).
 
+.. tip:: Fíjate bien en cómo se escribe ``True`` y ``False``. La
+         primera letra en mayúscula y sin utilizar comillas.  Si
+         escribes ``'True'`` lo interpretará como una cadena y si
+         escribes ``true`` no lo entenderá.  Por razones que
+         desconozco ésto es una fuente errores frecuente.
+
 Algunas veces es posible combinar operandos de distinto tipo en una
 expresión.
 
 .. activecode:: ejemplo-cadena-entero
    :include: ejemplo-cadenas
+   :nocodelens:
 
    triple = saludo * 3
    print(type(triple), triple)
@@ -241,7 +274,8 @@ Multiplicar una cadena por un entero equivale a una nueva cadena que
 repite la cadena original tantas veces como indique el entero.
 
 .. activecode:: ejemplo-complejos
-   :include: ejemplo-enteros
+   :include: ejemplo-enteros-hidden
+   :nocodelens:
 
    d = .5j
    e = a + d
@@ -252,6 +286,7 @@ no tienen sentido. En ese caso Python se queja imprimiendo un error.
 
 .. activecode:: error-semantica-estatica
    :include: ejemplo-cadenas
+   :nocodelens:
 
    error = saludo / 3
    print(type(error), error)
@@ -264,8 +299,9 @@ Utiliza ``type`` para determinar el tipo de la expresión
 
 .. activecode:: busca-tipo-expr
    :include: ejemplo-cadenas
+   :nocodelens:
 
-   a = pow(2,600)
+   a = pow(2,30)
    # ¿Cuál es el tipo de a?
 
 
@@ -315,7 +351,21 @@ cúbica:
    def es_raiz_cubica(raiz, num):
       return cubo(raiz) == num
 
-Éste es **conocimiento declarativo**, sabemos hechos matemáticamente
+En este fragmento se definen dos funciones de usuario.  La función
+*cubo* devuelve el cubo de un número que se le pasa como argumento, y
+la función *es_raiz_cubica* devuelve ``True`` si el primer argumento
+es raiz cúbica exacta del número que se pasa como segundo argumento.
+Por ejemplo:
+
+.. activecode:: raiz-cubica-e-exhaustiva
+   :include: raiz-cubica-entera
+
+   x = 3
+   print('El cubo de', x, 'es', cubo(x))
+   if es_raiz_cubica(x, cubo(x)):
+       print('Funciona, porque la raiz cúbica de', cubo(x), 'es', x)
+
+Ésto es **conocimiento declarativo**, sabemos hechos matemáticamente
 ciertos porque se derivan de definiciones y axiomas. Pero este
 conocimiento no nos permite por sí solo encontrar una solución a
 nuestro problema, un método para encontrar la raiz cuadrada de un
@@ -335,20 +385,22 @@ exhaustiva`.
            n = n + 1
        return n
 
-El método que hemos utilizado es la **:term:`enumeración exhaustiva`**
+El método que hemos utilizado es la :term:`enumeración exhaustiva`
 de todos los números hasta encontrar la respuesta correcta. Los
 ordenadores son increíblemente rápidos y muchas veces este método
 puede generar una respuesta en un tiempo pequeño.
 
-La :term:`enumeración exhaustiva` es un método muy sencillo de
-implementar, pero no siempre es utilizable. En muchas ocasiones el
-número de posibles respuestas es tan elevado que no podemos
-enumerarlas todas en un tiempo razonable.
+.. tip::
+
+   La **enumeración exhaustiva** es un método muy sencillo de
+   implementar, pero no siempre es utilizable. En muchas ocasiones el
+   número de posibles respuestas es tan elevado que no podemos
+   enumerarlas todas en un tiempo razonable.
 
 Examina el ejemplo anterior para distintos valores. Por ejemplo:
 
 .. activecode:: python
-   :include: raiz-cubica-e-exhaustiva
+   :include: raiz-cubica-entera, raiz-cubica-e-exhaustiva
 
    print(raiz_cubica(8))
    print(raiz_cubica(1971935064))
@@ -356,3 +408,21 @@ Examina el ejemplo anterior para distintos valores. Por ejemplo:
 ¿Qué pasaría si se llama con el argumento 9? ¿Qué debería devolver? No
 son preguntas que debas saber a priori, ni preguntas con trampa. Piensa
 cómo debería comportarse según tu propio criterio.
+
+Cuando el programa no tiene una buena respuesta es mejor no dar
+respuesta.  ¿Pero cómo detectamos esta condición anómala en nuestros
+programas?  Hoy en día probablemente la mejor solución está en el uso
+de **excepciones**, una construcción para el manejo estructurado de
+errores, que veremos en un capítulo posterior.
+
+De momento puedes apañarte no devolviendo nada.  Pero recuerda que es
+una medida temporal, hasta que conozcas las excepciones.
+
+.. tip:: Cuando una función no puede devolver ningún valor razonable
+         debes utilizar excepciones.  Temporalmente, hasta que veamos
+         el mecanismo, no devuelvas nada o devuelve ``None``, que es
+         el literal de Python equivalente a *nada*.
+
+	 **Nunca devuelvas algo que no tiene nada que ver, como una
+	 cadena de texto con un error.**  Eso complica enormemente el
+	 uso de la función.

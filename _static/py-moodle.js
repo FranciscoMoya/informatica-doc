@@ -22,24 +22,29 @@
 //    either class Test(TestCase) or class Test(TestCaseGui).
 //
 // 3. Optionally define a container (em, span) with id minpass containing the
-//    minimum number of tests (asserts) required to submit (0 by default).
+//    minimum number of tests (asserts) required to submit.
 
+// Note: minpass has a different meaning when using TestCase (number
+// of test_ methods successfully executed) or TestCaseGui (number of
+// asserts successfully passed). This is an issue related to Skulpt
+// unittest.gui
 
-var code_separator = "\n===='''\n\n";
+var code_separator = "\n---- \n==== \n";
 
 function installPythonFacade() {
-    var editor = $('div.felement.feditor');
+    var editor = $('#id_onlinetext_editor_tbl');
     if (editor.length == 0)
 	return;
     editor.hide();
     editor.after('<div style="float:right; background-color:#FFF;">' +
                  '<input type="checkbox" id="python3" checked>Python 3</div>' + 
 	         '<textarea rows="7" style="width:97%;font-family:monospace;"' +
-                 ' id="code">' + getSubmittedCode() + '</textarea>' +
+                 ' id="code">Leyendo entrega...</textarea>' +
 		 '<div id="status"></div>' +
 		 '<div id="canvas"></div>' + 
 	         '<div id="test"><pre id="output"></pre></div>');
     $('#mform1').submit(testAndSubmitPythonProgram.bind(null,$));
+    $('#code').val(getSubmittedCode());
 }
 
 function testAndSubmitPythonProgram($, e) {
@@ -94,47 +99,69 @@ function testPythonProgram(prog) {
 }
 
 function builtinRead(x) {
-    if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+    if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined) {
+	var div = document.getElementById(x);
+	if (div) return div.textContent;
 	throw "File not found: '" + x + "'";
+    }
     return Sk.builtinFiles["files"][x];
 }
 
 function stdOut(text) {
-    $('#output').append(text);
+    $('#output').append(sanitize(text));
 }
 
 function buildProg() {
     var prog = $('#code').val() + unittest($('#unittest'));
-    return prog
+    return unsanitize(prog);
+}
+
+function unittest(elem) {
+    if (elem.length == 0)
+	return '\ndef test__():\n return [1,1]';
+    return '\nfor n in ["Test","unittest","TestCase","TestCaseGui"]:' +
+        '\n if n in globals():' +
+        '\n  raise ImportError("No incluyas pruebas ({})".format(n))' +
+        '\nfrom unittest.gui import TestCaseGui\n' + 
+	'from unittest import TestCase\n' + 
+	elem.text() +
+	'\ndef test__():\n' +
+	' t=Test()\n t.main()\n' +
+	' return [t.numPassed, t.numFailed]'; 
+}
+
+function unsanitize(text) {
+    return text
+	.replace(new RegExp('&amp;', 'g'), '&')
 	.replace(new RegExp('&lt;', 'g'), '<')
 	.replace(new RegExp('&gt;', 'g'), '>')
 	.replace(new RegExp('&#34;', 'g'), '"')
 	.replace(new RegExp('&#39;', 'g'), "'");
 }
 
-function unittest(elem) {
-    if (elem.length == 0)
-	return '\ndef test__():\n return [1,1]';
-    return '\nfrom unittest.gui import TestCaseGui\n' + 
-	'from unittest import TestCase\n' + 
-	elem.html() +
-	'\ndef test__():\n' +
-	' t=Test()\n t.main()\n' +
-	' return [t.numPassed, t.numFailed]'; 
+function sanitize(text) {
+    /* unsanitize to avoid double encoding */
+    return unsanitize(text)
+	.replace(new RegExp('<', 'g'), '&lt;')
+	.replace(new RegExp('&', 'g'), '&amp;')
+	.replace(new RegExp('"', 'g'), '&#34;')
+	.replace(new RegExp("'", 'g'), '&#39;');
 }
 
 function updateSubmittedText(passed, failed) {
+    /* submitted text must be able to be embedded into HTML elements */
     var prog = $('#code').val(),
         out = $('#output').text(),
-        header = "''' " + $("input[name=userid]").val() +
+        header = $("input[name=userid]").val() +
                  " (" + passed.toString() + "/" + failed.toString() + ")\n\n",
-        doc = header + out + code_separator + prog;
-    $('#id_onlinetext_editor').val(doc);
+        doc = header + out + code_separator + prog + code_separator;
+    $('#id_onlinetext_editor').val('<pre>' + sanitize(doc) + '</pre>');
 }
 
 function getSubmittedCode() {
     var code = $('#id_onlinetext_editor').val().split(code_separator);
-    return code.length > 1? code[1]: code[0];
+    var prog = code.length > 1? code[1]: code[0];
+    return unsanitize(prog.replace('<pre>','').replace('</pre>',''));
 }
 
 function isPython3Source() {
@@ -149,22 +176,4 @@ function minPassed() {
     return parseInt(f.text(), 10);
 }
 
-function loadJS (url, success){
-    var scriptTag = document.createElement('script');
-    scriptTag.src = url;
-    scriptTag.onload = success;
-    scriptTag.onreadystatechange = success;
-    document.head.appendChild(scriptTag);
-};
-
-// There is an incompatibility between jQuery 3.1 and
-// https://campusvirtual.uclm.es/lib/requirejs.php/1476343773/core/first.js
-// therefore we stay at 2.2
-loadJS('https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', function(){
-    loadJS('https://www.promisejs.org/polyfills/promise-7.0.4.min.js', function(){});
-    var skulpt_base = 'https://rawgit.com/skulpt/skulpt-dist/master/';
-    loadJS(skulpt_base + 'skulpt.min.js', function() {
-	loadJS(skulpt_base + 'skulpt-stdlib.js', function(){});
-    });
-    $(document).ready(installPythonFacade);
-});
+$(document).ready(installPythonFacade);

@@ -131,7 +131,7 @@ electrónico de una línea de transmisión.  El ingeniero que participa
 en el diseño de cualquier equipo electrónico tendrá que lidiar con
 computadores.
 
-Pero es que además el ordenador es la mejor herramienta de trabajo
+Pero es que además el computador es la mejor herramienta de trabajo
 para el ingeniero.  Hoy en día es posible encontrar ingenieros que no
 saben ni siquiera lo que es una regla de cálculo, pero es imposible
 encontrar un ingeniero en activo que no use computadores a diario.
@@ -166,8 +166,8 @@ nuestra intención crear un nuevo libro, hay muchos y algunos muy
 buenos.  El problema es que nuestro alumno típico no sabe inglés, y
 hay poca literatura técnica en castellano.  Empezamos a colgar notas
 de clase pero un número significativo de estudiantes jamás llegaron a
-descargarlas.  Tal vez en un bloque monolítico sea más difícil que eso
-pase.
+descargarlas todas.  Tal vez en un bloque monolítico sea más difícil
+que eso pase.
 
 Este pequeño libro recoge las notas de clase elaboradas durante varios
 años.  La estructura responde aproximadamente al libro de John Guttag,
@@ -294,19 +294,21 @@ varios de los siguientes recursos:
    complementarios, pero también pueden ser vídeos o artículos
    disponibles en Internet.
 
-Es muy conveniente comprobar frecuentemente la documentación disponible
-en el Campus Virtual de la UCLM, sobre todo el día antes de cada clase y
-cuando así se diga en las clases. Todas aquellas personas que no pueden
-asistir con regularidad a las clases deberían ver el video
-correspondiente a cada clase (que se publicará un día después de a
-clase) para un seguimiento óptimo de la asignatura.
+Es muy conveniente comprobar frecuentemente la documentación
+disponible en el Campus Virtual de la UCLM, sobre todo el día antes de
+cada clase y cuando así se diga en las clases. Todas aquellas personas
+que no pueden asistir con regularidad a las clases deberían ver el
+video correspondiente a cada clase [#]_, si está disponible, para un
+seguimiento óptimo de la asignatura.
+
+.. [#] Estamos en proceso de grabación de las clases en vídeo. Es posible que algunas clases no estén todavía disponibles. Comprueba el progreso en nuestro `canal de YouTube <https://www.youtube.com/channel/UCMvJ1Uyt9J9PQlrUqOwyYDg>`_.
 
 Trabajo en el laboratorio
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 En general las actividades de laboratorio consistirán en la realización
 de pequeños programas. La evaluación y/o corrección se realizará de
-forma completamente automática a través de una actividad del Campus
+forma prácticamente automática a través de una actividad del Campus
 Virtual.  El profesor no está, por tanto, para deciros si un programa
 está bien o mal, sino para orientaros sobre formas alternativas de
 resolver problemas o para indicaros las mejores formas de expresar
@@ -343,7 +345,7 @@ El trabajo en casa tiene dos partes bien diferenciadas:
 
 2. Por otro lado tienes que poner en práctica estos conocimientos. Para
    ello *tienes* que hacer dos actividades: leer programas de otros,
-   escribir programas para resolver pequeños problemas. No te quedes en
+   y escribir programas para resolver pequeños problemas. No te quedes en
    la segunda parte, es *muy importante* leer programas de otros. Puedes
    aprender a nadar con *estilo perrito* pero cuando ves nadar a un
    profesional te das cuenta que tu estilo puede y debe mejorar. Hay
@@ -351,11 +353,12 @@ El trabajo en casa tiene dos partes bien diferenciadas:
    propiedades son deseables y cuáles no, aprende a escribir programas
    para que otros los entiendan.
 
-Con gran diferencia la segunda parte es la que más tiempo te debe
-consumir. Python tiene solo 40 palabras y la mayoría son vocablos
-comunes en inglés, que ya deberías conocer. Si estás consumiendo mucho
-tiempo en la primera parte reacciona pronto, porque la propia práctica
-de la programación también te ayuda a asimilar los conceptos y lo
+Con gran diferencia la parte práctica (leer y escribir programas) es
+la que más tiempo te debe consumir. Python tiene solo 40 palabras y la
+mayoría son vocablos comunes en inglés, que ya deberías conocer. Si
+estás consumiendo mucho tiempo en la primera parte (asimilar
+conocimientos teóricos) reacciona pronto, porque la propia práctica de
+la programación también te ayuda a asimilar los conceptos y lo
 contrario no ocurre nunca. Leyendo un manual de técnica de natación no
 se aprende a nadar.
 
@@ -369,7 +372,7 @@ programas de ejemplo te resultan muy fáciles.
 Política de copias
 ------------------
 
-En esta asignatura hay y habrá tolerancia cero con la copia y el engaño.
+En esta asignatura hay y habrá tolerancia cero a la copia y el engaño.
 Es un comportamiento totalmente inaceptable para cualquier profesional
 cualificado y será perseguido con la máxima dureza que permita la
 reglamentación interna de la UCLM. Se utilizarán herramientas *estado

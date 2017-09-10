@@ -1,0 +1,129 @@
+<p>-<em>- coding: utf-8 -</em>- # Bucles e iteración</p>
+<p>Este segundo bloque está concebido para que utilices bucles y practiques iterando (recorriendo) estructuras de datos.</p>
+<p>En todos los bloques se propone la realización de una serie de ejercicios. Cada uno de ellos consistirá en definir una o varias funciones. Debes definir todas las funciones en la entrega.</p>
+<p>Esta página comprobará que los ejercicios se han realizado correctamente y no permitirá entregas con errores sintácticos. <strong>Sin embargo en este bloque se permitirán entregas que solo pasen el 50% de las pruebas.</strong></p>
+<h2 id="suma-de-rango-de-enteros">11. Suma de rango de enteros</h2>
+<p>Define una función <code>suma_rango</code> que tenga dos argumentos enteros y devuelva la suma de todos los números desde el primero hasta el segundo, sin contar este último. Se asume que el primer argumento es menor que el segundo.</p>
+<h2 id="contar-negativos">12 Contar negativos</h2>
+<p>Define una función <code>contar_negativos</code> que tenga un único argumento que es una lista de enteros. Debe devolver el número de enteros negativos que contiene.</p>
+<h2 id="números-primos">13. Números primos</h2>
+<p>Define una función de nombre <code>es_primo</code> que admita un único argumento entero. Esta función debe devolver <code>True</code> si el argumento es un número primo y <code>False</code> en caso contrario.</p>
+<h2 id="buscar-vocal">14. Buscar vocal</h2>
+<p>Define una función <code>buscar_vocal</code> que tenga un único argumento de tipo cadena de texto y devuelva la posición de la primera vocal encontrada. Si no encuentra vocales debe devolver -1.</p>
+<p><strong>Nota: la primera letra tiene la posición 0.</strong></p>
+<h2 id="múltiplos-de-7">15. Múltiplos de 7</h2>
+<p>Define una función <code>multiplos_7_en_rango</code> que tenga dos argumentos enteros y devuelva una lista con todos los números enteros entre ambos argumentos (sin contar el segundo argumento) que sean múltiplos de 7. Se asume que el primer argumento es menor que el segundo.</p>
+<h2 id="cuadrado-ascii">16. Cuadrado ASCII</h2>
+<p>Define una función <code>dibujar_cuadrado</code> que tenga un argumento entero que corresponde al ancho del cuadrado en caracteres. Esta función debe imprimir por salida estándar el dibujo de un cuadrado del ancho especificado en caracteres. Por ejemplo, para el ancho 8 la función debe imprimir exactamente el dibujo siguiente.</p>
+<pre><code>+------+
+|      |
+|      |
++------+</code></pre>
+<p><strong>Nota: El ancho puede asumirse entero par mayor o igual a 4. Nótese que el ancho incluye los caracteres de los bordes y esquinas. Nótese que la altura del cuadrado es la mitad de la anchura.</strong></p>
+<h2 id="código-césar">17. Código César</h2>
+<p>Escribe una función <code>codigo_cesar</code> que tenga un único argumento de tipo cadena de texto. Debe devolver otra cadena resultado de aplicar el <a href="https://es.wikipedia.org/wiki/Cifrado_César">cifrado césar</a> con desplazamiento de 3 posiciones a la cadena original. No se consideran letras acentuadas, ni diéresis, ni ñ, ni números.</p>
+<p><strong>Nota: Las letras a considerar son las que muestra el siguiente fragmento (en el mismo orden).</strong></p>
+<pre><code>import string
+print(string.ascii_letters)</code></pre>
+<h2 id="números-perfectos">18. Números perfectos</h2>
+<p>Escribe una función <code>es_perfecto(n)</code> que devuelva <code>True</code> si el argumento es un <a href="https://es.wikipedia.org/wiki/Número_perfecto">número perfecto</a> y <code>False</code> si no lo es.</p>
+<h2 id="cifras-decimales">19. Cifras decimales</h2>
+<p>Escribe una función <code>cifras(n)</code> que devuelve una lista de las cifras decimales de su argumento. Por ejemplo, para el número 1984 devuelve <code>[1, 9, 8, 4]</code>.</p>
+<h2 id="las-siete-y-media">20. Las siete y media</h2>
+<p>Un popular juego de naipes llamado <a href="https://es.wikipedia.org/wiki/Siete_y_media">las siete y media</a> precisa sumar los valores de conjuntos de cartas de una manera muy peculiar. Los naipes están numerados del 1 al 12, aunque los 8 y los 9 no se utilizan en este juego. Cada carta vale lo que corresponde a su número salvo los 10, 11 y 12 que valen solo 0.5 puntos. Si se superan los 7.5 puntos se ha perdido. Si no se supera gana el que más se aproxime a 7.5 puntos (de ahí el nombre). Escribe una función <code>compara_mano</code> que acepta dos listas de números correspondientes a la mano de dos jugadores y devuelve 1 si gana la primera lista, 2 si gana la segunda lista y 0 si hay empate. Por ejemplo, <code>compara_mano([1,5,12], [7,10])</code> debe devolver 2.</p>
+<h2 id="pruebas">Pruebas</h2>
+<p>A continuación se incluyen las pruebas que será necesario pasar para aceptar esta entrega. Debe pasar al menos el 50% de las pruebas para aceptar la entrega. Consulta <a href="">esta página</a> para aprender cómo pueden ayudarte las pruebas a desarrollar tu propio programa.</p>
+<pre><code>import sys
+try: from io import StringIO
+except: from StringIO import StringIO
+
+class Test(unittest.TestCase):
+    def test_suma_rango(self):
+        self.assertEqual(suma_rango(5,5), 0)
+        self.assertEqual(suma_rango(0,5), 10)
+        self.assertEqual(suma_rango(5,10), 35)
+        self.assertEqual(suma_rango(-3,4), 0)
+        
+    def test_contar_negativos(self):
+        self.assertEqual(contar_negativos([]), 0)
+        self.assertEqual(contar_negativos([0, -2, 0, -1]), 2)
+        self.assertEqual(contar_negativos([0, -1, -1]), 2)
+        self.assertEqual(contar_negativos([0, 1, 1]), 0)
+        
+    def test_buscar_vocal(self):
+        self.assertEqual(buscar_vocal(&#39;prueba&#39;), 2)
+        self.assertEqual(buscar_vocal(&#39;PRUEBA&#39;), 2)
+        self.assertEqual(buscar_vocal(&#39;AEIOU&#39;), 0)
+        self.assertEqual(buscar_vocal(&#39;Sdzqrt3&#39;), -1)
+        self.assertEqual(buscar_vocal(&#39;prJ3b4 s1n V0C4L3S&#39;), -1)
+        
+    def test_multiplos_7_en_rango(self):
+        self.assertEqual(multiplos_7_en_rango(1,7), [])
+        self.assertEqual(multiplos_7_en_rango(1,14), [7])
+        self.assertEqual(multiplos_7_en_rango(7,21), [7,14])
+        self.assertEqual(multiplos_7_en_rango(7,77), [7,14,21,28,35,42,49,56,63,70])
+        
+    def test_dibujar_cuadrado(self):
+        self.clear_std_output()
+        self.assertEqual(self.std_output(dibujar_cuadrado(12)),
+                         [&#39;+----------+&#39;,
+                          &#39;|          |&#39;,
+                          &#39;|          |&#39;,
+                          &#39;|          |&#39;,
+                          &#39;|          |&#39;,
+                          &#39;+----------+&#39;])
+        self.clear_std_output()
+        self.assertEqual(self.std_output(dibujar_cuadrado(8)),
+                         [&#39;+------+&#39;,
+                          &#39;|      |&#39;,
+                          &#39;|      |&#39;,
+                          &#39;+------+&#39;])
+        self.clear_std_output()
+        self.assertEqual(self.std_output(dibujar_cuadrado(4)),
+                         [&#39;+--+&#39;,
+                          &#39;+--+&#39;])
+
+    def test_codigo_cesar(self):
+        self.assertEqual(codigo_cesar(&#39;abcdef&#39;), &#39;defghi&#39;)
+        self.assertEqual(codigo_cesar(&#39;ABCDEF&#39;), &#39;DEFGHI&#39;)
+        self.assertEqual(codigo_cesar(&#39;AZ&#39;), &#39;Dc&#39;)
+        self.assertEqual(codigo_cesar(&#39;MaximoSecreto&#39;), &#39;PdAlprVhfuhwr&#39;)
+        
+    def test_es_perfecto(self):
+        self.assertTrue(es_perfecto(6))
+        self.assertTrue(es_perfecto(28))
+        self.assertTrue(es_perfecto(496))
+        self.assertTrue(es_perfecto(8128))
+        self.assertFalse(es_perfecto(5))
+        self.assertFalse(es_perfecto(27))
+        self.assertFalse(es_perfecto(495))
+        self.assertFalse(es_perfecto(8127))
+        
+    def test_cifras(self):
+        self.assertEqual(cifras(2016), [2,0,1,6])
+        self.assertEqual(cifras(123456789), list(range(1,10)))
+        self.assertEqual(cifras(9876543210), list(range(9,-1,-1)))
+        
+    def test_compara_mano(self):
+        self.assertEqual(compara_mano([1,5,12], [7,10]), 2)
+        self.assertEqual(compara_mano([2,5,12], [7,10]), 0)
+        self.assertEqual(compara_mano([5,12], [3,10]), 1)
+        self.assertEqual(compara_mano([5,12,3], [5,10]), 2)
+        self.assertEqual(compara_mano([5,12,3], [5,10,4]), 0)
+
+    def setUp(self):
+        self.console = sys.stdout
+        self.s = &#39;&#39;
+
+    def tearDown(self):
+        self.s += sys.stdout.getvalue()
+        sys.stdout = self.console
+        print(self.s)
+
+    def std_output(self, _):
+        sys.stdout.flush()
+        return [x.strip() for x in sys.stdout.getvalue().strip().split(&#39;\n&#39;)]
+
+    def clear_std_output(self):
+        self.s += sys.stdout.getvalue()
+        sys.stdout = StringIO()     </code></pre>

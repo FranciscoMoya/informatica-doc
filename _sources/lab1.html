@@ -1,0 +1,117 @@
+<h1 id="literales-expresiones-y-ejecución-condicional">Literales, expresiones y ejecución condicional</h1>
+<p>Bienvenidos al laboratorio. Este primer bloque servirá para familiarizarte con la mecánica de entrega de prácticas, que es la misma del examen.</p>
+<p>En cada bloque se propone la realización de una serie de ejercicios. Cada uno de ellos consistirá en definir una o varias funciones. Debes definir todas las funciones en la entrega.</p>
+<p>Esta página comprobará que los ejercicios se han realizado correctamente y no permitirá entregas con errores sintácticos o con fallos de funcionamiento. En otros casos te permitiremos algunos fallos.</p>
+<h2 id="correo-electrónico">1. Correo electrónico</h2>
+<p>Debes definir una función <code>my_email</code> sin argumentos que devuelva la dirección de correo de la UCLM.</p>
+<p>Las pruebas que deberá pasar tu entrega se muestran a continuación. Aunque ahora mismo no lo entiendas muy bien estoy seguro de que podrás descubrir información útil</p>
+<h2 id="recortar-un-valor-dentro-de-un-rango">2. Recortar un valor dentro de un rango</h2>
+<p>Define una función <code>recortar</code> que admita un único argumento que será un número real. Esta función debe devolver el valor de su argumento recortado al intervalo [−1,1]. Es decir, si el argumento es menor que −1 debe devolver -1.0, si es mayor que 1 debe devolver 1.0, y en cualquier otro caso debe devolver el valor del argumento.</p>
+<h2 id="años-bisiestos">3. Años bisiestos</h2>
+<p>Define una función de nombre <code>es_bisiesto</code> que admita un único argumento entero. Esta función debe devolver <code>True</code> si el argumento corresponde con un año bisiesto y <code>False</code> en caso contrario.</p>
+<p><strong>Nota: Un año es bisiesto si es divisible entre 4, salvo los divisibles por 100, pero los divisibles por 400 también son bisiestos.</strong></p>
+<h2 id="media-geométrica">4. Media geométrica</h2>
+<p>Define una función de nombre <code>media_geometrica</code> que devuelva el valor de la media geométrica de los dos números reales que se le pasen como argumentos.</p>
+<h2 id="batería-cargada">5. Batería cargada</h2>
+<p>Define una función de nombre <code>bateria_cargada</code> que devuelve <code>True</code> si el argumento real que se le pasa está en el intervalo <code>[12.50,12.95]</code> o en el intervalo <code>[−12.95,−12.50]</code>. Debe devolver <code>False</code> en cualquier otro caso.</p>
+<h2 id="calificación-alfabética">6. Calificación alfabética</h2>
+<p>Define una función de nombre <code>calificacion</code> que devuelve una cadena de texto con la calificación alfabética correspondiente a una nota numérica que se pasa como argumento. Si la nota es inferior a 5.0 debe devolver <code>Suspenso</code>, si está en el intervalo [5.0,7.0) debe devolver <code>Aprobado</code>, si está en el intervalo [7.0,9.0) debe devolver <code>Notable</code> y si está en el intervalo [9.0,10] debe devolver <code>Sobresaliente</code>.</p>
+<p><strong>Nota: El enunciado no dice nada acerca de notas superiores a 10. Esto es intencional, el programador es libre de hacer lo que considere más conveniente.</strong></p>
+<h2 id="conversión-fahrenheit-a-celsius">7. Conversión Fahrenheit a Celsius</h2>
+<p>Define una función de nombre <code>fahrenheit_a_celsius</code> que transforma una temperatura expresada en grados Fahrenheit, que se pasa como argumento, en la misma temperatura expresada en grados centígrados, que es devuelta por la función.</p>
+<h2 id="área-del-círculo">8. Área del círculo</h2>
+<p>Define una función <code>area_circulo</code> que calcula el área de un círculo dado el radio, que se pasa como argumento. El radio está expresado en metros y el área debe expresarse en metros cuadrados.</p>
+<h2 id="energía-cinética">9. Energía cinética</h2>
+<p>Define una función <code>energia_cinetica</code> que calcula la energía cinética en función del tiempo de una partícula de masa <code>m</code> en caída libre en las proximidades de la superficie terrestre partiendo del reposo. Esta función debe aceptar dos argumentos, la masa expresada en Kg y el tiempo transcurrido desde que se dejó en caída libre expresado en segundos. El valor de retorno debe ser la energía cinética expresada en Julios.</p>
+<p><strong>Nota: Aunque se pide hacer una función eso no significa que no se puedan hacer otras auxiliares para simplificar la implementación. En particular puede interesar una función para calcular la velocidad en función del tiempo.</strong></p>
+<h2 id="redondeo-a-entero">10. Redondeo a entero</h2>
+<p>Define una función <code>redondear</code> que devuelva el número <strong>entero</strong> más próximo al real que se le pasa como argumento. El valor medio se redondeará en exceso, es decir 0.5 se redondeará como 1.</p>
+<h2 id="pruebas">Pruebas</h2>
+<p>A continuación se incluyen las pruebas que será necesario pasar para aceptar esta entrega. Consulta <a href="">esta página</a> para aprender cómo pueden ayudarte las pruebas a desarrollar tu propio programa.</p>
+<pre><code>class Test(TestCaseGui):
+    def test_my_email(self):
+        self.assertEqual(1,my_email().count(&#39;@&#39;))
+        self.assertTrue(my_email().endswith(&#39;uclm.es&#39;))
+        
+    def test_recortar(self):
+        self.assertEqual(recortar(120.), 1.0)
+        self.assertEqual(recortar(-120.), -1.0)
+        self.assertEqual(recortar(-1.), -1.0)
+        self.assertEqual(recortar(1.), 1.0)
+        self.assertEqual(recortar(0.75), 0.75)
+        self.assertEqual(recortar(0.), 0.)
+        self.assertEqual(recortar(-0.25), -0.25)
+        
+    def test_es_bisiesto(self):
+        self.assertFalse(es_bisiesto(1))
+        self.assertTrue(es_bisiesto(4))
+        self.assertFalse(es_bisiesto(100))
+        self.assertTrue(es_bisiesto(400))
+        self.assertTrue(es_bisiesto(2000))
+        self.assertFalse(es_bisiesto(1900))
+        self.assertTrue(es_bisiesto(2016))
+        
+    def test_es_primo(self):
+        self.assertFalse(es_primo(0))
+        self.assertFalse(es_primo(1))
+        self.assertTrue(es_primo(2))
+        self.assertTrue(es_primo(17))
+        self.assertFalse(es_primo(18))
+        self.assertTrue(es_primo(19))
+        self.assertTrue(es_primo(97))
+        self.assertFalse(es_primo(98))
+        self.assertFalse(es_primo(99))
+        
+    def test_media_geometrica(self):
+        self.assertEqual(media_geometrica(1.0, 1.0), 1.0)
+        self.assertEqual(media_geometrica(4.0, 25.0), 10.0)
+        self.assertEqual(media_geometrica(100.0, 16.0), 40.0)
+        self.assertEqual(media_geometrica(2.0, 1.125), 1.5)
+        
+    def test_bateria_cargada(self):
+        self.assertTrue(bateria_cargada(12.5))
+        self.assertTrue(bateria_cargada(12.95))
+        self.assertTrue(bateria_cargada(12.75))
+        self.assertFalse(bateria_cargada(12.96))
+        self.assertFalse(bateria_cargada(12.49))
+        self.assertTrue(bateria_cargada(-12.5))
+        self.assertTrue(bateria_cargada(-12.95))
+        self.assertTrue(bateria_cargada(-12.75))
+        self.assertFalse(bateria_cargada(-12.96))
+        self.assertFalse(bateria_cargada(-12.49))
+        
+    def test_calificacion(self):
+        self.assertEqual(calificacion(4.9), &#39;Suspenso&#39;)
+        self.assertEqual(calificacion(5.0), &#39;Aprobado&#39;)
+        self.assertEqual(calificacion(6.96), &#39;Aprobado&#39;)
+        self.assertEqual(calificacion(7.0), &#39;Notable&#39;)
+        self.assertEqual(calificacion(8.9999), &#39;Notable&#39;)
+        self.assertEqual(calificacion(9.0), &#39;Sobresaliente&#39;)
+        self.assertEqual(calificacion(10.0), &#39;Sobresaliente&#39;)
+        
+    def test_fahrenheit_a_celsius(self):
+        self.assertEqual(fahrenheit_a_celsius(32.0), 0.0)
+        self.assertEqual(fahrenheit_a_celsius(86.0), 30.0)
+        self.assertEqual(fahrenheit_a_celsius(212.0), 100.0)
+        
+    def test_area_circulo(self):
+        from math import pi
+        self.assertAlmostEqual(area_circulo(1.0), pi)
+        self.assertAlmostEqual(area_circulo(2.0), 4.*pi)
+        self.assertAlmostEqual(area_circulo(1.25), 1.5625*pi)
+        self.assertAlmostEqual(area_circulo(0), 0.0)
+        
+    def test_energia_cinetica(self):
+        epsilon = 0.001
+        self.assertTrue(abs(energia_cinetica(1,2) - 192.08) &lt; epsilon)
+        self.assertTrue(abs(energia_cinetica(2,1) - 96.04) &lt; epsilon)
+        self.assertTrue(abs(energia_cinetica(2,2) - 384.16) &lt; epsilon)
+        self.assertTrue(abs(energia_cinetica(1,4) - 768.32) &lt; epsilon)
+        
+    def test_redondear(self):
+        self.assertIs(type(redondear(1.25)), int)
+        self.assertEqual(redondear(1.0), 1)
+        self.assertEqual(redondear(1.25), 1)
+        self.assertEqual(redondear(1.25), 1)
+        self.assertEqual(redondear(1.55), 2)
+        self.assertEqual(redondear(1.5), 2)</code></pre>
