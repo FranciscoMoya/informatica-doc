@@ -507,38 +507,104 @@ Ejercicios
           un entero usando la función ``int``. ¿Qué pasaría si lo que
           metemos no es un entero?
    
-
-Vamos a enfrentarnos por primera vez a un prgrama de más de 5 líneas:
-
-| Haz un programa que imprima la tabla de multiplicar completa (del 1 al 9).
-
 .. activecode:: imprime-tabla-v1
+   :autograde:
 
-    def imprime_tablas_simple():
-        for i in range(1,10):
-            imprime_tabla(i)
-            print()
-    
-    def imprime_tabla(n):
-        for i in range(1,11):
-            imprime_linea(n,i)
-            print()
-    
-    def imprime_linea(n,i):
-        print(n,'x',i,'=',n*i,end='')
+   Vamos a enfrentarnos por primera vez a un programa de más de 5
+   líneas. Corrije el programa para que imprima la tabla de
+   multiplicar completa (del 1 al 9). Solo tienes que poner la llamada
+   a función adecuada en cada una de las líneas de comentario.  Cada
+   línea debe tener la forma ``n x i = resultado``.  Por ejemplo, 
+   ``3 x 4 = 12``.
+   ~~~~
+   def imprime_tablas():
+       for i in range(1,10):
+           # imprime la tabla del numero i
+           print()
+   
+   def imprime_tabla(n):
+       for i in range(1,11):
+           # imprime la línea n x i = resultado
+   
+   def imprime_linea(n,i):
+       print(n,'x',i,'=',n*i)
+   
+   imprime_tablas()
+   ====
+   import unittest
+   import sys
+   try: from io import StringIO
+   except: from StringIO import StringIO
+   
+   class TestTablas(unittest.TestCase):
+     def test_tablas(self):
+        import re
+        def getTuple(s):
+           return tuple(int(x) for x in re.split('x|=', s))
+        
+	self.clear_std_output()
+        imprime_tablas()
+	self.clear_std_output()
+        A = [ getTuple(line) for line in self.s.split('\n') if line.strip() != '' ]
+	B = [ (x, y, x*y) for x in range(1,10) for y in range (1,11) ]
+	self.s = ''
+        self.assertEqual(len(A),len(B))
+        for a,b in zip(A,B):
+           self.assertEqual(a,b)
 
+     def setUp(self):
+        print('Permíteme que yo también compruebe tu solución...')
+        self.console = sys.stdout
+        self.s = ''
+
+     def tearDown(self):
+        try:
+            self.s += sys.stdout.getvalue()
+            sys.stdout = self.console
+            print(self.s)
+        except: pass
+
+     def clear_std_output(self):
+        try: self.s += sys.stdout.getvalue()
+        except: pass
+        sys.stdout = StringIO()
+   
+   TestTablas().main()
 
 Observa cómo escribimos el programa, desde lo más complejo hasta lo
 más simple.  Empezamos con el problema que se pide (escribir las nueve
 tablas de multiplicar).  Si en ese proceso nos surge otro problema
-(imprimir tabla de multiplicar) lo asumimos resuelto con una función,
+(imprimir una tabla de multiplicar) lo asumimos resuelto con una función,
 la que nosotros decidimos (``imprime_tabla``) con todos los argumentos
 que necesitemos.  Después aplicamos el mismo proceso con todas las
-funciones que hayamos necesitado usar y no estén aún definidas.
+funciones que hayamos necesitado usar y no estén aún definidas.  Este
+procedimiento se denomina habitualmente metodología *top-down*. Fuerza
+el pensamiento a ir de lo más abstracto a lo más concreto.
 
-Otra forma:
+No lo hagas al revés (también se conoce como metodología *bottom-up*).
+No anticipes las funciones que vas a necesitar antes de realmente
+necesitarlas.  No es que sea imposible hacerlo así pero requiere mucha
+más experiencia que aún no tienes.  La metodología *bottom-up* solo se
+utiliza cuando las funciones de más bajo nivel de abstracción vienen
+impuestas a priori, normalmente porque ya han sido realizadas antes.
 
-.. code:: python
+.. tip::
+
+   Aunque debes tender a utilizar diseño *top-down* en la mayor parte
+   de tus programas es prácticamente imposible que todo el programa
+   sea realizado de esta forma.  Vas a utilizar continuamente
+   funciones de la biblioteca estándar, eso es *bottom-up*.  No
+   desesperes, los nombres no importan.  Importa que sepas por qué te
+   interesa una u otra metodología.  Empezar en lo más abstracto e ir
+   descomponiendo el programa hacia lo más concreto es lo que mejor se
+   adapta a la forma de pensar de los seres humanos.  Pero si tú
+   conoces una biblioteca que resuelve parcial o totalmente tu
+   problema no dudes en aprovecharla.
+
+No hay una única solución para un problema.  Por ejemplo, volvamos a
+la tabla de multiplicar.  Considera esta otra forma de resolverla.
+
+.. activecode:: imprime-tabla-mosaico
 
     def imprime_mosaico():
         for i in range(1,10,3):
@@ -561,9 +627,12 @@ Otra forma:
     imprime_mosaico()
 
 No te quedes mirando, lee, experimenta y cambia lo que necesites hasta
-entenderlo completamente.
+entenderlo completamente.  Como ves hemos seguido la misma metodología
+*top-down* de antes.
 
-| Haz un programa que imprima el siguiente dibujo
+Vamos a seguir explorando la construcción de bucles.  Un ejercicio
+frecuente (también en los exámenes) consiste en dibujar en la pantalla
+empleando caracteres normales.  Por ejemplo, considera este cuadrado.
 
 ::
 
@@ -578,128 +647,143 @@ entenderlo completamente.
     |                |
     +----------------+
 
-.. code:: python
 
-    def imprime_cuadrado(ancho):
-        imprime_borde(ancho)
-        for i in range(8):
-            imprime_cara(ancho)
-        imprime_borde(ancho)
-        
-    def imprime_borde(ancho):
-        print('+' + '-'*ancho + '+')
-    
-    def imprime_cara(ancho):
-        print('|' + ' '*ancho + '|')
-    
-    imprime_cuadrado(16)
+.. activecode:: imprime-cuadrado
+   :autograde:
 
-
-.. parsed-literal::
-
-    +----------------+
-    |                |
-    |                |
-    |                |
-    |                |
-    |                |
-    |                |
-    |                |
-    |                |
-    +----------------+
-
-
-Crear una función que valide una contraseña según estos criterios:
-
--  La contraseña debe contener un mínimo de 8 caracteres.
--  Una contraseña debe contener letras minúsculas, mayúsculas, números y
-   al menos 1 carácter no alfanumérico.
--  La contraseña no puede contener espacios en blanco.
--  Contraseña válida, retorna ``True``.
--  Contraseña no válida, retorna el mensaje
-   ``"La contraseña elegida no es segura"``.
-
-.. code:: python
-
-    def valida_palabra_clave(palabra):
-        return  valida_8_caracteres(palabra) and \
-                valida_tipos_caracteres(palabra) and \
-                valida_no_espacios(palabra)
-    
-            
-    def valida_8_caracteres(palabra):
-        return len(palabra) >= 8
-    
-    
-    def valida_tipos_caracteres(palabra):
-        return valida_mayusculas(palabra) \
-            and valida_minusculas(palabra) \
-            and valida_numeros(palabra) \
-            and valida_simbolos(palabra)
-    
-            
-    def valida_no_espacios(palabra):
-        for c in palabra:
-            if c == ' ':
-                return False
-        return True
-    
-    
-    def valida_mayusculas(palabra):
-        for c in palabra:
-            if es_mayuscula(c):
-                return True
-        return False
-    
-    
-    def valida_minusculas(palabra):
-        for c in palabra:
-            if es_minuscula(c):
-                return True
-        return False
-    
-    
-    def valida_numeros(palabra):
-        for c in palabra:
-            if es_numero(c):
-                return True
-        return False
-    
-    
-    def valida_simbolos(palabra):
-        for c in palabra:
-            if es_simbolo(c):
-                return True
-        return False
-    
-    
-    def es_mayuscula(c):
-        return c >= 'A' and c <= 'Z'
-    
-    
-    def es_minuscula(c):
-        return c >= 'a' and c <= 'z'
-    
-    
-    def es_numero(c):
-        return c >= '0' and c <= '9'
-    
-    
-    def es_simbolo(c):
-        return not ( es_mayuscula(c) \
-            or es_minuscula(c) \
-            or es_numero(c) )
-    
-    
-    valida_palabra_clave('aLt0$€cr3t0')
+   Modifica el siguiente programa para que imprima el cuadrado que se muestra sobre estas líneas.
+   ~~~~
+   def imprime_cuadrado(ancho):
+       imprime_borde(ancho)
+       # imprime las líneas de la cara
+       imprime_borde(ancho)
+       
+   def imprime_borde(ancho):
+       print('+' + '-'*ancho + '+')
+   
+   def imprime_cara(ancho):
+       print('|' + ' '*ancho + '|')
+   
+   imprime_cuadrado(16)
+   ====
+   import unittest
+   import sys
+   try: from io import StringIO
+   except: from StringIO import StringIO
+   
+   class TestCuadrado(unittest.TestCase):
+     def test_cuadrado_8(self):
+	self.clear_std_output()
+        imprime_cuadrado(8)
+	self.clear_std_output()
+        self.assertEqual(self.s.strip(), '+--------+\n|        |\n|        |\n|        |\n|        |\n+--------+')
+     
+     def setUp(self):
+        print('Permíteme que yo también compruebe tu solución...')
+        self.console = sys.stdout
+        self.s = ''
+     
+     def tearDown(self):
+        try:
+            self.s += sys.stdout.getvalue()
+            sys.stdout = self.console
+            print(self.s)
+        except: pass
+     
+     def clear_std_output(self):
+        try: self.s += sys.stdout.getvalue()
+        except: pass
+        sys.stdout = StringIO()
+   
+   TestCuadrado().main()
 
 
 
+.. activecode:: valida-palabra-clave-v1
+   :autograde:
 
-.. parsed-literal::
+   Permíteme insistir en la metodología *top-down*. Es muy importante
+   en los programas reales. Para ilustrarlo veamos un ejemplo más.
+   Completa las funciones para que valide una contraseña según estos
+   criterios:
+   
+   -  La contraseña debe contener un mínimo de 8 caracteres.
+   -  Una contraseña debe contener letras minúsculas, mayúsculas, números y
+      al menos 1 carácter no alfanumérico.
+   -  La contraseña no puede contener espacios en blanco.
+   -  Contraseña válida, retorna ``True``, contraseña no válida, retorna ``False``.
+   ~~~~
+   def valida_palabra_clave(palabra):
+       return  valida_8_caracteres(palabra) and \
+               valida_tipos_caracteres(palabra) and \
+               valida_no_espacios(palabra)
+   
+   def valida_8_caracteres(palabra):
+       return len(palabra) >= 8
+   
+   def valida_tipos_caracteres(palabra):
+       return valida_mayusculas(palabra) \
+           and valida_minusculas(palabra) \
+           and valida_numeros(palabra) \
+           and valida_simbolos(palabra)
+           
+   def valida_no_espacios(palabra):
+       for c in palabra:
+           if c == ' ':
+               return False
+       return True
+   
+   def valida_mayusculas(palabra):
+       for c in palabra:
+           if es_mayuscula(c):
+               return True
+       return False
+   
+   def valida_minusculas(palabra):
+       # devuelve True si palabra contiene una letra minúscula
+       # en caso contrario devuelve False
+   
+   def valida_numeros(palabra):
+       # devuelve True si palabra contiene un dígito decimal
+       # en caso contrario devuelve False
+   
+   def valida_simbolos(palabra):
+       # devuelve True si palabra contiene un símbolo
+       # en caso contrario devuelve False
+   
+   def es_mayuscula(c):
+       return c >= 'A' and c <= 'Z'   
+   
+   def es_minuscula(c):
+       return c >= 'a' and c <= 'z'
+   
+   def es_numero(c):
+       return c >= '0' and c <= '9'
+   
+   def es_simbolo(c):
+       return not ( es_mayuscula(c) \
+           or es_minuscula(c) \
+           or es_numero(c) )
 
-    True
-
+   print(valida_palabra_clave('aLt0$€cr3t0'))
+   ====
+   import unittest
+   import sys
+   try: from io import StringIO
+   except: from StringIO import StringIO
+   
+   class TestValida(unittest.TestCase):
+     def test_valida_palabra_clave(self):
+        self.assertTrue(valida_palabra_clave('aLt0$€cr3t0'))
+        self.assertTrue(valida_palabra_clave('MUYALTOSECRETOaLt0$€cr3t0'))
+        self.assertFalse(valida_palabra_clave('aLt0$€c'))
+        self.assertFalse(valida_palabra_clave('aLt0$ cr3t0'))
+        self.assertFalse(valida_palabra_clave('alt0$€cr3t0'))
+        self.assertFalse(valida_palabra_clave('ALT0$€CR3T0'))
+        self.assertFalse(valida_palabra_clave('aLtO$€crEtO'))
+        self.assertFalse(valida_palabra_clave('aLt0Secr3t0'))
+   
+   TestValida().main()
 
 
 ¿No es muy repetitivo? Las validaciones de tipos de caracteres son
@@ -707,38 +791,64 @@ prácticamente iguales. Solo se diferencian en la función que determina
 el tipo de cada caracter. Por tanto para no repetir código se puede
 pasar como parámetro.
 
-.. code:: python
+Si, efectivamente, las funciones también se pueden pasar como
+parámetro o devolver como resultado.  Tenlo siempre presente porque
+abre un amplio abanico de nuevas posibilidades.
 
-    def valida_tipos_caracteres(palabra):
-        return valida_tipo(es_mayuscula, palabra) \
-            and valida_tipo(es_minuscula, palabra) \
-            and valida_tipo(es_numero, palabra) \
-            and valida_tipo(es_simbolo, palabra)
-    
-            
-    def valida_no_espacios(palabra):
-        return not valida_tipo(es_espacio, palabra)
-    
-    
-    def valida_tipo(es_tipo, palabra):
-        for c in palabra:
-            if es_tipo(c):
-                return True
-        return False
-    
-    
-    def es_espacio(c):
-        return c == ' '
-    
-    
-    valida_palabra_clave('aLt0s€cr3T0')
+.. activecode:: valida-palabra-clave-v2
 
+   def valida_palabra_clave(palabra):
+       return  valida_8_caracteres(palabra) and \
+               valida_tipos_caracteres(palabra) and \
+               valida_no_espacios(palabra)
+   
+   def valida_8_caracteres(palabra):
+       return len(palabra) >= 8
+   
+   def valida_tipos_caracteres(palabra):
+       return valida_tipo(es_mayuscula, palabra) \
+           and valida_tipo(es_minuscula, palabra) \
+           and valida_tipo(es_numero, palabra) \
+           and valida_tipo(es_simbolo, palabra)
+               
+   def valida_no_espacios(palabra):
+       return not valida_tipo(es_espacio, palabra)
+   
+   def valida_tipo(es_tipo, palabra):
+       for c in palabra:
+           if es_tipo(c):
+               return True
+       return False
+   
+   def es_espacio(c):
+       return c == ' '
+   
+   def es_mayuscula(c):
+       return c >= 'A' and c <= 'Z'   
+  
+   def es_minuscula(c):
+       return c >= 'a' and c <= 'z'
+  
+   def es_numero(c):
+       return c >= '0' and c <= '9'
+  
+   def es_simbolo(c):
+       return not ( es_mayuscula(c) \
+          or es_minuscula(c) \
+          or es_numero(c) )
 
+   print(valida_palabra_clave('aLt0s€cr3T0'))
 
+.. mchoice:: question_bif_iter_1
+   :answer_a: zip(len(L), L)
+   :answer_b: zip(L,range(len(L)))
+   :answer_c: zip(range(len(L)), L)
+   :answer_d: zip(L,L)
+   :correct: c
+   :feedback_a: El primer argumento de zip no es iterable, es simplemente una longitud.
+   :feedback_b: No, es al revés. La función enumerate(L) genera pares en los que el primer elemento es la posición.
+   :feedback_c: Exacto. Es correcto, pero todavía sería más eficiente usando itertools.count y la expresión zip(count(),L). 
+		Busca la documentación de itertools.count para entender cómo funciona.
+   :feedback_d: No es así. Compruébalo en una ventana de intérprete.
 
-.. parsed-literal::
-
-    True
-
-
-
+   ¿Cuál de las siguientes expresiones es equivalente a ``enumerate(L)``?

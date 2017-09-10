@@ -32,7 +32,7 @@
 var code_separator = "\n---- \n==== \n";
 
 function installPythonFacade() {
-    var editor = $('div.felement.feditor');
+    var editor = $('#id_onlinetext_editor_tbl');
     if (editor.length == 0)
 	return;
     editor.hide();

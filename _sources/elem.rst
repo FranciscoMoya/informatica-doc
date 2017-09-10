@@ -423,6 +423,6 @@ una medida temporal, hasta que conozcas las excepciones.
          el mecanismo, no devuelvas nada o devuelve ``None``, que es
          el literal de Python equivalente a *nada*.
 
-	 Nunca devuelvas algo que no tiene nada que ver, como una
-	 cadena de texto con un error.  Eso complica enormemente el
+	 **Nunca devuelvas algo que no tiene nada que ver, como una
+	 cadena de texto con un error.**  Eso complica enormemente el
 	 uso de la función.
