@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>53. Trabajo en grupo (curso 2016-2017)</title>
+    <title>5. Abstracción con funciones</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -105,8 +105,8 @@
     <link rel="author" title="Sobre este documento" href="about.html" />
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="54. Resumen de métodos computacionales" href="Resumen.html" />
-    <link rel="prev" title="52. El tour del caballo" href="tour-caballo.html" />
+    <link rel="next" title="6. Listas, tuplas, conjuntos y diccionarios" href="python-09.html" />
+    <link rel="prev" title="4. Ramificación e iteración" href="bif-iter.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -252,7 +252,7 @@
             <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
             <li class="divider"></li>
             <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
-            <li><a href='/runestone/default/reportabug?course=CS101&page=trabajo-grupo'>Report A Problem</a></li>
+            <li><a href='/runestone/default/reportabug?course=CS101&page=abstraccion-func'>Report A Problem</a></li>
           </ul>
         </li>
         <!-- end help menu dropdown -->
@@ -267,19 +267,9 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">53. Trabajo en grupo (curso 2016-2017)</a><ul>
-<li><a class="reference internal" href="#rango-de-una-matriz">53.1. 1. Rango de una matriz</a><ul>
-<li><a class="reference internal" href="#ejemplo-de-funcionamiento">53.1.1. Ejemplo de funcionamiento</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#solucion-de-sistema-de-ecuaciones">53.2. 2. Solución de sistema de ecuaciones</a><ul>
-<li><a class="reference internal" href="#id1">53.2.1. Ejemplo de funcionamiento</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#inversa-de-una-matriz">53.3. 3. Inversa de una matriz</a><ul>
-<li><a class="reference internal" href="#id2">53.3.1. Ejemplo de funcionamiento</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">5. Abstracción con funciones</a><ul>
+<li><a class="reference internal" href="#recursion">5.1. Recursión</a></li>
+<li><a class="reference internal" href="#id1">5.2. Recursión</a></li>
 </ul>
 </li>
 </ul>
@@ -289,14 +279,14 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 52. El tour del caballo" data-toggle="tooltip">
-    <a href="tour-caballo.html" >
+  <li id="relations-prev" title="Previous Chapter - 4. Ramificación e iteración" data-toggle="tooltip">
+    <a href="bif-iter.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 54. Resumen de métodos computacionales' data-toggle="tooltip" >
-    <a href="Resumen.html" >
+  <li id="relations-next" title='Next Chapter - 6. Listas, tuplas, conjuntos y diccionarios' data-toggle="tooltip" >
+    <a href="python-09.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -314,7 +304,7 @@
         -->
         
           <li>
-  <a href="_sources/trabajo-grupo.rst.txt"
+  <a href="_sources/abstraccion-func.rst.txt"
      rel="nofollow">Source</a></li>
         
       </ul>
@@ -328,57 +318,102 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="trabajo-en-grupo-curso-2016-2017">
-<h1>53. Trabajo en grupo (curso 2016-2017)<a class="headerlink" href="#trabajo-en-grupo-curso-2016-2017" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>En este curso el trabajo en grupo consistirá simplemente en el
-desarrollo en Python del método de Gauss-Jordan. Se proponen varios
-ejercicios relacionados con esto.</p>
-<div class="section" id="rango-de-una-matriz">
-<h2>53.1. 1. Rango de una matriz<a class="headerlink" href="#rango-de-una-matriz" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Definir la función <code class="docutils literal"><span class="pre">rango_matriz(m)</span></code> que devuelve el rango de una
-matriz calculado por el <a class="reference external" href="http://matematicasies.com/Rango-de-una-matriz-por-el-metodo-de-Gauss">método de
-Gauss</a>.</p>
-<p>Deberá funcionar con cualquier número de filas y columnas. No se dará
-puntuación alguna a las entregas que no respeten este requisito.</p>
-<div class="section" id="ejemplo-de-funcionamiento">
-<h3>53.1.1. Ejemplo de funcionamiento<a class="headerlink" href="#ejemplo-de-funcionamiento" title="Enlazar permanentemente con este título">¶</a></h3>
-<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rango_matriz</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
-<span class="go">3</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">rango_matriz</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
-<span class="go">2</span>
+  <div class="section" id="abstraccion-con-funciones">
+<h1>5. Abstracción con funciones<a class="headerlink" href="#abstraccion-con-funciones" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Como ya comentamos en la introducción, la <em>abstracción</em> es la
+herramienta más potente que tenemos para manejar problemas grandes.
+Abstraer es simplificar, dejar de lado los detalles para concentrarse
+en lo fundamental.  Eso es justo lo que hacemos al <em>usar</em> una función,
+al emplear la <em>expresión de llamada</em>.  Al llamar a una función no nos
+preocupa cómo funciona por dentro, sino solamente lo que hace.  ¿A que
+no te has preguntado cómo es la función <code class="docutils literal"><span class="pre">print</span></code> por dentro? Y sin
+embargo estás usándola desde tu primer programa.  Acostúmbrate a hacer
+lo mismo cuando usas tus propias funciones.  No pienses en cómo están
+hechas, sino en qué hacen.  Ya te ocuparás del cómo más adelante.</p>
+<p>Usar funciones (la expresión de llamada) no debería resultar nada
+nuevo, porque es complétamente análogo al uso de funciones en
+matemáticas.  Cuando se utiliza una función, como <span class="math">\(max(x,y)\)</span>
+no nos preocupa cómo está definida, sino simplemente lo que hace, como
+si se tratara de una caja negra, y la utilizamos sin ni siquiera
+pensar en la definición.</p>
+<div class="section" id="recursion">
+<h2>5.1. Recursión<a class="headerlink" href="#recursion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><em>Ejercicio: Implementar el factorial de forma iterativa y recursiva</em></p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fact</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">n</span><span class="o">*</span><span class="n">fact</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fact_iter</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">res</span> <span class="o">*=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+</div>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">assert</span><span class="p">(</span><span class="n">fact</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="n">fact_iter</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><em>Ejercicio: implementar una función para saber si un texto es
+palíndromo.</em></p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">es_palindromo</span><span class="p">(</span><span class="n">texto</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">es_simetrico</span><span class="p">(</span><span class="n">extraer_letras</span><span class="p">(</span><span class="n">texto</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">extraer_letras</span><span class="p">(</span><span class="n">texto</span><span class="p">):</span>
+    <span class="n">letras</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">texto</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+            <span class="n">letras</span> <span class="o">+=</span> <span class="n">c</span>
+    <span class="k">return</span> <span class="n">letras</span>
+
+<span class="k">def</span> <span class="nf">es_simetrico</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="n">es_simetrico</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">es_palindromo</span><span class="p">(</span><span class="s1">&#39;Dabale arroz a la zorra el abad.&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kc">True</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="solucion-de-sistema-de-ecuaciones">
-<h2>53.2. 2. Solución de sistema de ecuaciones<a class="headerlink" href="#solucion-de-sistema-de-ecuaciones" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Definir una función <code class="docutils literal"><span class="pre">lin_solve(A,B)</span></code> que resuelve el sistema lineal de
-ecuaciones <span class="math">\(A\cdot x = B\)</span> empleando el método de Gauss-Jordan. La
-función debe devolver la secuencia de operaciones a realizar sobre
-<code class="docutils literal"><span class="pre">A|B</span></code>, y el vector solución.</p>
 <div class="section" id="id1">
-<h3>53.2.1. Ejemplo de funcionamiento<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h3>
-<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lin_solve</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
-<span class="go">([(&#39;div&#39;, 1, 2), (&#39;mac&#39;, 2, 1, -2), (&#39;div&#39;, 2, 3)], [1, 0, 0])</span>
+<h2>5.2. Recursión<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><em>Ejercicio: Implementar de forma recursiva un programa que dibuje la
+curva de Koch</em></p>
+<p>Este tipo de dibujos se puede hacer facilmente con el módulo <code class="docutils literal"><span class="pre">turtle</span></code>
+de la biblioteca estándar. Nosotros vamos a usar una versión de
+<code class="docutils literal"><span class="pre">turtle</span></code> que funciona en los cuadernos. Se llama <code class="docutils literal"><span class="pre">mobilechelonian</span></code>
+pero funciona igual que <code class="docutils literal"><span class="pre">turtle</span></code>.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">koch</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">N</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">400</span><span class="o">/</span><span class="mi">3</span><span class="o">**</span><span class="n">N</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="k">for</span> <span class="n">angulo</span> <span class="ow">in</span> <span class="p">(</span><span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="n">koch</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">angulo</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="o">-</span><span class="n">angulo</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="n">angulo</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Hemos representado las operaciones por una tupla, que incluye una cadena
-(<code class="docutils literal"><span class="pre">'div'</span></code> para dividir, <code class="docutils literal"><span class="pre">'mac'</span></code> para multiplicar y sumar, etc.)
-seguida de los argumentos necesarios (fila donde se aplica, fila con la
-que se opera, factor de multiplicación, etc.). Tu puedes representar las
-operaciones de forma diferente. Por ejemplo, se recomiendan clases.</p>
-</div>
-</div>
-<div class="section" id="inversa-de-una-matriz">
-<h2>53.3. 3. Inversa de una matriz<a class="headerlink" href="#inversa-de-una-matriz" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Definir la función <code class="docutils literal"><span class="pre">inv_matriz(M)</span></code> que devuelve la matriz inversa de
-la que se pasa como argumento.</p>
-<div class="section" id="id2">
-<h3>53.3.1. Ejemplo de funcionamiento<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h3>
-<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">inv_matriz</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">]])</span>
-<span class="go">[[1,0,0], [0,0.25,0], [0,0,0.1]]</span>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mobilechelonian</span> <span class="k">import</span> <span class="n">Turtle</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">Turtle</span><span class="p">()</span>
+<span class="n">t</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
+<span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
+<span class="n">t</span><span class="o">.</span><span class="n">pensize</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">koch</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
+<span class="n">t</span><span class="o">.</span><span class="n">home</span><span class="p">()</span>
 </pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -386,19 +421,19 @@ la que se pasa como argumento.</p>
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 52. El tour del caballo' data-toggle="tooltip">
-    <a href="tour-caballo.html" >
+  <li id="relations-prev" class="navLink" title='Previous Section - 4. Ramificación e iteración' data-toggle="tooltip">
+    <a href="bif-iter.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="tour-caballo.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="bif-iter.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 54. Resumen de métodos computacionales' data-toggle="tooltip" >
-    <a href="Resumen.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 6. Listas, tuplas, conjuntos y diccionarios' data-toggle="tooltip" >
+    <a href="python-09.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="Resumen.html" >Next Section - 54. Resumen de métodos computacionales</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="python-09.html" >Next Section - 6. Listas, tuplas, conjuntos y diccionarios</a>
 
 <script type="text/javascript">
 

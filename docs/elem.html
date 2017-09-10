@@ -41,7 +41,6 @@
       };
     </script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
-    <script type="text/javascript" src="_static/codemirror.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -160,7 +159,7 @@
       </button>
 
       <div>
-        <div style='float:left;display:block;background-size:90px 40px !important;height:40px;width:90px;background:transparent url("_static/eii_small.png") no-repeat 0px 0px;'>&nbsp; </div>
+        <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
         <a class="navbar-brand" href="index.html">Informática</a>
       </div>
     </div>
@@ -169,10 +168,104 @@
 
       <ul class="nav navbar-nav navbar-right">
 
-        <!--<li class="divider-vertical"></li>-->
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/CS101/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
         
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/CS101/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=CS101&page=elem'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
           <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">3. Elementos de un programa</a><ul>
 <li><a class="reference internal" href="#expresiones-primitivas-y-compuestas">3.1. Expresiones primitivas y compuestas</a><ul>
@@ -186,9 +279,9 @@
 </ul>
 </ul>
 </li>
-          <!--<li class="divider-vertical"></li>-->
+          <li class="divider-vertical"></li>
         
-        <!--
+        
           
   <li id="relations-prev" title="Previous Chapter - 2. Introducción" data-toggle="tooltip">
     <a href="intro.html" >
@@ -213,63 +306,11 @@
   $('#relations-next').tooltip(opts);
 </script>
         -->
-
-        <li class="divider-vertical"></li>
-
-        <!-- search dropdown -->
-        <li class="dropdown">
-          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
-          </a>
-          <ul class='dropdown-menu'>
-            
-                <li><a href='index.html'>Índice del libro</a></li>
-            
-            <li><a href="genindex.html">Índice alfabético</a></li>
-            <li class="divider"></li>
-            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Código activo de prueba</a></li>
-            <li class="divider"></li>
-            <li style="width: 240px;">
-              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
-                <div class="input-group">
-                  <input type="text" class="form-control" name="q" placeholder="Buscar en el libro" />
-                  <span class="input-group-btn">
-                    <button class="btn btn-primary" style="margin:0;" type="submit">
-                      <i class="glyphicon glyphicon-search"></i>
-                    </button>
-                  </span>
-                </div><!-- /input-group -->
-                <input type="hidden" name="check_keywords" value="yes" />
-                <input type="hidden" name="area" value="default" />
-              </form>
-            </li>
-          </ul>
-        </li>
-        <!-- end search dropdown -->
-
         
-        <li class="divider-vertical"></li>
-
-        <!-- help menu dropdown -->
-        <li class="dropdown">
-          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
-          </a>
-          <ul class="dropdown-menu user-menu">
-            <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
-            
-            <li>
+          <li>
   <a href="_sources/elem.rst.txt"
-     rel="nofollow">Ver fuente</a></li>
-            
-            <li class="divider"></li>
-            <li><a href='http://runestoneinteractive.org'>Acerca de Runestone</a></li>
-          </ul>
-        </li>
-        <!-- end help menu dropdown -->
-
-        <li class="divider-vertical"></li>
-
+     rel="nofollow">Source</a></li>
+        
       </ul>
 
     </div>
@@ -283,9 +324,9 @@
   
   <div class="section" id="elementos-de-un-programa">
 <h1>3. Elementos de un programa<a class="headerlink" href="#elementos-de-un-programa" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>Un lenguaje de programación es más que un mecanismo para decirle al
-ordenador qué operaciones tiene que realizar. Sirve también como un
-entorno en el que organizar nuestras ideas sobre procesos
+<p>Un lenguaje de programación es bastante más que un mecanismo para
+decirle al ordenador qué operaciones tiene que realizar. Sirve también
+como un entorno en el que organizar nuestras ideas sobre procesos
 computacionales.  Los programas sirven para comunicar esas ideas a los
 miembros de la comunidad.  Es decir, los programas tienen que
 escribirse fundamentalmente para que la gente los lea y eventualmente
@@ -297,21 +338,25 @@ más clara posible.</p>
 tipos de elementos:</p>
 <ul class="simple">
 <li>Sentencias y expresiones <strong>primitivas</strong>, que representan los bloques
-más simples proporcionados por el lenguaje.</li>
+más simples proporcionados por el lenguaje.  Puedes verlo como
+piezas de LEGO.</li>
 <li>Mecanismos de <strong>combinación</strong>, con los que se construyen elementos
-compuestos a partir de otros más sencillos.</li>
+compuestos a partir de otros más sencillos.  Son los mecanismos para
+encajar unas piezas con otras para formar bloques más complejos.</li>
 <li>Mecanismos de <strong>abstracción</strong>, mediante los que se puede dar nombre
 a los elementos compuestos y usarlos como elementos nuevos sin
-atender a los detalles internos.</li>
+atender a los detalles internos.  Piensa por ejemplo en un avión
+hecho con piezas de LEGO.  Lo de menos son las piezas que lo
+componen, se maneja como un todo que actúa como cualquier avión.</li>
 </ul>
 <p>Si recapacitas en lo que vimos en el capítulo anterior hemos visto un
 poco de todo.  Las cadenas de texto como <code class="docutils literal"><span class="pre">'Hola</span> <span class="pre">Mundo'</span></code>, los
 números, o los nombres de las variables son expresiones primitivas.
 Las sentencias de asignación o las sentencias en las que simplemente
 llamábamos a una función son sentencias primitivas.</p>
-<p>La <span class="xref std std-term">sentencia *if*</span>, o el <span class="xref std std-term">bucle *while*</span> son formas de
+<p>La <span class="xref std std-term">sentencia if</span>, o el <span class="xref std std-term">bucle while</span> son formas de
 combinar sentencias que se ejecutan en unos casos pero no en otros.
-El conjunto de la <span class="xref std std-term">sentencia *if*</span> junto a todas las sentencias
+El conjunto de la <span class="xref std std-term">sentencia if</span> junto a todas las sentencias
 indentadas después de la condición se comportan como una única
 sentencia compuesta.  También las expresiones que combinan varias
 expresiones primitivas con la ayuda de operadores son expresiones
@@ -373,7 +418,7 @@ de subexpresiones de los operandos, separados por comas.</p>
 llamada decimos que la función <code class="docutils literal"><span class="pre">max</span></code> es llamada con los argumentos
 7.5 y 9.5 y devuelve el valor 9.5.</p>
 <p>El orden de los argumentos en una expresión de llamada importa.  Por
-ejemplo, la función pow eleva su primer argumento a la potencia
+ejemplo, la función <code class="docutils literal"><span class="pre">pow</span></code> eleva su primer argumento a la potencia
 indicada en su segundo argumento.</p>
 
 <div data-childcomponent="orden-argumentos-importa" class="explainer ac_section alert alert-warning">
@@ -395,7 +440,7 @@ ordenador, pero capaces de representar cualquier cantidad de dígitos.</p>
 from operator import add, sub, mul, div
 </textarea>
 </div>
-<p>Lo siguiente es un ejemplo de llamada al operador <code class="docutils literal"><span class="pre">+</span></code> (suma) usando
+<p>Lo siguiente es un ejemplo de llamada al <code class="docutils literal"><span class="pre">operador</span> <span class="pre">+</span></code> (suma) usando
 notación de llamada a función.</p>
 
 <div data-childcomponent="suma-con-funcion" class="explainer ac_section alert alert-warning">
@@ -404,11 +449,15 @@ notación de llamada a función.</p>
 print(add(1,3))
 </textarea>
 </div>
+<p>Como puedes ver las expresiones aritméticas pueden escribirse
+indistintamente con una notación infija (con operadores matemáticos
+normales) o con una notación funcional.  Vamos a analizar brevemente
+la ventaja de esta última aproximación.</p>
 <div class="section" id="notacion-funcional">
 <h3>3.1.1. Notación funcional<a class="headerlink" href="#notacion-funcional" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>La notación funcional tiene una serie de ventajas:</p>
 <ul>
-<li><p class="first">Primero se extiende de forma natural a cualquier número de
+<li><p class="first">Primero, se extiende de forma natural a cualquier número de
 argumentos.</p>
 
 <div data-childcomponent="max-n-argumentos" class="explainer ac_section alert alert-warning">
@@ -418,7 +467,7 @@ print(max(1,-2,3,-4))
 </textarea>
 </div>
 </li>
-<li><p class="first">Segundo se extiende fácilmente a expresiones anidadas, donde los
+<li><p class="first">Segundo, se extiende fácilmente a expresiones anidadas, donde los
 elementos son a su vez expresiones compuestas. La estructura del
 anidamiento es completamente explícita, a diferencia de las
 expresiones infijas compuestas.</p>
@@ -433,7 +482,7 @@ print(max(min(1, -2), min(pow(3, 5), -4)))
 <li><p class="first">Tercero, la notación matemática infija tiene una amplia variedad de
 formas de representación, que en algunos casos es muy difícil de
 teclear en un ordenador. Piensa por ejemplo en el signo de la raiz
-cuadrada, o las fracciones. En cambio, la notación funcional es
+cúbica, o las fracciones. En cambio, la notación funcional es
 completamente homogénea y fácil de teclear. Incluso los operadores
 matemáticos habituales pueden expresarse con notación funcional.</p>
 
@@ -446,6 +495,11 @@ print(mul(add(2,mul(4, 6)), add(3, 5)))
 </div>
 </li>
 </ul>
+<p>No tomes ésto como una indicación para usar siempre la notación
+funcional.  Usa la que represente de forma más natural lo que quieres
+expresar.  Pero ten en cuenta las ventajas de las funciones, porque
+van a ser el mecanismo fundamental que te permitirá construir
+programas grandes.</p>
 </div>
 </div>
 <div class="section" id="tipos-de-datos-en-python">
@@ -460,13 +514,23 @@ expresiones:</p>
 saludo = 'Hola'
 quien = 'Mundo'
 mensaje = saludo + ', ' + quien
+</textarea>
+</div>
+<p>El tipo de <code class="docutils literal"><span class="pre">mensaje</span></code> se puede obtener fácilmente preguntándoselo al
+propio intérprete de Python.</p>
+
+<div data-childcomponent="imprime-tipo-ejemplo-cadenas" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=imprime-tipo-ejemplo-cadenas data-lang="python"   data-include="ejemplo-cadenas" data-timelimit=25000   data-audio=''     >
 print(type(mensaje), mensaje)
 </textarea>
 </div>
 <p>El tipo de una expresión puede averiguarse con la función <code class="docutils literal"><span class="pre">type</span></code>.
 Como puedes comprobar el tipo de la expresión resultante de sumar
 cadenas de texto es <code class="docutils literal"><span class="pre">&lt;class</span> <span class="pre">'str'&gt;</span></code>.  Es decir, otra cadena de
-texto.</p>
+texto. En otros intérpretes de Python verás el resultado de forma
+ligeramente distinta, como un simple <code class="docutils literal"><span class="pre">'str'</span></code>.  Da igual, quédate con
+la idea de que <code class="docutils literal"><span class="pre">type(mensaje)</span> <span class="pre">==</span> <span class="pre">type('')</span></code>.</p>
 
 <div data-childcomponent="ejemplo-enteros" class="explainer ac_section alert alert-warning">
 
@@ -478,7 +542,7 @@ print(type(c), c)
 </textarea>
 </div>
 <p>El tipo de la expresión resultante de una suma de enteros es
-<code class="docutils literal"><span class="pre">'int'</span></code>. Es decir, otro entero.</p>
+<code class="docutils literal"><span class="pre">&lt;class</span> <span class="pre">'int'&gt;</span></code>. Es decir, otro entero.</p>
 
 <div data-childcomponent="ejemplo-enteros-hidden" class="explainer ac_section alert alert-warning">
 
@@ -491,7 +555,7 @@ c = a + b
 
 <div data-childcomponent="ejemplo-comparacion" class="explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=ejemplo-comparacion data-lang="python"   data-include="ejemplo-enteros-hidden" data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=ejemplo-comparacion data-lang="python"   data-include="ejemplo-enteros-hidden" data-timelimit=25000   data-audio=''     >
 mayor = a > 3
 print(type(mayor), mayor)
 </textarea>
@@ -499,12 +563,20 @@ print(type(mayor), mayor)
 <p>El tipo de una comparación es <code class="docutils literal"><span class="pre">&lt;class</span> <span class="pre">'bool'&gt;</span></code>.  Corresponde a un
 tipo <em>booleano</em>, que solo puede tomar dos valores: <code class="docutils literal"><span class="pre">True</span></code>
 (verdadero) y <code class="docutils literal"><span class="pre">False</span></code> (falso).</p>
+<div class="admonition tip">
+<p class="first admonition-title">Truco</p>
+<p class="last">Fíjate bien en cómo se escribe <code class="docutils literal"><span class="pre">True</span></code> y <code class="docutils literal"><span class="pre">False</span></code>. La
+primera letra en mayúscula y sin utilizar comillas.  Si
+escribes <code class="docutils literal"><span class="pre">'True'</span></code> lo interpretará como una cadena y si
+escribes <code class="docutils literal"><span class="pre">true</span></code> no lo entenderá.  Por razones que
+desconozco ésto es una fuente errores frecuente.</p>
+</div>
 <p>Algunas veces es posible combinar operandos de distinto tipo en una
 expresión.</p>
 
 <div data-childcomponent="ejemplo-cadena-entero" class="explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=ejemplo-cadena-entero data-lang="python"   data-include="ejemplo-cadenas" data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=ejemplo-cadena-entero data-lang="python"   data-include="ejemplo-cadenas" data-timelimit=25000   data-audio=''     >
 triple = saludo * 3
 print(type(triple), triple)
 </textarea>
@@ -514,7 +586,7 @@ repite la cadena original tantas veces como indique el entero.</p>
 
 <div data-childcomponent="ejemplo-complejos" class="explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=ejemplo-complejos data-lang="python"   data-include="ejemplo-enteros" data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=ejemplo-complejos data-lang="python"   data-include="ejemplo-enteros-hidden" data-timelimit=25000   data-audio=''     >
 d = .5j
 e = a + d
 print(type(e), e)
@@ -525,7 +597,7 @@ no tienen sentido. En ese caso Python se queja imprimiendo un error.</p>
 
 <div data-childcomponent="error-semantica-estatica" class="explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=error-semantica-estatica data-lang="python"   data-include="ejemplo-cadenas" data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=error-semantica-estatica data-lang="python"   data-include="ejemplo-cadenas" data-timelimit=25000   data-audio=''     >
 error = saludo / 3
 print(type(error), error)
 </textarea>
@@ -537,14 +609,14 @@ produce un error.</p>
 
 <div data-childcomponent="busca-tipo-expr" class="explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=busca-tipo-expr data-lang="python"   data-include="ejemplo-cadenas" data-timelimit=25000  data-codelens="true" data-audio=''     >
-a = pow(2,600)
+<textarea data-component="activecode" id=busca-tipo-expr data-lang="python"   data-include="ejemplo-cadenas" data-timelimit=25000   data-audio=''     >
+a = pow(2,30)
 # ¿Cuál es el tipo de a?
 </textarea>
 </div>
 
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="q-elem-type">
-            Q-2: ¿Cuál es el tipo de <code class="docutils literal"><span class="pre">pow(2,600)</span></code>?
+            Q-6: ¿Cuál es el tipo de <code class="docutils literal"><span class="pre">pow(2,600)</span></code>?
             <li data-component="answer" data-correct id="q-elem-type_opt_a">(A) &lt;class 'int'&gt;</li><li data-component="feedback" id="q-elem-type_opt_a">Muy bien, la función ``pow`` devuelve un entero si sus
 argumentos son enteros.  Prueba a usar argumentos con
 punto decimal.</li>
@@ -585,7 +657,22 @@ def es_raiz_cubica(raiz, num):
    return cubo(raiz) == num
 </textarea>
 </div>
-<p>Éste es <strong>conocimiento declarativo</strong>, sabemos hechos matemáticamente
+<p>En este fragmento se definen dos funciones de usuario.  La función
+<em>cubo</em> devuelve el cubo de un número que se le pasa como argumento, y
+la función <em>es_raiz_cubica</em> devuelve <code class="docutils literal"><span class="pre">True</span></code> si el primer argumento
+es raiz cúbica exacta del número que se pasa como segundo argumento.
+Por ejemplo:</p>
+
+<div data-childcomponent="raiz-cubica-e-exhaustiva" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=raiz-cubica-e-exhaustiva data-lang="python"   data-include="raiz-cubica-entera" data-timelimit=25000  data-codelens="true" data-audio=''     >
+x = 3
+print('El cubo de', x, 'es', cubo(x))
+if es_raiz_cubica(x, cubo(x)):
+    print('Funciona, porque la raiz cúbica de', cubo(x), 'es', x)
+</textarea>
+</div>
+<p>Ésto es <strong>conocimiento declarativo</strong>, sabemos hechos matemáticamente
 ciertos porque se derivan de definiciones y axiomas. Pero este
 conocimiento no nos permite por sí solo encontrar una solución a
 nuestro problema, un método para encontrar la raiz cuadrada de un
@@ -605,19 +692,22 @@ def raiz_cubica(num):
     return n
 </textarea>
 </div>
-<p>El método que hemos utilizado es la <strong>:term:`enumeración exhaustiva`</strong>
+<p>El método que hemos utilizado es la <span class="xref std std-term">enumeración exhaustiva</span>
 de todos los números hasta encontrar la respuesta correcta. Los
 ordenadores son increíblemente rápidos y muchas veces este método
 puede generar una respuesta en un tiempo pequeño.</p>
-<p>La <span class="xref std std-term">enumeración exhaustiva</span> es un método muy sencillo de
+<div class="admonition tip">
+<p class="first admonition-title">Truco</p>
+<p class="last">La <strong>enumeración exhaustiva</strong> es un método muy sencillo de
 implementar, pero no siempre es utilizable. En muchas ocasiones el
 número de posibles respuestas es tan elevado que no podemos
 enumerarlas todas en un tiempo razonable.</p>
+</div>
 <p>Examina el ejemplo anterior para distintos valores. Por ejemplo:</p>
 
 <div data-childcomponent="python" class="explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=python data-lang="python"   data-include="raiz-cubica-e-exhaustiva" data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=python data-lang="python"   data-include="raiz-cubica-entera raiz-cubica-e-exhaustiva" data-timelimit=25000  data-codelens="true" data-audio=''     >
 print(raiz_cubica(8))
 print(raiz_cubica(1971935064))
 </textarea>
@@ -625,20 +715,37 @@ print(raiz_cubica(1971935064))
 <p>¿Qué pasaría si se llama con el argumento 9? ¿Qué debería devolver? No
 son preguntas que debas saber a priori, ni preguntas con trampa. Piensa
 cómo debería comportarse según tu propio criterio.</p>
+<p>Cuando el programa no tiene una buena respuesta es mejor no dar
+respuesta.  ¿Pero cómo detectamos esta condición anómala en nuestros
+programas?  Hoy en día probablemente la mejor solución está en el uso
+de <strong>excepciones</strong>, una construcción para el manejo estructurado de
+errores, que veremos en un capítulo posterior.</p>
+<p>De momento puedes apañarte no devolviendo nada.  Pero recuerda que es
+una medida temporal, hasta que conozcas las excepciones.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Truco</p>
+<p>Cuando una función no puede devolver ningún valor razonable
+debes utilizar excepciones.  Temporalmente, hasta que veamos
+el mecanismo, no devuelvas nada o devuelve <code class="docutils literal"><span class="pre">None</span></code>, que es
+el literal de Python equivalente a <em>nada</em>.</p>
+<p class="last"><strong>Nunca devuelvas algo que no tiene nada que ver, como una
+cadena de texto con un error.</strong>  Eso complica enormemente el
+uso de la función.</p>
+</div>
 </div>
 </div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Capítulo anterior - 2. Introducción' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - 2. Introducción' data-toggle="tooltip">
     <a href="intro.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="intro.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Capítulo siguiente - 4. Ramificación e iteración' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - 4. Ramificación e iteración' data-toggle="tooltip" >
     <a href="bif-iter.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>

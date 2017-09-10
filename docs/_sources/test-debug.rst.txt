@@ -2,22 +2,38 @@
 Prueba y depuración de software
 ===============================
 
+Las pruebas primero
+-------------------
+
+Antes de empezar en tema vamos a explicar someramente la mecánica que
+deberías aplicar desde el primer día en tus ejercicios y programas.
+Aún cuando no hayas leído nada más de este tema *debes* aplicar el
+método desde el primer día.
+
+Lo primero es tener claro qué vas a hacer. Inmediatamente después, el
+siguiente caso es hace una prueba, un pequeño ejemplo que permita
+saber si el programa que vas a hacer funciona o no. Es decir, se usa el programa antes incluso de hacerlo, *Las pruebas
+primero*.
+
+
 Casos de prueba
 ---------------
 
-Las pruebas que se pasan en los ejercicios del laboratorio pueden servir
-de ejemplo para probar tus propios programas. Vemos como ejemplo el
-primer ejercicio del primer bloque.
+Las pruebas que se pasan automáticamente en los ejercicios del
+laboratorio pueden servir de ejemplo para ayudarte a probar tus
+propios programas. Vemos como ejemplo el primer ejercicio del primer
+bloque.
 
 .. activecode:: correo-electronico
-    :nocodelens:
-    :caption: Correo electrónico
+   :nocodelens:
+   :nocanvas:
+   :caption: Correo electrónico
 
-    def my_email():
-        return 'francisco.moya@uclm.es'
+   def my_email():
+       return 'francisco.moya@uclm.es'
 
 Definir la función que se indica en el enunciado no es tu único
-trabajo.  **Es responsabilidad tuya probar el código *antes* de
+trabajo.  **Es responsabilidad tuya probar el código antes de
 enviarlo**. Python incluye una biblioteca para pruebas denominada
 ``unittest``. El único problema es que exige definir una clase y es
 posible que todavía no sepas hacerlo. No te asustes, los enunciados de
@@ -26,24 +42,26 @@ como punto de partida.  Copia esta línea a continuación de tu
 programa.
 
 .. activecode:: import-unittest
-    :nocodelens:
-    :caption: Importación de la biblioteca de pruebas
+   :nocodelens:
+   :nocanvas:
+   :caption: Importación de la biblioteca de pruebas
 
-    import unittest
+   import unittest
 
 Como primera aproximación basta añadir el código de pruebas de
 cualquiera de las tareas de prácticas.  En el primer ejercicio se
 muestra lo siguiente.
 
 .. activecode:: test-case-email
-    :nocodelens:
-    :caption: TestCase para la práctica del correo electrónico
-    :include: import-unittest, correo-electronico
+   :nocodelens:
+   :nocanvas:
+   :caption: TestCase para la práctica del correo electrónico
+   :include: correo-electronico,import-unittest
 
-    class Test(unittest.TestCase):
-        def test_my_email(self):
-            self.assertEqual(1, my_email().count('@'))
-            self.assertTrue(my_email().endswith('uclm.es'))
+   class Test(unittest.TestCase):
+       def test_my_email(self):
+           self.assertEqual(1, my_email().count('@'))
+           self.assertTrue(my_email().endswith('uclm.es'))
 
 Es más simple de lo que parece, pero no te preocupes si no lo
 entiendes de momento. Dentro de la *clase* ``Test`` hay una definición
@@ -106,7 +124,7 @@ mucho más simple poner un único ``assert`` que asegurara que termina en
 .. activecode:: otro-ejemplo-de-test
     :nocodelens:
     :caption: Otra alternativa de prueba
-    :include: import-unittest, correo-electronico
+    :include: correo-electronico,import-unittest
 
     class OtroTest(unittest.TestCase):
         def test_my_email(self):
@@ -132,11 +150,11 @@ runners*), como ``nosetests`` para ejecutar las pruebas. Sin instalar
 nada lo puedes hacer tú mismo en Python.
 
 .. activecode:: driver-del-testcase
-    :nocodelens:
-    :caption: Ejecución del caso de prueba
-    :include: test-case-email
+   :nocodelens:
+   :caption: Ejecución del caso de prueba
+   :include: correo-electronico, import-unittest, test-case-email
 
-    unittest.main()
+   unittest.main()
 
 
 Hay mucho más sobre pruebas, pero eso te toca a ti descubrirlo. Si en

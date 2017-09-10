@@ -41,7 +41,6 @@
       };
     </script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
-    <script type="text/javascript" src="_static/codemirror.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -160,7 +159,7 @@
       </button>
 
       <div>
-        <div style='float:left;display:block;background-size:90px 40px !important;height:40px;width:90px;background:transparent url("_static/eii_small.png") no-repeat 0px 0px;'>&nbsp; </div>
+        <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
         <a class="navbar-brand" href="index.html">Informática</a>
       </div>
     </div>
@@ -169,10 +168,104 @@
 
       <ul class="nav navbar-nav navbar-right">
 
-        <!--<li class="divider-vertical"></li>-->
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/CS101/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
         
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/CS101/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=CS101&page=intro'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
           <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">2. Introducción</a><ul>
 <li><a class="reference internal" href="#interpretes-y-compiladores">2.1. Intérpretes y compiladores</a></li>
@@ -205,9 +298,9 @@
 </ul>
 </ul>
 </li>
-          <!--<li class="divider-vertical"></li>-->
+          <li class="divider-vertical"></li>
         
-        <!--
+        
           
   <li id="relations-prev" title="Previous Chapter - 1. Prefacio" data-toggle="tooltip">
     <a href="prefacio.html" >
@@ -232,63 +325,11 @@
   $('#relations-next').tooltip(opts);
 </script>
         -->
-
-        <li class="divider-vertical"></li>
-
-        <!-- search dropdown -->
-        <li class="dropdown">
-          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
-          </a>
-          <ul class='dropdown-menu'>
-            
-                <li><a href='index.html'>Índice del libro</a></li>
-            
-            <li><a href="genindex.html">Índice alfabético</a></li>
-            <li class="divider"></li>
-            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Código activo de prueba</a></li>
-            <li class="divider"></li>
-            <li style="width: 240px;">
-              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
-                <div class="input-group">
-                  <input type="text" class="form-control" name="q" placeholder="Buscar en el libro" />
-                  <span class="input-group-btn">
-                    <button class="btn btn-primary" style="margin:0;" type="submit">
-                      <i class="glyphicon glyphicon-search"></i>
-                    </button>
-                  </span>
-                </div><!-- /input-group -->
-                <input type="hidden" name="check_keywords" value="yes" />
-                <input type="hidden" name="area" value="default" />
-              </form>
-            </li>
-          </ul>
-        </li>
-        <!-- end search dropdown -->
-
         
-        <li class="divider-vertical"></li>
-
-        <!-- help menu dropdown -->
-        <li class="dropdown">
-          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
-          </a>
-          <ul class="dropdown-menu user-menu">
-            <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
-            
-            <li>
+          <li>
   <a href="_sources/intro.rst.txt"
-     rel="nofollow">Ver fuente</a></li>
-            
-            <li class="divider"></li>
-            <li><a href='http://runestoneinteractive.org'>Acerca de Runestone</a></li>
-          </ul>
-        </li>
-        <!-- end help menu dropdown -->
-
-        <li class="divider-vertical"></li>
-
+     rel="nofollow">Source</a></li>
+        
       </ul>
 
     </div>
@@ -327,6 +368,53 @@ desarrollar tu intuición para ver cómo puedes cambiar un programa para
 que haga lo que tú quieres.</p>
 <div class="section" id="interpretes-y-compiladores">
 <h2>2.1. Intérpretes y compiladores<a class="headerlink" href="#interpretes-y-compiladores" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El computador es una máquina bastante simple. Ejecuta de manera
+secuencial una serie de instrucciones elementales. Solo sabe ejecutar
+un repertorio limitado de operaciones muy sencillas que se denomina
+<span class="xref std std-term">lenguaje máquina</span>. Sin embargo nadie programa los ordenadores
+utilizando directamente lenguaje máquina.  Eso sería de locos,
+complicaría incluso entender lo que hace un programa.</p>
+<p>En la actualidad los computadores se programan usando un
+<span class="xref std std-term">lenguaje de alto nivel</span>. Se trata de un lenguaje más abstracto,
+fácil de entender, y muy regular.  Los programas escritos en uno de
+estos lenguajes deben ser primero traducidos a <em>lenguaje
+máquina</em>. Esta traducción puede realizarse de dos formas.</p>
+<ol class="arabic simple">
+<li>En los <span class="xref std std-term">lenguajes compilados</span> el programa es traducido
+previamente a lenguaje máquina antes de su ejecución, empleando un
+programa especial denominado <span class="xref std std-term">compilador</span>.  El resultado
+puede ejecutarse directamente, sin necesidad de que vuelva a
+producirse un proceso de traducción.</li>
+<li>En los <span class="xref std std-term">lenguajes interpretados</span> el programa no se ejecuta
+directamente.  En su lugar se ejecuta otro programa, denominado
+<span class="xref std std-term">intérprete</span>, que va leyendo el programa y ejecutando las
+instrucciones máquina correspondientes a cada fragmento
+identificado.</li>
+</ol>
+<p>Cada una de estas opciones tiene sus ventajas y sus
+inconvenientes.</p>
+<p>Los lenguajes compilados requieren un paso previo de <em>compilación</em>
+para poder ejecutar, pero esto solo se realiza una vez y el resultado
+puede ser optimizado globalmente. Sin embargo el resultado de la
+compilación (programa ejecutable) solo es válido para ordenadores que
+entienden el lenguaje máquina que ha generado, es decir, para una
+<span class="xref std std-term">arquitectura de repertorio de instrucciones</span>.</p>
+<p>Por contra un intérprete no necesita este paso previo, por lo que el
+programa es válido para cualquier arquitectura.  Sin embargo la
+traducción a lenguaje máquina se produce en cada ejecución, por lo que
+suelen ser sensiblemente más lentos.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Advertencia</p>
+<p class="last">En la actualidad la mayoría de los intérpretes utilizan
+una técnica híbrida entre el compilador y el intérprete
+clásico. Por un lado el intérprete realiza un
+procesamiento previo y almacena una versión
+extremadamente simplificada del programa que no llega a
+ser lenguaje máquina pero se parece (<em>bytecode</em>). Por
+otro lado suelen utilizar una técnica conocida como
+compilación <em>just in time</em>.  El programa se traduce a
+lenguaje máquina la primera vez que se ejecuta</p>
+</div>
 </div>
 <div class="section" id="instalacion-del-software">
 <h2>2.2. Instalación del software<a class="headerlink" href="#instalacion-del-software" title="Enlazar permanentemente con este título">¶</a></h2>
@@ -596,8 +684,12 @@ poco.</p>
 distribución oficial de Python. Por tanto está disponible en todos
 los ordenadores que dispongan de Python.</p>
 <p>Más adelante, cuando domines el lenguaje, empieza a probar otros, como
-<a class="reference external" href="http://jupyter.org/">Jupyter</a>, <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a>, <a class="reference external" href="http://www.pydev.org/">Eclipse PyDev</a>, <a class="reference external" href="http://wiki.netbeans.org/Python">Netbeans Python</a>,
-<a class="reference external" href="https://www.visualstudio.com/es/vs/python/">Visual Studio con Python Development Tools</a>, etc.</p>
+<a class="reference external" href="http://jupyter.org/">Jupyter</a>,
+<a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a>,
+<a class="reference external" href="http://www.pydev.org/">Eclipse PyDev</a>,
+<a class="reference external" href="http://wiki.netbeans.org/Python">Netbeans Python</a>,
+<a class="reference external" href="https://www.visualstudio.com/es/vs/python/">Visual Studio con Python Development Tools</a>,
+etc.</p>
 <p>No te rindas a la primera.  Un buen entorno es normalmente complejo y
 requiere algo de tiempo acostumbrarse a él.  Ese tiempo se recupera
 con creces en el futuro debido a los incrementos de productividad que
@@ -631,7 +723,7 @@ la expresión.  Por ejemplo:</p>
 </div>
 
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="question1_1">
-            Q-3: Examina la salida del programa de arriba y en base a ello
+            Q-7: Examina la salida del programa de arriba y en base a ello
 selecciona el modo de ejecución de estas celdas.
             <li data-component="answer"  id="question1_1_opt_a">(A) Modo interactivo</li><li data-component="feedback" id="question1_1_opt_a">Si te fijas en la salida del programa cuando se
 ejecuta no hay nada.  Eso significa que el intérprete
@@ -663,7 +755,13 @@ básicos.</p>
 </pre></div>
 </div>
 <p>La única línea de la que consta el programa es una <span class="xref std std-term">sentencia</span>.
-Un programa es una secuencia de <em>sentencias</em> que se ejecutan en orden.</p>
+Un programa es una secuencia de <em>sentencias</em> que se ejecutan en orden <a class="footnote-reference" href="#id2" id="id1">[1]</a>.</p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>La palabra <em>sentencia</em> es un calco léxico del inglés <em>sentence</em>, que en otros contextos se traduciría como <em>frase</em>. En informática los calcos léxicos son habituales, muy a pesar de los académicos de la RAE.</td></tr>
+</tbody>
+</table>
 <p>Nuestra sentencia es una <span class="xref std std-term">llamada a función</span>, muy similar al uso
 de una función en matemáticas.  La función <code class="docutils literal"><span class="pre">print</span></code> imprime sus
 argumentos en la <span class="xref std std-term">salida estándar</span> y no devuelve nada.  Las
@@ -698,7 +796,7 @@ puede controlar con un argumento opcional de <code class="docutils literal"><spa
 <div data-childcomponent="hola-mundo-2-prints" class="explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=hola-mundo-2-prints data-lang="python"    data-timelimit=25000   data-audio=''     >
-print('Hola,', end='')
+print('Hola, ', end='')
 print('Mundo')
 </textarea>
 </div>
@@ -729,14 +827,13 @@ in Codelens</em>.  <em>Codelens</em> es una herramienta educativa que permite
 entender cómo funciona el programa paso a paso.  Utiliza los botones
 <em>Forward</em> y <em>Back</em> para avanzar y retroceder.  Observa cómo aparece la
 variable cuando se ejecuta la sentencia de asignación.  Aparece en una
-tabla llamada <em>Global frame</em>.  Ya veremos eso con más detalle más
-adelante.</p>
+tabla llamada <em>Global frame</em>.  Ya veremos eso en detalle más adelante.</p>
 </div>
 <div class="section" id="bifurcacion">
 <h3>2.6.2. Bifurcación<a class="headerlink" href="#bifurcacion" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>A veces es necesario ejecutar determinadas sentencias solo si se
 cumple una condición.  Esto se consigue con una <span class="xref std std-term">sentencia de
-bifurcación</span>.  La más simple de todas es la <span class="xref std std-term">sentencia *if*</span>.</p>
+bifurcación</span>.  La más simple de todas es la <span class="xref std std-term">sentencia if</span>.</p>
 
 <div data-childcomponent="ejemplo-bifurcar" class="explainer ac_section alert alert-warning">
 
@@ -756,26 +853,37 @@ cumple la condición.  Verás que Python es bastante relajado con la
 forma en que escribes el programa, solo necesita que respetes los
 márgenes.  Por ejemplo, si quieres ejecutar dos <code class="docutils literal"><span class="pre">print</span></code> en caso de
 que se cumpla la condición, tendrás que ponerlos con el mismo margen
-ambos.  Da igual cuántos espacios, pero que sean los mismos.</p>
+ambos.  Da igual cuántos espacios, pero que sean los mismos.  Por
+ejemplo:</p>
+
+<div data-childcomponent="ejemplo-bifurcar-2" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ejemplo-bifurcar-2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+n = 2
+if n > 1:
+    print('n es mayor que 1')
+    print('n es', n)
+</textarea>
+</div>
 </div>
 <div class="section" id="bucles">
 <h3>2.6.3. Bucles<a class="headerlink" href="#bucles" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>En no pocas ocasiones necesitaremos repetir una serie de operaciones
 idénticas o casi idénticas.  Para repetir están los bucles.  El más
-sencillo de todos es el <span class="xref std std-term">bucle *while*</span>:</p>
-<p>El <span class="xref std std-term">bucle *while*</span> funciona de forma similar a la
-<span class="xref std std-term">sentencia *if*</span>.  Evalúa la condición y si se cumple ejecuta
-las sentencias indentadas justo a continuación.  Pero después de
-ejecutarlas no continúa con la siguiente sentencia, sino que vuelve a
-evaluar la condición.  Así hasta que la condición no se cumpla.</p>
+sencillo de todos es el <span class="xref std std-term">bucle while</span>:</p>
+<p>El <span class="xref std std-term">bucle while</span> funciona de forma similar a la <span class="xref std std-term">sentencia
+if</span>.  Evalúa la condición y si se cumple ejecuta las sentencias
+indentadas justo a continuación.  Pero después de ejecutarlas no
+continúa con la siguiente sentencia, sino que vuelve a evaluar la
+condición.  Así hasta que la condición no se cumpla.</p>
 
 <div data-childcomponent="tabla-del-3" class="explainer ac_section alert alert-warning">
 
 <textarea data-component="activecode" id=tabla-del-3 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
 tabla = 3
-i=0
-while i<10:
-    print(tabla,'x',i,'=',tabla*i)
+i = 0
+while i < 10:
+    print(tabla, 'x', i, '=', tabla*i)
     i = i + 1
 </textarea>
 </div>
@@ -794,7 +902,7 @@ sentencias indentadas del bucle.</p>
 <textarea data-component="activecode" id=tabla-del-3-for data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
 tabla = 3
 for i in range(10):
-    print(tabla,'x',i,'=',tabla*i)
+    print(tabla, 'x', i, '=', tabla*i)
 </textarea>
 </div>
 </div>
@@ -899,7 +1007,7 @@ else:
 </textarea>
 </div>
 <p>Bueno, esta es la primera vez que vemos un <code class="docutils literal"><span class="pre">else</span></code>.  Deberíamos
-aclarar algo, verdad?  La claúsula <code class="docutils literal"><span class="pre">else</span></code> es una parte opcional de
+aclarar algo, ¿verdad?  La claúsula <code class="docutils literal"><span class="pre">else</span></code> es una parte opcional de
 la sentencia <code class="docutils literal"><span class="pre">if</span></code>.  Indica que en caso de que no se cumpla la
 condición ejecute las sentencias indentadas a continuación.  Te
 aseguro que no es tan útil como el <code class="docutils literal"><span class="pre">if</span></code> pero a veces puede ser
@@ -976,7 +1084,7 @@ Con muy poquito esfuerzo más se pueden resolver problemas parecidos.</p>
 <textarea data-component="activecode" id=tabla-del-3-v1 data-lang="python"    data-timelimit=25000   data-audio=''     >
 i = 0
 while i < 10:
-    print('3 x',i,'=',3*i)
+    print('3 x', i, '=', 3*i)
     i = i + 1
 </textarea>
 </div>
@@ -1029,10 +1137,10 @@ tratara de una nueva sentencia.</p>
 imprimir_tabla_multiplicar(5)
 </textarea>
 </div>
-<p>Ya está bien por ahora, pero no creas que es la única forma de resolver el
-problema. En Python siempre hay más formas de escribir las cosas. Por
-ejemplo, ésto sería más cercano a lo que haría un programador
-experimentado:</p>
+<p>Ya está bien por ahora, pero no creas que es la única forma de
+resolver el problema. En Python siempre hay más formas de escribir las
+cosas. Por ejemplo, ésto sería más cercano a lo que haría un
+programador experimentado:</p>
 
 <div data-childcomponent="imprimir_tabla_multiplicar_v2" class="explainer ac_section alert alert-warning">
 
@@ -1054,14 +1162,14 @@ detalle.</p>
 
   
       
-  <li id="relations-prev" class="navLink" title='Capítulo anterior - 1. Prefacio' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - 1. Prefacio' data-toggle="tooltip">
     <a href="prefacio.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="prefacio.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Capítulo siguiente - 3. Elementos de un programa' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - 3. Elementos de un programa' data-toggle="tooltip" >
     <a href="elem.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>

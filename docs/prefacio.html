@@ -41,7 +41,6 @@
       };
     </script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
-    <script type="text/javascript" src="_static/codemirror.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -160,7 +159,7 @@
       </button>
 
       <div>
-        <div style='float:left;display:block;background-size:90px 40px !important;height:40px;width:90px;background:transparent url("_static/eii_small.png") no-repeat 0px 0px;'>&nbsp; </div>
+        <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
         <a class="navbar-brand" href="index.html">Informática</a>
       </div>
     </div>
@@ -169,10 +168,104 @@
 
       <ul class="nav navbar-nav navbar-right">
 
-        <!--<li class="divider-vertical"></li>-->
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/CS101/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
         
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/CS101/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=CS101&page=prefacio'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
           <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">1. Prefacio</a><ul>
 <li><a class="reference internal" href="#acerca-de-la-asignatura">1.1. Acerca de la asignatura</a></li>
@@ -190,9 +283,9 @@
 </ul>
 </ul>
 </li>
-          <!--<li class="divider-vertical"></li>-->
+          <li class="divider-vertical"></li>
         
-        <!--
+        
           
   <li id="relations-prev" title="Previous Chapter - Informática para ingenieros" data-toggle="tooltip">
     <a href="index.html" >
@@ -217,63 +310,11 @@
   $('#relations-next').tooltip(opts);
 </script>
         -->
-
-        <li class="divider-vertical"></li>
-
-        <!-- search dropdown -->
-        <li class="dropdown">
-          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
-          </a>
-          <ul class='dropdown-menu'>
-            
-                <li><a href='index.html'>Índice del libro</a></li>
-            
-            <li><a href="genindex.html">Índice alfabético</a></li>
-            <li class="divider"></li>
-            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Código activo de prueba</a></li>
-            <li class="divider"></li>
-            <li style="width: 240px;">
-              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
-                <div class="input-group">
-                  <input type="text" class="form-control" name="q" placeholder="Buscar en el libro" />
-                  <span class="input-group-btn">
-                    <button class="btn btn-primary" style="margin:0;" type="submit">
-                      <i class="glyphicon glyphicon-search"></i>
-                    </button>
-                  </span>
-                </div><!-- /input-group -->
-                <input type="hidden" name="check_keywords" value="yes" />
-                <input type="hidden" name="area" value="default" />
-              </form>
-            </li>
-          </ul>
-        </li>
-        <!-- end search dropdown -->
-
         
-        <li class="divider-vertical"></li>
-
-        <!-- help menu dropdown -->
-        <li class="dropdown">
-          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
-          </a>
-          <ul class="dropdown-menu user-menu">
-            <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
-            
-            <li>
+          <li>
   <a href="_sources/prefacio.rst.txt"
-     rel="nofollow">Ver fuente</a></li>
-            
-            <li class="divider"></li>
-            <li><a href='http://runestoneinteractive.org'>Acerca de Runestone</a></li>
-          </ul>
-        </li>
-        <!-- end help menu dropdown -->
-
-        <li class="divider-vertical"></li>
-
+     rel="nofollow">Source</a></li>
+        
       </ul>
 
     </div>
@@ -400,7 +441,7 @@ el control electrónico de una planta de fabricación, o el control
 electrónico de una línea de transmisión.  El ingeniero que participa
 en el diseño de cualquier equipo electrónico tendrá que lidiar con
 computadores.</p>
-<p>Pero es que además el ordenador es la mejor herramienta de trabajo
+<p>Pero es que además el computador es la mejor herramienta de trabajo
 para el ingeniero.  Hoy en día es posible encontrar ingenieros que no
 saben ni siquiera lo que es una regla de cálculo, pero es imposible
 encontrar un ingeniero en activo que no use computadores a diario.
@@ -432,8 +473,8 @@ nuestra intención crear un nuevo libro, hay muchos y algunos muy
 buenos.  El problema es que nuestro alumno típico no sabe inglés, y
 hay poca literatura técnica en castellano.  Empezamos a colgar notas
 de clase pero un número significativo de estudiantes jamás llegaron a
-descargarlas.  Tal vez en un bloque monolítico sea más difícil que eso
-pase.</p>
+descargarlas todas.  Tal vez en un bloque monolítico sea más difícil
+que eso pase.</p>
 <p>Este pequeño libro recoge las notas de clase elaboradas durante varios
 años.  La estructura responde aproximadamente al libro de John Guttag,
 <a class="reference external" href="https://mitpress.mit.edu/books/introduction-computation-and-programming-using-python-0">Introduction to Computation and Programming Using Python</a>
@@ -542,18 +583,24 @@ vida del estudiante. Normalmente se tratará de textos
 complementarios, pero también pueden ser vídeos o artículos
 disponibles en Internet.</li>
 </ol>
-<p>Es muy conveniente comprobar frecuentemente la documentación disponible
-en el Campus Virtual de la UCLM, sobre todo el día antes de cada clase y
-cuando así se diga en las clases. Todas aquellas personas que no pueden
-asistir con regularidad a las clases deberían ver el video
-correspondiente a cada clase (que se publicará un día después de a
-clase) para un seguimiento óptimo de la asignatura.</p>
+<p>Es muy conveniente comprobar frecuentemente la documentación
+disponible en el Campus Virtual de la UCLM, sobre todo el día antes de
+cada clase y cuando así se diga en las clases. Todas aquellas personas
+que no pueden asistir con regularidad a las clases deberían ver el
+video correspondiente a cada clase <a class="footnote-reference" href="#id2" id="id1">[1]</a>, si está disponible, para un
+seguimiento óptimo de la asignatura.</p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Estamos en proceso de grabación de las clases en vídeo. Es posible que algunas clases no estén todavía disponibles. Comprueba el progreso en nuestro <a class="reference external" href="https://www.youtube.com/channel/UCMvJ1Uyt9J9PQlrUqOwyYDg">canal de YouTube</a>.</td></tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="trabajo-en-el-laboratorio">
 <h3>1.4.2. Trabajo en el laboratorio<a class="headerlink" href="#trabajo-en-el-laboratorio" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>En general las actividades de laboratorio consistirán en la realización
 de pequeños programas. La evaluación y/o corrección se realizará de
-forma completamente automática a través de una actividad del Campus
+forma prácticamente automática a través de una actividad del Campus
 Virtual.  El profesor no está, por tanto, para deciros si un programa
 está bien o mal, sino para orientaros sobre formas alternativas de
 resolver problemas o para indicaros las mejores formas de expresar
@@ -587,7 +634,7 @@ calificación final, y mucho menos con tu actividad profesional como
 ingeniero.</li>
 <li>Por otro lado tienes que poner en práctica estos conocimientos. Para
 ello <em>tienes</em> que hacer dos actividades: leer programas de otros,
-escribir programas para resolver pequeños problemas. No te quedes en
+y escribir programas para resolver pequeños problemas. No te quedes en
 la segunda parte, es <em>muy importante</em> leer programas de otros. Puedes
 aprender a nadar con <em>estilo perrito</em> pero cuando ves nadar a un
 profesional te das cuenta que tu estilo puede y debe mejorar. Hay
@@ -595,11 +642,12 @@ belleza en los programas, aprende a apreciarla, descubre qué
 propiedades son deseables y cuáles no, aprende a escribir programas
 para que otros los entiendan.</li>
 </ol>
-<p>Con gran diferencia la segunda parte es la que más tiempo te debe
-consumir. Python tiene solo 40 palabras y la mayoría son vocablos
-comunes en inglés, que ya deberías conocer. Si estás consumiendo mucho
-tiempo en la primera parte reacciona pronto, porque la propia práctica
-de la programación también te ayuda a asimilar los conceptos y lo
+<p>Con gran diferencia la parte práctica (leer y escribir programas) es
+la que más tiempo te debe consumir. Python tiene solo 40 palabras y la
+mayoría son vocablos comunes en inglés, que ya deberías conocer. Si
+estás consumiendo mucho tiempo en la primera parte (asimilar
+conocimientos teóricos) reacciona pronto, porque la propia práctica de
+la programación también te ayuda a asimilar los conceptos y lo
 contrario no ocurre nunca. Leyendo un manual de técnica de natación no
 se aprende a nadar.</p>
 <p>Para ayudarte en esta labor te proponemos una serie de ejercicios muy
@@ -612,7 +660,7 @@ programas de ejemplo te resultan muy fáciles.</p>
 </div>
 <div class="section" id="politica-de-copias">
 <h2>1.5. Política de copias<a class="headerlink" href="#politica-de-copias" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>En esta asignatura hay y habrá tolerancia cero con la copia y el engaño.
+<p>En esta asignatura hay y habrá tolerancia cero a la copia y el engaño.
 Es un comportamiento totalmente inaceptable para cualquier profesional
 cualificado y será perseguido con la máxima dureza que permita la
 reglamentación interna de la UCLM. Se utilizarán herramientas <em>estado
@@ -667,14 +715,14 @@ exámenes.</p>
 
   
       
-  <li id="relations-prev" class="navLink" title='Capítulo anterior - Informática para ingenieros' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - Informática para ingenieros' data-toggle="tooltip">
     <a href="index.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="index.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Capítulo siguiente - 2. Introducción' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - 2. Introducción' data-toggle="tooltip" >
     <a href="intro.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>

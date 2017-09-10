@@ -41,7 +41,6 @@
       };
     </script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
-    <script type="text/javascript" src="_static/codemirror.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -106,7 +105,7 @@
     <link rel="author" title="Sobre este documento" href="about.html" />
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="5. Abstracción con funciones" href="python-05-06-07.html" />
+    <link rel="next" title="5. Abstracción con funciones" href="abstraccion-func.html" />
     <link rel="prev" title="3. Elementos de un programa" href="elem.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -160,7 +159,7 @@
       </button>
 
       <div>
-        <div style='float:left;display:block;background-size:90px 40px !important;height:40px;width:90px;background:transparent url("_static/eii_small.png") no-repeat 0px 0px;'>&nbsp; </div>
+        <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
         <a class="navbar-brand" href="index.html">Informática</a>
       </div>
     </div>
@@ -169,10 +168,104 @@
 
       <ul class="nav navbar-nav navbar-right">
 
-        <!--<li class="divider-vertical"></li>-->
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/CS101/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
         
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/CS101/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=CS101&page=bif-iter'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
           <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ir a <b class="caret"></b></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">4. Ramificación e iteración</a><ul>
 <li><a class="reference internal" href="#ramificacion">4.1. Ramificación</a></li>
@@ -183,9 +276,9 @@
 </ul>
 </ul>
 </li>
-          <!--<li class="divider-vertical"></li>-->
+          <li class="divider-vertical"></li>
         
-        <!--
+        
           
   <li id="relations-prev" title="Previous Chapter - 3. Elementos de un programa" data-toggle="tooltip">
     <a href="elem.html" >
@@ -194,7 +287,7 @@
   </li>
   
   <li id="relations-next" title='Next Chapter - 5. Abstracción con funciones' data-toggle="tooltip" >
-    <a href="python-05-06-07.html" >
+    <a href="abstraccion-func.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -210,63 +303,11 @@
   $('#relations-next').tooltip(opts);
 </script>
         -->
-
-        <li class="divider-vertical"></li>
-
-        <!-- search dropdown -->
-        <li class="dropdown">
-          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
-          </a>
-          <ul class='dropdown-menu'>
-            
-                <li><a href='index.html'>Índice del libro</a></li>
-            
-            <li><a href="genindex.html">Índice alfabético</a></li>
-            <li class="divider"></li>
-            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Código activo de prueba</a></li>
-            <li class="divider"></li>
-            <li style="width: 240px;">
-              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
-                <div class="input-group">
-                  <input type="text" class="form-control" name="q" placeholder="Buscar en el libro" />
-                  <span class="input-group-btn">
-                    <button class="btn btn-primary" style="margin:0;" type="submit">
-                      <i class="glyphicon glyphicon-search"></i>
-                    </button>
-                  </span>
-                </div><!-- /input-group -->
-                <input type="hidden" name="check_keywords" value="yes" />
-                <input type="hidden" name="area" value="default" />
-              </form>
-            </li>
-          </ul>
-        </li>
-        <!-- end search dropdown -->
-
         
-        <li class="divider-vertical"></li>
-
-        <!-- help menu dropdown -->
-        <li class="dropdown">
-          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
-          </a>
-          <ul class="dropdown-menu user-menu">
-            <li><a href="_static/navhelp.html">Ayuda a la navegación</a></li>
-            
-            <li>
+          <li>
   <a href="_sources/bif-iter.rst.txt"
-     rel="nofollow">Ver fuente</a></li>
-            
-            <li class="divider"></li>
-            <li><a href='http://runestoneinteractive.org'>Acerca de Runestone</a></li>
-          </ul>
-        </li>
-        <!-- end help menu dropdown -->
-
-        <li class="divider-vertical"></li>
-
+     rel="nofollow">Source</a></li>
+        
       </ul>
 
     </div>
@@ -296,8 +337,8 @@ comportan como una única sentencia.  Veamos las más importantes.</p>
 <p>Es necesario emplear sentencias de <span class="xref std std-term">bifurcación</span> o
 <span class="xref std std-term">ramificación</span> siempre que se necesite ejecutar un conjunto de
 sentencias solo en determinados casos y no en otros.</p>
-<p>La sentencia básica de <span class="xref std std-term">ramificación</span> es la <span class="xref std std-term">sentencia
-*if*</span>.  La estructura más simple es la siguiente:</p>
+<p>La sentencia básica de <span class="xref std std-term">ramificación</span> es la <em>sentencia
+if</em>.  La estructura más simple es la siguiente:</p>
 <pre class="literal-block">
 if <em>condición</em>:
     <em>bloque_si_cierto</em>
@@ -307,6 +348,13 @@ convertirlo a un valor booleano.  Es decir, la <em>condición</em> debe poder
 evaluarse como uno de los valores <code class="docutils literal"><span class="pre">True</span></code> (cierto) o <code class="docutils literal"><span class="pre">False</span></code>
 (falso).  Si la <em>condición</em> es <code class="docutils literal"><span class="pre">True</span></code> entonces se ejecutará el
 <em>bloque_si_cierto</em>.  Después sigue con la ejecución secuencial.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Truco</p>
+<p class="last">Los bloques como <em>bloque_si_cierto</em> no tienen por qué consistir en
+una única instrucción.  Pueden ser varias siempre que tengan el
+mismo nivel de <em>indentación</em>, es decir, el ´mismo número de
+espacios antes de cada sentencia.</p>
+</div>
 <p>Todas las sentencias compuestas tienen la misma estructura.  Empiezan
 con una <span class="xref std std-term">palabra clave</span> que la identifica, luego pueden aparecer
 una serie de elementos sintácticos propios de la sentencia y termina
@@ -314,7 +362,7 @@ la línea con un signo <code class="docutils literal"><span class="pre">:</span>
 menos un bloque de sentencias que debe cambiar su margen respecto a la
 <span class="xref std std-term">palabra clave</span>. ¿Cuánto margen?  Da igual, mientras sea
 diferente del margen de la palabra clave a Python le da lo mismo.</p>
-<p>En el caso de la <span class="xref std std-term">sentencia *if*</span> existen versiones algo más
+<p>En el caso de la <span class="xref std std-term">sentencia if</span> existen versiones algo más
 complejas, que, no obstante, mantienen la misma estructura.  Por
 ejemplo, es posible indicar también un bloque de sentencias que se
 ejecuta solo si no se cumple la <em>condición</em>:</p>
@@ -329,10 +377,10 @@ se evalúe como <code class="docutils literal"><span class="pre">False</span></c
 <em>bloque_si_falso</em>, que sigue a la palabra clave <code class="docutils literal"><span class="pre">else</span></code>.  El nuevo
 añadido tiene la misma estructura de una sentencia compuesta
 cualquiera, pero es parte de la <span class="xref std std-term">sentencia *if*</span>.  Se denomina
-<span class="xref std std-term">claúsula *else*</span>.</p>
-<p>Todavía hay otra claúsula más en la <span class="xref std std-term">sentencia *if*</span>.  Se trata
-de la <span class="xref std std-term">claúsula *elif*</span> que puede repetirse tantas veces como
-sea necesario justo antes de la <span class="xref std std-term">claúsula *else*</span>:</p>
+<span class="xref std std-term">claúsula else</span>.</p>
+<p>Todavía hay otra claúsula más en la <span class="xref std std-term">sentencia if</span>.  Se trata
+de la <span class="xref std std-term">claúsula elif</span> que puede repetirse tantas veces como
+sea necesario justo antes de la <span class="xref std std-term">claúsula else</span>:</p>
 <pre class="literal-block">
 if <em>condición1</em>:
     <em>bloque_si_cierto_1</em>
@@ -361,25 +409,33 @@ else:
             <em>bloque_si_falso</em>
 </pre>
 <p>Como puedes ver este código está lleno de márgenes diferentes.  Eso es
-extremadamente feo.  Los programas de ordenador´, como toda labor
+extremadamente feo.  Los programas de ordenador, como toda labor
 artesanal, tienen también cierto sentido estético.  Un programa de
 ordenador bonito debe ser agradable de leer, fácil de entender y
 modificar, sin redundancias, sin código innecesario.  Este fragmento
 es muy difícil de entender y modificar, así que no lo hagas nunca.</p>
-<p>Las claúsulas <em>elif</em> hacen más legible un código como el de arriba.
+<div class="admonition tip">
+<p class="first admonition-title">Truco</p>
+<p class="last">Las claúsulas <em>elif</em> hacen más legible un código como el de arriba.
 Pero debes pararte a pensar antes de usarlas.  Una <span class="xref std std-term">sentencia
-*if*</span> con claúsulas <em>elif</em> es mucho más compleja que un <em>if</em> sencillo.
+if</span> con claúsulas <em>elif</em> es mucho más compleja que un <em>if</em> sencillo.
 Procura evitarlas, procura también evitar las claúsulas <em>else</em>.</p>
+</div>
 <p>Veamos unos ejemplos:</p>
 <ul>
 <li><p class="first">Imprimir por pantalla si un número <em>x</em> es par o impar.</p>
 
-<div data-childcomponent="numero-par-o-impar" class="explainer ac_section alert alert-warning">
+<div data-childcomponent="es-par" class="explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=numero-par-o-impar data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=es-par data-lang="python"    data-timelimit=25000   data-audio=''     >
 def es_par(n):
     return n % 2 == 0
+</textarea>
+</div>
 
+<div data-childcomponent="numero-par-o-impar" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=numero-par-o-impar data-lang="python"   data-include="es-par" data-timelimit=25000  data-codelens="true" data-audio=''     >
 x = 122
 if es_par(x):
     print(x, 'es par')
@@ -491,40 +547,47 @@ remedio que imprimir nosotros cada elemento en lugar de usar
 argumentos separados por un espacio.  Por tanto basta con pasar todos
 los elementos de la lista como argumentos independientes de <code class="docutils literal"><span class="pre">print</span></code>.
 Eso es lo que conseguimos con el asterisco antes de <code class="docutils literal"><span class="pre">sorted</span></code>.</p>
+<p>Así es, el asterisco no solo vale para multiplicar.  Como otros muchos
+operadores en Python tiene diferentes significados dependiendo del
+contexto.  Cuando el operador <code class="docutils literal"><span class="pre">*</span></code> solo tiene un argumento (operador
+unario) y el argumento es una secuencia de elementos el asterisco
+<em>desempaqueta</em> los elementos y permite usarlos en contextos en los que
+se necesitan varios argumentos.  Por ejemplo, en llamadas a función.</p>
 <p>Hemos visto suficiente de ejecución condicional como para hacer con
 facilidad todos los ejercicios del curso, pero no queremos cerrar la
 sección sin mostrar otras posibilidades que ofrece Python de ejecución
-condicional.  El <span class="xref std std-term">operador ternario *if/else*</span> permite evaluar
+condicional.  El <span class="xref std std-term">operador ternario if/else</span> permite evaluar
 expresiones de forma condicional.  En el siguiente ejemplo el valor de
 <code class="docutils literal"><span class="pre">y</span></code> depende del valor de <code class="docutils literal"><span class="pre">x</span></code>. Si <code class="docutils literal"><span class="pre">x</span></code> es par <code class="docutils literal"><span class="pre">y</span></code> toma el valor
 <code class="docutils literal"><span class="pre">x/2</span></code>, en caso contrario <code class="docutils literal"><span class="pre">y</span></code> toma el valor <code class="docutils literal"><span class="pre">x</span></code>.</p>
 
 <div data-childcomponent="ejemplo-op-ternario" class="explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=ejemplo-op-ternario data-lang="python"   data-include="define-x-y-z" data-timelimit=25000  data-codelens="true" data-audio=''     >
+<textarea data-component="activecode" id=ejemplo-op-ternario data-lang="python"   data-include="define-x-y-z es-par" data-timelimit=25000  data-codelens="true" data-audio=''     >
 x = 124
 y = x/2 if es_par(x) else x
 print(y)
 </textarea>
 </div>
-<p>El <span class="xref std std-term">operador ternario *if/else*</span> es distinto a la
-<span class="xref std std-term">sentencia *if*</span> con <span class="xref std std-term">claúsula *else*</span> aunque usan las
-mismas palabras reservadas.  En este caso no usamos los dos puntos
-para marcar inicios del bloque contenido.</p>
+<p>El <span class="xref std std-term">operador ternario if/else</span> es distinto a la <span class="xref std std-term">sentencia
+if</span> con <span class="xref std std-term">claúsula else</span> aunque usan las mismas palabras
+reservadas.  En este caso no usamos los dos puntos para marcar inicios
+del bloque contenido.  Ese pequeño detalle hace que no se interprete
+como una sentencia, sino como una expresión.</p>
 </div>
 <div class="section" id="iteracion">
 <h2>4.2. Iteración<a class="headerlink" href="#iteracion" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Los bucles son construcciones que permiten volver atrás en la secuencia
 de sentencias. Cada ejecución del bloque de sentencias que compone el
 cuerpo del bucle se le llama <span class="xref std std-term">iteración</span>.</p>
-<p>El más general es el <span class="xref std std-term">bucle *while*</span> que repite un bloque de
+<p>El más general es el <span class="xref std std-term">bucle while</span> que repite un bloque de
 sentencias mientras se verifique una condición booleana y que ya
 conocemos de ejemplos anteriores.  La estructura general es:</p>
 <pre class="literal-block">
 while <em>condición</em>:
     <em>bloque_si_cierto</em>
 </pre>
-<p>El bloque del <span class="xref std std-term">bucle *while*</span> se repite continuamente mientras
+<p>El bloque del <span class="xref std std-term">bucle while</span> se repite continuamente mientras
 se cumpla la condición.  Se comprueba la condición siempre al empezar
 cada repetición.</p>
 <p>Veamos un ejemplo muy similar a un conocido.</p>
@@ -598,7 +661,7 @@ permanencia en el bucle es precisamente la que impone la
 <span class="xref std std-term">función de decremento</span>, <span class="math">\(f(i,n) &gt; 0\)</span>, es decir, <span class="math">\(n
 &lt; i^3\)</span>.</p>
 <p>Otra forma de iteración soportada por Python es el <span class="xref std std-term">bucle
-*for*</span>.  En este caso una variable toma una secuencia de valores que
+for</span>.  En este caso una variable toma una secuencia de valores que
 se indica.  La forma general es:</p>
 <pre class="literal-block">
 for <em>variable</em> in <em>iterable</em>:
@@ -693,6 +756,8 @@ def raiz_cubica(n):
 print(raiz_cubica(2406104))
 </textarea>
 </div>
+<p>La sentencia <code class="docutils literal"><span class="pre">break</span></code> interrumpe el bucle.  Es decir, sale del bucle
+que está ejecutando y continúa con la siguiente sentencia.</p>
 <p>Las cadenas de texto también pueden ser recorridas carácter a carácter
 con un bucle <em>for</em>.</p>
 
@@ -740,7 +805,7 @@ ejercicio con un <em>for</em> prueba a hacerlo con un <em>while</em>.</p>
 <h2>4.3. Ejercicios<a class="headerlink" href="#ejercicios" title="Enlazar permanentemente con este título">¶</a></h2>
 
     <pre data-component="parsons" id="suma-10-input">
-        <span data-question>Q-1: Reordena las líneas para que el programa imprima la suma de los 10
+        <span data-question>Q-4: Reordena las líneas para que el programa imprima la suma de los 10
 números que se introduzcan por pantalla.</span>suma = 0
 for a in range(10):
     suma = suma + int(input('Introduce un numero '))
@@ -753,85 +818,131 @@ Fíjate bien en cómo convertimos el resultado de <code class="docutils literal"
 un entero usando la función <code class="docutils literal"><span class="pre">int</span></code>. ¿Qué pasaría si lo que
 metemos no es un entero?</p>
 </div>
-<p>Vamos a enfrentarnos por primera vez a un prgrama de más de 5 líneas:</p>
-<div class="line-block">
-<div class="line">Haz un programa que imprima la tabla de multiplicar completa (del 1 al 9).</div>
-</div>
 
 <div data-childcomponent="imprime-tabla-v1" class="explainer ac_section alert alert-warning">
-
+Vamos a enfrentarnos por primera vez a un programa de más de 5
+líneas. Corrije el programa para que imprima la tabla de
+multiplicar completa (del 1 al 9). Solo tienes que poner la llamada
+a función adecuada en cada una de las líneas de comentario.  Cada
+línea debe tener la forma <code class="docutils literal"><span class="pre">n</span> <span class="pre">x</span> <span class="pre">i</span> <span class="pre">=</span> <span class="pre">resultado</span></code>.  Por ejemplo,
+<code class="docutils literal"><span class="pre">3</span> <span class="pre">x</span> <span class="pre">4</span> <span class="pre">=</span> <span class="pre">12</span></code>.
 <textarea data-component="activecode" id=imprime-tabla-v1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
-def imprime_tablas_simple():
+def imprime_tablas():
     for i in range(1,10):
-        imprime_tabla(i)
+        # imprime la tabla del numero i
         print()
 
 def imprime_tabla(n):
     for i in range(1,11):
-        imprime_linea(n,i)
-        print()
+        # imprime la línea n x i = resultado
+
+def imprime_linea(n,i):
+    print(n,'x',i,'=',n*i)
+
+imprime_tablas()
+====
+import unittest
+import sys
+try: from io import StringIO
+except: from StringIO import StringIO
+
+class TestTablas(unittest.TestCase):
+  def test_tablas(self):
+     import re
+     def getTuple(s):
+        return tuple(int(x) for x in re.split('x|=', s))
+
+     self.clear_std_output()
+     imprime_tablas()
+     self.clear_std_output()
+     A = [ getTuple(line) for line in self.s.split('\n') if line.strip() != '' ]
+     B = [ (x, y, x*y) for x in range(1,10) for y in range (1,11) ]
+     self.s = ''
+     self.assertEqual(len(A),len(B))
+     for a,b in zip(A,B):
+        self.assertEqual(a,b)
+
+  def setUp(self):
+     print('Permíteme que yo también compruebe tu solución...')
+     self.console = sys.stdout
+     self.s = ''
+
+  def tearDown(self):
+     try:
+         self.s += sys.stdout.getvalue()
+         sys.stdout = self.console
+         print(self.s)
+     except: pass
+
+  def clear_std_output(self):
+     try: self.s += sys.stdout.getvalue()
+     except: pass
+     sys.stdout = StringIO()
+
+TestTablas().main()
+</textarea>
+</div>
+<p>Observa cómo escribimos el programa, desde lo más complejo hasta lo
+más simple.  Empezamos con el problema que se pide (escribir las nueve
+tablas de multiplicar).  Si en ese proceso nos surge otro problema
+(imprimir una tabla de multiplicar) lo asumimos resuelto con una función,
+la que nosotros decidimos (<code class="docutils literal"><span class="pre">imprime_tabla</span></code>) con todos los argumentos
+que necesitemos.  Después aplicamos el mismo proceso con todas las
+funciones que hayamos necesitado usar y no estén aún definidas.  Este
+procedimiento se denomina habitualmente metodología <em>top-down</em>. Fuerza
+el pensamiento a ir de lo más abstracto a lo más concreto.</p>
+<p>No lo hagas al revés (también se conoce como metodología <em>bottom-up</em>).
+No anticipes las funciones que vas a necesitar antes de realmente
+necesitarlas.  No es que sea imposible hacerlo así pero requiere mucha
+más experiencia que aún no tienes.  La metodología <em>bottom-up</em> solo se
+utiliza cuando las funciones de más bajo nivel de abstracción vienen
+impuestas a priori, normalmente porque ya han sido realizadas antes.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Truco</p>
+<p class="last">Aunque debes tender a utilizar diseño <em>top-down</em> en la mayor parte
+de tus programas es prácticamente imposible que todo el programa
+sea realizado de esta forma.  Vas a utilizar continuamente
+funciones de la biblioteca estándar, eso es <em>bottom-up</em>.  No
+desesperes, los nombres no importan.  Importa que sepas por qué te
+interesa una u otra metodología.  Empezar en lo más abstracto e ir
+descomponiendo el programa hacia lo más concreto es lo que mejor se
+adapta a la forma de pensar de los seres humanos.  Pero si tú
+conoces una biblioteca que resuelve parcial o totalmente tu
+problema no dudes en aprovecharla.</p>
+</div>
+<p>No hay una única solución para un problema.  Por ejemplo, volvamos a
+la tabla de multiplicar.  Considera esta otra forma de resolverla.</p>
+
+<div data-childcomponent="imprime-tabla-mosaico" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=imprime-tabla-mosaico data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def imprime_mosaico():
+    for i in range(1,10,3):
+        imprime_tablas_mosaico(i)
+
+def imprime_tablas_mosaico(primera):
+    for i in range(1,11):
+        imprime_linea_mosaico(primera,i)
+    print()
+
+def imprime_linea_mosaico(primera, n):
+    for i in range(primera, primera+3):
+        imprime_linea(i,n)
+        print(end='\t')
+    print()
 
 def imprime_linea(n,i):
     print(n,'x',i,'=',n*i,end='')
+
+imprime_mosaico()
 </textarea>
 </div>
-<p>Otra forma:</p>
-<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">imprime_mosaico</span><span class="p">():</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>
-        <span class="n">imprime_tablas_mosaico</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">imprime_tablas_mosaico</span><span class="p">(</span><span class="n">primera</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
-        <span class="n">imprime_linea_mosaico</span><span class="p">(</span><span class="n">primera</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">()</span>
-
-<span class="k">def</span> <span class="nf">imprime_linea_mosaico</span><span class="p">(</span><span class="n">primera</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">primera</span><span class="p">,</span> <span class="n">primera</span><span class="o">+</span><span class="mi">3</span><span class="p">):</span>
-        <span class="n">imprime_linea</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">()</span>
-
-<span class="k">def</span> <span class="nf">imprime_linea</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">i</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="p">,</span><span class="n">n</span><span class="o">*</span><span class="n">i</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-
-<span class="n">imprime_mosaico</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="n">x</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">1</span>   <span class="mi">2</span> <span class="n">x</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">2</span>       <span class="mi">3</span> <span class="n">x</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="mi">1</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">2</span>   <span class="mi">2</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">4</span>       <span class="mi">3</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">6</span>
-<span class="mi">1</span> <span class="n">x</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">3</span>   <span class="mi">2</span> <span class="n">x</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">6</span>       <span class="mi">3</span> <span class="n">x</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">9</span>
-<span class="mi">1</span> <span class="n">x</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">4</span>   <span class="mi">2</span> <span class="n">x</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">8</span>       <span class="mi">3</span> <span class="n">x</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">12</span>
-<span class="mi">1</span> <span class="n">x</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">5</span>   <span class="mi">2</span> <span class="n">x</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">10</span>      <span class="mi">3</span> <span class="n">x</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">15</span>
-<span class="mi">1</span> <span class="n">x</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">6</span>   <span class="mi">2</span> <span class="n">x</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">12</span>      <span class="mi">3</span> <span class="n">x</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">18</span>
-<span class="mi">1</span> <span class="n">x</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">7</span>   <span class="mi">2</span> <span class="n">x</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">14</span>      <span class="mi">3</span> <span class="n">x</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">21</span>
-<span class="mi">1</span> <span class="n">x</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">8</span>   <span class="mi">2</span> <span class="n">x</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">16</span>      <span class="mi">3</span> <span class="n">x</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">24</span>
-<span class="mi">1</span> <span class="n">x</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">9</span>   <span class="mi">2</span> <span class="n">x</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">18</span>      <span class="mi">3</span> <span class="n">x</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">27</span>
-<span class="mi">1</span> <span class="n">x</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">10</span> <span class="mi">2</span> <span class="n">x</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">20</span>     <span class="mi">3</span> <span class="n">x</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">30</span>
-
-<span class="mi">4</span> <span class="n">x</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">4</span>   <span class="mi">5</span> <span class="n">x</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">5</span>       <span class="mi">6</span> <span class="n">x</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">6</span>
-<span class="mi">4</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">8</span>   <span class="mi">5</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">10</span>      <span class="mi">6</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">12</span>
-<span class="mi">4</span> <span class="n">x</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">12</span>  <span class="mi">5</span> <span class="n">x</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">15</span>      <span class="mi">6</span> <span class="n">x</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">18</span>
-<span class="mi">4</span> <span class="n">x</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">16</span>  <span class="mi">5</span> <span class="n">x</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">20</span>      <span class="mi">6</span> <span class="n">x</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">24</span>
-<span class="mi">4</span> <span class="n">x</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">20</span>  <span class="mi">5</span> <span class="n">x</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">25</span>      <span class="mi">6</span> <span class="n">x</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">30</span>
-<span class="mi">4</span> <span class="n">x</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">24</span>  <span class="mi">5</span> <span class="n">x</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">30</span>      <span class="mi">6</span> <span class="n">x</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">36</span>
-<span class="mi">4</span> <span class="n">x</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">28</span>  <span class="mi">5</span> <span class="n">x</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">35</span>      <span class="mi">6</span> <span class="n">x</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">42</span>
-<span class="mi">4</span> <span class="n">x</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">32</span>  <span class="mi">5</span> <span class="n">x</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">40</span>      <span class="mi">6</span> <span class="n">x</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">48</span>
-<span class="mi">4</span> <span class="n">x</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">36</span>  <span class="mi">5</span> <span class="n">x</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">45</span>      <span class="mi">6</span> <span class="n">x</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">54</span>
-<span class="mi">4</span> <span class="n">x</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">40</span> <span class="mi">5</span> <span class="n">x</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">50</span>     <span class="mi">6</span> <span class="n">x</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">60</span>
-
-<span class="mi">7</span> <span class="n">x</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">7</span>   <span class="mi">8</span> <span class="n">x</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">8</span>       <span class="mi">9</span> <span class="n">x</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">9</span>
-<span class="mi">7</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">14</span>  <span class="mi">8</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">16</span>      <span class="mi">9</span> <span class="n">x</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">18</span>
-<span class="mi">7</span> <span class="n">x</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">21</span>  <span class="mi">8</span> <span class="n">x</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">24</span>      <span class="mi">9</span> <span class="n">x</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">27</span>
-<span class="mi">7</span> <span class="n">x</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">28</span>  <span class="mi">8</span> <span class="n">x</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">32</span>      <span class="mi">9</span> <span class="n">x</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">36</span>
-<span class="mi">7</span> <span class="n">x</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">35</span>  <span class="mi">8</span> <span class="n">x</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">40</span>      <span class="mi">9</span> <span class="n">x</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">45</span>
-<span class="mi">7</span> <span class="n">x</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">42</span>  <span class="mi">8</span> <span class="n">x</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">48</span>      <span class="mi">9</span> <span class="n">x</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">54</span>
-<span class="mi">7</span> <span class="n">x</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">49</span>  <span class="mi">8</span> <span class="n">x</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">56</span>      <span class="mi">9</span> <span class="n">x</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">63</span>
-<span class="mi">7</span> <span class="n">x</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">56</span>  <span class="mi">8</span> <span class="n">x</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">64</span>      <span class="mi">9</span> <span class="n">x</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">72</span>
-<span class="mi">7</span> <span class="n">x</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">63</span>  <span class="mi">8</span> <span class="n">x</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">72</span>      <span class="mi">9</span> <span class="n">x</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">81</span>
-<span class="mi">7</span> <span class="n">x</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">70</span> <span class="mi">8</span> <span class="n">x</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">80</span>     <span class="mi">9</span> <span class="n">x</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">90</span>
-</pre></div>
-</div>
-<p>Haz un programa que imprima el siguiente dibujo</p>
+<p>No te quedes mirando, lee, experimenta y cambia lo que necesites hasta
+entenderlo completamente.  Como ves hemos seguido la misma metodología
+<em>top-down</em> de antes.</p>
+<p>Vamos a seguir explorando la construcción de bucles.  Un ejercicio
+frecuente (también en los exámenes) consiste en dibujar en la pantalla
+empleando caracteres normales.  Por ejemplo, considera este cuadrado.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">+----------------+</span>
 <span class="o">|</span>                <span class="o">|</span>
 <span class="o">|</span>                <span class="o">|</span>
@@ -844,170 +955,230 @@ def imprime_linea(n,i):
 <span class="o">+----------------+</span>
 </pre></div>
 </div>
-<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">imprime_cuadrado</span><span class="p">(</span><span class="n">ancho</span><span class="p">):</span>
-    <span class="n">imprime_borde</span><span class="p">(</span><span class="n">ancho</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
-        <span class="n">imprime_cara</span><span class="p">(</span><span class="n">ancho</span><span class="p">)</span>
-    <span class="n">imprime_borde</span><span class="p">(</span><span class="n">ancho</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">imprime_borde</span><span class="p">(</span><span class="n">ancho</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;+&#39;</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="n">ancho</span> <span class="o">+</span> <span class="s1">&#39;+&#39;</span><span class="p">)</span>
+<div data-childcomponent="imprime-cuadrado" class="explainer ac_section alert alert-warning">
+Modifica el siguiente programa para que imprima el cuadrado que se muestra sobre estas líneas.
+<textarea data-component="activecode" id=imprime-cuadrado data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def imprime_cuadrado(ancho):
+    imprime_borde(ancho)
+    # imprime las líneas de la cara
+    imprime_borde(ancho)
 
-<span class="k">def</span> <span class="nf">imprime_cara</span><span class="p">(</span><span class="n">ancho</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="n">ancho</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span><span class="p">)</span>
+def imprime_borde(ancho):
+    print('+' + '-'*ancho + '+')
 
-<span class="n">imprime_cuadrado</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
-</pre></div>
+def imprime_cara(ancho):
+    print('|' + ' '*ancho + '|')
+
+imprime_cuadrado(16)
+====
+import unittest
+import sys
+try: from io import StringIO
+except: from StringIO import StringIO
+
+class TestCuadrado(unittest.TestCase):
+  def test_cuadrado_8(self):
+     self.clear_std_output()
+     imprime_cuadrado(8)
+     self.clear_std_output()
+     self.assertEqual(self.s.strip(), '+--------+\n|        |\n|        |\n|        |\n|        |\n+--------+')
+
+  def setUp(self):
+     print('Permíteme que yo también compruebe tu solución...')
+     self.console = sys.stdout
+     self.s = ''
+
+  def tearDown(self):
+     try:
+         self.s += sys.stdout.getvalue()
+         sys.stdout = self.console
+         print(self.s)
+     except: pass
+
+  def clear_std_output(self):
+     try: self.s += sys.stdout.getvalue()
+     except: pass
+     sys.stdout = StringIO()
+
+TestCuadrado().main()
+</textarea>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">+----------------+</span>
-<span class="o">|</span>                <span class="o">|</span>
-<span class="o">|</span>                <span class="o">|</span>
-<span class="o">|</span>                <span class="o">|</span>
-<span class="o">|</span>                <span class="o">|</span>
-<span class="o">|</span>                <span class="o">|</span>
-<span class="o">|</span>                <span class="o">|</span>
-<span class="o">|</span>                <span class="o">|</span>
-<span class="o">|</span>                <span class="o">|</span>
-<span class="o">+----------------+</span>
-</pre></div>
-</div>
-<p>Crear una función que valide una contraseña según estos criterios:</p>
+
+<div data-childcomponent="valida-palabra-clave-v1" class="explainer ac_section alert alert-warning">
+<p>Permíteme insistir en la metodología <em>top-down</em>. Es muy importante
+en los programas reales. Para ilustrarlo veamos un ejemplo más.
+Completa las funciones para que valide una contraseña según estos
+criterios:</p>
 <ul class="simple">
 <li>La contraseña debe contener un mínimo de 8 caracteres.</li>
 <li>Una contraseña debe contener letras minúsculas, mayúsculas, números y
 al menos 1 carácter no alfanumérico.</li>
 <li>La contraseña no puede contener espacios en blanco.</li>
-<li>Contraseña válida, retorna <code class="docutils literal"><span class="pre">True</span></code>.</li>
-<li>Contraseña no válida, retorna el mensaje
-<code class="docutils literal"><span class="pre">&quot;La</span> <span class="pre">contraseña</span> <span class="pre">elegida</span> <span class="pre">no</span> <span class="pre">es</span> <span class="pre">segura&quot;</span></code>.</li>
+<li>Contraseña válida, retorna <code class="docutils literal"><span class="pre">True</span></code>, contraseña no válida, retorna <code class="docutils literal"><span class="pre">False</span></code>.</li>
 </ul>
-<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">valida_palabra_clave</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
-    <span class="k">return</span>  <span class="n">valida_8_caracteres</span><span class="p">(</span><span class="n">palabra</span><span class="p">)</span> <span class="ow">and</span> \
-            <span class="n">valida_tipos_caracteres</span><span class="p">(</span><span class="n">palabra</span><span class="p">)</span> <span class="ow">and</span> \
-            <span class="n">valida_no_espacios</span><span class="p">(</span><span class="n">palabra</span><span class="p">)</span>
 
+<textarea data-component="activecode" id=valida-palabra-clave-v1 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def valida_palabra_clave(palabra):
+    return  valida_8_caracteres(palabra) and \
+            valida_tipos_caracteres(palabra) and \
+            valida_no_espacios(palabra)
 
-<span class="k">def</span> <span class="nf">valida_8_caracteres</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
-    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">palabra</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">8</span>
+def valida_8_caracteres(palabra):
+    return len(palabra) >= 8
 
+def valida_tipos_caracteres(palabra):
+    return valida_mayusculas(palabra) \
+        and valida_minusculas(palabra) \
+        and valida_numeros(palabra) \
+        and valida_simbolos(palabra)
 
-<span class="k">def</span> <span class="nf">valida_tipos_caracteres</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">valida_mayusculas</span><span class="p">(</span><span class="n">palabra</span><span class="p">)</span> \
-        <span class="ow">and</span> <span class="n">valida_minusculas</span><span class="p">(</span><span class="n">palabra</span><span class="p">)</span> \
-        <span class="ow">and</span> <span class="n">valida_numeros</span><span class="p">(</span><span class="n">palabra</span><span class="p">)</span> \
-        <span class="ow">and</span> <span class="n">valida_simbolos</span><span class="p">(</span><span class="n">palabra</span><span class="p">)</span>
+def valida_no_espacios(palabra):
+    for c in palabra:
+        if c == ' ':
+            return False
+    return True
 
+def valida_mayusculas(palabra):
+    for c in palabra:
+        if es_mayuscula(c):
+            return True
+    return False
 
-<span class="k">def</span> <span class="nf">valida_no_espacios</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">palabra</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">return</span> <span class="kc">True</span>
+def valida_minusculas(palabra):
+    # devuelve True si palabra contiene una letra minúscula
+    # en caso contrario devuelve False
 
+def valida_numeros(palabra):
+    # devuelve True si palabra contiene un dígito decimal
+    # en caso contrario devuelve False
 
-<span class="k">def</span> <span class="nf">valida_mayusculas</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">palabra</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">es_mayuscula</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
-            <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">return</span> <span class="kc">False</span>
+def valida_simbolos(palabra):
+    # devuelve True si palabra contiene un símbolo
+    # en caso contrario devuelve False
 
+def es_mayuscula(c):
+    return c >= 'A' and c <= 'Z'
 
-<span class="k">def</span> <span class="nf">valida_minusculas</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">palabra</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">es_minuscula</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
-            <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">return</span> <span class="kc">False</span>
+def es_minuscula(c):
+    return c >= 'a' and c <= 'z'
 
+def es_numero(c):
+    return c >= '0' and c <= '9'
 
-<span class="k">def</span> <span class="nf">valida_numeros</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">palabra</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">es_numero</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
-            <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">return</span> <span class="kc">False</span>
+def es_simbolo(c):
+    return not ( es_mayuscula(c) \
+        or es_minuscula(c) \
+        or es_numero(c) )
 
+print(valida_palabra_clave('aLt0$€cr3t0'))
+====
+import unittest
+import sys
+try: from io import StringIO
+except: from StringIO import StringIO
 
-<span class="k">def</span> <span class="nf">valida_simbolos</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">palabra</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">es_simbolo</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
-            <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">return</span> <span class="kc">False</span>
+class TestValida(unittest.TestCase):
+  def test_valida_palabra_clave(self):
+     self.assertTrue(valida_palabra_clave('aLt0$€cr3t0'))
+     self.assertTrue(valida_palabra_clave('MUYALTOSECRETOaLt0$€cr3t0'))
+     self.assertFalse(valida_palabra_clave('aLt0$€c'))
+     self.assertFalse(valida_palabra_clave('aLt0$ cr3t0'))
+     self.assertFalse(valida_palabra_clave('alt0$€cr3t0'))
+     self.assertFalse(valida_palabra_clave('ALT0$€CR3T0'))
+     self.assertFalse(valida_palabra_clave('aLtO$€crEtO'))
+     self.assertFalse(valida_palabra_clave('aLt0Secr3t0'))
 
-
-<span class="k">def</span> <span class="nf">es_mayuscula</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">c</span> <span class="o">&gt;=</span> <span class="s1">&#39;A&#39;</span> <span class="ow">and</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="s1">&#39;Z&#39;</span>
-
-
-<span class="k">def</span> <span class="nf">es_minuscula</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">c</span> <span class="o">&gt;=</span> <span class="s1">&#39;a&#39;</span> <span class="ow">and</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="s1">&#39;z&#39;</span>
-
-
-<span class="k">def</span> <span class="nf">es_numero</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">c</span> <span class="o">&gt;=</span> <span class="s1">&#39;0&#39;</span> <span class="ow">and</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="s1">&#39;9&#39;</span>
-
-
-<span class="k">def</span> <span class="nf">es_simbolo</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
-    <span class="k">return</span> <span class="ow">not</span> <span class="p">(</span> <span class="n">es_mayuscula</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> \
-        <span class="ow">or</span> <span class="n">es_minuscula</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> \
-        <span class="ow">or</span> <span class="n">es_numero</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="p">)</span>
-
-
-<span class="n">valida_palabra_clave</span><span class="p">(</span><span class="s1">&#39;aLt0$€cr3t0&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kc">True</span>
-</pre></div>
+TestValida().main()
+</textarea>
 </div>
 <p>¿No es muy repetitivo? Las validaciones de tipos de caracteres son
 prácticamente iguales. Solo se diferencian en la función que determina
 el tipo de cada caracter. Por tanto para no repetir código se puede
 pasar como parámetro.</p>
-<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">valida_tipos_caracteres</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">valida_tipo</span><span class="p">(</span><span class="n">es_mayuscula</span><span class="p">,</span> <span class="n">palabra</span><span class="p">)</span> \
-        <span class="ow">and</span> <span class="n">valida_tipo</span><span class="p">(</span><span class="n">es_minuscula</span><span class="p">,</span> <span class="n">palabra</span><span class="p">)</span> \
-        <span class="ow">and</span> <span class="n">valida_tipo</span><span class="p">(</span><span class="n">es_numero</span><span class="p">,</span> <span class="n">palabra</span><span class="p">)</span> \
-        <span class="ow">and</span> <span class="n">valida_tipo</span><span class="p">(</span><span class="n">es_simbolo</span><span class="p">,</span> <span class="n">palabra</span><span class="p">)</span>
+<p>Si, efectivamente, las funciones también se pueden pasar como
+parámetro o devolver como resultado.  Tenlo siempre presente porque
+abre un amplio abanico de nuevas posibilidades.</p>
 
+<div data-childcomponent="valida-palabra-clave-v2" class="explainer ac_section alert alert-warning">
 
-<span class="k">def</span> <span class="nf">valida_no_espacios</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
-    <span class="k">return</span> <span class="ow">not</span> <span class="n">valida_tipo</span><span class="p">(</span><span class="n">es_espacio</span><span class="p">,</span> <span class="n">palabra</span><span class="p">)</span>
+<textarea data-component="activecode" id=valida-palabra-clave-v2 data-lang="python"    data-timelimit=25000  data-codelens="true" data-audio=''     >
+def valida_palabra_clave(palabra):
+    return  valida_8_caracteres(palabra) and \
+            valida_tipos_caracteres(palabra) and \
+            valida_no_espacios(palabra)
 
+def valida_8_caracteres(palabra):
+    return len(palabra) >= 8
 
-<span class="k">def</span> <span class="nf">valida_tipo</span><span class="p">(</span><span class="n">es_tipo</span><span class="p">,</span> <span class="n">palabra</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">palabra</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">es_tipo</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
-            <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">return</span> <span class="kc">False</span>
+def valida_tipos_caracteres(palabra):
+    return valida_tipo(es_mayuscula, palabra) \
+        and valida_tipo(es_minuscula, palabra) \
+        and valida_tipo(es_numero, palabra) \
+        and valida_tipo(es_simbolo, palabra)
 
+def valida_no_espacios(palabra):
+    return not valida_tipo(es_espacio, palabra)
 
-<span class="k">def</span> <span class="nf">es_espacio</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span>
+def valida_tipo(es_tipo, palabra):
+    for c in palabra:
+        if es_tipo(c):
+            return True
+    return False
 
+def es_espacio(c):
+    return c == ' '
 
-<span class="n">valida_palabra_clave</span><span class="p">(</span><span class="s1">&#39;aLt0s€cr3T0&#39;</span><span class="p">)</span>
-</pre></div>
+def es_mayuscula(c):
+    return c >= 'A' and c <= 'Z'
+
+def es_minuscula(c):
+    return c >= 'a' and c <= 'z'
+
+def es_numero(c):
+    return c >= '0' and c <= '9'
+
+def es_simbolo(c):
+    return not ( es_mayuscula(c) \
+       or es_minuscula(c) \
+       or es_numero(c) )
+
+print(valida_palabra_clave('aLt0s€cr3T0'))
+</textarea>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kc">True</span>
-</pre></div>
-</div>
-</div>
+
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question_bif_iter_1">
+            Q-5: ¿Cuál de las siguientes expresiones es equivalente a <code class="docutils literal"><span class="pre">enumerate(L)</span></code>?
+            <li data-component="answer"  id="question_bif_iter_1_opt_a">(A) zip(len(L), L)</li><li data-component="feedback" id="question_bif_iter_1_opt_a">El primer argumento de zip no es iterable, es simplemente una longitud.</li>
+            
+            <li data-component="answer"  id="question_bif_iter_1_opt_b">(B) zip(L,range(len(L)))</li><li data-component="feedback" id="question_bif_iter_1_opt_b">No, es al revés. La función enumerate(L) genera pares en los que el primer elemento es la posición.</li>
+            
+            <li data-component="answer" data-correct id="question_bif_iter_1_opt_c">(C) zip(range(len(L)), L)</li><li data-component="feedback" id="question_bif_iter_1_opt_c">Exacto. Es correcto, pero todavía sería más eficiente usando itertools.count y la expresión zip(count(),L).
+Busca la documentación de itertools.count para entender cómo funciona.</li>
+            
+            <li data-component="answer"  id="question_bif_iter_1_opt_d">(D) zip(L,L)</li><li data-component="feedback" id="question_bif_iter_1_opt_d">No es así. Compruébalo en una ventana de intérprete.</li>
+            
+
+            </ul>
+            </div>
 </div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Capítulo anterior - 3. Elementos de un programa' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - 3. Elementos de un programa' data-toggle="tooltip">
     <a href="elem.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="elem.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Capítulo siguiente - 5. Abstracción con funciones' data-toggle="tooltip" >
-    <a href="python-05-06-07.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 5. Abstracción con funciones' data-toggle="tooltip" >
+    <a href="abstraccion-func.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="python-05-06-07.html" >Next Section - 5. Abstracción con funciones</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="abstraccion-func.html" >Next Section - 5. Abstracción con funciones</a>
 
 <script type="text/javascript">
 
