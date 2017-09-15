@@ -72,7 +72,7 @@ function testAndSubmitPythonProgram($, e) {
     testPythonProgram(prog).then(
 	function success(summary) {
             updateSubmittedText(summary[0], summary[1]);
-	    var submission = form.serialize().replace('_id_onlinetext_editor', 'id_onlinetext_editor');
+	    var submission = form.serialize().replace(/_id_onlinetext_editor/g, 'id_onlinetext_editor');
 	    alert(submission);
 	    $.post(form.attr('action'), submission, function(msg) {
 		form.replaceWith($('div.submissionstatustable', $(msg)));
