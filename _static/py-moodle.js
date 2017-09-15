@@ -73,7 +73,7 @@ function testAndSubmitPythonProgram($, e) {
 	function success(summary) {
             updateSubmittedText(summary[0], summary[1]);
 	    var submission = form.serialize().replace(new RegExp('_id_onlinetext_editor', 'g'), 'id_onlinetext_editor');
-	    $.post(form.attr('action'), form.serialize(), function(msg) {
+	    $.post(form.attr('action'), submission, function(msg) {
 		form.replaceWith($('div.submissionstatustable', $(msg)));
 	    });
 	}, 
@@ -134,6 +134,7 @@ function unittest(elem) {
 }
 
 function unsanitize(text) {
+    return text;
     return text
 	.replace(new RegExp('&amp;', 'g'), '&')
 	.replace(new RegExp('&lt;', 'g'), '<')
@@ -143,6 +144,7 @@ function unsanitize(text) {
 }
 
 function sanitize(text) {
+    return text;
     /* unsanitize to avoid double encoding */
     return unsanitize(text)
 	.replace(new RegExp('<', 'g'), '&lt;')
