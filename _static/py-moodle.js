@@ -36,7 +36,7 @@ function installPythonFacade() {
     if (editor.length == 0)
 	return;
     editor.attr('id', '_id_onlinetext_editor'); // prevent rich-text install
-    editor.attr('name', '_id_onlinetext_editor'); // prevent rich-text install
+    editor.attr('name', '_id_onlinetext_editor[text]'); // prevent rich-text install
     editor.hide();
     editor.after('<div style="float:right; background-color:#FFF;">' +
                  '<input type="checkbox" id="python3" checked>Python 3</div>' + 
