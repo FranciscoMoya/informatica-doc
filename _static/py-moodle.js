@@ -134,7 +134,6 @@ function unittest(elem) {
 }
 
 function unsanitize(text) {
-    return text;
     return text
 	.replace(new RegExp('&amp;', 'g'), '&')
 	.replace(new RegExp('&lt;', 'g'), '<')
@@ -144,7 +143,6 @@ function unsanitize(text) {
 }
 
 function sanitize(text) {
-    return text;
     /* unsanitize to avoid double encoding */
     return unsanitize(text)
 	.replace(new RegExp('<', 'g'), '&lt;')
