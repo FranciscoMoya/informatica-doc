@@ -256,9 +256,9 @@ tipo *booleano*, que solo puede tomar dos valores: ``True``
 
 .. tip:: Fíjate bien en cómo se escribe ``True`` y ``False``. La
          primera letra en mayúscula y sin utilizar comillas.  Si
-         escribes ``'True'`` lo interpretará como una cadena y si
-         escribes ``true`` no lo entenderá.  Por razones que
-         desconozco ésto es una fuente errores frecuente.
+         escribes ``'True'`` no lo interpretará como verdadero, sino
+         como una cadena y si escribes ``true`` no lo entenderá.  Por
+         razones que desconozco ésto es una fuente errores frecuente.
 
 Algunas veces es posible combinar operandos de distinto tipo en una
 expresión.

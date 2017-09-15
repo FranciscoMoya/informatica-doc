@@ -32,9 +32,11 @@
 var code_separator = "\n---- \n==== \n";
 
 function installPythonFacade() {
-    var editor = $('#id_onlinetext_editor_tbl');
+    var editor = $('#id_onlinetext_editor');
     if (editor.length == 0)
 	return;
+    editor.attr('id', '_id_onlinetext_editor'); // prevent rich-text install
+    editor.attr('name', '_id_onlinetext_editor'); // prevent rich-text install
     editor.hide();
     editor.after('<div style="float:right; background-color:#FFF;">' +
                  '<input type="checkbox" id="python3" checked>Python 3</div>' + 
@@ -70,6 +72,7 @@ function testAndSubmitPythonProgram($, e) {
     testPythonProgram(prog).then(
 	function success(summary) {
             updateSubmittedText(summary[0], summary[1]);
+	    var submission = form.serialize().replace(new RegExp('_id_onlinetext_editor', 'g'), 'id_onlinetext_editor');
 	    $.post(form.attr('action'), form.serialize(), function(msg) {
 		form.replaceWith($('div.submissionstatustable', $(msg)));
 	    });
@@ -155,11 +158,11 @@ function updateSubmittedText(passed, failed) {
         header = $("input[name=userid]").val() +
                  " (" + passed.toString() + "/" + failed.toString() + ")\n\n",
         doc = header + out + code_separator + prog + code_separator;
-    $('#id_onlinetext_editor').val('<pre>' + sanitize(doc) + '</pre>');
+    $('#_id_onlinetext_editor').val('<pre>' + sanitize(doc) + '</pre>');
 }
 
 function getSubmittedCode() {
-    var code = $('#id_onlinetext_editor').val().split(code_separator);
+    var code = $('#_id_onlinetext_editor').val().split(code_separator);
     var prog = code.length > 1? code[1]: code[0];
     return unsanitize(prog.replace('<pre>','').replace('</pre>',''));
 }
