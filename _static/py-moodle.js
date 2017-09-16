@@ -54,7 +54,7 @@ function testAndSubmitPythonProgram($, e) {
     window.$ = $;
 
     var output = $('#output'), 
-	status = $('#status'),
+        status = $('#status'),
 	form = $('#mform1'),
         prog = buildProg();
 
@@ -74,7 +74,8 @@ function testAndSubmitPythonProgram($, e) {
             updateSubmittedText(summary[0], summary[1]);
 	    var submission = form.serialize().replace(/_id_onlinetext_editor/g, 'onlinetext_editor');
 	    $.post(form.attr('action'), submission, function(msg) {
-		form.replaceWith($('div.submissionstatustable', $(msg)));
+		document.write(msg);
+		//form.replaceWith($('div.submissionstatustable', $(msg)));
 	    });
 	}, 
 	function failure(err) { 
