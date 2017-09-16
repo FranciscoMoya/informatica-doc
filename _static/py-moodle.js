@@ -135,23 +135,17 @@ function unittest(elem) {
 }
 
 function unsanitize(text) {
-    return text;
     return text
 	.replace(new RegExp('&amp;', 'g'), '&')
 	.replace(new RegExp('&lt;', 'g'), '<')
-	.replace(new RegExp('&gt;', 'g'), '>')
-	.replace(new RegExp('&#34;', 'g'), '"')
-	.replace(new RegExp('&#39;', 'g'), "'");
+	.replace(new RegExp('&gt;', 'g'), '>');
 }
 
 function sanitize(text) {
-    return text;
-    /* unsanitize to avoid double encoding */
-    return unsanitize(text)
+    return text
 	.replace(new RegExp('<', 'g'), '&lt;')
-	.replace(new RegExp('&', 'g'), '&amp;')
-	.replace(new RegExp('"', 'g'), '&#34;')
-	.replace(new RegExp("'", 'g'), '&#39;');
+	.replace(new RegExp('>', 'g'), '&gt;')
+	.replace(new RegExp('&', 'g'), '&amp;');
 }
 
 function updateSubmittedText(passed, failed) {
@@ -161,13 +155,13 @@ function updateSubmittedText(passed, failed) {
         header = $("input[name=userid]").val() +
                  " (" + passed.toString() + "/" + failed.toString() + ")\n\n",
         doc = header + out + code_separator + prog + code_separator;
-    $('#_id_onlinetext_editor').val('<pre>' + sanitize(doc) + '</pre>');
+    $('#_id_onlinetext_editor').val(doc);
 }
 
 function getSubmittedCode() {
     var code = $('#_id_onlinetext_editor').val().split(code_separator);
     var prog = code.length > 1? code[1]: code[0];
-    return unsanitize(prog.replace('<pre>','').replace('</pre>',''));
+    return unsanitize(prog);
 }
 
 function isPython3Source() {
