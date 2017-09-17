@@ -38,15 +38,19 @@ function installPythonFacade() {
 	return;
     editor.setAttribute('id', '_id_onlinetext_editor'); // prevent rich-text install
     editor.style.display = 'block';
+    editor.style.fontFamily = 'monospace';
+    
     var py3 = document.createElement('div');
     py3.style = 'float:right; background-color:#FFF;';
     py3.innerHTML = '<input type="checkbox" id="python3" checked>Python 3';
     editor.parentNode.insertBefore(py3, editor);
+
     var output = document.createElement('div');
     output.innerHTML= '<div id="status"></div>' +
 	'<div id="canvas"></div>' + 
 	'<div id="test"><pre id="output"></pre></div>';
     editor.parentNode.insertBefore(output, editor.nextSibling);
+
     var form = document.getElementById('mform1');
     if (form.addEventListener)
 	form.addEventListener("submit", testAndSubmitPythonProgram, false);
