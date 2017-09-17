@@ -21,45 +21,49 @@
 // 2. Define a container (pre, div) with id unittest containing the TestCase.
 //    either class Test(TestCase) or class Test(TestCaseGui).
 //
-// 3. Optionally define a container (em, span) with id minpass containing the
-//    minimum number of tests (asserts) required to submit.
+// 3. Optionally define a container (em, span, div) with id minpass
+//    containing the minimum number of tests (asserts) required to
+//    submit.
 
 // Note: minpass has a different meaning when using TestCase (number
 // of test_ methods successfully executed) or TestCaseGui (number of
 // asserts successfully passed). This is an issue related to Skulpt
 // unittest.gui
 
-var code_separator = "\n---- \n==== \n";
+var code_separator = "\n# ---- #\n# ==== #\n";
 
 function installPythonFacade() {
-    var editor = $('#id_onlinetext_editor');
-    if (editor.length == 0)
+    var editor = document.getElementById('id_onlinetext_editor');
+    if (!editor)
 	return;
-    editor.attr('id', '_id_onlinetext_editor'); // prevent rich-text install
-    editor.attr('name', '_id_onlinetext_editor[text]'); // prevent rich-text install
-    editor.hide();
-    editor.after('<div style="float:right; background-color:#FFF;">' +
+    editor.setAttribute('id', '_id_onlinetext_editor'); // prevent rich-text install
+    editor.style.display = 'none';
+    var new_editor = document.createElement('<div style="float:right; background-color:#FFF;">' +
                  '<input type="checkbox" id="python3" checked>Python 3</div>' + 
 	         '<textarea rows="7" style="width:97%;font-family:monospace;"' +
-                 ' id="code">Leyendo entrega...</textarea>' +
+                 ' id="onlinetext_editor" name="onlinetext_editor[text]">Leyendo entrega...</textarea>' +
 		 '<div id="status"></div>' +
 		 '<div id="canvas"></div>' + 
 	         '<div id="test"><pre id="output"></pre></div>');
-    $('#mform1').submit(testAndSubmitPythonProgram.bind(null,$));
-    $('#code').val(getSubmittedCode());
+    editor.parentNode.insertBefore(new_editor, editor);
+    var form = document.getElementById('mform1');
+    if (form.addEventListener)
+	form.addEventListener("submit", testAndSubmitPythonProgram, false);
+    else if (form.attachEvent)
+	form.attachEvent("onsubmit", testAndSubmitPythonProgram);
+    new_editor.value = editor.value;
 }
 
-function testAndSubmitPythonProgram($, e) {
+function testAndSubmitPythonProgram(e) {
     e.preventDefault();
-    window.$ = $;
 
-    var output = $('#output'), 
-        status = $('#status'),
-	form = $('#mform1'),
-        prog = buildProg();
+    var output = document.getElementById('output');
+    var status = document.getElementById('status');
+    var form = document.getElementById('mform1');
+    var prog = buildProg();
 
-    status.text('');
-    output.text('');
+    status.innerHTML = '';
+    output.innerHTML = '';
     Sk.configure({
 	output: stdOut,
 	read: builtinRead,
@@ -72,11 +76,10 @@ function testAndSubmitPythonProgram($, e) {
     testPythonProgram(prog).then(
 	function success(summary) {
             updateSubmittedText(summary[0], summary[1]);
-	    var submission = form.serialize().replace(/_id_onlinetext_editor/g, 'onlinetext_editor');
-	    $.post(form.attr('action'), submission, function(msg) {
-		document.write(msg);
-		//form.replaceWith($('div.submissionstatustable', $(msg)));
-	    });
+	    var data = new FormData(form);
+	    var req = new XMLHttpRequest();
+	    req.open('POST', form.action);
+	    req.send(data);
 	}, 
 	function failure(err) { 
 	    status.html('<p>' + err.toString() + '</p>');
@@ -93,7 +96,9 @@ function testPythonProgram(prog) {
 	    Sk.misceval.callsimAsync(null, test).then(
 		function (r) {
 		    var ret = Sk.ffi.remapToJs(r);
-		    $('#test_unit_results p').hide(); // Remove missleading summaries
+		    var results = document.getElementById('test_unit_results');
+		    if (results)
+			results.style.display = 'none';
 		    if (ret[0] < minPassed()) reject(testFail);
 		    else resolve(ret);
 		},
@@ -112,23 +117,25 @@ function builtinRead(x) {
 }
 
 function stdOut(text) {
-    $('#output').append(sanitize(text));
+    var output = document.getElementById('output');
+    output.innerHTML += sanitize(text);
 }
 
 function buildProg() {
-    var prog = $('#code').val() + unittest($('#unittest'));
+    var code = getUserCode();
+    var prog = code.innerHTML + unittest(document.getElementById('unittest'));
     return unsanitize(prog);
 }
 
 function unittest(elem) {
-    if (elem.length == 0)
+    if (!elem)
 	return '\ndef test__():\n return [1,1]';
     return '\nfor n in ["Test","unittest","TestCase","TestCaseGui"]:' +
         '\n if n in globals():' +
         '\n  raise ImportError("No incluyas pruebas ({})".format(n))' +
         '\nfrom unittest.gui import TestCaseGui\n' + 
 	'from unittest import TestCase\n' + 
-	elem.text() +
+	elem.innerHTML +
 	'\ndef test__():\n' +
 	' t=Test()\n t.main()\n' +
 	' return [t.numPassed, t.numFailed]'; 
@@ -148,32 +155,78 @@ function sanitize(text) {
 	.replace(new RegExp('&', 'g'), '&amp;');
 }
 
-function updateSubmittedText(passed, failed) {
-    /* submitted text must be able to be embedded into HTML elements */
-    var prog = $('#code').val(),
-        out = $('#output').text(),
-        header = $("input[name=userid]").val() +
-                 " (" + passed.toString() + "/" + failed.toString() + ")\n\n",
-        doc = header + out + code_separator + prog + code_separator;
-    $('#_id_onlinetext_editor').val(doc);
-}
-
-function getSubmittedCode() {
-    var code = $('#_id_onlinetext_editor').val().split(code_separator);
-    var prog = code.length > 1? code[1]: code[0];
+function getUserCode() {
+    var code = document.getElementById('onlinetext_editor');
+    var sec = code.value.split(code_separator);
+    var prog =  sec.length > 1? sec[1]: sec[0]; 
     return unsanitize(prog);
 }
 
+function updateSubmittedText(passed, failed) {
+    var prog = getUserCode();
+    var out = document.getElementById('output').innerHTML;
+    var header = "# " + passed.toString() + " passed / " + failed.toString() + " failed\n\n";
+    var doc = header + code_separator + prog + code_separator + out;
+    document.getElementById('onlinetext_editor').value = doc;
+}
+
 function isPython3Source() {
-    var py3 = $('#python3');
-    if (py3.length == 0) return true;
-    return py3.prop('checked');
+    var py3 = document.getElementById('python3');
+    if (!py3) return true;
+    return py3.checked;
 }
 
 function minPassed() {
-    var f = $('#minpass');
-    if (f.length == 0) return 0;
-    return parseInt(f.text(), 10);
+    var f = document.getElementById('minpass');
+    if (!f) return 0;
+    return parseInt(f.innerHTML, 10);
 }
 
-$(document).ready(installPythonFacade);
+// https://raw.githubusercontent.com/jfriend00/docReady/master/docready.js
+(function(funcName, baseObj) {
+    "use strict";
+    funcName = funcName || "docReady";
+    baseObj = baseObj || window;
+    var readyList = [];
+    var readyFired = false;
+    var readyEventHandlersInstalled = false;
+    
+    function ready() {
+        if (!readyFired) {
+            readyFired = true;
+            for (var i = 0; i < readyList.length; i++) {
+                readyList[i].fn.call(window, readyList[i].ctx);
+            }
+            readyList = [];
+        }
+    }
+    
+    function readyStateChange() {
+        if ( document.readyState === "complete" ) {
+            ready();
+        }
+    }
+    
+    baseObj[funcName] = function(callback, context) {
+        if (readyFired) {
+            setTimeout(function() {callback(context);}, 1);
+            return;
+        } else {
+            readyList.push({fn: callback, ctx: context});
+        }
+        if (document.readyState === "complete" || (!document.attachEvent && document.readyState === "interactive")) {
+            setTimeout(ready, 1);
+        } else if (!readyEventHandlersInstalled) {
+            if (document.addEventListener) {
+                document.addEventListener("DOMContentLoaded", ready, false);
+                window.addEventListener("load", ready, false);
+            } else {
+                document.attachEvent("onreadystatechange", readyStateChange);
+                window.attachEvent("onload", ready);
+            }
+            readyEventHandlersInstalled = true;
+        }
+    }
+})("docReady", window);
+
+docReady(installPythonFacade);
