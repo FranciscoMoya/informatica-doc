@@ -77,10 +77,7 @@ function testAndSubmitPythonProgram(e) {
     testPythonProgram(prog).then(
 	function success(summary) {
             updateSubmittedText(summary[0], summary[1]);
-	    var data = new FormData(form);
-	    var req = new XMLHttpRequest();
-	    req.open('POST', form.action);
-	    req.send(data);
+	    form.submit();
 	}, 
 	function failure(err) { 
 	    status.innerHTML = '<p>' + err.toString() + '</p>';
