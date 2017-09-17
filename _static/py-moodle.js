@@ -39,6 +39,7 @@ function installPythonFacade() {
     editor.setAttribute('id', '_id_onlinetext_editor'); // prevent rich-text install
     editor.style.display = 'block';
     editor.style.fontFamily = 'monospace';
+    editor.value = getUserCode();
     
     var py3 = document.createElement('div');
     py3.style = 'float:right; background-color:#FFF;';
