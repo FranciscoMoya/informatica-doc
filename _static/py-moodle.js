@@ -37,22 +37,21 @@ function installPythonFacade() {
     if (!editor)
 	return;
     editor.setAttribute('id', '_id_onlinetext_editor'); // prevent rich-text install
-    editor.style.display = 'none';
-    var new_editor = document.createElement('div');
-    new_editor.innerHTML = '<div style="float:right; background-color:#FFF;">' +
-        '<input type="checkbox" id="python3" checked>Python 3</div>' + 
-	'<textarea rows="7" style="width:97%;font-family:monospace;"' +
-        ' id="onlinetext_editor" name="onlinetext_editor[text]">Leyendo entrega...</textarea>' +
-	'<div id="status"></div>' +
+    editor.style.display = 'block';
+    var py3 = document.createElement('div');
+    py3.style = 'float:right; background-color:#FFF;';
+    py3.innerHTML = '<input type="checkbox" id="python3" checked>Python 3';
+    editor.parentNode.insertBefore(py3, editor);
+    var output = document.createElement('div');
+    output.innerHTML= '<div id="status"></div>' +
 	'<div id="canvas"></div>' + 
 	'<div id="test"><pre id="output"></pre></div>';
-    editor.parentNode.insertBefore(new_editor, editor);
+    editor.parentNode.insertBefore(output, editor.nextSibling);
     var form = document.getElementById('mform1');
     if (form.addEventListener)
 	form.addEventListener("submit", testAndSubmitPythonProgram, false);
     else if (form.attachEvent)
 	form.attachEvent("onsubmit", testAndSubmitPythonProgram);
-    document.getElementById('onlinetext_editor').value = editor.value;
 }
 
 function testAndSubmitPythonProgram(e) {
@@ -153,7 +152,7 @@ function sanitize(text) {
 }
 
 function getUserCode() {
-    var code = document.getElementById('onlinetext_editor');
+    var code = document.getElementById('_id_onlinetext_editor');
     var sec = code.value.split(code_separator);
     var prog =  sec.length > 1? sec[1]: sec[0]; 
     return unsanitize(prog);
@@ -162,9 +161,9 @@ function getUserCode() {
 function updateSubmittedText(passed, failed) {
     var prog = getUserCode();
     var out = document.getElementById('output').innerHTML;
-    var header = "# " + passed.toString() + " passed / " + failed.toString() + " failed\n\n";
+    var header = (isPython3Source()? "#py3 ": "#py2 ") + passed.toString() + " passed / " + failed.toString() + " failed\n";
     var doc = header + code_separator + prog + code_separator + out;
-    document.getElementById('onlinetext_editor').value = doc;
+    document.getElementById('_id_onlinetext_editor').value = doc;
 }
 
 function isPython3Source() {
