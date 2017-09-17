@@ -31,7 +31,7 @@
 
 var code_separator = "\n---- \n==== \n";
 
-function testAndSubmitPythonProgram($, e) {
+function testAndSubmitPythonProgram(e) {
     e.preventDefault();
 
     var output = $('#output'), 
@@ -54,10 +54,7 @@ function testAndSubmitPythonProgram($, e) {
 	function success(summary) {
             updateSubmittedText(summary[0], summary[1]);
 	    var submission = form.serialize().replace(/_id_onlinetext_editor/g, 'onlinetext_editor');
-	    $.post(form.attr('action'), submission, function(msg) {
-		document.write(msg);
-		//form.replaceWith($('div.submissionstatustable', $(msg)));
-	    });
+	    $.post(form.attr('action'), submission, document.write);
 	}, 
 	function failure(err) { 
 	    status.html('<p>' + err.toString() + '</p>');
@@ -173,7 +170,9 @@ require(['jquery'], function($) {
 		     '<div id="status"></div>' +
 		     '<div id="canvas"></div>' + 
 	             '<div id="test"><pre id="output"></pre></div>');
-	$('#mform1').submit(testAndSubmitPythonProgram.bind(null,$));
+	$('#mform1').submit(testAndSubmitPythonProgram);
 	$('#code').val(getSubmittedCode());
     });
 });
+
+requirejs = require = define = undefined;
