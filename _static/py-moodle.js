@@ -34,36 +34,34 @@ var code_separator = "\n---- \n==== \n";
 function testAndSubmitPythonProgram(e) {
     e.preventDefault();
 
-    require(['jquery'], function($) {
-	var output = $('#output'); 
-        var status = $('#status');
-	var form = $('#mform1');
-        var prog = buildProg($);
+    var output = $('#output'), 
+        status = $('#status'),
+	form = $('#mform1'),
+        prog = buildProg();
 
-	status.text('');
-	output.text('');
-	Sk.configure({
-	    output: stdOut.bind(null, $),
-	    read: builtinRead,
-	    python3: isPython3Source($),
-	    inputfunTakesPrompt: true,
+    status.text('');
+    output.text('');
+    Sk.configure({
+	output: stdOut,
+	read: builtinRead,
+	python3: isPython3Source(),
+	inputfunTakesPrompt: true,
+    });
+    (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
+    Sk.canvas = 'canvas';
+    Sk.divid = 'test';
+    testPythonProgram(prog).then(
+	function success(summary) {
+            updateSubmittedText(summary[0], summary[1]);
+	    var submission = form.serialize().replace(/_id_onlinetext_editor/g, 'onlinetext_editor');
+	    $.post(form.attr('action'), submission, document.write);
+	}, 
+	function failure(err) { 
+	    status.html('<p>' + err.toString() + '</p>');
 	});
-	(Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
-	Sk.canvas = 'canvas';
-	Sk.divid = 'test';
-	testPythonProgram(prog, $).then(
-	    function success(summary) {
-		updateSubmittedText(summary[0], summary[1], $);
-		var submission = form.serialize().replace(/_id_onlinetext_editor/g, 'onlinetext_editor');
-		$.post(form.attr('action'), submission, document.write);
-	    }, 
-	    function failure(err) { 
-		status.html('<p>' + err.toString() + '</p>');
-	    });
-    }
 }
 
-function testPythonProgram(prog, $) {
+function testPythonProgram(prog) {
     var testFail = 'Corrije los errores que se muestran abajo antes de enviar.'
     return new Promise(function (resolve, reject) {
 	Sk.misceval.asyncToPromise(function () {
@@ -74,7 +72,7 @@ function testPythonProgram(prog, $) {
 		function (r) {
 		    var ret = Sk.ffi.remapToJs(r);
 		    $('#test_unit_results p').hide(); // Remove missleading summaries
-		    if (ret[0] < minPassed($)) reject(testFail);
+		    if (ret[0] < minPassed()) reject(testFail);
 		    else resolve(ret);
 		},
 		reject);
@@ -91,11 +89,11 @@ function builtinRead(x) {
     return Sk.builtinFiles["files"][x];
 }
 
-function stdOut($, text) {
+function stdOut(text) {
     $('#output').append(sanitize(text));
 }
 
-function buildProg($) {
+function buildProg() {
     var prog = $('#code').val() + unittest($('#unittest'));
     return unsanitize(prog);
 }
@@ -128,35 +126,36 @@ function sanitize(text) {
 	.replace(new RegExp('&', 'g'), '&amp;');
 }
 
-function updateSubmittedText(passed, failed, $) {
+function updateSubmittedText(passed, failed) {
     /* submitted text must be able to be embedded into HTML elements */
-    var prog = $('#code').val();
-    var out = $('#output').text();
-    var header = $("input[name=userid]").val() +
-        " (" + passed.toString() + "/" + failed.toString() + ")\n\n";
-    var doc = header + out + code_separator + prog + code_separator;
+    var prog = $('#code').val(),
+        out = $('#output').text(),
+        header = $("input[name=userid]").val() +
+                 " (" + passed.toString() + "/" + failed.toString() + ")\n\n",
+        doc = header + out + code_separator + prog + code_separator;
     $('#_id_onlinetext_editor').val(doc);
 }
 
-function getSubmittedCode($) {
+function getSubmittedCode() {
     var code = $('#_id_onlinetext_editor').val().split(code_separator);
     var prog = code.length > 1? code[1]: code[0];
     return unsanitize(prog);
 }
 
-function isPython3Source($) {
+function isPython3Source() {
     var py3 = $('#python3');
     if (py3.length == 0) return true;
     return py3.prop('checked');
 }
 
-function minPassed($) {
+function minPassed() {
     var f = $('#minpass');
     if (f.length == 0) return 0;
     return parseInt(f.text(), 10);
 }
 
 require(['jquery'], function($) {
+    window.$ = $;
     $(document).ready(function () {
 	var editor = $('#id_onlinetext_editor');
 	if (editor.length == 0)
@@ -172,7 +171,8 @@ require(['jquery'], function($) {
 		     '<div id="canvas"></div>' + 
 	             '<div id="test"><pre id="output"></pre></div>');
 	$('#mform1').submit(testAndSubmitPythonProgram);
-	$('#code').val(getSubmittedCode($));
+	$('#code').val(getSubmittedCode());
     });
+    requirejs = require = define = undefined;
 });
 
