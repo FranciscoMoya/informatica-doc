@@ -60,7 +60,7 @@ function testAndSubmitPythonProgram(e) {
 	    function failure(err) { 
 		status.html('<p>' + err.toString() + '</p>');
 	    });
-    }
+    });
 }
 
 function testPythonProgram(prog, $) {
