@@ -173,6 +173,6 @@ require(['jquery'], function($) {
 	$('#mform1').submit(testAndSubmitPythonProgram);
 	$('#code').val(getSubmittedCode());
     });
-    requirejs = require = define = undefined;
 });
 
+requirejs = require = define = undefined;
