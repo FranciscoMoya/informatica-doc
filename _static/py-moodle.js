@@ -30,7 +30,7 @@
 // asserts successfully passed). This is an issue related to Skulpt
 // unittest.gui
 
-var code_separator = "\n# ---- #\n# ==== #\n";
+var code_separator = "\n# === === === # \n";
 
 function installPythonFacade() {
     var editor = document.getElementById('id_onlinetext_editor');
@@ -167,7 +167,7 @@ function updateSubmittedText(passed, failed) {
     var prog = getUserCode();
     var out = document.getElementById('output').innerHTML;
     var header = (isPython3Source()? "#py3 ": "#py2 ") + passed.toString() + " passed / " + failed.toString() + " failed\n";
-    var doc = header + code_separator + prog + code_separator + out;
+    var doc = '<pre>' + header + code_separator + prog + code_separator + out + '</pre>';
     document.getElementById('_id_onlinetext_editor').value = doc;
 }
 
