@@ -83,7 +83,7 @@ function testAndSubmitPythonProgram(e) {
 	    req.send(data);
 	}, 
 	function failure(err) { 
-	    status.html('<p>' + err.toString() + '</p>');
+	    status.innerHTML = '<p>' + err.toString() + '</p>';
 	});
 }
 
