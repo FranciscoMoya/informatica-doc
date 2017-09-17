@@ -32,23 +32,21 @@
 var code_separator = "\n---- \n==== \n";
 
 function installPythonFacade() {
-    require(['jquery', 'message_popup/message_popover_controller'], function($, controller) {
-	var editor = $('#id_onlinetext_editor');
-	if (editor.length == 0)
-	    return;
-	editor.attr('id', '_id_onlinetext_editor'); // prevent rich-text install
-	editor.attr('name', '_id_onlinetext_editor[text]'); // prevent rich-text install
-	editor.hide();
-	editor.after('<div style="float:right; background-color:#FFF;">' +
-                     '<input type="checkbox" id="python3" checked>Python 3</div>' + 
-	             '<textarea rows="7" style="width:97%;font-family:monospace;"' +
-                     ' id="code">Leyendo entrega...</textarea>' +
-		     '<div id="status"></div>' +
-		     '<div id="canvas"></div>' + 
-	             '<div id="test"><pre id="output"></pre></div>');
-	$('#mform1').submit(testAndSubmitPythonProgram.bind(null,$));
-	$('#code').val(getSubmittedCode());
-    });
+    var editor = $('#id_onlinetext_editor');
+    if (editor.length == 0)
+	return;
+    editor.attr('id', '_id_onlinetext_editor'); // prevent rich-text install
+    editor.attr('name', '_id_onlinetext_editor[text]'); // prevent rich-text install
+    editor.hide();
+    editor.after('<div style="float:right; background-color:#FFF;">' +
+                 '<input type="checkbox" id="python3" checked>Python 3</div>' + 
+	         '<textarea rows="7" style="width:97%;font-family:monospace;"' +
+                 ' id="code">Leyendo entrega...</textarea>' +
+		 '<div id="status"></div>' +
+		 '<div id="canvas"></div>' + 
+	         '<div id="test"><pre id="output"></pre></div>');
+    $('#mform1').submit(testAndSubmitPythonProgram.bind(null,$));
+    $('#code').val(getSubmittedCode());
 }
 
 function testAndSubmitPythonProgram($, e) {
