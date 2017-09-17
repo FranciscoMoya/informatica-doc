@@ -38,20 +38,21 @@ function installPythonFacade() {
 	return;
     editor.setAttribute('id', '_id_onlinetext_editor'); // prevent rich-text install
     editor.style.display = 'none';
-    var new_editor = document.createElement('<div style="float:right; background-color:#FFF;">' +
-                 '<input type="checkbox" id="python3" checked>Python 3</div>' + 
-	         '<textarea rows="7" style="width:97%;font-family:monospace;"' +
-                 ' id="onlinetext_editor" name="onlinetext_editor[text]">Leyendo entrega...</textarea>' +
-		 '<div id="status"></div>' +
-		 '<div id="canvas"></div>' + 
-	         '<div id="test"><pre id="output"></pre></div>');
+    var new_editor = document.createElement('div');
+    new_editor.innerHTML = '<div style="float:right; background-color:#FFF;">' +
+        '<input type="checkbox" id="python3" checked>Python 3</div>' + 
+	'<textarea rows="7" style="width:97%;font-family:monospace;"' +
+        ' id="onlinetext_editor" name="onlinetext_editor[text]">Leyendo entrega...</textarea>' +
+	'<div id="status"></div>' +
+	'<div id="canvas"></div>' + 
+	'<div id="test"><pre id="output"></pre></div>';
     editor.parentNode.insertBefore(new_editor, editor);
     var form = document.getElementById('mform1');
     if (form.addEventListener)
 	form.addEventListener("submit", testAndSubmitPythonProgram, false);
     else if (form.attachEvent)
 	form.attachEvent("onsubmit", testAndSubmitPythonProgram);
-    new_editor.value = editor.value;
+    document.getElementById('onlinetext_editor').value = editor.value;
 }
 
 function testAndSubmitPythonProgram(e) {
