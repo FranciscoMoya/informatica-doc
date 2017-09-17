@@ -123,8 +123,7 @@ function stdOut(text) {
 }
 
 function buildProg() {
-    var code = getUserCode();
-    var prog = code.innerHTML + unittest(document.getElementById('unittest'));
+    var prog = getUserCode() + unittest(document.getElementById('unittest'));
     return unsanitize(prog);
 }
 
