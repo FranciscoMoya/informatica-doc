@@ -41,7 +41,7 @@ function installPythonFacade() {
 	return;
     prependPython3Checkbox(editor);
     appendOutputArea(editor);
-    replaceFormSubmission('mform1');
+    replaceFormSubmission('mform1', editor.getAttribute('id'));
 }
 
 function setupTextArea(id) {
@@ -52,7 +52,7 @@ function setupTextArea(id) {
     editor.setAttribute('id', newId); // prevent rich-text install
     editor.style.display = 'block';
     editor.style.fontFamily = 'monospace';
-    editor.value = getUserCode(newId);
+    editor.value = getUserCode(editor);
     return editor;
 }
 
@@ -70,15 +70,15 @@ function appendOutputArea(editor) {
     editor.parentNode.insertBefore(output, editor.nextSibling);
 }
 
-function replaceFormSubmission(id) {
+function replaceFormSubmission(id, editor) {
     var form = document.getElementById(id);
     if (form.addEventListener)
-	form.addEventListener("submit", testAndSubmitPythonProgram(id, form), false);
+	form.addEventListener("submit", testAndSubmitPythonProgram(editor, form), false);
     else if (form.attachEvent)
-	form.attachEvent("onsubmit", testAndSubmitPythonProgram(id, form));
+	form.attachEvent("onsubmit", testAndSubmitPythonProgram(editor, form));
 }
 
-function testAndSubmitPythonProgram (id, form) {
+function testAndSubmitPythonProgram (editor, form) {
     return function (e) {
 	e.preventDefault();
 	stdOut();
@@ -92,9 +92,9 @@ function testAndSubmitPythonProgram (id, form) {
 	(Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
 	Sk.canvas = 'canvas';
 	Sk.divid = 'test';
-	testPythonProgram(buildProg(id)).then(
+	testPythonProgram(buildProg(editor)).then(
 	    function success(summary) {
-		updateSubmittedText(id, summary);
+		updateSubmittedText(editor, summary);
 		form.submit();
 	    }, statusOut);
     };
@@ -146,8 +146,8 @@ function statusOut(text) {
 	status.innerHTML = '';
 }
 
-function buildProg(id) {
-    var prog = getUserCode(id) + unittest(document.getElementById('unittest'));
+function buildProg(editor) {
+    var prog = getUserCode(editor) + unittest(document.getElementById('unittest'));
     return unsanitize(prog);
 }
 
@@ -179,19 +179,18 @@ function sanitize(text) {
 	.replace(new RegExp('&', 'g'), '&amp;');
 }
 
-function getUserCode(id) {
-    var code = document.getElementById(id);
-    var sec = code.value.split(code_separator);
+function getUserCode(editor) {
+    var sec = editor.value.split(code_separator);
     var prog =  sec.length > 1? sec[1]: sec[0]; 
     return unsanitize(prog);
 }
 
-function updateSubmittedText(id, sum) {
-    var prog = getUserCode(id);
+function updateSubmittedText(editor, sum) {
+    var prog = getUserCode(editor);
     var out = document.getElementById('output').innerHTML;
     var header = (isPython3Source()? "#py3 ": "#py2 ") + sum[0].toString() + " passed / " + sum[1].toString() + " failed\n";
     var doc = '<pre>' + header + code_separator + prog + code_separator + out + '</pre>';
-    document.getElementById(id).value = doc;
+    editor.value = doc;
 }
 
 function isPython3Source() {
