@@ -73,16 +73,16 @@ function appendOutputArea(editor) {
 function replaceFormSubmission(id) {
     var form = document.getElementById(id);
     if (form.addEventListener)
-	form.addEventListener("submit", testAndSubmitPythonProgram(id), false);
+	form.addEventListener("submit", testAndSubmitPythonProgram(id, form), false);
     else if (form.attachEvent)
-	form.attachEvent("onsubmit", testAndSubmitPythonProgram(id));
+	form.attachEvent("onsubmit", testAndSubmitPythonProgram(id, form));
 }
 
-function testAndSubmitPythonProgram (id) {
+function testAndSubmitPythonProgram (id, form) {
     return function (e) {
 	e.preventDefault();
 	stdOut();
-	stdErr();
+	statusOut();
 	Sk.configure({
 	    output: stdOut,
 	    read: builtinRead,
@@ -95,8 +95,8 @@ function testAndSubmitPythonProgram (id) {
 	testPythonProgram(buildProg(id)).then(
 	    function success(summary) {
 		updateSubmittedText(id, summary);
-		this.form.submit();
-	    }, stdErr);
+		form.submit();
+	    }, statusOut);
     };
 }
 
@@ -138,7 +138,7 @@ function stdOut(text) {
 	output.innerHTML = '';
 }
 
-function stdErr(text) {
+function statusOut(text) {
     var status = document.getElementById('status');
     if (text)
 	status.innerHTML += '<p>' + sanitize(text) + '</p>';
