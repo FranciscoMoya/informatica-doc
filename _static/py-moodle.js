@@ -15,8 +15,11 @@
 
 // Usage:
 //
-// 1. Insert a <script> tag in the task description:
-//    <script src="py-moodle.js">
+// 1. Insert <script> tags in the task description:
+//    <script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
+//    <script src="https://rawgit.com/skulpt/skulpt-dist/master/skulpt.min.js"></script>
+//    <script src="https://rawgit.com/skulpt/skulpt-dist/master/skulpt-stdlib.js"></script>
+//    <script src="https://rawgit.com/FranciscoMoya/informatica-doc/master/_static/py-moodle.js"></script>
 //
 // 2. Define a container (pre, div) with id unittest containing the TestCase.
 //    either class Test(TestCase) or class Test(TestCaseGui).
@@ -33,59 +36,68 @@
 var code_separator = "\n# === === === # \n";
 
 function installPythonFacade() {
-    var editor = document.getElementById('id_onlinetext_editor');
+    var editor = setupTextArea('id_onlinetext_editor');
     if (!editor)
 	return;
-    editor.setAttribute('id', '_id_onlinetext_editor'); // prevent rich-text install
+    prependPython3Checkbox(editor);
+    appendOutputArea(editor);
+    replaceFormSubmission('mform1');
+}
+
+function setupTextArea(id) {
+    var editor = document.getElementById(id);
+    if (!editor)
+	return null;
+    var newId = '_' + id;
+    editor.setAttribute('id', newId); // prevent rich-text install
     editor.style.display = 'block';
     editor.style.fontFamily = 'monospace';
-    editor.value = getUserCode();
-    
+    editor.value = getUserCode(newId);
+    return editor;
+}
+
+function prependPython3Checkbox(editor) {
     var py3 = document.createElement('div');
     py3.style = 'float:right; background-color:#FFF;';
     py3.innerHTML = '<input type="checkbox" id="python3" checked>Python 3';
     editor.parentNode.insertBefore(py3, editor);
-
-    var output = document.createElement('div');
-    output.innerHTML= '<div id="status"></div>' +
-	'<div id="canvas"></div>' + 
-	'<div id="test"><pre id="output"></pre></div>';
-    editor.parentNode.insertBefore(output, editor.nextSibling);
-
-    var form = document.getElementById('mform1');
-    if (form.addEventListener)
-	form.addEventListener("submit", testAndSubmitPythonProgram, false);
-    else if (form.attachEvent)
-	form.attachEvent("onsubmit", testAndSubmitPythonProgram);
 }
 
-function testAndSubmitPythonProgram(e) {
-    e.preventDefault();
+function appendOutputArea(editor) {
+    var output = document.createElement('div');
+    output.innerHTML= '<div id="status"></div><div id="canvas"></div>' 
+	+ '<div id="test"><pre id="output"></pre></div>';
+    editor.parentNode.insertBefore(output, editor.nextSibling);
+}
 
-    var output = document.getElementById('output');
-    var status = document.getElementById('status');
-    var form = document.getElementById('mform1');
-    var prog = buildProg();
+function replaceFormSubmission(id) {
+    var form = document.getElementById(id);
+    if (form.addEventListener)
+	form.addEventListener("submit", testAndSubmitPythonProgram(id), false);
+    else if (form.attachEvent)
+	form.attachEvent("onsubmit", testAndSubmitPythonProgram(id));
+}
 
-    status.innerHTML = '';
-    output.innerHTML = '';
-    Sk.configure({
-	output: stdOut,
-	read: builtinRead,
-	python3: isPython3Source(),
-	inputfunTakesPrompt: true,
-    });
-    (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
-    Sk.canvas = 'canvas';
-    Sk.divid = 'test';
-    testPythonProgram(prog).then(
-	function success(summary) {
-            updateSubmittedText(summary[0], summary[1]);
-	    form.submit();
-	}, 
-	function failure(err) { 
-	    status.innerHTML = '<p>' + err.toString() + '</p>';
+function testAndSubmitPythonProgram (id) {
+    return function (e) {
+	e.preventDefault();
+	stdOut();
+	stdErr();
+	Sk.configure({
+	    output: stdOut,
+	    read: builtinRead,
+	    python3: isPython3Source(),
+	    inputfunTakesPrompt: true,
 	});
+	(Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
+	Sk.canvas = 'canvas';
+	Sk.divid = 'test';
+	testPythonProgram(buildProg(id)).then(
+	    function success(summary) {
+		updateSubmittedText(id, summary);
+		this.form.submit();
+	    }, stdErr);
+    };
 }
 
 function testPythonProgram(prog) {
@@ -120,11 +132,22 @@ function builtinRead(x) {
 
 function stdOut(text) {
     var output = document.getElementById('output');
-    output.innerHTML += sanitize(text);
+    if (text)
+	output.innerHTML += sanitize(text);
+    else
+	output.innerHTML = '';
 }
 
-function buildProg() {
-    var prog = getUserCode() + unittest(document.getElementById('unittest'));
+function stdErr(text) {
+    var status = document.getElementById('status');
+    if (text)
+	status.innerHTML += '<p>' + sanitize(text) + '</p>';
+    else
+	status.innerHTML = '';
+}
+
+function buildProg(id) {
+    var prog = getUserCode(id) + unittest(document.getElementById('unittest'));
     return unsanitize(prog);
 }
 
@@ -156,19 +179,19 @@ function sanitize(text) {
 	.replace(new RegExp('&', 'g'), '&amp;');
 }
 
-function getUserCode() {
-    var code = document.getElementById('_id_onlinetext_editor');
+function getUserCode(id) {
+    var code = document.getElementById(id);
     var sec = code.value.split(code_separator);
     var prog =  sec.length > 1? sec[1]: sec[0]; 
     return unsanitize(prog);
 }
 
-function updateSubmittedText(passed, failed) {
-    var prog = getUserCode();
+function updateSubmittedText(id, sum) {
+    var prog = getUserCode(id);
     var out = document.getElementById('output').innerHTML;
-    var header = (isPython3Source()? "#py3 ": "#py2 ") + passed.toString() + " passed / " + failed.toString() + " failed\n";
+    var header = (isPython3Source()? "#py3 ": "#py2 ") + sum[0].toString() + " passed / " + sum[1].toString() + " failed\n";
     var doc = '<pre>' + header + code_separator + prog + code_separator + out + '</pre>';
-    document.getElementById('_id_onlinetext_editor').value = doc;
+    document.getElementById(id).value = doc;
 }
 
 function isPython3Source() {
