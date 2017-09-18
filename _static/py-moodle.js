@@ -41,7 +41,7 @@ function installPythonFacade() {
 	return;
     prependPython3Checkbox(editor);
     appendOutputArea(editor);
-    replaceFormSubmission('mform1', editor.getAttribute('id'));
+    replaceFormSubmission('mform1', editor);
 }
 
 function setupTextArea(id) {
