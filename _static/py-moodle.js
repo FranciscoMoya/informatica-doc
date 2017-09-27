@@ -15,64 +15,89 @@
 
 // Usage:
 //
-// 1. Insert a <script> tag in the task description:
-//    <script src="py-moodle.js">
+// 1. Insert <script> tags in the task description:
+//    <script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
+//    <script src="https://rawgit.com/skulpt/skulpt-dist/master/skulpt.min.js"></script>
+//    <script src="https://rawgit.com/skulpt/skulpt-dist/master/skulpt-stdlib.js"></script>
+//    <script src="https://rawgit.com/FranciscoMoya/informatica-doc/master/_static/py-moodle.js"></script>
 //
 // 2. Define a container (pre, div) with id unittest containing the TestCase.
 //    either class Test(TestCase) or class Test(TestCaseGui).
 //
-// 3. Optionally define a container (em, span) with id minpass containing the
-//    minimum number of tests (asserts) required to submit (0 by default).
+// 3. Optionally define a container (em, span, div) with id minpass
+//    containing the minimum number of tests (asserts) required to
+//    submit.
 
+// Note: minpass has a different meaning when using TestCase (number
+// of test_ methods successfully executed) or TestCaseGui (number of
+// asserts successfully passed). This is an issue related to Skulpt
+// unittest.gui
 
-var code_separator = "\n---- \n==== \n";
+var code_separator = "\n# === === === # \n";
 
 function installPythonFacade() {
-    var editor = $('div.felement.feditor');
-    if (editor.length == 0)
+    var editor = setupTextArea('id_onlinetext_editor');
+    if (!editor)
 	return;
-    editor.hide();
-    editor.after('<div style="float:right; background-color:#FFF;">' +
-                 '<input type="checkbox" id="python3" checked>Python 3</div>' + 
-	         '<textarea rows="7" style="width:97%;font-family:monospace;"' +
-                 ' id="code">Leyendo entrega...</textarea>' +
-		 '<div id="status"></div>' +
-		 '<div id="canvas"></div>' + 
-	         '<div id="test"><pre id="output"></pre></div>');
-    $('#mform1').submit(testAndSubmitPythonProgram.bind(null,$));
-    $('#code').val(getSubmittedCode());
+    prependPython3Checkbox(editor);
+    appendOutputArea(editor);
+    replaceFormSubmission('mform1', editor);
 }
 
-function testAndSubmitPythonProgram($, e) {
-    e.preventDefault();
-    window.$ = $;
+function setupTextArea(id) {
+    var editor = document.getElementById(id);
+    if (!editor)
+	return null;
+    var newId = '_' + id;
+    editor.setAttribute('id', newId); // prevent rich-text install
+    editor.style.display = 'block';
+    editor.style.fontFamily = 'monospace';
+    editor.value = getUserCode(editor);
+    return editor;
+}
 
-    var output = $('#output'), 
-	status = $('#status'),
-	form = $('#mform1'),
-        prog = buildProg();
+function prependPython3Checkbox(editor) {
+    var py3 = document.createElement('div');
+    py3.style = 'float:right; background-color:#FFF;';
+    py3.innerHTML = '<input type="checkbox" id="python3" checked>Python 3';
+    editor.parentNode.insertBefore(py3, editor);
+}
 
-    status.text('');
-    output.text('');
-    Sk.configure({
-	output: stdOut,
-	read: builtinRead,
-	python3: isPython3Source(),
-	inputfunTakesPrompt: true,
-    });
-    (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
-    Sk.canvas = 'canvas';
-    Sk.divid = 'test';
-    testPythonProgram(prog).then(
-	function success(summary) {
-            updateSubmittedText(summary[0], summary[1]);
-	    $.post(form.attr('action'), form.serialize(), function(msg) {
-		form.replaceWith($('div.submissionstatustable', $(msg)));
-	    });
-	}, 
-	function failure(err) { 
-	    status.html('<p>' + err.toString() + '</p>');
+function appendOutputArea(editor) {
+    var output = document.createElement('div');
+    output.innerHTML= '<div id="status"></div><div id="canvas"></div>' 
+	+ '<div id="test"><pre id="output"></pre></div>';
+    editor.parentNode.insertBefore(output, editor.nextSibling);
+}
+
+function replaceFormSubmission(id, editor) {
+    var form = document.getElementById(id);
+    if (form.addEventListener)
+	form.addEventListener("submit", testAndSubmitPythonProgram(editor, form), false);
+    else if (form.attachEvent)
+	form.attachEvent("onsubmit", testAndSubmitPythonProgram(editor, form));
+}
+
+function testAndSubmitPythonProgram (editor, form) {
+    return function (e) {
+	e.preventDefault();
+	stdOut();
+	statusOut();
+	Sk.configure({
+	    output: stdOut,
+	    read: builtinRead,
+	    python3: isPython3Source(),
+	    inputfunTakesPrompt: true,
 	});
+	(Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
+	Sk.canvas = 'canvas';
+	Sk.divid = 'test';
+	testPythonProgram(buildProg(editor)).then(
+	    function success(summary) {
+		updateSubmittedText(editor, summary);
+		form.submit();
+	    }, statusOut);
+    };
 }
 
 function testPythonProgram(prog) {
@@ -85,7 +110,9 @@ function testPythonProgram(prog) {
 	    Sk.misceval.callsimAsync(null, test).then(
 		function (r) {
 		    var ret = Sk.ffi.remapToJs(r);
-		    $('#test_unit_results p').hide(); // Remove missleading summaries
+		    var results = document.getElementById('test_unit_results');
+		    if (results)
+			results.style.display = 'none';
 		    if (ret[0] < minPassed()) reject(testFail);
 		    else resolve(ret);
 		},
@@ -104,23 +131,35 @@ function builtinRead(x) {
 }
 
 function stdOut(text) {
-    $('#output').append(sanitize(text));
+    var output = document.getElementById('output');
+    if (text)
+	output.innerHTML += sanitize(text);
+    else
+	output.innerHTML = '';
 }
 
-function buildProg() {
-    var prog = $('#code').val() + unittest($('#unittest'));
+function statusOut(text) {
+    var status = document.getElementById('status');
+    if (text)
+	status.innerHTML += '<p>' + sanitize(text) + '</p>';
+    else
+	status.innerHTML = '';
+}
+
+function buildProg(editor) {
+    var prog = getUserCode(editor) + unittest(document.getElementById('unittest'));
     return unsanitize(prog);
 }
 
 function unittest(elem) {
-    if (elem.length == 0)
+    if (!elem)
 	return '\ndef test__():\n return [1,1]';
     return '\nfor n in ["Test","unittest","TestCase","TestCaseGui"]:' +
         '\n if n in globals():' +
         '\n  raise ImportError("No incluyas pruebas ({})".format(n))' +
         '\nfrom unittest.gui import TestCaseGui\n' + 
 	'from unittest import TestCase\n' + 
-	elem.text() +
+	elem.innerHTML +
 	'\ndef test__():\n' +
 	' t=Test()\n t.main()\n' +
 	' return [t.numPassed, t.numFailed]'; 
@@ -130,64 +169,87 @@ function unsanitize(text) {
     return text
 	.replace(new RegExp('&amp;', 'g'), '&')
 	.replace(new RegExp('&lt;', 'g'), '<')
-	.replace(new RegExp('&gt;', 'g'), '>')
-	.replace(new RegExp('&#34;', 'g'), '"')
-	.replace(new RegExp('&#39;', 'g'), "'");
+	.replace(new RegExp('&gt;', 'g'), '>');
 }
 
 function sanitize(text) {
-    /* unsanitize to avoid double encoding */
-    return unsanitize(text)
+    return text
 	.replace(new RegExp('<', 'g'), '&lt;')
-	.replace(new RegExp('&', 'g'), '&amp;')
-	.replace(new RegExp('"', 'g'), '&#34;')
-	.replace(new RegExp("'", 'g'), '&#39;');
+	.replace(new RegExp('>', 'g'), '&gt;')
+	.replace(new RegExp('&', 'g'), '&amp;');
 }
 
-function updateSubmittedText(passed, failed) {
-    /* submitted text must be able to be embedded into HTML elements */
-    var prog = $('#code').val(),
-        out = $('#output').text(),
-        header = $("input[name=userid]").val() +
-                 " (" + passed.toString() + "/" + failed.toString() + ")\n\n",
-        doc = header + out + code_separator + prog + code_separator;
-    $('#id_onlinetext_editor').val('<pre>' + sanitize(doc) + '</pre>');
+function getUserCode(editor) {
+    var sec = editor.value.split(code_separator);
+    var prog =  sec.length > 1? sec[1]: sec[0]; 
+    return unsanitize(prog);
 }
 
-function getSubmittedCode() {
-    var code = $('#id_onlinetext_editor').val().split(code_separator);
-    var prog = code.length > 1? code[1]: code[0];
-    return unsanitize(prog.replace('<pre>','').replace('</pre>',''));
+function updateSubmittedText(editor, sum) {
+    var prog = getUserCode(editor);
+    var out = document.getElementById('output').innerHTML;
+    var header = (isPython3Source()? "#py3 ": "#py2 ") + sum[0].toString() + " passed / " + sum[1].toString() + " failed\n";
+    var doc = '<pre>' + header + code_separator + prog + code_separator + out + '</pre>';
+    editor.value = doc;
 }
 
 function isPython3Source() {
-    var py3 = $('#python3');
-    if (py3.length == 0) return true;
-    return py3.prop('checked');
+    var py3 = document.getElementById('python3');
+    if (!py3) return true;
+    return py3.checked;
 }
 
 function minPassed() {
-    var f = $('#minpass');
-    if (f.length == 0) return 0;
-    return parseInt(f.text(), 10);
+    var f = document.getElementById('minpass');
+    if (!f) return 0;
+    return parseInt(f.innerHTML, 10);
 }
 
-function loadJS (url, success){
-    var scriptTag = document.createElement('script');
-    scriptTag.src = url;
-    scriptTag.onload = success;
-    scriptTag.onreadystatechange = success;
-    document.head.appendChild(scriptTag);
-};
+// https://raw.githubusercontent.com/jfriend00/docReady/master/docready.js
+(function(funcName, baseObj) {
+    "use strict";
+    funcName = funcName || "docReady";
+    baseObj = baseObj || window;
+    var readyList = [];
+    var readyFired = false;
+    var readyEventHandlersInstalled = false;
+    
+    function ready() {
+        if (!readyFired) {
+            readyFired = true;
+            for (var i = 0; i < readyList.length; i++) {
+                readyList[i].fn.call(window, readyList[i].ctx);
+            }
+            readyList = [];
+        }
+    }
+    
+    function readyStateChange() {
+        if ( document.readyState === "complete" ) {
+            ready();
+        }
+    }
+    
+    baseObj[funcName] = function(callback, context) {
+        if (readyFired) {
+            setTimeout(function() {callback(context);}, 1);
+            return;
+        } else {
+            readyList.push({fn: callback, ctx: context});
+        }
+        if (document.readyState === "complete" || (!document.attachEvent && document.readyState === "interactive")) {
+            setTimeout(ready, 1);
+        } else if (!readyEventHandlersInstalled) {
+            if (document.addEventListener) {
+                document.addEventListener("DOMContentLoaded", ready, false);
+                window.addEventListener("load", ready, false);
+            } else {
+                document.attachEvent("onreadystatechange", readyStateChange);
+                window.attachEvent("onload", ready);
+            }
+            readyEventHandlersInstalled = true;
+        }
+    }
+})("docReady", window);
 
-// There is an incompatibility between jQuery 3.1 and
-// https://campusvirtual.uclm.es/lib/requirejs.php/1476343773/core/first.js
-// therefore we stay at 2.2
-loadJS('https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', function(){
-    loadJS('https://www.promisejs.org/polyfills/promise-7.0.4.min.js', function(){});
-    var skulpt_base = 'https://rawgit.com/skulpt/skulpt-dist/master/';
-    loadJS(skulpt_base + 'skulpt.min.js', function() {
-	loadJS(skulpt_base + 'skulpt-stdlib.js', function(){});
-    });
-    $(document).ready(installPythonFacade);
-});
+docReady(installPythonFacade);

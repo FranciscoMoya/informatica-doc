@@ -15,7 +15,7 @@ Mancha*.
    intro.rst
    elem.rst
    bif-iter.rst
-   python-05-06-07.rst
+   abstraccion-func.rst
    python-09.rst
    python-10.rst
    test-debug.rst
