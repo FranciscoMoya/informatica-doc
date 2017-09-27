@@ -517,7 +517,7 @@ Bifurcación
 
 A veces es necesario ejecutar determinadas sentencias solo si se
 cumple una condición.  Esto se consigue con una :term:`sentencia de
-bifurcación`.  La más simple de todas es la :term:`sentencia *if*`.
+bifurcación`.  La más simple de todas es la :term:`sentencia if`.
 
 .. activecode:: ejemplo-bifurcar
 
@@ -545,7 +545,7 @@ idénticas o casi idénticas.  Para repetir están los bucles.  El más
 sencillo de todos es el :term:`bucle *while*`:
 
 El :term:`bucle *while*` funciona de forma similar a la
-:term:`sentencia *if*`.  Evalúa la condición y si se cumple ejecuta
+:term:`sentencia if`.  Evalúa la condición y si se cumple ejecuta
 las sentencias indentadas justo a continuación.  Pero después de
 ejecutarlas no continúa con la siguiente sentencia, sino que vuelve a
 evaluar la condición.  Así hasta que la condición no se cumpla.

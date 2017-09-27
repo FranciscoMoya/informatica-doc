@@ -53,4 +53,5 @@ Mancha*.
 
    Resumen.rst
    PythonMinimo.rst
+   glosario.rst
    about.rst

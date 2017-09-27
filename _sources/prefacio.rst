@@ -284,7 +284,7 @@ varios de los siguientes recursos:
    como una transcripción de la parte correspondiente de la clase.
 
 2. **Libro de texto**. El libro también recoge los ejemplos de clase
-   ordenados secuencialmente y con alguna propuesta de trabjo
+   ordenados secuencialmente y con alguna propuesta de trabajo
    adicional. Lee los capítulos correspondientes antes de la clase e
    intenta reproducir por tí mismo los ejemplos.
 
@@ -328,7 +328,7 @@ Trabajo en casa
 
 El trabajo en casa tiene dos partes bien diferenciadas:
 
-1. Por un lado hay que asimilar los (escasos) conocimientos teóricos de
+1. Por un lado hay que **asimilar los (escasos) conocimientos teóricos** de
    la asignatura. Tienes un libro de texto, tienes las clases con su
    material asociado y tienes Internet. Úsalos, no te quedes en las
    transparencias, busca lo que no entiendas, lee ejemplos de otra gente
@@ -341,7 +341,7 @@ El trabajo en casa tiene dos partes bien diferenciadas:
    calificación final, y mucho menos con tu actividad profesional como
    ingeniero.
 
-2. Por otro lado tienes que poner en práctica estos conocimientos. Para
+2. Por otro lado tienes que **poner en práctica estos conocimientos**. Para
    ello *tienes* que hacer dos actividades: leer programas de otros,
    escribir programas para resolver pequeños problemas. No te quedes en
    la segunda parte, es *muy importante* leer programas de otros. Puedes
