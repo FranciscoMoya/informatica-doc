@@ -190,7 +190,7 @@ function updateSubmittedText(editor, sum) {
     var prog = getUserCode(editor);
     var out = document.getElementById('output').innerHTML;
     var header = (isPython3Source()? "#py3 ": "#py2 ") + sum[0].toString() + " passed / " + sum[1].toString() + " failed\n";
-    var doc = '<pre><![CDATA[' + header + code_separator + sanitize(prog) + code_separator + out + ']]></pre>';
+    var doc = '<pre><![CDATA[' + header + code_separator + prog + code_separator + out + ']]></pre>';
     editor.value = doc;
 }
 
