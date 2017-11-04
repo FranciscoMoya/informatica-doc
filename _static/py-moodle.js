@@ -173,10 +173,12 @@ function unsanitize(text) {
 }
 
 function sanitize(text) {
-    return text
-	.replace(new RegExp('<', 'g'), '&lt;')
-	.replace(new RegExp('>', 'g'), '&gt;')
-	.replace(new RegExp('&', 'g'), '&amp;');
+    if (typeof text === 'string')
+	return text
+	    .replace(new RegExp('<', 'g'), '&lt;')
+	    .replace(new RegExp('>', 'g'), '&gt;')
+	    .replace(new RegExp('&', 'g'), '&amp;');
+    return JSON.stringify(text);
 }
 
 function getUserCode(editor) {
