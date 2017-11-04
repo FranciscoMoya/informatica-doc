@@ -295,7 +295,7 @@ La segunda línea no llega a ejecutarse porque con anterioridad se
 produce un error.
 
 Utiliza ``type`` para determinar el tipo de la expresión
-``pow(2,600)``.
+``pow(2,20)``.
 
 .. activecode:: busca-tipo-expr
    :include: ejemplo-cadenas
@@ -321,7 +321,7 @@ Utiliza ``type`` para determinar el tipo de la expresión
    :feedback_d: La propia función ``pow`` es una función predefinida,
                 pero su aplicación a los argumentos que indicamos no.
 
-   ¿Cuál es el tipo de ``pow(2,600)``?
+   ¿Cuál es el tipo de ``pow(2,20)``?
 
 
 Funciones
