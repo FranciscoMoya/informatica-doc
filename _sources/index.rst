@@ -27,9 +27,6 @@ Mancha*.
    Examen ordinario.rst
    Gráficas.rst
    hanoi.rst
-   lab-01.rst
-   lab-02.rst
-   lab-03.rst
    mochila01.rst
    Navegación web.rst
    Optimización.rst

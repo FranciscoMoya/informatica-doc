@@ -13,20 +13,14 @@ elementos en Python. La que hemos utilizado con más frecuencia es la
 los conjuntos, que se expresan como una secuencia de elementos entre
 llaves.
 
-.. code:: python
+.. activecode::
 
     a = [ 1, 2, 3 ]
     b = ( 1, 2, 3 )
     c = { 1, 2, 3 }
     d = {}
-    type(d), type(a), type(b), type(c)
+    print(type(a), type(b), type(c), type(d))
 
-
-
-
-.. parsed-literal::
-
-    (dict, list, tuple, set)
 
 
 

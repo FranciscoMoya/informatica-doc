@@ -1,4 +1,3 @@
-
 Abstracción con funciones
 =========================
 
@@ -87,6 +86,65 @@ pasar un argumento que incluye ambas coordenadas.
 
 Ámbitos de declaración
 ----------------------
+
+Es muy importante entender cómo funciona las llamadas a función en un
+lenguaje de programación.  Veamos primero la anatomía de una función
+básica:
+
+.. activecode::
+
+   def max(x,y):
+       if x > y:
+           return x
+       return y
+
+La palabra reservada `def` dice al intérprete de Python que se va a
+definir una función.  El nombre (en este caso `max`) se usa para
+referirse a esta función.  La secuencia de nombres entre paréntesis
+(`x , y` en este ejemplo) son los parámetros formales de la función.
+
+El cuerpo de la función es cualquier fragmento de código Python.
+Además tenemos una sentencia especial, `return`, que solo puede usarse
+en el cuerpo de una función. Como cualquier expresión, la expresión de
+llamada o invocación a una función también tiene un valor, que es
+devuelto con ayuda de `return`.
+
+Por ejemplo `max(3,4)*max(3,2)` es 12 , porque la primera invocación
+de `max` devuelve 4 y la segunda devuelve 3.  Recuerda que `return`
+termina la invocación de la función. Por ese motivo no es necesaria
+una cláusula else en este caso.
+
+Es muy interesante ver cómo implementa Python la llamada a función.
+Ayuda a entender la diferencia entre argumentos y parámetros formales,
+ayuda a entender la abstracción lambda y ayuda a entender el concepto
+de variable local.  Para ello nos vamos a ayudar de la herramienta
+CodeLens, que está basada en `Python Tutor <http://pythontutor.com/>`_
+de `Phillip Guo <http://www.pgbovine.net>`_.
+
+Vamos a ver con CodeLens un viejo conocido:
+
+.. codelens:: imprime-mosaico-codelens
+
+    def imprime_mosaico():
+        for i in range(1,10,3):
+            imprime_tablas_mosaico(i)
+            
+    def imprime_tablas_mosaico(primera):
+        for i in range(1,11):
+            imprime_linea_mosaico(primera,i)
+        print()
+    
+    def imprime_linea_mosaico(primera, n):
+        for i in range(primera, primera+3):
+            imprime_linea(i,n)
+            print(end='\t')
+        print()
+    
+    def imprime_linea(n,i):
+        print(n,'x',i,'=',n*i,end='')
+    
+    imprime_mosaico()
+
 
 
 
