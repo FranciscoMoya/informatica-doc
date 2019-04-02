@@ -17,9 +17,9 @@
 //
 // 1. Insert <script> tags in the task description:
 //    <script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
-//    <script src="https://rawgit.com/skulpt/skulpt-dist/master/skulpt.min.js"></script>
-//    <script src="https://rawgit.com/skulpt/skulpt-dist/master/skulpt-stdlib.js"></script>
-//    <script src="https://rawgit.com/FranciscoMoya/informatica-doc/master/_static/py-moodle.js"></script>
+//    <script src="https://cdn.jsdelivr.net/gh/skulpt/skulpt-dist@0.11.0/skulpt.min.js"></script>
+//    <script src="https://cdn.jsdelivr.net/gh/skulpt/skulpt-dist@0.11.0/skulpt-stdlib.js"></script>
+//    <script src="https://cdn.jsdelivr.net/gh/FranciscoMoya/informatica-doc@master/_static/py-moodle.js"></script>
 //
 // 2. Define a container (pre, div) with id unittest containing the TestCase.
 //    either class Test(TestCase) or class Test(TestCaseGui).
@@ -157,12 +157,11 @@ function unittest(elem) {
     return '\nfor n in ["Test","unittest","TestCase","TestCaseGui"]:' +
         '\n if n in globals():' +
         '\n  raise ImportError("No incluyas pruebas ({})".format(n))' +
-        '\nfrom unittest.gui import TestCaseGui\n' + 
-	'from unittest import TestCase\n' + 
-	elem.innerHTML +
-	'\ndef test__():\n' +
-	' t=Test()\n t.main()\n' +
-	' return [t.numPassed, t.numFailed]'; 
+        'from unittest import TestCase\n' + 
+        elem.innerHTML +
+        '\ndef test__():\n' +
+        ' t=Test()\n t.main()\n' +
+        ' return [t.numPassed, t.numFailed]'; 
 }
 
 function unsanitize(text) {
