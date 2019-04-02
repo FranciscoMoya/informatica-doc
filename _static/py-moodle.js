@@ -157,7 +157,7 @@ function unittest(elem) {
     return '\nfor n in ["Test","unittest","TestCase","TestCaseGui"]:' +
         '\n if n in globals():' +
         '\n  raise ImportError("No incluyas pruebas ({})".format(n))' +
-        'from unittest import TestCase\n' + 
+        '\nfrom unittest import TestCase\n' + 
         elem.innerHTML +
         '\ndef test__():\n' +
         ' t=Test()\n t.main()\n' +
