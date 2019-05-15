@@ -39,7 +39,6 @@ function installPythonFacade() {
     var editor = setupTextArea('id_onlinetext_editor');
     if (!editor)
 	return;
-    prependPython3Checkbox(editor);
     appendOutputArea(editor);
     replaceFormSubmission('mform1', editor);
 }
@@ -54,13 +53,6 @@ function setupTextArea(id) {
     editor.style.fontFamily = 'monospace';
     editor.value = getUserCode(editor);
     return editor;
-}
-
-function prependPython3Checkbox(editor) {
-    var py3 = document.createElement('div');
-    py3.style = 'float:right; background-color:#FFF;';
-    py3.innerHTML = '<input type="checkbox" id="python3" checked>Python 3';
-    editor.parentNode.insertBefore(py3, editor);
 }
 
 function appendOutputArea(editor) {
@@ -87,7 +79,7 @@ function testAndSubmitPythonProgram (editor, form) {
 	    output: stdOut,
 	    read: builtinRead,
         inputfunTakesPrompt: true,
-        python3: true,
+        __future__: Sk.python3,
 	});
 	(Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
 	Sk.canvas = 'canvas';
@@ -188,16 +180,11 @@ function getUserCode(editor) {
 function updateSubmittedText(editor, sum) {
     var prog = getUserCode(editor);
     var out = document.getElementById('output').innerHTML;
-    var header = (isPython3Source()? "#py3 ": "#py2 ") + sum[0].toString() + " passed / " + sum[1].toString() + " failed\n";
+    var header = "#py3 " + sum[0].toString() + " passed / " + sum[1].toString() + " failed\n";
     var doc = '<pre><![CDATA[' + header + code_separator + prog + code_separator + out + ']]></pre>';
     editor.value = doc;
 }
 
-function isPython3Source() {
-    var py3 = document.getElementById('python3');
-    if (!py3) return true;
-    return py3.checked;
-}
 
 function minPassed() {
     var f = document.getElementById('minpass');
