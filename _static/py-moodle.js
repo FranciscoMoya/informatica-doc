@@ -86,10 +86,10 @@ function testAndSubmitPythonProgram (editor, form) {
 	Sk.configure({
 	    output: stdOut,
 	    read: builtinRead,
-	    python3: isPython3Source(),
 	    inputfunTakesPrompt: true,
 	});
 	(Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
+    Sk.python3 = isPython3Source();
 	Sk.canvas = 'canvas';
 	Sk.divid = 'test';
 	testPythonProgram(buildProg(editor)).then(
